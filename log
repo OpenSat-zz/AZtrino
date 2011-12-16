@@ -1,0 +1,258 @@
+sectionsd.cpp:72:32: error: boost/shared_ptr.hpp: No such file or directory
+sectionsd.cpp:403: error: 'boost' has not been declared
+sectionsd.cpp:403: error: expected initializer before '<' token
+sectionsd.cpp:406: error: 'SIeventPtr' was not declared in this scope
+sectionsd.cpp:406: error: template argument 2 is invalid
+sectionsd.cpp:406: error: template argument 4 is invalid
+sectionsd.cpp:406: error: invalid type in declaration before ';' token
+sectionsd.cpp:416: error: ISO C++ forbids declaration of 'SIeventPtr' with no type
+sectionsd.cpp:416: error: expected ',' or '...' before '&' token
+sectionsd.cpp: In member function 'bool OrderServiceUniqueKeyFirstStartTimeEventUniqueKey::operator()(int)':
+sectionsd.cpp:419: error: 'p1' was not declared in this scope
+sectionsd.cpp:419: error: 'p2' was not declared in this scope
+sectionsd.cpp: At global scope:
+sectionsd.cpp:426: error: 'SIeventPtr' was not declared in this scope
+sectionsd.cpp:426: error: template argument 1 is invalid
+sectionsd.cpp:426: error: template argument 3 is invalid
+sectionsd.cpp:426: error: invalid type in declaration before ';' token
+sectionsd.cpp:431: error: ISO C++ forbids declaration of 'SIeventPtr' with no type
+sectionsd.cpp:431: error: expected ',' or '...' before '&' token
+sectionsd.cpp: In member function 'bool OrderFirstEndTimeServiceIDEventUniqueKey::operator()(int)':
+sectionsd.cpp:434: error: 'p1' was not declared in this scope
+sectionsd.cpp:434: error: 'p2' was not declared in this scope
+sectionsd.cpp: At global scope:
+sectionsd.cpp:442: error: 'SIeventPtr' was not declared in this scope
+sectionsd.cpp:442: error: template argument 1 is invalid
+sectionsd.cpp:442: error: template argument 3 is invalid
+sectionsd.cpp:442: error: invalid type in declaration before ';' token
+sectionsd.cpp: In function 'bool deleteEvent(event_id_t)':
+sectionsd.cpp:654: error: expected initializer before 'e'
+sectionsd.cpp:656: error: 'e' was not declared in this scope
+sectionsd.cpp:656: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:662: error: request for member 'erase' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp:663: error: request for member 'erase' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:668: error: request for member 'erase' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:669: error: request for member 'erase' in 'mySIeventsNVODorderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'void addEvent(const SIevent&, unsigned int, time_t, bool)':
+sectionsd.cpp:725: error: 'SIeventPtr' was not declared in this scope
+sectionsd.cpp:725: error: expected ';' before 'e'
+sectionsd.cpp:728: error: 'e' was not declared in this scope
+sectionsd.cpp:771: error: expected initializer before 'si'
+sectionsd.cpp:772: error: 'si' was not declared in this scope
+sectionsd.cpp:772: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:860: error: 'SIeventPtr' was not declared in this scope
+sectionsd.cpp:860: error: expected ';' before 'e'
+sectionsd.cpp:863: error: 'e' was not declared in this scope
+sectionsd.cpp:870: error: 'e' was not declared in this scope
+sectionsd.cpp:872: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:874: error: expected initializer before 'lastEvent'
+sectionsd.cpp:876: error: 'lastEvent' was not declared in this scope
+sectionsd.cpp:880: error: request for member 'begin' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp:901: error: expected initializer before 'ie'
+sectionsd.cpp:903: error: 'ie' was not declared in this scope
+sectionsd.cpp:903: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:909: error: expected initializer before 'i2'
+sectionsd.cpp:913: error: 'i2' was not declared in this scope
+sectionsd.cpp:913: error: request for member 'end' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:916: error: request for member 'insert' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:917: error: request for member 'insert' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp:931: error: request for member 'insert' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:936: error: request for member 'insert' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:937: error: request for member 'insert' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp: In function 'void addNVODevent(const SIevent&)':
+sectionsd.cpp:993: error: 'SIeventPtr' was not declared in this scope
+sectionsd.cpp:993: error: expected ';' before 'e'
+sectionsd.cpp:996: error: expected initializer before 'e2'
+sectionsd.cpp:998: error: 'e2' was not declared in this scope
+sectionsd.cpp:998: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:1003: error: 'e' was not declared in this scope
+sectionsd.cpp:1009: error: 'e' was not declared in this scope
+sectionsd.cpp:1011: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:1013: error: expected initializer before 'lastEvent'
+sectionsd.cpp:1015: error: 'lastEvent' was not declared in this scope
+sectionsd.cpp:1019: error: request for member 'begin' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp:1030: error: request for member 'insert' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:1032: error: request for member 'insert' in 'mySIeventsNVODorderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:1038: error: request for member 'insert' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:1039: error: request for member 'insert' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp: In function 'void removeOldEvents(long int)':
+sectionsd.cpp:1146: error: expected initializer before 'e'
+sectionsd.cpp:1148: error: 'e' was not declared in this scope
+sectionsd.cpp:1148: error: request for member 'end' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp: At global scope:
+sectionsd.cpp:1258: error: 'boost' has not been declared
+sectionsd.cpp:1258: error: expected initializer before '<' token
+sectionsd.cpp:1261: error: 'SIservicePtr' was not declared in this scope
+sectionsd.cpp:1261: error: template argument 2 is invalid
+sectionsd.cpp:1261: error: template argument 4 is invalid
+sectionsd.cpp:1261: error: invalid type in declaration before ';' token
+sectionsd.cpp:1264: error: 'SIservicePtr' was not declared in this scope
+sectionsd.cpp:1264: error: template argument 2 is invalid
+sectionsd.cpp:1264: error: template argument 4 is invalid
+sectionsd.cpp:1264: error: invalid type in declaration before ';' token
+sectionsd.cpp: In function 'bool addService(const SIservice&, int)':
+sectionsd.cpp:1546: error: expected initializer before 'si'
+sectionsd.cpp:1547: error: 'si' was not declared in this scope
+sectionsd.cpp:1547: error: request for member 'end' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:1555: error: request for member 'erase' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:1567: error: 'SIservicePtr' was not declared in this scope
+sectionsd.cpp:1567: error: expected ';' before 'sptr'
+sectionsd.cpp:1573: error: 'sptr' was not declared in this scope
+sectionsd.cpp:1579: error: 'sptr' was not declared in this scope
+sectionsd.cpp:1582: error: request for member 'insert' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:1588: error: request for member 'insert' in 'mySIservicesNVODorderUniqueKey', which is of non-class type 'MySIservicesNVODorderUniqueKey'
+sectionsd.cpp: In function 'const SIevent& findSIeventForEventUniqueKey(event_id_t)':
+sectionsd.cpp:1744: error: expected initializer before 'e'
+sectionsd.cpp:1746: error: 'e' was not declared in this scope
+sectionsd.cpp:1746: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'const SIevent& findActualSIeventForServiceUniqueKey(t_channel_id, SItime&, long int, unsigned int*)':
+sectionsd.cpp:1759: error: expected initializer before 'e'
+sectionsd.cpp:1759: error: 'e' was not declared in this scope
+sectionsd.cpp:1759: error: request for member 'end' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp: In function 'const SIevent& findNextSIeventForServiceUniqueKey(t_channel_id, SItime&)':
+sectionsd.cpp:1794: error: expected initializer before 'e'
+sectionsd.cpp:1794: error: 'e' was not declared in this scope
+sectionsd.cpp:1794: error: request for member 'end' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp: In function 'const SIevent& findNextSIevent(event_id_t, SItime&)':
+sectionsd.cpp:1871: error: expected initializer before 'eFirst'
+sectionsd.cpp:1873: error: 'eFirst' was not declared in this scope
+sectionsd.cpp:1873: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:1890: error: expected initializer before 'eNext'
+sectionsd.cpp:1894: error: expected initializer before 'e'
+sectionsd.cpp:1894: error: 'e' was not declared in this scope
+sectionsd.cpp:1895: error: request for member 'end' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp:1901: error: 'eNext' was not declared in this scope
+sectionsd.cpp:1906: error: 'eNext' was not declared in this scope
+sectionsd.cpp:1933: error: 'eNext' was not declared in this scope
+sectionsd.cpp:1942: error: 'eNext' was not declared in this scope
+sectionsd.cpp: In function 'void findPrevNextSIevent(event_id_t, SItime&, SIevent&, SItime&, SIevent&, SItime&)':
+sectionsd.cpp:2046: error: expected initializer before 'eFirst'
+sectionsd.cpp:2048: error: 'eFirst' was not declared in this scope
+sectionsd.cpp:2048: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:2083: error: expected initializer before 'eNext'
+sectionsd.cpp:2085: error: 'eNext' was not declared in this scope
+sectionsd.cpp:2085: error: request for member 'begin' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:2098: error: 'eNext' was not declared in this scope
+sectionsd.cpp:2100: error: request for member 'end' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp: In function 'void commandDumpAllServices(int, char*, unsigned int)':
+sectionsd.cpp:2216: error: expected initializer before 's'
+sectionsd.cpp:2216: error: 's' was not declared in this scope
+sectionsd.cpp:2216: error: request for member 'end' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp: In function 'void sendAllEvents(int, t_channel_id, bool, char, std::string)':
+sectionsd.cpp:2351: error: expected initializer before 'e'
+sectionsd.cpp:2351: error: 'e' was not declared in this scope
+sectionsd.cpp:2351: error: request for member 'end' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp: In function 'void commandDumpStatusInformation(int, char*, unsigned int)':
+sectionsd.cpp:2517: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:2519: error: request for member 'size' in 'mySIeventsNVODorderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:2527: error: request for member 'size' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:2529: error: request for member 'size' in 'mySIservicesNVODorderUniqueKey', which is of non-class type 'MySIservicesNVODorderUniqueKey'
+sectionsd.cpp: In function 'void commandComponentTagsUniqueKey(int, char*, unsigned int)':
+sectionsd.cpp:2693: error: expected initializer before 'eFirst'
+sectionsd.cpp:2706: error: 'eFirst' was not declared in this scope
+sectionsd.cpp:2706: error: request for member 'find' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:2708: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:2735: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'void commandLinkageDescriptorsUniqueKey(int, char*, unsigned int)':
+sectionsd.cpp:2783: error: expected initializer before 'eFirst'
+sectionsd.cpp:2800: error: 'eFirst' was not declared in this scope
+sectionsd.cpp:2800: error: request for member 'find' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:2802: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:2837: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'void commandCurrentNextInfoChannelID(int, char*, unsigned int)':
+sectionsd.cpp:3118: error: expected initializer before 'si'
+sectionsd.cpp:3119: error: 'si' was not declared in this scope
+sectionsd.cpp:3119: error: request for member 'find' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:3121: error: request for member 'end' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:3143: error: expected initializer before 'eFirst'
+sectionsd.cpp:3145: error: 'eFirst' was not declared in this scope
+sectionsd.cpp:3145: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:3149: error: request for member 'begin' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:3152: error: request for member 'begin' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'void sendEventList(int, unsigned char, unsigned char, int, t_channel_id*, int)':
+sectionsd.cpp:3690: error: expected initializer before 'e'
+sectionsd.cpp:3690: error: 'e' was not declared in this scope
+sectionsd.cpp:3690: error: request for member 'end' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:3699: error: expected initializer before 's'
+sectionsd.cpp:3701: error: 's' was not declared in this scope
+sectionsd.cpp:3701: error: request for member 'end' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp: In function 'void commandTimesNVODservice(int, char*, unsigned int)':
+sectionsd.cpp:4031: error: expected initializer before 'si'
+sectionsd.cpp:4047: error: 'si' was not declared in this scope
+sectionsd.cpp:4047: error: request for member 'find' in 'mySIservicesNVODorderUniqueKey', which is of non-class type 'MySIservicesNVODorderUniqueKey'
+sectionsd.cpp:4049: error: request for member 'end' in 'mySIservicesNVODorderUniqueKey', which is of non-class type 'MySIservicesNVODorderUniqueKey'
+sectionsd.cpp: In function 'void deleteSIexceptEPG()':
+sectionsd.cpp:4289: error: request for member 'clear' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp: In function 'void commandFreeMemory(int, char*, unsigned int)':
+sectionsd.cpp:4309: error: request for member 'clear' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp:4310: error: request for member 'clear' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:4311: error: request for member 'clear' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:4312: error: request for member 'clear' in 'mySIeventsNVODorderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'void commandWriteSI2XML(int, char*, unsigned int)':
+sectionsd.cpp:4624: error: expected initializer before 'e'
+sectionsd.cpp:4626: error: 'e' was not declared in this scope
+sectionsd.cpp:4626: error: request for member 'end' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:4640: error: request for member 'end' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp: In function 'void* eitThread(void*)':
+sectionsd.cpp:7288: error: expected initializer before 'si'
+sectionsd.cpp:7292: error: 'si' was not declared in this scope
+sectionsd.cpp:7292: error: request for member 'find' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:7294: error: 'si' was not declared in this scope
+sectionsd.cpp:7294: error: request for member 'end' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:7453: error: expected initializer before 'si'
+sectionsd.cpp:7455: error: 'si' was not declared in this scope
+sectionsd.cpp:7455: error: request for member 'end' in 'mySIservicesNVODorderUniqueKey', which is of non-class type 'MySIservicesNVODorderUniqueKey'
+sectionsd.cpp: In function 'void* houseKeepingThread(void*)':
+sectionsd.cpp:8104: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8110: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8111: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8114: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8119: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8126: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8129: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8132: error: request for member 'size' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8133: error: request for member 'size' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:8134: error: request for member 'size' in 'mySIeventsOrderFirstEndTimeServiceIDEventUniqueKey', which is of non-class type 'MySIeventsOrderFirstEndTimeServiceIDEventUniqueKey'
+sectionsd.cpp:8135: error: request for member 'size' in 'mySIeventsNVODorderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'void sectionsd_main_thread(void*)':
+sectionsd.cpp:8597: warning: dereferencing type-punned pointer will break strict-aliasing rules
+sectionsd.cpp: In function 'void sectionsd_getEventsServiceKey(t_channel_id, CChannelEventList&, char, std::string)':
+sectionsd.cpp:8700: error: expected initializer before 'e'
+sectionsd.cpp:8700: error: 'e' was not declared in this scope
+sectionsd.cpp:8700: error: request for member 'end' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp: In function 'void sectionsd_getCurrentNextServiceKey(t_channel_id, CSectionsdClient::responseGetCurrentNextInfoChannelID&)':
+sectionsd.cpp:8827: error: expected initializer before 'si'
+sectionsd.cpp:8828: error: 'si' was not declared in this scope
+sectionsd.cpp:8828: error: request for member 'find' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:8830: error: request for member 'end' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:8852: error: expected initializer before 'eFirst'
+sectionsd.cpp:8854: error: 'eFirst' was not declared in this scope
+sectionsd.cpp:8854: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8858: error: request for member 'begin' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp:8861: error: request for member 'begin' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'void sectionsd_getChannelEvents(CChannelEventList&, bool, t_channel_id*, int)':
+sectionsd.cpp:9139: error: expected initializer before 'e'
+sectionsd.cpp:9139: error: 'e' was not declared in this scope
+sectionsd.cpp:9139: error: request for member 'end' in 'mySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey', which is of non-class type 'MySIeventsOrderServiceUniqueKeyFirstStartTimeEventUniqueKey'
+sectionsd.cpp:9148: error: expected initializer before 's'
+sectionsd.cpp:9150: error: 's' was not declared in this scope
+sectionsd.cpp:9150: error: request for member 'end' in 'mySIservicesOrderUniqueKey', which is of non-class type 'MySIservicesOrderUniqueKey'
+sectionsd.cpp:9171: warning: unused variable 'eName'
+sectionsd.cpp:9172: warning: unused variable 'eText'
+sectionsd.cpp:9173: warning: unused variable 'eExtendedText'
+sectionsd.cpp: In function 'bool sectionsd_getComponentTagsUniqueKey(event_id_t, std::vector<CSectionsdClient::responseGetComponentTags, std::allocator<CSectionsdClient::responseGetComponentTags> >&)':
+sectionsd.cpp:9209: error: expected initializer before 'eFirst'
+sectionsd.cpp:9211: error: 'eFirst' was not declared in this scope
+sectionsd.cpp:9211: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'bool sectionsd_getLinkageDescriptorsUniqueKey(event_id_t, std::vector<CSectionsdClient::responseGetLinkageDescriptors, std::allocator<CSectionsdClient::responseGetLinkageDescriptors> >&)':
+sectionsd.cpp:9238: error: expected initializer before 'eFirst'
+sectionsd.cpp:9240: error: 'eFirst' was not declared in this scope
+sectionsd.cpp:9240: error: request for member 'end' in 'mySIeventsOrderUniqueKey', which is of non-class type 'MySIeventsOrderUniqueKey'
+sectionsd.cpp: In function 'bool sectionsd_getNVODTimesServiceKey(t_channel_id, std::vector<CSectionsdClient::responseGetNVODTimes, std::allocator<CSectionsdClient::responseGetNVODTimes> >&)':
+sectionsd.cpp:9271: error: expected initializer before 'si'
+sectionsd.cpp:9272: error: 'si' was not declared in this scope
+sectionsd.cpp:9272: error: request for member 'end' in 'mySIservicesNVODorderUniqueKey', which is of non-class type 'MySIservicesNVODorderUniqueKey'
+make[3]: *** [sectionsd.o] Error 1
+make[2]: *** [all-recursive] Error 1
+make[1]: *** [all-recursive] Error 1
+make: *** [all] Error 2

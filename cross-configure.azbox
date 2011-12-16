@@ -1,0 +1,51 @@
+#!/bin/sh
+
+OE_BASE=`echo $BBPATH | cut -d":" -f 3- | sed -e 's,/$,,'`
+PREFIX=$OE_BASE/tmp/staging/mipsel-oe-linux/usr
+CCPATH=
+HOST=mipsel-oe-linux
+
+export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
+export CC=$CCPATH$HOST-gcc
+export AR=$CCPATH$HOST-ar
+export NM=$CCPATH$HOST-nm
+export RANLIB=$CCPATH$HOST-ranlib
+export OBJDUMP=$CCPATH$HOST-objdump
+export STRIP=$CCPATH$HOST-strip
+
+export CFLAGS="-Wall -g0 -O2 \
+	 -D__KERNEL_STRICT_NAMES -DAZBOX_GEN_1 \
+	-I"$PWD"/include -I"$PWD"/include/linux/dvb -I"$PREFIX"/include/freetype2 \
+	-I"$PREFIX"/include/gstreamer-0.10 -I"$PREFIX"/include/glib-2.0 -I"$PREFIX"/include/libxml2"
+
+export CXXFLAGS="-Wall -g0 -O2 \
+	 -D__KERNEL_STRICT_NAMES -DAZBOX_GEN_1 \
+	-I"$PWD"/include -I"$PWD"/include/linux/dvb -I"$PREFIX"/include/freetype2 \
+	-I"$PREFIX"/include/gstreamer-0.10 -I"$PREFIX"/include/glib-2.0 -I"$PREFIX"/include/libxml2"
+
+
+export LDFLAGS="-L"$PREFIX"/lib  -lcurl -lssl -lcrypto -ldl -L"$PREFIX"/lib/gstreamer-0.10 -lgstreamer-0.10"
+
+export DVB_API_VERSION=3
+export FREETYPE_CONFIG=$OE_BASE/tmp/staging/i686-linux/usr/bin/mipsel-oe-linux/freetype-config
+export CURL_CONFIG=$OE_BASE/tmp/staging/i686-linux/usr/bin/mipsel-oe-linux/curl-config
+export AVFORMAT_CFLAGS=$OE_BASE/tmp/staging/mipsel-oe-linux/usr/include
+export AVFORMAT_LIBS="-L"$OE_BASE"/tmp/staging/mipsel-oe-linux/usr/lib/ -lavformat"
+
+export AVCODEC_CFLAGS=$OE_BASE/tmp/staging/mipsel-oe-linux/usr/include
+export AVCODEC_LIBS="-L"$OE_BASE"/tmp/staging/mipsel-oe-linux/usr/lib/ -lavcodec"
+
+export AVUTIL_CFLAGS=$OE_BASE/tmp/staging/mipsel-oe-linux/usr/include
+export AVUTIL_LIBS="-L"$OE_BASE"/tmp/staging/mipsel-oe-linux/usr/lib/ -lavutil"
+
+export ID3TAG_CFLAGS=$OE_BASE/tmp/staging/mipsel-oe-linux/usr/include
+export ID3TAG_LIBS="-L"$OE_BASE"/tmp/staging/mipsel-oe-linux/usr/lib/ -lid3tag"
+
+export MAD_CFLAGS=$OE_BASE/tmp/staging/mipsel-oe-linux/usr/include
+export MAD_LIBS="-L"$OE_BASE"/tmp/staging/mipsel-oe-linux/usr/lib/ -lmad"
+
+export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
+
+./autogen.sh
+./configure --prefix=${PREFIX} --build=i386-pc-linux-gnu --host=$HOST --with-target=cdk --with-targetprefix="" "$*"
+

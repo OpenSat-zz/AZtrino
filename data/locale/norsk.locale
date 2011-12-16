@@ -1,0 +1,969 @@
+AUDIOSelectMenue.head Lydvalg
+EPGMenu.epgplus EPG Oversikt
+EPGMenu.eventinfo Detaljer om nåværende program
+EPGMenu.eventlist EPG nåværende program
+EPGMenu.head EPG - Program Informasjon
+EPGMenu.streaminfo Teknisk informasjon
+EPGPlus.actions Handlinger
+EPGPlus.bybouquet_mode av favoritt-liste
+EPGPlus.bypage_mode av side
+EPGPlus.change_font_size Bytt tekst størrelse
+EPGPlus.change_font_style Bytt tekst utseende
+EPGPlus.change_size Forandre størrelse
+EPGPlus.channelentry_font Kanaler
+EPGPlus.channelentry_separationlineheight høyde av linje mellom poster
+EPGPlus.channelentry_width lengde av kanalnavnscrambled_channel Scrambled channel
+EPGPlus.channelevententry_font Program
+EPGPlus.edit_fonts Editer tekst
+EPGPlus.edit_sizes Editer størrelser
+EPGPlus.font_style_bold fet
+EPGPlus.font_style_italic kursiv
+EPGPlus.font_style_regular vanlig
+EPGPlus.footer_fontbouquetchannelname Valgt favorittliste -/kanalnavn
+EPGPlus.footer_fontbuttons Knapper
+EPGPlus.footer_fonteventdescription Tittel 1 valgt program
+EPGPlus.footer_fonteventshortdescription Tittel 2 valgt program
+EPGPlus.head EPG (EPG Pluss)
+EPGPlus.header_font Hoved
+EPGPlus.horgap1_height høyde 1
+EPGPlus.horgap2_height høyde 2
+EPGPlus.next_bouquet Neste favorittliste
+EPGPlus.options Innstillinger
+EPGPlus.page_down Side ned
+EPGPlus.page_up Side opp
+EPGPlus.prev_bouquet Forrige favorittliste
+EPGPlus.record Ta opp
+EPGPlus.refresh_epg Oppdatere
+EPGPlus.remind Oversikt
+EPGPlus.reset_settings Gjennopprett Innstillinger
+EPGPlus.save_settings Langre Innstillinger
+EPGPlus.scroll_mode Scroll modus
+EPGPlus.select_font_name Tekstvalg
+EPGPlus.settings Innstillinger
+EPGPlus.slider_width slider bredde
+EPGPlus.stretch_mode utstrekk modus
+EPGPlus.swap_mode overhopp modus
+EPGPlus.timeline_fontdate Dato Innstillinger
+EPGPlus.timeline_fonttime Tidsinnstillinger
+EPGPlus.vergap1_width lengde versjon 1
+EPGPlus.vergap2_width lengde versjon 2
+EPGPlus.view_mode Se modus
+GENRE.ARTS.0 kunst/kultur
+GENRE.ARTS.1 kunstlig oppvisning
+GENRE.ARTS.10 kunst/kultur magasin
+GENRE.ARTS.11 mote
+GENRE.ARTS.2 fin kunst
+GENRE.ARTS.3 religion
+GENRE.ARTS.4 populær kultur/tradisjonell kunst
+GENRE.ARTS.5 litteratur
+GENRE.ARTS.6 film/kino
+GENRE.ARTS.7 eksperimentell film/video
+GENRE.ARTS.8 aktører/presse
+GENRE.ARTS.9 nytt media
+GENRE.CHILDRENs_PROGRAMMES.0 barn/ungdomsprogram
+GENRE.CHILDRENs_PROGRAMMES.1 førskole barneprogram
+GENRE.CHILDRENs_PROGRAMMES.2 underholdningsprogram fra 6 til 14
+GENRE.CHILDRENs_PROGRAMMES.3 underholdningsprogram fra 10 til 19
+GENRE.CHILDRENs_PROGRAMMES.4 informasjon/utdanning/skoleprogram
+GENRE.CHILDRENs_PROGRAMMES.5 animasjon/dukketeater
+GENRE.DOCUS_MAGAZINES.0 dokumentarer/magasiner
+GENRE.DOCUS_MAGAZINES.1 natur/dyr/miljø
+GENRE.DOCUS_MAGAZINES.2 teknologi/naturvitenskap
+GENRE.DOCUS_MAGAZINES.3 medisin/psykologi
+GENRE.DOCUS_MAGAZINES.4 andre Land/ ekspedisjoner
+GENRE.DOCUS_MAGAZINES.5 sosial/åndelig
+GENRE.DOCUS_MAGAZINES.6 videreutdanning
+GENRE.DOCUS_MAGAZINES.7 språk
+GENRE.MOVIE.0 film/drama
+GENRE.MOVIE.1 krim/skrekk
+GENRE.MOVIE.2 eventyr/western/krig
+GENRE.MOVIE.3 science fiction/fantasi/skrekk
+GENRE.MOVIE.4 komedie
+GENRE.MOVIE.5 såpe/mellodrama/folkehistorie
+GENRE.MOVIE.6 roman
+GENRE.MOVIE.7 seriøst/klassisk/religion/historisk film/drama
+GENRE.MOVIE.8 voksenfilm/drama
+GENRE.MUSIC_DANCE.0 musikk/balett/dans
+GENRE.MUSIC_DANCE.1 rock/pop
+GENRE.MUSIC_DANCE.2 klassisk musik
+GENRE.MUSIC_DANCE.3 folk/tradisjonell musikk
+GENRE.MUSIC_DANCE.4 jazz
+GENRE.MUSIC_DANCE.5 musikkal/opera
+GENRE.MUSIC_DANCE.6 balett
+GENRE.NEWS.0 nyheter
+GENRE.NEWS.1 nyheter/værmelding
+GENRE.NEWS.2 nyhetsmagasin
+GENRE.NEWS.3 dokumentar
+GENRE.NEWS.4 diskusjon/intervju/debatt
+GENRE.SHOW.0 Show / Gameshow
+GENRE.SHOW.1 game show/spørre-konkuranser
+GENRE.SHOW.2 varierte program
+GENRE.SHOW.3 talkshow
+GENRE.SOCIAL_POLITICAL.0 sosiale & politisk/bedrifter
+GENRE.SOCIAL_POLITICAL.1 magasin/rapporter/dokumentarer
+GENRE.SOCIAL_POLITICAL.2 økonomi/sosiale spørsmål
+GENRE.SOCIAL_POLITICAL.3 benevningsrike mennesker
+GENRE.SPORTS.0 sport
+GENRE.SPORTS.1 spesielle arrangement (OL, VM osv.)
+GENRE.SPORTS.10 heste sport
+GENRE.SPORTS.11 kamp sport
+GENRE.SPORTS.2 sport magasin
+GENRE.SPORTS.3 fotball
+GENRE.SPORTS.4 tennis/squash
+GENRE.SPORTS.5 lagsporter (eksklusiv fotball)
+GENRE.SPORTS.6 fri-idrett
+GENRE.SPORTS.7 motorsport
+GENRE.SPORTS.8 vannsport
+GENRE.SPORTS.9 vintersport
+GENRE.TRAVEL_HOBBIES.0 reise & rekreasjon
+GENRE.TRAVEL_HOBBIES.1 turist /reiser
+GENRE.TRAVEL_HOBBIES.2 håndtverk
+GENRE.TRAVEL_HOBBIES.3 motorer
+GENRE.TRAVEL_HOBBIES.4 trening & helse
+GENRE.TRAVEL_HOBBIES.5 matlaging
+GENRE.TRAVEL_HOBBIES.6 reklame/shopping
+GENRE.TRAVEL_HOBBIES.7 hage
+GENRE.UNKNOWN ukjent
+apidselector.head Velg språk
+audiomenu.PCMOffset senk volumen (PCM)
+audiomenu.analogout Analog utgang
+audiomenu.avs avs
+audiomenu.avs_control Volumkontroll 
+audiomenu.dolbydigital Dolby Digital som standard
+audiomenu.head Lydinnstillinger
+audiomenu.lirc lirc
+audiomenu.monoleft mono venstre
+audiomenu.monoright mono høyre
+audiomenu.ost ost
+audiomenu.stereo stereo
+audiomenu.hdmi_dd Kryptert DD på HDMI
+audiomenu.spdif_dd Kryptert DD på SPDIF
+audioplayer.add Legg til
+audioplayer.artist_title Artist, Tittel
+audioplayer.building_search_index bygger søkindex
+audioplayer.button_select_title_by_id søk etter ID
+audioplayer.button_select_title_by_name søk etter navn
+audioplayer.defdir start mappe
+audioplayer.delete slett
+audioplayer.deleteall slett alle
+audioplayer.display_order sorter etter
+audioplayer.enable_sc_metadata aktiver shoutcast meta data lesing
+audioplayer.fastforward fast fremover
+audioplayer.follow auto velg nåværende
+audioplayer.head Lyd spilleliste
+audioplayer.highprio høy dekodningsprioritet
+audioplayer.jump_backwards hopp bakover
+audioplayer.jump_dialog_hint1 Angi destinasjonsmål
+audioplayer.jump_dialog_hint2 (relativt, i sekunder)
+audioplayer.jump_dialog_title Angi destinasjonsmål
+audioplayer.jump_forwards hopp framover
+audioplayer.keylevel nøkkelnivå
+audioplayer.name Auido-spiller
+audioplayer.pause pause
+audioplayer.play Avspill
+audioplayer.playing Nåværende spor
+audioplayer.playlist_fileerror_msg Filen kunne ikke skapes
+audioplayer.playlist_fileoverwrite_msg Vil du overskrive denne filen?
+audioplayer.playlist_fileoverwrite_title Overskriv?
+audioplayer.playlist_name filnavn på spillelisten
+audioplayer.playlist_name_hint1 Angi filnavnet på spillelisten
+audioplayer.playlist_name_hint2 Suffixet .m3u kommer til å bli standard
+audioplayer.reading_files leser meta data
+audioplayer.repeat_on aktivere gjentagelse (repeat)
+audioplayer.rewind spole bakover
+audioplayer.save_playlist lagre spillelisten
+audioplayer.screensaver_timeout timeout skermsparer (min, 0=av)
+audioplayer.select_title_by_name søk tittel via navn (SMS)
+audioplayer.show_playlist vis spilleliste
+audioplayer.shuffle omsorter (shuffle)
+audioplayer.stop Stopp
+audioplayer.title_artist Tittel, Artist
+audioplayerpicsettings.general Musikkspiller/videospiller
+bookmarkmanager.delete slett
+bookmarkmanager.name bokmmerke
+bookmarkmanager.rename bytt navn
+bookmarkmanager.select velg
+bouqueteditor.add Legg til
+bouqueteditor.bouquetname Navn på favorittliste
+bouqueteditor.delete Slett
+bouqueteditor.discardingchanges fjerner endringer. vennligst vent..
+bouqueteditor.hide Skjul
+bouqueteditor.lock Lås
+bouqueteditor.move Flytt
+bouqueteditor.name Endre favorittliste
+bouqueteditor.newbouquetname Endre navn på favorittliste
+bouqueteditor.rename Bytt navn
+bouqueteditor.return klar
+bouqueteditor.savechanges? Vil du lagre endringene?
+bouqueteditor.savingchanges Lagrer endringer. Vennligst vent..
+bouqueteditor.switch legg til/fjern
+bouqueteditor.switchmode TV/Radio
+bouquetlist.head Favorittlister
+cablesetup.provider kabel operatør
+channellist.extended Utvidet Kanal Liste
+channellist.head Alla tjenester
+channellist.nonefound Ingen kanaler funnet!\nVennligst gjør et søk\n(dbox-knapp -> tjenester)
+channellist.since siden %02d:%02d
+channellist.make_hdlist Opprett HD Kanalliste
+colorchooser.alpha alpha
+colorchooser.blue blå
+colorchooser.green grønn
+colorchooser.red rød
+colormenu.background Bakgrunn
+colormenu.fade Tone ned menyer
+colormenu.font Skrift størrelse
+colormenu.gtx_alpha Gjennomsiktighet (GTX)
+colormenu.head Fargeinnstillinger
+colormenu.menucolors Menyfarger
+colormenu.statusbar Info bar
+colormenu.textcolor Tekstfarge
+colormenu.themeselect Velg Skin
+colormenu.timing OSD Timing
+colormenusetup.head Menyfarger
+colormenusetup.menucontent Vinduinnhold
+colormenusetup.menucontent_inactive Vinduinnhold deaktivert
+colormenusetup.menucontent_selected Vinduinnhold valgt
+colormenusetup.menuhead Menytopp
+colorstatusbar.head Info bar
+colorstatusbar.text Info bar
+colorthememenu.classic_theme Klassisk skin
+colorthememenu.dblue_theme DarkBlue skin
+colorthememenu.dvb2k_theme DVB2000 skin
+colorthememenu.head Skin velger
+colorthememenu.neutrino_theme AZtrino skin
+date.Apr Apr
+date.Aug Aug
+date.Dec Des
+date.Feb Feb
+date.Fri Fre
+date.Jan Jan
+date.Jul Jul
+date.Jun Jun
+date.Mar Mar
+date.May Mai
+date.Mon Man
+date.Nov Nov
+date.Oct Okt
+date.Sat Lør
+date.Sep Sep
+date.Sun Søn
+date.Thu Tor
+date.Tue Tir
+date.Wed Ons
+epgextended.actors Skuespillere
+epgextended.director Regisør
+epgextended.guests Gjester
+epgextended.original_title Originaltittel
+epgextended.presenter Presentatør
+epgextended.year_of_production Produsert år
+epglist.noevents EPG er ikke tilgjengelig..
+epgviewer.More_Screenings Mer visninger på denne kanal
+epgviewer.nodetailed Ingen detaljert informasjon tilgjengelig
+epgviewer.notfound ingen EPG funnet
+eventfinder.search Søk
+eventlistbar.channelswitch reservasjon(timer)
+eventlistbar.eventsort sortering
+eventlistbar.recordevent Ta opp
+favorites.addchannel Nåværende kanal kommer til å legges\ntil i favorittlisten "Mine favoritter".\nDette tar noen sekundrr...
+favorites.bouquetname Mine favoritter
+favorites.bqcreated Favoritt liste "Mine favoritter" er laget...\n
+favorites.chadded nåværende kanal er lagt til i dine favoritter..\n
+favorites.chalreadyinbq Nåværende kanal er allerede i dine favoritter...\n
+favorites.finalhint \nBruk favorittliste editor for å endre dine favoritter.\n
+favorites.menueadd legg til kanal til favoritter
+favorites.nobouquets Favoritter er bare tilgjengelige med aktiveret favorittliste.
+filebrowser.delete Slett
+filebrowser.denydirectoryleave Topp startmappe
+filebrowser.dodelete1 Slett
+filebrowser.dodelete2 ?
+filebrowser.filter.active Filter på
+filebrowser.filter.inactive Filter av
+filebrowser.head Filoversikt
+filebrowser.mark Marker
+filebrowser.nextpage Nesta side
+filebrowser.prevpage Forrige side
+filebrowser.scan Søker mappe..
+filebrowser.select Velg
+filebrowser.showrights Vis filrettigheter
+filebrowser.sort.date (dato)
+filebrowser.sort.name (filnavn)
+filebrowser.sort.namedirsfirst (filnavn2)
+filebrowser.sort.size (Størrelse)
+filebrowser.sort.type (type)
+filesystem.is.utf8 filsystem
+filesystem.is.utf8.option.iso8859.1 ISO-8859-1
+filesystem.is.utf8.option.utf8 UTF-8
+flashupdate.actionreadflash leser flash
+flashupdate.cantopenfile kan ikke åpne filer
+flashupdate.cantopenmtd kan ikke åpne mtd-enhet
+flashupdate.checkupdate søker etter ny versjon
+flashupdate.currentreleasecycle Lanseringssyklus
+flashupdate.currentversion_sep Nåvørende versjon
+flashupdate.currentversiondate Dato
+flashupdate.currentversionsnapshot Bildetype
+flashupdate.currentversiontime Tid
+flashupdate.erasefailed sletting av flash feilet
+flashupdate.erasing sletter flash
+flashupdate.experimentalimage Denne imagen er en utestet versjon, dette betyr\nat din .box kanksje ikke starter etter oppdateringen.\n\nVil du virkelig oppdatere til denne versjonen?
+flashupdate.expertfunctions Avanserte funksjoner
+flashupdate.fileis0bytes filstørrelser 0 Bytes
+flashupdate.fileselector Filvelger
+flashupdate.flashreadyreboot Flashning av image er vellykket.\nDin AZBox startes på nytt.
+flashupdate.getinfofile henter versjons informasjon
+flashupdate.getinfofileerror kan ikke hente versjon informasjon
+flashupdate.getupdatefile henter oppdatering
+flashupdate.getupdatefileerror kan ikke hente opppdatering
+flashupdate.globalprogress Global prosess:
+flashupdate.head Oppdatering av programvare
+flashupdate.md5check undersøker image
+flashupdate.md5sumerror image inneholder feil
+flashupdate.msgbox Funnet følgende image:\nDato: %s, %s\nBasimage: %s\nImagetyp: %s\n\nVil du laste ned og installere denne versjonen nå?
+flashupdate.msgbox_manual Funnet følgende ny image:\nDato: %s, %s\nBasimage: %s\nImagetyp: %s\n\nVil du installere denne versjon nå?
+flashupdate.mtdselector Partisjonsvelger
+flashupdate.programmingflash programmerer flash
+flashupdate.proxypassword Passord
+flashupdate.proxypassword_hint1 angi passord for proxyserver
+flashupdate.proxypassword_hint2    
+flashupdate.proxyserver Server
+flashupdate.proxyserver_hint1 angi proxyservers navn og IP, bruk navn:port
+flashupdate.proxyserver_hint2 la raden være tom om du ikke har en proxy
+flashupdate.proxyserver_sep Proxyserver
+flashupdate.proxyusername Brukernavn
+flashupdate.proxyusername_hint1 angi brukernavn for proxyserver
+flashupdate.proxyusername_hint2 la randen være tom om du ikke bruker proxy-auth
+flashupdate.readflash Les image
+flashupdate.readflashmtd Les en partisjon
+flashupdate.ready klar
+flashupdate.reallyflashmtd Vil du virkelig flashe?\n\nOm en feil oppstår eller om imagen er invalid\n kan boxen ikke startet etter flashing.\n\Imagenavn: %s\nMål: %s
+flashupdate.savesuccess Image lagret under\n%s.
+flashupdate.selectimage Tilgjengelige Programvare
+flashupdate.squashfs.noversion Kontroll av SquashFS versjon er endret mulig når oppdatering gjøres via web.\nEr du sikker på at du vill installere denne imagen?
+flashupdate.titlereadflash Leser Flash
+flashupdate.titlewriteflash Skriver Flash
+flashupdate.updatemode Oppdateringsmodus
+flashupdate.updatemode_internet Internett
+flashupdate.updatemode_manual manuell(ftp)
+flashupdate.url_file konfigurasjonsfil
+flashupdate.versioncheck undersøker versjon
+flashupdate.writeflash Skriv hele imagen
+flashupdate.writeflashmtd Skriv en partisjon
+flashupdate.wrongbase Din lanseringscykel skiller seg ut, kan ikke oppdatere\nuten å ha den rette versjonen installert!
+fontmenu.channellist Kanal-liste
+fontmenu.epg EPG
+fontmenu.eventlist EPG Liste
+fontmenu.gamelist Spill Liste
+fontmenu.head Innstillinger for tekst størrelse
+fontmenu.infobar Info-bar
+fontsize.channel_num_zap Direktevalg
+fontsize.channellist Kanal-Liste
+fontsize.channellist_descr Beskrivelse
+fontsize.channellist_number Nummer
+fontsize.epg_date EPG Dato
+fontsize.epg_info1 EPG Info 1
+fontsize.epg_info2 EPG Info 2
+fontsize.epg_title EPG tittel
+fontsize.eventlist_datetime dato / tid
+fontsize.eventlist_itemlarge stor
+fontsize.eventlist_itemsmall liten
+fontsize.eventlist_title Tittel
+fontsize.filebrowser_item Filvelger post
+fontsize.gamelist_itemlarge stor
+fontsize.gamelist_itemsmall liten
+fontsize.hint Initialiserer font,\nvennligst vent..
+fontsize.infobar_channame Kanalnavn
+fontsize.infobar_info Info
+fontsize.infobar_number Nummer
+fontsize.infobar_small Liten
+fontsize.menu Menytekst
+fontsize.menu_info Meny Info
+fontsize.menu_title Meny Tittel
+gtxalpha.alpha1 Alpha 1
+gtxalpha.alpha2 Alpha 2
+infoviewer.epgnotload EPG ikke lastet....
+infoviewer.epgwait venter på EPG..
+infoviewer.eventlist EPG Liste
+infoviewer.motor_moving Antenneposisjon
+infoviewer.nocurrent Ingen info for nåværende program tilgjengelig
+infoviewer.noepg EPG ikke tilgjengelig
+infoviewer.notavailable Kanal ikke tilgjengelig
+infoviewer.selecttime Tidsvalg
+infoviewer.streaminfo Tjenester
+infoviewer.subchan_disp_pos Underkanal visning
+infoviewer.subservice Underkanaler
+infoviewer.waittime Venter på tid...
+ipsetup.hint_1 Bruk 0..9, eller Opp/Ned,
+ipsetup.hint_2 OK Lagrer, Exit avbryter
+keybindingmenu.RC Lås knapprepetering
+keybindingmenu.addrecord legg til opptakstimer
+keybindingmenu.addremind legg til påminnelse-timer
+keybindingmenu.allchannels_on_ok alle-kanaler
+keybindingmenu.bouquetchannels_on_ok nåværande kanalliste
+keybindingmenu.bouquetdown Kanalliste tillbake
+keybindingmenu.bouquethandling Kanalliste Oppsett
+keybindingmenu.bouquetlist_on_ok kanalliste
+keybindingmenu.bouquetup Neste Kanalliste
+keybindingmenu.cancel Lukk kanalliste
+keybindingmenu.channeldown kanal ned
+keybindingmenu.channellist Kanalliste
+keybindingmenu.channelup kanal opp
+keybindingmenu.head Knapp Oppsett
+keybindingmenu.lastchannel Sistvalgt kanal
+keybindingmenu.modechange Endre modus
+keybindingmenu.pagedown side ned
+keybindingmenu.pageup side opp
+keybindingmenu.quickzap Hurtig-zap
+keybindingmenu.repeatblock Repetisjon utsettelse
+keybindingmenu.repeatblockgeneric Generisk utsettelse
+keybindingmenu.sort endra sortering
+keybindingmenu.subchanneldown underkanal ned
+keybindingmenu.subchannelup underkanal opp
+keybindingmenu.tvradiomode TV/Radio-modus
+keybindingmenu.zaphistory Zap-logg Liste
+keychooser.head Angi ny nøkkel
+keychooser.text1 Vennligst trykk den nye knappen
+keychooser.text2 venta ett par sekunder før avbryt
+keychoosermenu.currentkey nåværande knapp
+keychoosermenu.setnew angi ny knapp
+keychoosermenu.setnone ingen knapp
+languagesetup.head Språk Innstilling
+languagesetup.select Språk
+lcdcontroler.brightness Normal lysstyrke
+lcdcontroler.brightnessstandby Lysstyrke standbye
+lcdcontroler.contrast Kontrast
+lcdmenu.autodimm Auto dim
+lcdmenu.dim_brightness Lysstyrke etter dimmer timeout
+lcdmenu.dim_time Dimmer timeout
+lcdmenu.head LCD Innstilling
+lcdmenu.inverse Inverter
+lcdmenu.lcdcontroler Kontrast / Lysstyrke
+lcdmenu.power Strøm
+lcdmenu.statusline Statuslinje
+lcdmenu.statusline.both volum / spilletid
+lcdmenu.statusline.playtime Spilletid
+lcdmenu.statusline.volume Lydstyrke
+mainmenu.audioplayer Lydspiller
+mainmenu.games Spill
+mainmenu.head Hovedmeny
+mainmenu.movieplayer Videospiller
+mainmenu.pausesectionsd Les EPG
+mainmenu.pictureviewer Bildeviser
+mainmenu.radiomode Radio-Modus
+mainmenu.reboot Start på Nytt
+mainmenu.recording Opptak
+mainmenu.recording_start start
+mainmenu.recording_stop stopp
+mainmenu.scartmode Scart-Modus
+mainmenu.scripts Skript
+mainmenu.service Tjenester
+mainmenu.settings Oppsett
+mainmenu.shutdown Skru Av
+mainmenu.sleeptimer Sleep timer
+mainmenu.tvmode TV-Modus
+mainsettings.audio Lyd
+mainsettings.head Oppsett
+mainsettings.keybinding Knapp Oppsett
+mainsettings.language Språk
+mainsettings.timezone Tid Sone
+mainsettings.lcd LCD-skjerm
+mainsettings.misc Ekstra Oppsett
+mainsettings.network Nettverk
+mainsettings.recording Opptak
+mainsettings.savesettingsnow Lagre innstillinger nå
+mainsettings.savesettingsnow_hint Lagrer Oppsett,\nVennligst vent...
+mainsettings.streaming Videospiller 
+mainsettings.video Video
+menu.back Tillbake
+messagebox.back Tillbake
+messagebox.cancel Avbryt
+messagebox.discard Forkast endringer?
+messagebox.error Feil
+messagebox.info Informasjon
+messagebox.no Nei
+messagebox.yes Ja
+miscsettings.bootinfo Vis info ved oppstart
+miscsettings.bootmenu Vis bootmeny
+miscsettings.channellist Kanalliste
+miscsettings.channellist_epgtext_align Programtekst Justering
+miscsettings.driver_boot drivere og boot alternativ
+miscsettings.fb_destination Ekspert! Bootkonsol
+miscsettings.general Generelt
+miscsettings.head Ekstra innstillinger
+miscsettings.hwsections Bruk hardvareseksjon
+miscsettings.infobar_sat_display Satellitinfo på Infobar
+miscsettings.shutdown_count Slå av etter
+miscsettings.shutdown_count_hint1 tid (i minuter) for oppvåking fra standbye
+miscsettings.shutdown_count_hint2 Tid til dyp stand-by  (0 = av).
+miscsettings.noaviawatchdog aktiver AVIA watchdog
+miscsettings.noenxwatchdog aktiver eNX watchdog
+miscsettings.pmtupdate aktiver pmt oppdatering
+miscsettings.shutdown_real Aktiver Stand-bye
+miscsettings.shutdown_real_rcdelay Utsett avslåing
+miscsettings.sptsmode bruk spts type
+miscsettings.epg_cache EPG-Lagring (Dager)
+miscsettings.epg_cache_hint1 Hvor lenge fram i tid EPG-Data skal lagres?
+miscsettings.epg_cache_hint2 I dager.
+miscsettings.epg_dir EPG lagringsmappe
+miscsettings.epg_extendedcache EPG Lang Beskrivelse (timer)
+miscsettings.epg_extendedcache_hint1 Hvor lenge fram i tid skal EPG utvidet beskrivelse 
+miscsettings.epg_extendedcache_hint2 Lagres? (i timer)
+miscsettings.epg_max_events Maks. EPG arrangement
+miscsettings.epg_max_events_hint1 Hvor mange EPG arrangement kal lagres ?
+miscsettings.epg_max_events_hint2 normalt 6000, bruk 0 for å deaktivere limit
+miscsettings.epg_old_events EPG slett etter (std.)
+miscsettings.epg_old_events_hint1 Hvor lenge skal EPG-Data lagres etter utgått tid?
+miscsettings.epg_old_events_hint2 I timer
+miscsettings.epg_save Lagre/Gjenopprett EPG ved oppstart
+motorcontrol.head Motorinnstalasjon
+movieplayer.bookmark Bokmerke
+movieplayer.bookmarkname Bokmerkenavn
+movieplayer.bookmarkname_hint1 Angi ett navn for ditt nye bokmerke
+movieplayer.bookmarkname_hint2   
+movieplayer.buffering Buffrer...
+movieplayer.defdir start mappe
+movieplayer.defplugin Startplugin
+movieplayer.dvdplayback DVD avspilling
+movieplayer.fileplayback Fil via VLC
+movieplayer.goto Hopp til ...
+movieplayer.goto.h1 = -> absolutt hopp
+movieplayer.goto.h2 +,- -> relativt hopp
+movieplayer.head Videospiller
+movieplayer.nostreamingserver Oppnår ikke kontakt med streamingserver
+movieplayer.pleasewait Vennligst vent.\nKobler opp mot streamingserveren...
+movieplayer.toomanybookmarks Det er for mange bokmerker.\nDu må fjerne en av de først.
+movieplayer.tshelp1 Stopp
+movieplayer.tshelp10 over 10 min tillbake
+movieplayer.tshelp11 hopp over 10 min
+movieplayer.tshelp12 Hjelp: http://www.giggo.de/dbox2/movieplayer.html\n
+movieplayer.tshelp2 Velg lydspor
+movieplayer.tshelp3 Pause/Fortsett
+movieplayer.tshelp4 Lag bokmerke
+movieplayer.tshelp5 Vis progress
+movieplayer.tshelp6 over 1 min tilbake
+movieplayer.tshelp7 hopp over 1 min
+movieplayer.tshelp8 over 5 min tilbake
+movieplayer.tshelp9 hopp over 5 min
+movieplayer.tsplayback Avspill TS
+movieplayer.vcdplayback (S)VCD
+movieplayer.vlchelp1 Stopp
+movieplayer.vlchelp10 over 10 min tilbake
+movieplayer.vlchelp11 hopp over 10 min
+movieplayer.vlchelp12 Hjelp: http://www.giggo.de/dbox2/movieplayer.html\n
+movieplayer.vlchelp2 Resync
+movieplayer.vlchelp3 Pause/Fortsett
+movieplayer.vlchelp4 Lag bokmerke
+movieplayer.vlchelp5 Vis progress
+movieplayer.vlchelp6 over 1 min tillbake
+movieplayer.vlchelp7 hopp over 1 min
+movieplayer.vlchelp8 over 5 min tilbake
+movieplayer.vlchelp9 hopp over 5 min
+movieplayer.wrongvlcversion Denna funksjonen finnes ikke i den nåværande versjon av VLC
+networkmenu.broadcast Broadcast
+networkmenu.dhcp DHCP
+networkmenu.gateway Default Gateway
+networkmenu.head Nettverksoppsett
+networkmenu.ipaddress IP-address
+networkmenu.mount NFS/CIFS/FTPFS
+networkmenu.nameserver DNS server
+networkmenu.netmask Subnetmask
+networkmenu.setupnow Start/Re-Start nettverk nå
+networkmenu.setuponstartup Start nettverk ved oppstart
+networkmenu.show Vis aktiv nettverksinnstilling
+networkmenu.test Test nettverket nå
+nfs.alreadymounted Mappen er allerede montert
+nfs.automount Mount ved oppstart
+nfs.dir Mappe/Sti
+nfs.ip Server IP
+nfs.localdir Lokal mappe
+nfs.mount Mount nettverksvolum
+nfs.mount_options Mount Alternativer
+nfs.mounterror Mountfeil
+nfs.mounterror_notsup Filsystemstypen støttes ikke
+nfs.mountnow Mount nå
+nfs.mountok Mount vellykket
+nfs.mounttimeout Mountfeil: timeout
+nfs.password Passord
+nfs.remount Re-mount mapper
+nfs.type Type
+nfs.type_cifs CIFS
+nfs.type_lufs FTPFS
+nfs.type_nfs NFS
+nfs.umount Unmount nettverksvolum
+nfs.umounterror Feil ved unmount
+nfs.username Brukernavn
+nfsmenu.head NFS/CIFS/FTPFS innstilling
+nvod.percentage (%d%% over)
+nvod.starting (starter om %d min)
+nvodselector.directormode Direktläge
+nvodselector.head Velg starttid
+nvodselector.subservice Velg underprogram
+options.default Tilbakestill innstillinger
+options.fb framebuffer
+options.null null
+options.off av
+options.on på
+options.serial seriell
+parentallock.changepin Endre PIN-kode
+parentallock.changepin_hint1 Angi PIN-kode for Foreldrelås!
+parentallock.changetolocked Lås Lister
+parentallock.head Angi PIN-kode for foreldrelås
+parentallock.lockage lås kanal
+parentallock.lockage12 fra 12 år og oppover
+parentallock.lockage16 fra 16 år og oppover
+parentallock.lockage18 fra 18 år og oppover
+parentallock.lockedchannel Låst kanal...
+parentallock.lockedprogram Låst program (fra %d år og oppover)
+parentallock.never aldri
+parentallock.onsignal signal lås
+parentallock.parentallock Foreldrelås
+parentallock.prompt spør for PIN-kode
+pictureviewer.decode_server_ip dekode server ip
+pictureviewer.decode_server_port dekode server port
+pictureviewer.defdir start mappe
+pictureviewer.head Bildeviser
+pictureviewer.help1 Meny Type
+pictureviewer.help10 visningstype
+pictureviewer.help11 last bildet på nytt
+pictureviewer.help12 forige bildet
+pictureviewer.help13 neste bildet
+pictureviewer.help14 Zoom ut
+pictureviewer.help15 Zoom in
+pictureviewer.help16 skroll opp
+pictureviewer.help17 skrolll venstre
+pictureviewer.help18 skroll høyre
+pictureviewer.help19 skroll ned
+pictureviewer.help2 vise bilder
+pictureviewer.help20 endra sortering
+pictureviewer.help21 lastebilde på nytt (ingen skalering)
+pictureviewer.help22 avslutte
+pictureviewer.help3 endra sortering
+pictureviewer.help4 Ikke skaler bilde
+pictureviewer.help5 diavisningstype
+pictureviewer.help6 forrige bild
+pictureviewer.help7 neste bilde
+pictureviewer.help8 endre sortering
+pictureviewer.help9 avslutte
+pictureviewer.resize.color_average Avansert
+pictureviewer.resize.none ingen
+pictureviewer.resize.simple enkel
+pictureviewer.scaling skalering
+pictureviewer.show vis
+pictureviewer.slide_time slideshow visningstid
+pictureviewer.slideshow slideshow
+pictureviewer.sortorder endre sortering
+pictureviewer.sortorder.date (dato)
+ping.ok Ut av rekkevidde (ping)
+ping.protocol Ute av rekkevidde(host eller protokollfeil)
+ping.socket Ute av rekkevidde (kontaktfeil)
+ping.unreachable Ute av rekkevidde
+pinprotection.head Angi PIN-kod
+pinprotection.wrongcode Feil PIN-kod! Prøv igjen.
+plugins.result plugin utskrift
+rclock.lockmsg Din AZBox fjernkontroll blir sperret.\nFor å ta bort sperren, tryck <RØD>\noch <DBOX> på din fjernkontroll.
+rclock.menueadd Lås FK
+rclock.title Lås fjernkontroll
+rclock.unlockmsg Fjernkontroll aktiveres.
+recordingmenu.apids Forhåndsinnstilling av lydspor
+recordingmenu.apids_ac3 Ta opp AC3 lydspor
+recordingmenu.apids_alt Ta opp i alternativt lydspor
+recordingmenu.apids_std Ta opp standard lydspor
+recordingmenu.choose_direct_rec_dir velg mappe ved direkte innspilling.
+recordingmenu.defdir Opptaksmappe
+recordingmenu.tsdir Timeshiftmappe
+recordingmenu.epg_for_filename lang filnavn (med EPG data)
+recordingmenu.file direkt (fil)
+recordingmenu.filesettings Innstilinger av direkte opptak
+recordingmenu.head Opptaksoppsett
+recordingmenu.help Opptaksenheter:\n--------------------------\nserver:\nmed en streaming programvare på en PC\n\n(analog) vcr:\nmed ett VCR utgang\n\ndirekte (fil):\ndirekte til en NFS-integrert mappe\neller til en intern harddisk\nTS: bruk spts-type\nPES: bruk ikke spts-type\n\n\nMax. filvolum:\n---------------------\nNFS V2: 2 GB (2048 MB)\nNFS V3: så stor harddisken er (0 MB)\nFAT: 2 GB (2048 MB)\nFAT32: 4 GB (4096 MB)
+recordingmenu.no_scart Ikke skift til SCART 
+recordingmenu.off av
+recordingmenu.record_in_spts_mode veksle til spts-type før opptak
+recordingmenu.recording_type opptaksenhet
+recordingmenu.ringbuffers antall ringbuffer
+recordingmenu.server server
+recordingmenu.server_ip Opptaksserver IP
+recordingmenu.server_mac MAC address
+recordingmenu.server_port Opptaksport
+recordingmenu.server_wakeup Opptak Server WoL
+recordingmenu.setupnow Aktiver endringer
+recordingmenu.splitsize Maks. filstørelse (MB)
+recordingmenu.stopplayback Stopp avspilling 
+recordingmenu.stopsectionsd stopp SD seksjon 
+recordingmenu.stream_vtxt_pid Ta opp Videotekst
+recordingmenu.stream_pmt_pid ta opp PMT
+recordingmenu.use_fdatasync skriv synkront (fdatasync)
+recordingmenu.use_o_sync skriv synkront (O_SYNC)
+recordingmenu.vcr vcr
+recordingmenu.zap_on_announce Skift kanal før opptak
+recordtimer.announce Opptakk begynner straks
+repeatblocker.hint_1 Kortast tid (i ms) registreres med  2 knapptrykk
+repeatblocker.hint_2 Trykk 0 for å deaktivere blokker (rød er mellomrom)
+satsetup.diseqc DiSEqC
+satsetup.diseqc10 DiSEqC 1.0
+satsetup.diseqc11 DiSEqC 1.1
+satsetup.diseqc12 DiSEqC 1.2
+satsetup.diseqc_advanced Avansert
+satsetup.diseqc_order Inngang Rekkefølge
+satsetup.diseqc_com_uncom Commited/Uncommited
+satsetup.diseqc_uncom_com Uncommited/Commited
+satsetup.diseqcrepeat DiSEqC-repetisjon
+satsetup.extended DiSEqC-oppsett
+satsetup.extended_motor Motoroppsett
+satsetup.minidiseqc Mini-DiSEqC
+satsetup.motorcontrol Motor Kontroll
+satsetup.nodiseqc ingen DiSEqC
+satsetup.satellite Satellit
+satsetup.savesettingsnow Lagre oppsett nå
+satsetup.smatvremote SMATV Fjernstyring 
+satsetup.sat_setup Satellitt Konfigurasjon /LNB
+satsetup.lofl LNB Lav Offset
+satsetup.lofh LNB Høy Offset
+satsetup.lofs LNB switch Offset
+satsetup.diseqc_input Diseqc inngang
+satsetup.uncomm_input Uncommited inngang
+satsetup.comm_input Commited inngang
+satsetup.motor_pos Rotor posisjon
+satsetup.auto_scan Auto-Søk Valgt Satellitt
+satsetup.auto_scan_all Auto-Søk MultiSat
+satsetup.manual_scan Manuelt Frekvenssøk
+satsetup.use_nit Bruk NIT
+satsetup.use_usals Bruk USALS for alle satellitter
+satsetup.usals_repeat USALS repetisjon kommando
+scants.abort_body Skal søkningen verkligen avbrytes?
+scants.abort_header Avbrytning av kanalsök
+scants.actcable Kabel:
+scants.actsatellite Satellit:
+scants.bouquet Liste
+scants.bouquet_create skap ny
+scants.bouquet_erase slett alle
+scants.bouquet_leave forkast nåvarende
+scants.bouquet_satellite Satellitt-Liste
+scants.bouquet_update oppdater
+scants.channel Kanal:
+scants.failed Transpondersøk misslykket!
+scants.finished Transpondersøk avsluttet!
+scants.freqdata Frekvens:
+scants.head Søk transponder
+scants.numberofdataservices Data
+scants.numberofradioservices Radio
+scants.numberoftotalservices Total
+scants.numberoftvservices TV tjeneste
+scants.provider Operatør:
+scants.startnow start søk
+scants.transponders Transpondere:
+screensetup.lowerright grønn = oppsett høyre ned 
+screensetup.upperleft rød = oppsett venstre top
+servicemenu.getplugins Hent in plugins
+servicemenu.getplugins_hint Henter in plugins,\nvennligst vent.
+servicemenu.head Tjeneste
+servicemenu.reload Last inn kanallister
+servicemenu.reload_hint Laster inn kanallister\nvennligst vent.
+servicemenu.restart Re-Start AZtrino
+servicemenu.restart_failed Feil ved omstart av AZtrino.
+servicemenu.restart_hint AZtrino restarter...
+servicemenu.restart_refused_recording Opptak igang. Omstart kan ikke gjennomføres.
+servicemenu.scants Kanalsøk
+servicemenu.ucodecheck Kontroller ucodes
+servicemenu.update Programvareoppdatering 
+settings.help Hjelp
+settings.missingoptionsconffile AZtrinoinstilingene er blitt oppdatert.\nNye instilingene kommer til å brukes som standard.
+settings.noconffile Ingen AZtrino-instillinger funnet.\nBruk standard.
+settings.pos_bottom_left venstre ned
+settings.pos_bottom_right høyre ned
+settings.pos_top_left venstre top
+settings.pos_top_right høyre top
+shutdowntimer.announce Mottakeren slår seg av om 1 min.\nAvbryt dette?
+shutdown.recoding_query Mottakeren tar opp akkurat nå.Vil di virkelig avslutte opptak?
+sleeptimerbox.announce Timer start om 1 min
+sleeptimerbox.hint1 Avstengningstid i min. (000=av)
+sleeptimerbox.hint2 Din Colstream kommer til å slå seg av etter dette.
+sleeptimerbox.title Innsovningstimer
+streamfeatures.head Funksjoner:
+streaminfo.aratio TV-format
+streaminfo.aratio_unknown TV-format: Ukjent
+streaminfo.audiotype Lydtype
+streaminfo.audiotype_unknown Lydtype: Ukjent
+streaminfo.bitrate Bitrate
+streaminfo.framerate Framerate
+streaminfo.framerate_unknown Framerate: Ukjent Framerate
+streaminfo.head Stream-Informasjon
+streaminfo.not_available Ikke tilgjengelig 
+streaminfo.resolution Oppløsning
+streaminfo.signal signalstyrke
+streaming.buffer_overflow Opptak avbrytes p.g.a.\ndata kunne ikke tas opp tilstrekkelig raskt.
+streaming.busy En eller flere opptaksprosses er aktive.\nOm du ser denne meldingen og ingen innspilling finner sted,re-starta  AZtrino.
+streaming.dir_not_writable Opptaksmappen er ikk skrivbar.\nInnspillingen blir mislykket.
+streaming.success Opptak ble vellyket.
+streaming.write_error Opptak avbrytes,\ngrunnet oppstått feil under innspilling.
+streaming.write_error_open Opptak avbrytes,\nmålfilen kan ikke åpnes.
+streamingmenu.352x288 352x288
+streamingmenu.352x576 352x576
+streamingmenu.480x576 480x576
+streamingmenu.704x576 704x576
+streamingmenu.head Videospiller Oppsett 
+streamingmenu.mpeg1 MPEG1
+streamingmenu.mpeg2 MPEG2
+streamingmenu.off Av
+streamingmenu.on På
+streamingmenu.server_ip Streamingserver IP
+streamingmenu.server_port Streamingserver Port
+streamingmenu.streaming_audiorate Datarate Lyd
+streamingmenu.streaming_force_avi_rawaudio Tving AC3 for AVI
+streamingmenu.streaming_force_transcode_video Transcode MPG/VCD video
+streamingmenu.streaming_resolution Oppløsning
+streamingmenu.streaming_server_cddrive DVD-enhet
+streamingmenu.streaming_server_startdir Mappe (VLC)
+streamingmenu.streaming_transcode_audio Transcode audio (DVD/VCD/MPG)
+streamingmenu.streaming_transcode_video_codec MPEG video codec
+streamingmenu.streaming_type Streamingserver
+streamingmenu.streaming_videorate Datarate Video
+streamingserver.noconnect Fant ikke forbindelse med streaming server.\nOpptak avbrytes.
+stringinput.caps caps / ingen store bokstav
+stringinput.clear Fjern alt
+timer.eventrecord.msg ... Vil du gjøre dette ?
+timer.eventrecord.title Programert Opptak
+timer.eventtimed.msg Programet er reservert.\n Mottakeren slår seg på og\nbytte til forhåndsvalgt kanal på angitt tidspunkt.
+timer.eventtimed.title Reservert Program
+timerbar.channelswitch Oversikt
+timerbar.recordevent Ta opp
+timerlist.alarmtime Alarmtid
+timerlist.apids Lyd PIDs
+timerlist.apids_dflt ta opp forhåndsvalgt tonespor
+timerlist.bouquetselect vglg kanalliste
+timerlist.channel Kanal
+timerlist.channelselect velg kanal
+timerlist.delete Slett
+timerlist.menumodify Forandre  timer
+timerlist.menunew Ny timer
+timerlist.message Beskjed
+timerlist.moderadio Radiokanaler
+timerlist.modeselect Modus Valg
+timerlist.modetv TV kanaler
+timerlist.modify Modifiser
+timerlist.name Timerliste
+timerlist.new Ny timer
+timerlist.overlapping_timer Timer konflikt. Legg til timer allikevel?
+timerlist.plugin Plugin
+timerlist.program.unknown Ukjent Program
+timerlist.recording_dir opptaksmappe
+timerlist.reload Last på nytt
+timerlist.repeat Reprise
+timerlist.repeat.biweekly ukentlig
+timerlist.repeat.byeventdescription se timer
+timerlist.repeat.daily daglig
+timerlist.repeat.fourweekly var fjerde uke
+timerlist.repeat.friday Fr
+timerlist.repeat.monday Ma
+timerlist.repeat.monthly månedlig 
+timerlist.repeat.once en gang
+timerlist.repeat.saturday Lø
+timerlist.repeat.sunday Sø
+timerlist.repeat.thursday To
+timerlist.repeat.tuesday Ti
+timerlist.repeat.unknown ukjent
+timerlist.repeat.weekdays på hverdager
+timerlist.repeat.weekly ukentlig
+timerlist.repeatcount repetisjonwr
+timerlist.repeatcount.help1 antall timer repetisjon 
+timerlist.repeatcount.help2 0 for uendelig repetisjon
+timerlist.save Lagre timer
+timerlist.standby Stand-bye
+timerlist.standby.off Avslutt vile modus
+timerlist.standby.on Gå in i vile modus
+timerlist.stoptime Stopptid
+timerlist.type Timertype
+timerlist.type.execplugin Start plugin
+timerlist.type.nextprogram Nesta program
+timerlist.type.record Ta Opp
+timerlist.type.remind Påminnelse
+timerlist.type.shutdown Skru av
+timerlist.type.sleeptimer Stand Bye Timer
+timerlist.type.standby modus
+timerlist.type.unknown Ukjent
+timerlist.type.zapto Zap til 
+timerlist.weekdays Uke Dager
+timerlist.weekdays.hint_1 Ma Ti On To Fr Lø Sø
+timerlist.weekdays.hint_2 'X'=timer '-' Ingen timer
+timersettings.record_safety_time_after Juster stopptid for opptak
+timersettings.record_safety_time_after.hint_1 Justeringstid i min. (00=av). Aktuell tid
+timersettings.record_safety_time_after.hint_2 legges på hver opptakstimer.
+timersettings.record_safety_time_before Justering av opptak starttid 
+timersettings.record_safety_time_before.hint_1 Justeringstid i min. (00=av). Aktuell tid
+timersettings.record_safety_time_before.hint_2 trekkes fra hver opptakstimer
+timersettings.separator Timer Oppsett
+timing.chanlist Kanalliste
+timing.epg Epg
+timing.filebrowser Filvelger
+timing.head OSD Timeout
+timing.hint_1 Tid i sek. Etter definert tid
+timing.hint_2 forsvinner info-baren sakte.
+timing.infobar Infobar
+timing.menu Meny
+timing.numericzap Numerisk Zap
+ucodecheck.avia500 Avia 500
+ucodecheck.avia600 Avia 600
+ucodecheck.cam-alpha Cam-Alpha
+ucodecheck.head Ukode kontroll
+ucodecheck.ucode Ukode
+ucodes.failure ADVARSEL, AUkoder IKKE funnet!\n\nVennligst overfør dem via FTP (eller Dbox-BootManager),\nog re-start din AZBox!
+usermenu.button_blue Bruker meny Blå
+usermenu.button_green Bruker meny Grøn
+usermenu.button_red Bruker Meny Rød
+usermenu.button_yellow Bruker Meny Gul
+usermenu.head Bruker Meny
+videomenu.csync Sync Justering
+videomenu.head Video Oppsett 
+videomenu.rgb_centering RGB sentrering
+videomenu.screensetup Skjerminnstiling
+videomenu.vcrswitch Veksle SCART automatisk
+videomenu.videoformat Format
+videomenu.videoformat_169 16:9
+videomenu.videoformat_43 4:3 (LB)
+videomenu.videoformat_autodetect autodetekter
+videomenu.dbdr_none ingen
+videomenu.enabled_modes VF knapp aktiverte modus
+zapit.scantype Søk etter program
+zapit.scantype.all alle program
+zapit.scantype.radio bare radio
+zapit.scantype.tv bare tv
+zapit.scantype.tvradio tv & radio
+zaptotimer.announce Zap til timer om ett minutt
+extra.start_tostandby Oppstart til Standby
+extra.rotor_swap Flytt motor øst/vest
+extra.zapit_motor_speed Motor Hastighet (10 = 1 grad/sek)
+extra.zapit_hvoltage 18V for motor bevegelse 
+reset_channels Slett alle kanaler
+reset_settings Nullstill Oppsett til oprinnelig status
+reset_all Fabrikk Nullstilling
+reset_confirm Vennligst bekreft JA eller Nei?
+extra.update_dir Oppdateringsmappe
+extra.loadconfig Last opp oppsett fra
+extra.saveconfig Lagre oppsett som
+servicemenu.imageinfo Programvare Informasjon
+imageinfo.creator Produsent:
+imageinfo.date Dato:
+imageinfo.dokumentation Dokumentasjon:
+imageinfo.forum Forum:
+imageinfo.head Bildeinformasjon:
+imageinfo.image Bilde:
+imageinfo.license Lissens:
+imageinfo.version Versjon:
+extra.cache_txt Lagring av teletekst
+extra.use_gotoxx Bruk Go To XX
+extra.latitude Breddegrad
+extra.longitude Lengegrad
+extra.ladirection Breddegrad Retning
+extra.lodirection Lengegrad Retning
+extra.south Sør
+extra.north Nord
+extra.east Øst
+extra.west Vest
+options.on.without_messages Uten meldinger
+extra.auto_timeshift Auto-opptak, sec (0 = deaktivert)
+extra.temp_timeshift Midlertidig timeshift
+extra.auto_delete Auto-slett
+extra.record_time Fast/timeshift opptakstid (timer)
+scrambled_channel Kryptert Kanal
+neutrino_starting AZtrino Starter...
+fan_speed CPU Vifte hastighet
+audio.srs_volume Lydstyrke Nivå
+audio.srs_nmgr Støy Behandling

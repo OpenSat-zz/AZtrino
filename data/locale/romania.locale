@@ -1,0 +1,1274 @@
+AUDIOSelectMenue.head Audio Selection
+EPGMenu.epgplus Prezentare generala Event
+EPGMenu.eventinfo Detalii program curent
+EPGMenu.eventlist Lista Event pt programul curent
+EPGMenu.head EPG - Program Informatii
+EPGMenu.streaminfo Informatii tehnice
+EPGPlus.actions Actiuni 
+EPGPlus.bybouquet_mode fiecare buchet
+EPGPlus.bypage_mode fiecare pagina
+EPGPlus.change_font_size dimensiune caractere
+EPGPlus.change_font_style font style
+EPGPlus.change_size schimba dimensiuni
+EPGPlus.channelentry_font caractere canale
+EPGPlus.channelentry_separationlineheight grosime linie de separare
+EPGPlus.channelentry_width largime
+EPGPlus.channelevententry_font caractere event
+EPGPlus.edit_fonts editare caractere
+EPGPlus.edit_sizes editare dimensiuni
+EPGPlus.font_style_bold stil bold
+EPGPlus.font_style_italic stil italic
+EPGPlus.font_style_regular stil regular
+EPGPlus.footer_fontbouquetchannelname footer bouquet
+EPGPlus.footer_fontbuttons footer buttons
+EPGPlus.footer_fonteventdescription footer event
+EPGPlus.footer_fonteventshortdescription footer event short
+EPGPlus.head Eventlist prezentare generala (EPG Plus)
+EPGPlus.header_font header font
+EPGPlus.horgap1_height height1
+EPGPlus.horgap2_height height2
+EPGPlus.next_bouquet urmatorul bouquet
+EPGPlus.options optiuni
+EPGPlus.page_down pagina anterioara
+EPGPlus.page_up pagina urmatoare
+EPGPlus.prev_bouquet bouquet anterior
+EPGPlus.record Inregistrare
+EPGPlus.refresh_epg Refresh
+EPGPlus.remind Agenda
+EPGPlus.reset_settings resetare setari
+EPGPlus.save_settings salveaza setari
+EPGPlus.scroll_mode Mod Scroll 
+EPGPlus.select_font_name caracter nume
+EPGPlus.settings setari
+EPGPlus.slider_width dimensiune cursor
+EPGPlus.stretch_mode Mod stretch
+EPGPlus.swap_mode mod swap 
+EPGPlus.timeline_fontdate caractere data
+EPGPlus.timeline_fonttime caractere timp
+EPGPlus.vergap1_width largime1
+EPGPlus.vergap2_width largime2
+EPGPlus.view_mode Mod de vizualizare
+GENRE.ARTS.0 arts / cultura
+GENRE.ARTS.1 performing arta
+GENRE.ARTS.10 arts/culture magazines
+GENRE.ARTS.11 fashion
+GENRE.ARTS.2 fine arts
+GENRE.ARTS.3 religie
+GENRE.ARTS.4 popular cultura/arta traditionala
+GENRE.ARTS.5 literatura
+GENRE.ARTS.6 film/cinema
+GENRE.ARTS.7 experimental film/video
+GENRE.ARTS.8 broadcasting/press
+GENRE.ARTS.9 new media
+GENRE.CHILDRENs_PROGRAMMES.0 children / juvenile program
+GENRE.CHILDRENs_PROGRAMMES.1 pre-school children's programmes
+GENRE.CHILDRENs_PROGRAMMES.2 entertainment programmes for 6 to 14
+GENRE.CHILDRENs_PROGRAMMES.3 entertainment programmes for 10 to 16
+GENRE.CHILDRENs_PROGRAMMES.4 informational/educational/school programmes
+GENRE.CHILDRENs_PROGRAMMES.5 cartoons/puppets
+GENRE.DOCUS_MAGAZINES.0 documentatii / magazin
+GENRE.DOCUS_MAGAZINES.1 natura/animale/mediu
+GENRE.DOCUS_MAGAZINES.2 tehnologie/stiinte naturale
+GENRE.DOCUS_MAGAZINES.3 medicina/psihologie/psychology
+GENRE.DOCUS_MAGAZINES.4 tari straine/expeditii
+GENRE.DOCUS_MAGAZINES.5 social/spiritual sciences
+GENRE.DOCUS_MAGAZINES.6 further education
+GENRE.DOCUS_MAGAZINES.7 limbi
+GENRE.MOVIE.0 film/drama
+GENRE.MOVIE.1 detective/thriller
+GENRE.MOVIE.2 adventure/western/war
+GENRE.MOVIE.3 science fiction/fantasy/horror
+GENRE.MOVIE.4 comedie
+GENRE.MOVIE.5 soap/melodrama/folkloric
+GENRE.MOVIE.6 romance
+GENRE.MOVIE.7 serious/classical/religious/historical movie/drama
+GENRE.MOVIE.8 adult movie/drama
+GENRE.MUSIC_DANCE.0 music / ballet / dance
+GENRE.MUSIC_DANCE.1 rock/pop
+GENRE.MUSIC_DANCE.2 serious music/classical music
+GENRE.MUSIC_DANCE.3 folk/traditional music
+GENRE.MUSIC_DANCE.4 jazz
+GENRE.MUSIC_DANCE.5 musical/opera
+GENRE.MUSIC_DANCE.6 ballet
+GENRE.NEWS.0 stiri
+GENRE.NEWS.1 stiri/meteo
+GENRE.NEWS.2 stiri magazin
+GENRE.NEWS.3 documentar
+GENRE.NEWS.4 discutii/interviuri/dezbateri
+GENRE.SHOW.0 Spectacol / Gameshow
+GENRE.SHOW.1 game show/quiz/contest
+GENRE.SHOW.2 variety show
+GENRE.SHOW.3 talk show
+GENRE.SOCIAL_POLITICAL.0 social & politic events / business
+GENRE.SOCIAL_POLITICAL.1 magazines/reports/documentary
+GENRE.SOCIAL_POLITICAL.2 economics/social advisory
+GENRE.SOCIAL_POLITICAL.3 remarkable people
+GENRE.SPORTS.0 sports
+GENRE.SPORTS.1 special events (Olympic Games,World Cup etc.)
+GENRE.SPORTS.10 equestrian
+GENRE.SPORTS.11 martial sports
+GENRE.SPORTS.2 sports magazines
+GENRE.SPORTS.3 football/soccer
+GENRE.SPORTS.4 tennis/squash
+GENRE.SPORTS.5 team sports (excluding football)
+GENRE.SPORTS.6 athletics
+GENRE.SPORTS.7 motor sports
+GENRE.SPORTS.8 water sports
+GENRE.SPORTS.9 winter sports
+GENRE.TRAVEL_HOBBIES.0 travel & recreation
+GENRE.TRAVEL_HOBBIES.1 tourism/travel
+GENRE.TRAVEL_HOBBIES.2 handicraft
+GENRE.TRAVEL_HOBBIES.3 motoring
+GENRE.TRAVEL_HOBBIES.4 fitness & health
+GENRE.TRAVEL_HOBBIES.5 cooking
+GENRE.TRAVEL_HOBBIES.6 advertisement/shopping
+GENRE.TRAVEL_HOBBIES.7 gardening
+GENRE.UNKNOWN unknown
+apidselector.head Selecteaza limba
+audiomenu.PCMOffset Micsoreaza Volum PCM
+audiomenu.analogout Analog Output
+audiomenu.avs avs
+audiomenu.avs_control Volume Control avs/ost
+audiomenu.dolbydigital Dolby Digital
+audiomenu.head Audio Setare
+audiomenu.lirc lirc
+audiomenu.monoleft mono stanga
+audiomenu.monoright mono dreapta
+audiomenu.ost ost
+audiomenu.stereo stereo
+audioplayer.add Adauga
+audioplayer.artist_title Artist, Title
+audioplayer.building_search_index building search index
+audioplayer.button_select_title_by_id cauta dupa ID
+audioplayer.button_select_title_by_name cauta pt nume
+audioplayer.defdir start dir.
+audioplayer.delete Sterge
+audioplayer.deleteall sterge tot
+audioplayer.display_order comenzi afisaj
+audioplayer.enable_sc_metadata enable shoutcast meta data parsing
+audioplayer.fastforward derulare inainte
+audioplayer.follow auto select current
+audioplayer.head Lista audio
+audioplayer.highprio High decode priority
+audioplayer.spectrum lcd a-spectrum
+audioplayer.jump_backwards salt inapoi
+audioplayer.jump_dialog_hint1 Please enter jump target
+audioplayer.jump_dialog_hint2 (relative, in seconds)
+audioplayer.jump_dialog_title Enter jump target
+audioplayer.jump_forwards salt inainte
+audioplayer.keylevel nivel chei
+audioplayer.name Audioplayer
+audioplayer.pause pause
+audioplayer.play Play
+audioplayer.playing Current Track
+audioplayer.playlist_fileerror_msg Fisierul nu poate fi creat:
+audioplayer.playlist_fileoverwrite_msg Vrei sa suprascri acest Fisier:
+audioplayer.playlist_name nume fisier play list
+audioplayer.playlist_name_hint1 Va rugam introduceti nume fisier pentru playlist
+audioplayer.playlist_name_hint2 The extension .m3u will be added automatically
+audioplayer.reading_files citeste fisiere
+audioplayer.repeat_on enable repeat mode
+audioplayer.rewind derulare inapoi
+audioplayer.save_playlist save play list
+audioplayer.screensaver_timeout screensaver timeout (min, 0=off)
+audioplayer.select_title_by_name search title by name (SMS)
+audioplayer.show_playlist Arata Playlist
+audioplayer.shuffle shuffle
+audioplayer.stop Stop
+audioplayer.title_artist Titlu, Artist
+audioplayerpicsettings.general audioplayer / picviewer
+bookmarkmanager.delete sterge
+bookmarkmanager.name bookmarks
+bookmarkmanager.rename redenumire
+bookmarkmanager.select selectare
+bouqueteditor.add Adaugare
+bouqueteditor.bouquetname Nume  bouquete
+bouqueteditor.delete Sterge
+bouqueteditor.discardingchanges Renut la schimbari. Va rog asteptati.
+bouqueteditor.hide Ascunde
+bouqueteditor.lock Incuie
+bouqueteditor.move Muta
+bouqueteditor.name editor bouquet 
+bouqueteditor.newbouquetname nume nou pt bouquete
+bouqueteditor.rename Redenumire
+bouqueteditor.return gata
+bouqueteditor.savechanges? Doriti sa salvati schimbarile?
+bouqueteditor.savingchanges Salvez schimbari. Rog asteptati ...
+bouqueteditor.switch adauga/sterge
+bouqueteditor.switchmode TV/Radio
+bouquetlist.head Bouquete
+cablesetup.provider provider cablu
+channellist.edit Editare
+channellist.head Toate serviciile
+channellist.nonefound No channels were found!
+channellist.since since %02d:%02d
+channellist.favs Favorites
+channellist.provs Providers
+channellist.sats Sateliti
+channellist.history History
+channellist.current_tp Current transponder
+colorchooser.alpha alpha
+colorchooser.blue albastru
+colorchooser.green verde
+colorchooser.red rosu
+colormenu.background Background
+colormenu.fade Fade menus
+colormenu.font dimensiune caractere
+colormenu.gtx_alpha Transparenta (GTX)
+colormenu.head setari culori
+colormenu.menucolors culori meniu
+colormenu.statusbar Infobar
+colormenu.textcolor Culoare text
+colormenu.themeselect selectare teme
+colormenu.timing OSD Timing
+colormenusetup.head Culori meniu
+colormenusetup.menucontent Window-Content
+colormenusetup.menucontent_inactive Window-Content inactive
+colormenusetup.menucontent_selected Window-Content selected
+colormenusetup.menuhead Menu Header
+colorstatusbar.head Infobar
+colorstatusbar.text Infobar
+colorthememenu.classic_theme Tema Clasica 
+colorthememenu.dblue_theme Tema albastru inchis
+colorthememenu.dvb2k_theme Tema DVB2000 
+colorthememenu.red_theme Simply Red
+colorthememenu.head Selector Teme
+colorthememenu.neutrino_theme Tema AZtrino 
+date.Apr  Apr
+date.Aug  Aug
+date.Dec  Dec
+date.Feb  Feb
+date.Fri  Fri
+date.Jan  Jan
+date.Jul  Jul
+date.Jun  Jun
+date.Mar  Mar
+date.May  May
+date.Mon  Mon
+date.Nov  Nov
+date.Oct  Oct
+date.Sat  Sat
+date.Sep  Sep
+date.Sun  Sun
+date.Thu  Thu
+date.Tue  Tue
+date.Wed  Wed
+epgextended.actors Actori
+epgextended.director Director
+epgextended.guests Oaspeti
+epgextended.original_title Titlu original
+epgextended.presenter Prezantare
+epgextended.year_of_production anul de productie
+epglist.noevents EPG nu este diponibil...
+epgviewer.More_Screenings More Screenings on this Channel
+epgviewer.nodetailed Nu sunt disponibile informatii detaliate
+epgviewer.notfound fara epg
+eventfinder.head Cauta in EPG
+eventfinder.keyword Cuvant cheie
+eventfinder.search Cauta
+eventfinder.search_within_epg Cauta cu
+eventfinder.search_within_list Cauta cu
+eventfinder.searching Cauta cuvant cheie in EPG...
+eventfinder.start_search  Porneste cautare
+eventlistbar.channelswitch agenda
+eventlistbar.eventsort sortare
+eventlistbar.recordevent inregistrare
+favorites.addchannel Canalul curent va fi adaugat \in buchetul "My Favorites". \n This will take a few seconds...
+favorites.bouquetname My Favorites
+favorites.bqcreated Bouquet "My Favorites" .a fost creeat..\n
+favorites.chadded Canalul a fost adaugat in listele favorite ...\n
+favorites.chalreadyinbq Canalul este deja in listele favorite...\n
+favorites.finalhint \nUse the bouqueteditor to modify your favorites.\n
+favorites.menueadd adauga canal la listele  favorite
+favorites.nobouquets Listele favorite sunt disponibile numaicu activarea  Bouquets 
+filebrowser.delete Sterge
+filebrowser.denydirectoryleave Absolute start directory
+filebrowser.dodelete1 Sterge
+filebrowser.dodelete2 ?
+filebrowser.filter.active Filtru pornit
+filebrowser.filter.inactive Filtru oprit
+filebrowser.head cauta fisiere
+filebrowser.mark Marcheaza
+filebrowser.nextpage  Pagina urmatoare
+filebrowser.prevpage Pagina anterioara
+filebrowser.scan Cauta folder
+filebrowser.select Selectare
+filebrowser.showrights Show file rights
+filebrowser.sort.date (date)
+filebrowser.sort.name (filename)
+filebrowser.sort.namedirsfirst (filename2)
+filebrowser.sort.size (Dimensiune)
+filebrowser.sort.type (tip)
+filesystem.is.utf8 file de sistem
+filesystem.is.utf8.option.iso8859.1 ISO-8859-1
+filesystem.is.utf8.option.utf8 UTF-8
+flashupdate.actionreadflash citeste
+flashupdate.cantopenfile nu pot deschide  fila
+flashupdate.cantopenmtd can't open mtd-device
+flashupdate.checkupdate search for new version
+flashupdate.currentreleasecycle Release cycle
+flashupdate.currentversion_sep Current version
+flashupdate.currentversiondate Data
+flashupdate.currentversionsnapshot ImageType
+flashupdate.currentversiontime Timp
+flashupdate.erasefailed stergere flash nereusita
+flashupdate.erasing stergere flash
+flashupdate.experimentalimage The image you have selected is an untested version, this means\nyour box maybe fail to boot after update.\n\nDo you really want to update to this version?
+flashupdate.expertfunctions Expert-functions
+flashupdate.fileis0bytes the filesize is 0 Bytes
+flashupdate.fileselector File-Selector
+flashupdate.flashreadyreboot The image was successfully flashed.\nThe box will be rebooted now.
+flashupdate.getinfofile getting versioninfo
+flashupdate.getinfofileerror can't get versioninfo
+flashupdate.getupdatefile caut actualizare
+flashupdate.getupdatefileerror nu sunt actualizari
+flashupdate.globalprogress Global Progress:
+flashupdate.head Actualizare soft
+flashupdate.md5check verific image
+flashupdate.md5sumerror image are erori
+flashupdate.msgbox Found the following new file:\nDate: %s, %s\nBaseImage: %s\nType: %s\n\nDo you want to download and install this version now?
+flashupdate.msgbox_manual Found the following new image:\nDate: %s, %s\nBaseImage: %s\nImageType: %s\n\nDo you want to install this version now?
+flashupdate.mtdselector Selector partitii
+flashupdate.programmingflash programare flash
+flashupdate.proxypassword Parola
+flashupdate.proxypassword_hint1 introduceti parola pt proxyserver
+flashupdate.proxypassword_hint2 a empty entry means no proxy-auth
+flashupdate.proxyserver Hostname
+flashupdate.proxyserver_hint1 enter proxyserver name or ip, use host:port
+flashupdate.proxyserver_hint2 a empty entry means no proxy
+flashupdate.proxyserver_sep Proxyserver
+flashupdate.proxyusername Username
+flashupdate.proxyusername_hint1 enter the proxyserver username
+flashupdate.proxyusername_hint2 a empty entry means no proxy-auth
+flashupdate.readflash Read whole image
+flashupdate.readflashmtd Read one partition
+flashupdate.ready gata
+flashupdate.reallyflashmtd Do you really want to flash?\n\nIf a error occurs or the image is not\nvalid, the box will not boot after flashing.\n\nImagename: %s\nTarget: %s
+flashupdate.savesuccess The image was successfully saved \nunder %s.
+flashupdate.selectimage Available Images/Files
+flashupdate.squashfs.noversion SquashFS version checks are currently only supported when updating over the web.\nAre you sure that you wish to install this image?
+flashupdate.titlereadflash Citeste flash
+flashupdate.titlewriteflash Scrie flash
+flashupdate.updatemode Mod actualizare
+flashupdate.updatemode_internet internet
+flashupdate.updatemode_manual manual (ftp)
+flashupdate.url_file config file
+flashupdate.versioncheck verific versiune
+flashupdate.writeflash Write whole image
+flashupdate.writeflashmtd Write one partition
+flashupdate.wrongbase Your Release cycle differs.\nTo continue? 
+fontmenu.channellist Lista canale
+fontmenu.epg EPG
+fontmenu.eventlist Eventlist
+fontmenu.gamelist Gamelist
+fontmenu.head Fontsize settings
+fontmenu.infobar Infobar
+fontsize.channel_num_zap direct selection
+fontsize.channellist Channellist
+fontsize.channellist_descr Description
+fontsize.channellist_number Number
+fontsize.epg_date EPG Date
+fontsize.epg_info1 EPG Info 1
+fontsize.epg_info2 EPG Info 2
+fontsize.epg_title EPG Title
+fontsize.eventlist_datetime data / timp
+fontsize.eventlist_itemlarge mare
+fontsize.eventlist_itemsmall mic
+fontsize.eventlist_title Titlu
+fontsize.filebrowser_item filebrowser item
+fontsize.gamelist_itemlarge mare
+fontsize.gamelist_itemsmall mic
+fontsize.hint Initialising font,\nplease wait...
+fontsize.infobar_channame nume canal
+fontsize.infobar_info info
+fontsize.infobar_number Numar
+fontsize.infobar_small mic
+fontsize.menu Menutext
+fontsize.menu_info Menu Info
+fontsize.menu_title Menu Title
+gtxalpha.alpha1 Alpha 1
+gtxalpha.alpha2 Alpha 2
+infoviewer.epgnotload EPG not loaded....
+infoviewer.epgwait asteapta pt EPG...
+infoviewer.eventlist Event-List
+infoviewer.languages Audio
+infoviewer.motor_moving Pozitionare Antena 
+infoviewer.nocurrent Nu sunt informatii pt programul curent
+infoviewer.noepg EPG nu este disponibil
+infoviewer.notavailable Chanalul nu este disponibil
+infoviewer.selecttime Selectare timp
+infoviewer.streaminfo Features
+infoviewer.subchan_disp_pos Subchannel display
+infoviewer.subservice Subservices
+infoviewer.waittime Waiting for time...
+ipsetup.hint_1 FOlositi 0..9, sau Sus/Jos,
+ipsetup.hint_2 OK saves, LAME! renunta
+keybindingmenu.RC Key repeat-blocker
+keybindingmenu.addrecord adauga timer inregistrare
+keybindingmenu.addremind add zapto timer
+keybindingmenu.allchannels_on_ok all-services
+keybindingmenu.bouquetchannels_on_ok current bouquet
+keybindingmenu.bouquetdown bouquet back
+keybindingmenu.bouquethandling Bouquet-control
+keybindingmenu.bouquetlist_on_ok bouquet-list
+keybindingmenu.bouquetup bouquetul urmator
+keybindingmenu.cancel inchide lista canale
+keybindingmenu.channeldown canal anterior
+keybindingmenu.channellist Lista canale
+keybindingmenu.channelup canal urmator
+keybindingmenu.head Setari Keybinding 
+keybindingmenu.lastchannel Cautare rapida
+keybindingmenu.modechange Modechange
+keybindingmenu.pagedown pagina anterioara
+keybindingmenu.pageup pagins urmatoare
+keybindingmenu.quickzap Cautare rapida
+keybindingmenu.repeatblock repeta intarzierea
+keybindingmenu.repeatblockgeneric intarziere generica
+keybindingmenu.sort schimba ordine sortare
+keybindingmenu.subchanneldown subcanal anterior
+keybindingmenu.subchannelup subcanal urmator
+keybindingmenu.tvradiomode Mod TV/Radio
+keybindingmenu.zaphistory Zapping History Bouquet
+keychooser.head Setup new Key
+keychooser.text1 Please press the new key
+keychooser.text2 Asteptati cateva secunde pt renutare
+keychoosermenu.currentkey current key
+keychoosermenu.setnew setup new key
+keychoosermenu.setnone no key
+languagesetup.head Setare limba
+languagesetup.select Limba
+lcdcontroler.brightness Stralucire normal 
+lcdcontroler.brightnessstandby Stralucire standby 
+lcdcontroler.contrast Contrast
+lcdmenu.autodimm Auto dimm
+lcdmenu.dim_brightness Brightness after dim timeout
+lcdmenu.dim_time Dim timeout
+lcdmenu.head Setari VFD
+lcdmenu.inverse Invert
+lcdmenu.lcdcontroler Contrast / Stralucire
+lcdmenu.power Power
+lcdmenu.statusline status line
+lcdmenu.statusline.both volum / playtime
+lcdmenu.statusline.playtime playtime
+lcdmenu.statusline.volume volum
+mainmenu.audioplayer Audioplayer
+mainmenu.clearsectionsd Clear EPG Cache
+mainmenu.games Jocuri
+mainmenu.head  Meniu principal
+mainmenu.movieplayer Movieplayer
+mainmenu.pausesectionsd Citeste EPG
+mainmenu.pictureviewer Vizionare imagini
+mainmenu.radiomode Mod radio
+mainmenu.reboot Repornire
+mainmenu.recording Inregistrare
+mainmenu.recording_start start
+mainmenu.recording_stop stop
+mainmenu.scartmode Mod scart
+mainmenu.scripts Scripts
+mainmenu.service Service
+mainmenu.settings Setari
+mainmenu.shutdown Opreste
+mainmenu.sleeptimer SleepTimer
+mainmenu.tvmode Mod TV
+mainsettings.audio Audio
+mainsettings.osd Setari OSD 
+mainsettings.head Setari
+mainsettings.keybinding Setare Key 
+mainsettings.language Limba
+mainsettings.timezone Timezone
+mainsettings.lcd Afisaj VFD
+mainsettings.misc Setari Misc 
+mainsettings.network Retea
+mainsettings.recording Inregistrare
+mainsettings.savesettingsnow salveaza setari
+mainsettings.savesettingsnow_hint Salvez setari,\nrog asteptati...
+mainsettings.streaming Movieplayer
+mainsettings.video Video
+menu.back Inapoi
+messagebox.back Inapoi
+messagebox.cancel Cancel
+messagebox.discard Renunt la schimbari?
+messagebox.error Eroare
+messagebox.info Informatii
+messagebox.no Nu
+messagebox.yes Da
+miscsettings.bootinfo Arata info la pornire
+miscsettings.bootmenu Arata meniu de boot
+miscsettings.driver_boot driver si optiuni boot 
+miscsettings.fb_destination Expert! Boot-Console
+miscsettings.general General
+miscsettings.head Setari misc 
+miscsettings.hwsections use Sectiuni hardware 
+miscsettings.infobar_sat_display Afisaza satelit pe infobar
+miscsettings.shutdown_count inchide dupa
+miscsettings.shutdown_count_hint1 timp (in minutes) pt trecere din standby
+miscsettings.shutdown_count_hint2 to deep standby (0 = off).
+miscsettings.noaviawatchdog porneste AVIA watchdog
+miscsettings.noenxwatchdog porneste eNX watchdog
+miscsettings.pmtupdate porneste actuaizare pmt 
+miscsettings.shutdown_real Porneste standby
+miscsettings.shutdown_real_rcdelay Oprire intarziata
+miscsettings.sptsmode foloseste mod spts 
+miscsettings.virtual_zap_mode Virtual zap
+miscsettings.epg_cache EPG-Cache (Days)
+miscsettings.epg_cache_hint1 How long will EPG-Data in the future cached?
+miscsettings.epg_cache_hint2 Set in days.
+miscsettings.epg_dir EPG save path
+miscsettings.epg_head Setari Epg 
+miscsettings.epg_max_events Max. Evenimente
+miscsettings.epg_max_events_hint1 Cate evenimente sa salvez?
+miscsettings.epg_max_events_hint2 normaly 6000, 0 to disable limit
+miscsettings.epg_old_events renunta la EPG dupa  (std.)
+miscsettings.epg_old_events_hint1 How long will EPG-Data be stored after they timed out?
+miscsettings.epg_old_events_hint2 Setare in ore
+miscsettings.epg_save Salvare/Restore epg la repornire
+motorcontrol.head Cauta sateliti
+motorcontrol.user_menu  Meniu utilizator
+motorcontrol.install_menu Meniu instalare
+motorcontrol.step_west Step/Drive Motor West (b,c)
+motorcontrol.step_east Step/Drive Motor East (b,c)
+motorcontrol.halt Opreste Motor
+motorcontrol.west_limit Setare West (soft) Limit
+motorcontrol.east_limit Setare East (soft) Limit
+motorcontrol.enable_limit Activeaza (soft) Limite
+motorcontrol.disable_limit Dezactiveaza (soft) Limite
+motorcontrol.ref_position Mergi la pozitia de referinta
+motorcontrol.calc_positions recalculare pozitie motor
+motorcontrol.pos_increase Increase Motor Position (a)
+motorcontrol.pos_decrease Decrease Motor Position (a)
+motorcontrol.step_drive Switch Step/Drive Mode (b)
+motorcontrol.store Memoreaza pozitie motor (a)
+motorcontrol.step_increase Mareste dimensiune pas (c)
+motorcontrol.step_decrease Micsoreaza dimensiune pas (c)
+motorcontrol.goto mergi la pozitie motor (a)
+motorcontrol.notdef Nu este folosit
+motorcontrol.motor_pos (a) Motor Position:
+motorcontrol.settings Setari control motor
+motorcontrol.movement (b) Movement:
+motorcontrol.step_mode Step Mode
+motorcontrol.drive_mode Drive Mode
+motorcontrol.drive_mode_auto Drive Mode/auto stop
+motorcontrol.timed_mode Timed Step Mode
+motorcontrol.step_size (c) Dimensiune pas:
+motorcontrol.stop_moving opreste la semnal bun(moving)
+motorcontrol.stop_stopped opreste la semnal bun(oprit)
+motorcontrol.no_mode nu conteaza
+motorcontrol.msec millisecunde
+motorcontrol.status Stare
+motorcontrol.sat_pos Pozitie satelit (Step Mode):
+moviebrowser.option_browser Optiuni cautare
+moviebrowser.book_clear_all Clear all
+moviebrowser.menu_save Salveaza schimbari
+moviebrowser.menu_save_all Start update of movie info files
+moviebrowser.info_head_update Save changes in all movie info files
+moviebrowser.update_if_dest_empty_only Copy if destination is empty only
+moviebrowser.serie_auto_create Serie auto create
+moviebrowser.load_default Incarca setarile initiale
+moviebrowser.browser_row_head Setari sageti
+moviebrowser.browser_row_nr Numar de sageti
+moviebrowser.browser_row_item Row item
+moviebrowser.browser_row_width Row width
+moviebrowser.reload_at_start reincarca filmul de la inceput
+moviebrowser.remount_at_start Remount at start
+moviebrowser.dir_head Additional paths
+moviebrowser.dir Path
+moviebrowser.use_dir Use directory
+moviebrowser.use_rec_dir Foloseste directorul inregistrare
+moviebrowser.use_movie_dir Foloseste directorul film
+moviebrowser.hide_series Hide series
+moviebrowser.last_record_max_items Number of lines last record
+moviebrowser.last_play_max_items Number of lines last play
+moviebrowser.browser_frame_high Browser hight [Pixel]
+moviebrowser.book_head Bookmarks
+moviebrowser.book_lastmoviestop Last play stop:
+moviebrowser.book_movieend Movie end:
+moviebrowser.book_moviestart Movie start:
+moviebrowser.book_name Nume:
+moviebrowser.book_new New Bookmark
+moviebrowser.book_position Pozitie:
+moviebrowser.book_type Jump (<0 back , >0 for):
+moviebrowser.book_type_backward Repeta
+moviebrowser.book_type_forward salt peste
+moviebrowser.edit_book Bookmark change
+moviebrowser.edit_book_name_info1 Enter new Bookmark name 
+moviebrowser.edit_book_name_info2 book name info2
+moviebrowser.edit_book_pos_info1 Introduceti noua pozitie (s)
+moviebrowser.edit_book_pos_info2 
+moviebrowser.edit_book_type_info1 Introduceti dimensiunea saltului (s)
+moviebrowser.edit_book_type_info2 <0 back , >0 for, 0: none
+moviebrowser.edit_serie denumiti seria
+moviebrowser.error_no_movies Nu au fost gasite filme
+moviebrowser.foot_filter Filtru:
+moviebrowser.foot_play Start film
+moviebrowser.foot_sort Sortare:
+moviebrowser.head TS cauta film
+moviebrowser.head_filter Filtreaza filme dupa categorii:
+moviebrowser.head_playlist Ultimul vizionat:
+moviebrowser.head_recordlist Ultimul inregistrat:
+moviebrowser.hint_jumpbackward Salt inapoi in 5 s\n '0' pt anulare 
+moviebrowser.hint_jumpforward Salt inainte in 5 s\n '0' pt anulare
+moviebrowser.hint_movieend Filmende in 5 s\n '0' zum weitersehen 
+moviebrowser.hint_newbook_backward Salt inapoi\n 'albastru' pt sfarsit 
+moviebrowser.hint_newbook_forward Salt inainte\n 'albastru' pt sfarsit 
+moviebrowser.info_audio Audio
+moviebrowser.info_channel Canal
+moviebrowser.info_filename Nume
+moviebrowser.info_genre_major Gen
+moviebrowser.info_genre_minor Gen
+moviebrowser.info_head Informatii film
+moviebrowser.info_info1 Info 1
+moviebrowser.info_length Durata (Min)
+moviebrowser.info_parental_lockage Parental Lock age
+moviebrowser.info_parental_lockage_0year Mereu
+moviebrowser.info_parental_lockage_12year 12 ani
+moviebrowser.info_parental_lockage_16year 16 ani
+moviebrowser.info_parental_lockage_18year 18 ani
+moviebrowser.info_parental_lockage_6year 6 ani
+moviebrowser.info_parental_lockage_always niciodata 
+moviebrowser.info_path Path
+moviebrowser.info_prevplaydate Last play date
+moviebrowser.info_prodcountry Tara
+moviebrowser.info_prodyear An
+moviebrowser.info_quality Calitate
+moviebrowser.info_recorddate Date inregistrare
+moviebrowser.info_serie Serie
+moviebrowser.info_size Dimensiune fisier (MB)
+moviebrowser.info_title Titlu
+moviebrowser.info_videoformat IMAGINE
+moviebrowser.menu_directories_head Paths
+moviebrowser.menu_help_head Ajutor
+moviebrowser.menu_main_bookmarks Bookmarks
+moviebrowser.menu_main_head Setari
+moviebrowser.menu_nfs_head Setari NFS 
+moviebrowser.menu_parental_lock_activated activat
+moviebrowser.menu_parental_lock_activated_no nu
+moviebrowser.menu_parental_lock_activated_yes da
+moviebrowser.menu_parental_lock_activated_no_temp no (temporary)
+moviebrowser.menu_parental_lock_head Parental Lock
+moviebrowser.menu_parental_lock_rate_head Lock movies from
+moviebrowser.scan_for_movies Cauta filme ...
+moviebrowser.serie_head Serie
+moviebrowser.serie_name Schimba nume
+moviebrowser.short_audio Audio
+moviebrowser.short_book Book
+moviebrowser.short_channel Canal
+moviebrowser.short_country Tara
+moviebrowser.short_filename Nume
+moviebrowser.short_format Format
+moviebrowser.short_genre_major Gen
+moviebrowser.short_genre_minor Gen
+moviebrowser.short_info1 Info 1
+moviebrowser.short_info2 Info 2
+moviebrowser.short_length Min
+moviebrowser.short_parental_lockage Varsta
+moviebrowser.short_path Path
+moviebrowser.short_prevplaydate Ultimul
+moviebrowser.short_prodyear An
+moviebrowser.short_quality * (quality)
+moviebrowser.short_recorddate Data
+moviebrowser.short_serie Serie
+moviebrowser.short_size MB
+moviebrowser.short_title Titlu
+moviebrowser.start_head Start movie from:
+moviebrowser.start_record_start Movie start
+movieplayer.bookmark Bookmarks
+movieplayer.bookmarkname Bookmarkname
+movieplayer.bookmarkname_hint1 Introduceti un nume pt noul bookmark
+movieplayer.bookmarkname_hint2 
+movieplayer.buffering Buffering...
+movieplayer.defdir start dir.
+movieplayer.defplugin Start-Plugin
+movieplayer.dvdplayback DVD
+movieplayer.fileplayback File via VLC
+movieplayer.goto Salt la ...
+movieplayer.goto.h1 = -> absolute jump
+movieplayer.goto.h2 +,- -> relative jump
+movieplayer.head Movieplayer
+movieplayer.nostreamingserver The streaming server could not be reached.
+movieplayer.pesplayback Play PES (Experimental)
+movieplayer.pleasewait Please wait.\nConnecting to the streaming server...
+movieplayer.toomanybookmarks Sunt prea multe bookmarks.\nTrebuie sa stergeti unul dintre ele.
+movieplayer.tshelp1 Stop 
+movieplayer.tshelp10 aprox.10 min inapoi 
+movieplayer.tshelp11 skip approx. 10 minutes 
+movieplayer.tshelp12 Help: http://www.giggo.de/dbox2/movieplayer.html\n 
+movieplayer.tshelp2 Selectati track audio 
+movieplayer.tshelp3 Pausa/Continuare 
+movieplayer.tshelp4 Creati bookmark 
+movieplayer.tshelp5 Arata progres 
+movieplayer.tshelp6 aprox. 1 minut inapoi 
+movieplayer.tshelp7 sari aprox. 1 minut 
+movieplayer.tshelp8 aprox. 5 minute inapoi 
+movieplayer.tshelp9 sari aprox. 5 minute 
+movieplayer.tsplayback Play TS
+movieplayer.vcdplayback (S)VCD
+movieplayer.vlchelp1 Stop 
+movieplayer.vlchelp10 aprox. 10 minute inapoi 
+movieplayer.vlchelp11 sari aprox. 10 minute 
+movieplayer.vlchelp12 Help: http://www.giggo.de/dbox2/movieplayer.html\n 
+movieplayer.vlchelp2 Resync 
+movieplayer.vlchelp3 Pausa/Continuare 
+movieplayer.vlchelp4 Creati bookmark 
+movieplayer.vlchelp5 Arata progres 
+movieplayer.vlchelp6 aprox. 1 minut inapoi 
+movieplayer.vlchelp7 sari aprox. 1 minut 
+movieplayer.vlchelp8 aprox. 5 minute inapoi 
+movieplayer.vlchelp9 sari aprox. 5 minute 
+movieplayer.wrongvlcversion Aceasta facilitate nu este suportata de versiunea curenta VLC
+networkmenu.broadcast Transmisie
+networkmenu.dhcp DHCP
+networkmenu.gateway default gateway
+networkmenu.head Setari retea
+networkmenu.ipaddress Adresa IP 
+networkmenu.mount NFS/CIFS/FTPFS
+networkmenu.nameserver nume server
+networkmenu.netmask netmask
+networkmenu.ntpenable Sincronizare prin 
+networkmenu.ntprefresh NTP/DVB-Refresh
+networkmenu.ntprefresh_hint1 NTP/DVB-Time-Sync in minute
+networkmenu.ntprefresh_hint2 necesita resetare sau reset epg
+networkmenu.ntpserver NTP-Server
+networkmenu.ntpserver_hint1 NTP-Server example: ntp1.ptb.de
+networkmenu.ntpserver_hint2 necesita resetare sau reset epg
+networkmenu.ntptitle Sincronizare timp
+networkmenu.setupnow setare retea
+networkmenu.setuponstartup Setare retea la pornire
+networkmenu.show Arate setarile active pt retea
+networkmenu.test test retea
+nfs.alreadymounted directory already mounted
+nfs.automount mount on startup
+nfs.dir directory/share
+nfs.ip Server IP
+nfs.localdir local dir
+nfs.mount Mount Network volume
+nfs.mount_options mount options
+nfs.mounterror mount error
+nfs.mounterror_notsup filesystem type not supported
+nfs.mountnow mount now
+nfs.mountok mount successful
+nfs.mounttimeout mount error: timeout
+nfs.password password
+nfs.remount remount directories
+nfs.type type
+nfs.type_cifs CIFS
+nfs.type_lufs FTPFS
+nfs.type_nfs NFS
+nfs.umount Umount Network volume
+nfs.umounterror error umounting volume
+nfs.username username
+nfsmenu.head NFS/CIFS/FTPFS settings
+nvod.percentage (%d%% over)
+nvod.starting (starting in %d min)
+nvodselector.directormode Direct-Mode
+nvodselector.head Select starting-time
+nvodselector.subservice Select Subservice
+options.default Reset to defaults
+options.fb framebuffer
+options.null null
+options.off off
+options.on on
+options.serial serial
+parentallock.changepin change PIN code
+parentallock.changepin_hint1 Enter your new youth protection pin code here!
+parentallock.changetolocked on locked bouquets
+parentallock.head Enter Parental Lock PIN code
+parentallock.lockage lock program
+parentallock.lockage12 from 12 ani up
+parentallock.lockage16 from 16 ani up
+parentallock.lockage18 from 18 ani up
+parentallock.lockedchannel Locked sender...
+parentallock.lockedprogram Locked program (from %d years up)
+parentallock.never niciodata
+parentallock.onsignal on broadcasted lock
+parentallock.parentallock Youth protection
+parentallock.prompt prompt for PIN
+pictureviewer.decode_server_ip decode server ip
+pictureviewer.decode_server_port decode server port
+pictureviewer.defdir start dir.
+pictureviewer.head Picture viewer
+pictureviewer.help1 Mod meniu
+pictureviewer.help10 Arata mod
+pictureviewer.help11 reread image
+pictureviewer.help12 previous image
+pictureviewer.help13 next image
+pictureviewer.help14 Zoom out
+pictureviewer.help15 Zoom in
+pictureviewer.help16 scroll sus
+pictureviewer.help17 scroll stanga
+pictureviewer.help18 scroll dreapta
+pictureviewer.help19 scroll jos
+pictureviewer.help2 display image
+pictureviewer.help20 Schimba ordine sortare canale
+pictureviewer.help21 reread image (no scaling)
+pictureviewer.help22 exit
+pictureviewer.help3 schimba ordine sortare canale
+pictureviewer.help4 do not scale picture
+pictureviewer.help5 diashow mode
+pictureviewer.help6 previous image
+pictureviewer.help7 next image
+pictureviewer.help8 schimba ordine sortare
+pictureviewer.help9 exit
+pictureviewer.resize.color_average advanced
+pictureviewer.resize.none niciunul
+pictureviewer.resize.simple simplu
+pictureviewer.scaling scaling
+pictureviewer.show arata
+pictureviewer.slide_time slideshow display time
+pictureviewer.slideshow slideshow
+pictureviewer.sortorder schimba ordine sortare
+pictureviewer.sortorder.date (date)
+pictureviewer.sortorder.filename (filename)
+ping.ok is reachable (ping)
+ping.protocol is unreachable (host or protocol error)
+ping.socket is unreachable (socket error)
+ping.unreachable is unreachable
+pinprotection.head Enter PIN code
+pinprotection.wrongcode PIN-Code gresit! Incercati din nou.
+plugins.result plugin output
+rclock.lockmsg Telecomanda receptorului va fi blocata.
+rclock.menueadd Lock RC 
+rclock.title Blocare telecomanda
+rclock.unlockmsg Telecomanda deblocata.
+recordingmenu.apids default audio streams
+recordingmenu.apids_ac3 record AC3 streams
+recordingmenu.apids_alt record alternative streams
+recordingmenu.apids_std record standard stream
+recordingmenu.choose_direct_rec_dir choose dir on imm. recording
+recordingmenu.defdir recording directory
+recordingmenu.epg_for_filename long filenames (with EPG data)
+recordingmenu.file direct (file)
+recordingmenu.filesettings direct recording settings
+recordingmenu.head Setari inregistrare
+recordingmenu.help Recording devices:\n--------------------------\nserver:\nusing streaming software on a PC\n\n(analog) vcr:\nusing the vcr outlet\n\ndirect (file):\ndirectly into an NFS mounted directory\nor onto an internal hard drive\nTS: use spts mode(dbox2)\nPES: do not use spts mode(dbox2)\n\n\nMax. file size:\n---------------------\nNFS V2: 2 GB (2048 MB)\nNFS V3: almost unlimited (0 MB)\nFAT: 2 GB (2048 MB)\nFAT32: 4 GB (4096 MB)
+recordingmenu.no_scart Nu schimbati in mod scart
+recordingmenu.off oprit
+recordingmenu.record_in_spts_mode switch to spts mode before recording
+recordingmenu.recording_type recording device
+recordingmenu.ringbuffers no. of ringbuffers
+recordingmenu.save_in_channeldir Salvare in channel dir
+recordingmenu.server server
+recordingmenu.server_ip recording server IP
+recordingmenu.server_mac MAC address
+recordingmenu.server_port recording server port
+recordingmenu.server_wakeup recording server WOL
+recordingmenu.setupnow activate changes
+recordingmenu.splitsize Max. file size (MB)
+recordingmenu.stopplayback stop playback
+recordingmenu.stopsectionsd stop sectionsd
+recordingmenu.stream_vtxt_pid record videotext
+recordingmenu.stream_pmt_pid record PMT
+recordingmenu.use_fdatasync write synchronous (fdatasync)
+recordingmenu.use_o_sync write synchronous (O_SYNC)
+recordingmenu.vcr vcr
+recordingmenu.zap_on_announce zap on recording announce
+recordtimer.announce Inregistrarea va porni in cateva minute
+repeatblocker.hint_1 Shortest time (in ms) to recognize 2 keystrokes
+repeatblocker.hint_2 Enter 0 to switch of the blocker (red is space)
+satsetup.diseqc DiSEqC
+satsetup.diseqc10 DiSEqC 1.0
+satsetup.diseqc11 DiSEqC 1.1
+satsetup.diseqc12 DiSEqC 1.2
+satsetup.diseqc_advanced Avansat
+satsetup.diseqc_order Input order
+satsetup.diseqc_com_uncom Commited/Uncommited
+satsetup.diseqc_uncom_com Uncommited/Commited
+satsetup.diseqcrepeat DiSEqC-repeats
+satsetup.extended setari DiSEqC
+satsetup.extended_motor Setari motor
+satsetup.minidiseqc Mini-DiSEqC
+satsetup.motorcontrol Setare manuala motor
+satsetup.nodiseqc fara DiSEqC
+satsetup.satellite Satelit
+satsetup.savesettingsnow salvez setari
+satsetup.smatvremote SMATV Remote Tuning
+satsetup.sat_setup Setup satellites input / LNB
+satsetup.do_scan Include in all scan
+satsetup.lofl LNB Low Offset
+satsetup.lofh LNB High Offset
+satsetup.lofs LNB switch Offset
+satsetup.diseqc_input Diseqc input
+satsetup.uncomm_input Uncommited input
+satsetup.comm_input Commited input
+satsetup.motor_pos Rotor position
+satsetup.auto_scan Auto-Scan selected Satellite
+satsetup.auto_scan_all Auto-Scan multiple Satellites
+satsetup.manual_scan Manual frequency scan
+satsetup.use_nit Use NIT
+satsetup.use_usals Foloseste usals
+scants.abort_body Should the search really be aborted?
+scants.abort_header Abortion of channel scan
+scants.actcable Cable:
+scants.actsatellite Satellite:
+scants.bouquet Bouquet
+scants.bouquet_create create new
+scants.bouquet_erase sterge tot
+scants.bouquet_leave pastreaza curent
+scants.bouquet_satellite Satelit-Bouquet
+scants.bouquet_update actualizare
+scants.channel Channel:
+scants.failed Scanare transponder esuata!
+scants.finished Scanare transponder reusita!
+scants.freqdata Frequency:
+scants.head Scan transponder
+scants.numberofdataservices Data
+scants.numberofradioservices Radio
+scants.numberoftotalservices Total
+scants.numberoftvservices TV
+scants.provider Provider:
+scants.startnow start scan
+scants.test Test signal
+scants.transponders Transponders:
+screensetup.lowerright green = setup lower right
+screensetup.upperleft red = setup upper left
+servicemenu.getplugins Reload plugins
+servicemenu.getplugins_hint Reloading plugins,\nplease be patient.
+servicemenu.head Service
+servicemenu.reload Reload channel lists
+servicemenu.reload_hint Reloading channel lists,\nplease be patient.
+servicemenu.restart Soft restart
+servicemenu.restart_failed Restart esuat
+servicemenu.restart_hint Restart, rog asteptati
+servicemenu.restart_refused_recording Nu se poate reporni,inregistrare pornita
+servicemenu.scants Servicescan
+servicemenu.ucodecheck Check ucodes
+servicemenu.update Software Update
+settings.help Help
+settings.missingoptionsconffile The AZtrino-settings have been updated.\nNew Options will be set to default.
+settings.noconffile No AZtrino-settings found.\nUsing defaults.
+settings.pos_bottom_left jos stanga
+settings.pos_bottom_right jos dreapta
+settings.pos_top_left oben sus stanga
+settings.pos_top_right oben sus dreapta
+shutdowntimer.announce Box se va inchide in 1 min.\nAnulare oprire ?
+shutdown.recoding_query Doriti sa opriti inregistrarea ?
+sleeptimerbox.announce Sleeptimer in 1 min
+sleeptimerbox.hint1 Shutdown time in min. (000=off)
+sleeptimerbox.hint2 The STB will shutdown after this time.
+sleeptimerbox.title Sleeptimer
+streamfeatures.head Features
+streaminfo.aratio Aspect Ratio
+streaminfo.aratio_unknown Aspect Ratio: unknown
+streaminfo.audiotype Audiotype
+streaminfo.audiotype_unknown Audiotype: unknown
+streaminfo.bitrate Bitrate
+streaminfo.framerate Framerate
+streaminfo.framerate_unknown Framerate: unknown
+streaminfo.head Stream-Information
+streaminfo.not_available not available
+streaminfo.resolution Resolution
+streaminfo.signal Receipt signal
+streaming.buffer_overflow The recording was aborted,\nsince the data could not be written fast enough.
+streaming.busy One or several recording processes are active.\nIf you encounter this message and no recording is active, please restart AZtrino.
+streaming.dir_not_writable The recording directory is not writable.\nRecording will not work.
+streaming.success The recording has ended successfully.
+streaming.write_error The recording was aborted,\nsince an error occured during the writing process.
+streaming.write_error_open The recording was aborted,\nbecause the target file could not be opened.
+streamingmenu.352x288 352x288
+streamingmenu.352x576 352x576
+streamingmenu.480x576 480x576
+streamingmenu.704x576 704x576
+streamingmenu.head Movieplayer Settings
+streamingmenu.mpeg1 MPEG1
+streamingmenu.mpeg2 MPEG2
+streamingmenu.off Pornit
+streamingmenu.on Oprit
+streamingmenu.server_ip Streamingserver IP
+streamingmenu.server_port Streamingserver Port
+streamingmenu.streaming_audiorate Datarate Audio
+streamingmenu.streaming_force_avi_rawaudio Force AC3 for AVI
+streamingmenu.streaming_force_transcode_video Transcode MPG/VCD video
+streamingmenu.streaming_resolution Resolution
+streamingmenu.streaming_server_cddrive DVD Drive
+streamingmenu.streaming_server_startdir Directory (VLC)
+streamingmenu.streaming_transcode_audio Transcode audio (DVD/VCD/MPG)
+streamingmenu.streaming_transcode_video_codec MPEG video codec
+streamingmenu.streaming_type Streamingserver
+streamingmenu.streaming_videorate Datarate Video
+streamingserver.noconnect No connection to streamingserver.\nRecording canceled.
+stringinput.caps caps / no caps
+stringinput.clear clear all
+timer.eventrecord.msg   ... TO be DONE, or not to be done
+timer.eventrecord.title Schedule Record
+timer.eventtimed.msg The event is scheduled.\nThe box will power on and \nswitch to this channel at the given time.
+timer.eventtimed.title Schedule Event
+timerbar.channelswitch Schedule
+timerbar.recordevent Record
+timerlist.alarmtime Alarm time
+timerlist.apids Audio PIDs
+timerlist.apids_dflt record default audio streams
+timerlist.bouquetselect choose bouquet
+timerlist.channel Channel
+timerlist.channelselect choose channel
+timerlist.delete Delete
+timerlist.menumodify Modify timer
+timerlist.menunew New timer
+timerlist.message Message
+timerlist.moderadio Radio channels
+timerlist.modeselect Mode selection
+timerlist.modetv TV channels
+timerlist.modify Modify
+timerlist.name Timer list
+timerlist.new New timer
+timerlist.overlapping_timer Timer conflict. Create the timer anyway?
+timerlist.plugin Plugin
+timerlist.program.unknown Program unknown
+timerlist.recording_dir recording directory
+timerlist.reload Reload
+timerlist.repeat Repeat
+timerlist.repeat.biweekly biweekly
+timerlist.repeat.byeventdescription see timer
+timerlist.repeat.daily zilnic
+timerlist.repeat.fourweekly de 4 ori pe saptamana
+timerlist.repeat.friday Vineri
+timerlist.repeat.monday Luni
+timerlist.repeat.monthly lunar
+timerlist.repeat.once o data
+timerlist.repeat.saturday Sambata
+timerlist.repeat.sunday Duminica
+timerlist.repeat.thursday Joi
+timerlist.repeat.tuesday Marti
+timerlist.repeat.unknown necunoscut
+timerlist.repeat.wednesday Miercuri
+timerlist.repeat.weekdays in cursul saptamanii
+timerlist.repeat.weekly saptamanal
+timerlist.repeatcount repeta
+timerlist.repeatcount.help1 amount of timer repeats 
+timerlist.repeatcount.help2 0 for unlimited repeats 
+timerlist.save Salveaza timer
+timerlist.standby SB mod
+timerlist.standby.off renunta la standby
+timerlist.standby.on Enter standby
+timerlist.stoptime Stop time
+timerlist.type Timer typ
+timerlist.type.execplugin Execute plugin
+timerlist.type.nextprogram Programul urmator
+timerlist.type.record Inregistrare
+timerlist.type.remind Reminder
+timerlist.type.shutdown Inchide
+timerlist.type.sleeptimer Sleeptimer
+timerlist.type.standby Standby
+timerlist.type.unknown Necunoscut
+timerlist.type.zapto Mergi la
+timerlist.weekdays Zilele saptamanii
+timerlist.weekdays.hint_1 Mo Tu We Th Fr Sa Su
+timerlist.weekdays.hint_2 'X'=timer '-' no timer
+timersettings.record_safety_time_after Record stop time correction
+timersettings.record_safety_time_after.hint_1 Correction time in min. (00=off). This time
+timersettings.record_safety_time_after.hint_2 will added to stop time of every record timer.
+timersettings.record_safety_time_before Record start time correction
+timersettings.record_safety_time_before.hint_1 Correction time in min. (00=off). This time
+timersettings.record_safety_time_before.hint_2 will be deducted of every record timer.
+timersettings.separator Setari timer 
+timing.chanlist Lista canale
+timing.epg Epg
+timing.filebrowser Cauta fila
+timing.head OSD Timeouts
+timing.hint_1 Timp in sec. Dupa asta
+timing.hint_2 infobar will be faded out.
+timing.infobar Infobar
+timing.menu Meniu
+timing.numericzap Numeric Zap
+ucodecheck.avia500 Avia 500
+ucodecheck.avia600 Avia 600
+ucodecheck.cam-alpha Cam-Alpha
+ucodecheck.head UCode check
+ucodecheck.ucode UCode
+ucodes.failure ATTENTION, µCodes could NOT be found!\n\nPlease upload them via FTP (or DBox-BootManager),\nthen restart your box!
+usermenu.button_blue Meniu albastru
+usermenu.button_green Meniu verde
+usermenu.button_red  Meniu rosu
+usermenu.button_yellow Meniu galben
+usermenu.head Meniu utilizator
+usermenu.item_bar ---- Boarder ----
+usermenu.item_epg_misc Functii EPG 
+usermenu.item_none Nimic
+usermenu.item_vtxt Videotext
+usermenu.name Nume
+videomenu.csync sync correction
+videomenu.head Setari video
+videomenu.osd OSD
+videomenu.rgb_centering RGB centering
+videomenu.screensetup Setari ecran
+videomenu.tv-scart Video
+videomenu.vcr-scart VCR Scart
+videomenu.vcrsignal VCR Output Signal Type
+videomenu.vcrsignal_composite CVBS
+videomenu.vcrsignal_svideo S-Video
+videomenu.vcrswitch comuta automat pe scart 
+videomenu.videoformat Format
+videomenu.videoformat_169 16:9
+videomenu.videoformat_43 4:3
+videomenu.videoformat_autodetect autodetect
+videomenu.43mode 4:3 Content mode
+videomenu.panscan Pan&Scan
+videomenu.letterbox Letterbox
+zapit.scantype scan for services
+zapit.scantype.all toate serviciile
+zapit.scantype.radio numai radio
+zapit.scantype.tv numai tv
+zapit.scantype.tvradio tv & radio
+zaptotimer.announce Zapto timer in one minute
+extra.english English
+extra.dboxinfo Box Info
+extra.scan_mode Mod scanare
+extra.start_tostandby Startup to standby
+extra.rotor_swap Swap rotor east/west
+extra.use_log Log to /tmp/log
+extra.spts_mode SPTS mode
+extra.hw_sect Hardware Sections
+extra.logo Logo number
+extra.scan_full Full
+extra.scan_fast Fast
+hdd_slow Slow
+hdd_middle Middle
+hdd_fast Fast
+hdd_ext3 Ext3fs
+hdd_reiser Reiserfs
+hdd_1min 1 min.
+hdd_5min 5 min.
+hdd_10min 10 min.
+hdd_20min 20 min.
+hdd_30min 30 min.
+hdd_60min 60 min.
+hdd_sleep Sleep time
+hdd_noise Noise
+hdd_activate Activare setari
+hdd_fs Filesystem
+hdd_format Format HDD
+hdd_format_warn Sunteti sigur ca vreti sa formatati? Pierdeti toate datele !
+hdd_format_failed HDD format asuat !
+hdd_umount_warn HDD unmount failed !
+hdd_check Check filesystem
+hdd_check_failed Verificare HDD esuata !
+hdd_settings Setari HDD 
+extra.clear_log Clear Log
+extra.zap_cycle Zap cycle
+extra.sms_channel sms-mode channel
+extra.manual_scan Cautare manuala
+extra.tp_freq Frequency
+extra.tp_rate Symbol rate
+extra.tp_pol Polarization
+extra.tp.pol_v V
+extra.tp_pol_h H
+extra.tp_fec FEC
+extra.fec_1_2 1/2
+extra.fec_2_3 2/3
+extra.fec_3_4 3/4
+extra.fec_5_6 5/6
+extra.fec_7_8 7/8
+extra.tp_mod Modulation
+extra.tp_mod_16 QAM/16
+extra.tp_mod_32 QAM/32
+extra.tp_mod_64 QAM/64
+extra.tp_mod_128 QAM/128
+extra.tp_mod_256 QAM/256
+extra.timezone Timezone
+extra.zapit_menu Zapit options
+extra.zapit_make_bouquet Make Remaining Channels list
+extra.zapit_save_last_chan Salveaza ultimul canal
+extra.zapit_motor_speed Viteza miscare motor (10 = 1deg/sec)
+extra.zapit_fe_timeout Tune timeout
+extra.zapit_fast_zap fast zap
+extra.zapit_sort_names Sortare canale dupa nume
+extra.zapit_scanpids cautare/Foloseste pids
+extra.zapit_rezap_time Re-Zap on emu switch time
+extra.zapit_hvoltage High (13.5/18.5) voltage
+reset_channels Sterge toate canalele
+reset_settings Revenire la setarile initiale
+reset_all Revenire la valorile din fabrica
+reset_confirm Sunteti sigur ?
+extra.zapit_backup Backup channels to /tmp
+extra.zapit_restore Restore channels from /tmp
+extra.add_to_bouquet Add to bouquet
+extra.key_list_start home
+extra.key_list_end end
+extra.chadded The current channel has been added to selected bouquet....\n
+extra.chalreadyinbq The current channel is already in selected bouquet....\n
+extra.menu_left_exit "Left" = menu back
+extra.zapit_write_names scrie nume canal
+extra.update_dir Directory pt actualizare
+extra.audio_run_player Audio key start player
+mpkey.rewind Inapoi
+mpkey.forward Inainte
+mpkey.pause Pause
+mpkey.stop Stop
+mpkey.play Play
+mpkey.audio Audio track
+mpkey.time Show time
+mpkey.bookmark save bookmark
+mpkey.plugin Run plugin
+extra.loadcolors Incarca culori din
+extra.savecolors Salaveaza culori ca
+extra.loadkeys Incarca keys din
+extra.savekeys Salveaza keys ca
+extra.loadconfig Incarca setari din
+extra.saveconfig Salveaza setari ca
+extra.key_click Key click
+videomenu.videomode Sistem video 
+videomenu.videomode_ntsc NTSC
+videomenu.videomode_pal PAL
+videomenu.videomode_palm PAL-M
+extra.key_timeshift Timeshift
+extra.key_plugin One touch plugin
+extra.timeshift_pause Timeshift pause
+rfmod.rfmod RF modulator
+rfmod.carrier Subcarrier Frequency
+rfmod.carrier4500 4.5
+rfmod.carrier5500 5.5
+rfmod.carrier6000 6.0
+rfmod.carrier6500 6.5
+rfmod.enable Porneste sunet
+rfmod.channel Canal
+rfmod.finetune Fine tune
+rfmod.standby Porneste modulator
+rfmod.test Test pattern
+extra.key_unlock Unlock key
+servicemenu.imageinfo Image informatii
+imageinfo.creator Creator:
+imageinfo.date Date:
+imageinfo.dokumentation Docs:
+imageinfo.forum Forum:
+imageinfo.head Image info:
+imageinfo.homepage Home page:
+imageinfo.image Image:
+imageinfo.license License:
+imageinfo.version Version:
+extra.cache_txt Cache teletext
+extra.use_gotoxx Use gotoXX
+extra.latitude Latitude
+extra.longitude Longitude
+extra.ladirection LaDirection
+extra.lodirection LoDirection
+extra.south Sud
+extra.north Nord
+extra.east Est
+extra.west Vest
+options.on.without_messages Fara msg
+extra.zapit_scan_sdt Cautare actualizare pt SDT 
+extra.zapit_sdt_changed Channels changed, reincarcare setari.
+extra.auto_timeshift Auto-record, sec (0 = disable)
+extra.temp_timeshift Temporary timeshift
+extra.auto_delete Auto-stergere
+extra.auto_to_record Move timeshift to records
+extra.record_time Fast/timeshift record time(hours)
+extra.fec_s2_qpsk_1_2 1/2 s2 qpsk
+extra.fec_s2_qpsk_2_3 3/2 s2 qpsk
+extra.fec_s2_qpsk_3_4 3/4 s2 qpsk
+extra.fec_s2_qpsk_5_6 5/6 s2 qpsk
+extra.fec_s2_qpsk_7_8 7/8 s2 qpsk
+extra.fec_s2_qpsk_8_9 8/9 s2 qpsk
+extra.fec_s2_qpsk_3_5 3/5 s2 qpsk
+extra.fec_s2_qpsk_4_5 4/5 s2 qpsk
+extra.fec_s2_qpsk_9_10 9/10 s2 qpsk
+extra.fec_s2_8psk_1_2 1/2 s2 8psk
+extra.fec_s2_8psk_2_3 3/2 s2 8psk
+extra.fec_s2_8psk_3_4 3/4 s2 8psk
+extra.fec_s2_8psk_5_6 5/6 s2 8psk
+extra.fec_s2_8psk_7_8 7/8 s2 8psk
+extra.fec_s2_8psk_8_9 8/9 s2 8psk
+extra.fec_s2_8psk_3_5 3/5 s2 8psk
+extra.fec_s2_8psk_4_5 4/5 s2 8psk
+extra.fec_s2_8psk_9_10 9/10 s2 8psk
+video_mode_ok Is this video mode working ok ?
+scrambled_channel Canal codat
+neutrino_starting AZtrino starting...

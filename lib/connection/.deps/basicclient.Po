@@ -1,0 +1,152 @@
+basicclient.o: basicclient.cpp basicclient.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/malloc.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/features.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/predefs.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/cdefs.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wordsize.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/gnu/stubs.h \
+ /home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/include/stddef.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/stdio.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/types.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/typesizes.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/libio.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/_G_config.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/wchar.h \
+ /home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/include/stdarg.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/stdio_lim.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/sys_errlist.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/stdio.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/types.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/time.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/endian.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/endian.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/byteswap.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/select.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/select.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/sigset.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/time.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/sysmacros.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/pthreadtypes.h \
+ basicmessage.h basicsocket.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/time.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/unistd.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/posix_opt.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/environments.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/confname.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/getopt.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/inttypes.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/stdint.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wchar.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/socket.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/uio.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/uio.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/socket.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/sockaddr.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/asm/socket.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/asm/sockios.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/asm/ioctl.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/un.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/string.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/xlocale.h
+
+basicclient.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/malloc.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/features.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/predefs.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/cdefs.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wordsize.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/gnu/stubs.h:
+
+/home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/include/stddef.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/stdio.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/types.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/typesizes.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/libio.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/_G_config.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/wchar.h:
+
+/home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/include/stdarg.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/stdio_lim.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/sys_errlist.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/stdio.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/types.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/time.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/endian.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/endian.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/byteswap.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/select.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/select.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/sigset.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/time.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/sysmacros.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/pthreadtypes.h:
+
+basicmessage.h:
+
+basicsocket.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/time.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/unistd.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/posix_opt.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/environments.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/confname.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/getopt.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/inttypes.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/stdint.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wchar.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/socket.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/uio.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/uio.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/socket.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/sockaddr.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/asm/socket.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/asm/sockios.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/asm/ioctl.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/un.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/string.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/xlocale.h:

@@ -1,0 +1,28 @@
+helpers.o: helpers.cpp \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/inttypes.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/features.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/predefs.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/cdefs.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wordsize.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/gnu/stubs.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/stdint.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wchar.h \
+ helpers.hpp
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/inttypes.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/features.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/predefs.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/cdefs.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wordsize.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/gnu/stubs.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/stdint.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wchar.h:
+
+helpers.hpp:

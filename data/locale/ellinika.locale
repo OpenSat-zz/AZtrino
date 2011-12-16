@@ -1,0 +1,1037 @@
+AUDIOSelectMenue.head Ακουστική επιλογή
+EPGMenu.epgplus Πρόβλεψης πλάνου
+EPGMenu.eventinfo Πληροφορίες για τη μετάδοση
+EPGMenu.eventlist Πρόβλεψης
+EPGMenu.head EPG -Πρόγραμμα πληροφορία
+EPGMenu.streaminfo Τεχνικές Πληροφορίeς
+EPGPlus.actions Ενέργειες
+EPGPlus.bybouquet_mode Σημείο μπουκέτο
+EPGPlus.bypage_mode Από τη σελίδα
+EPGPlus.change_font_size Αλλαγή μεγέθους χαρακτήρα
+EPGPlus.change_font_style Ύφος γραψίματος
+EPGPlus.change_size Αλλαγή μέγεθου
+EPGPlus.channelentry_font Kανάλια
+EPGPlus.channelentry_separationlineheight Ύψος της γραμμής  μεταξύ των καταχωρήσεων καναλιών
+EPGPlus.channelentry_width Πλάτος των ονομάτων καναλιών
+EPGPlus.channelevententry_font Μεταδόσεις
+EPGPlus.edit_fonts Ρύθμιση γράφεις
+EPGPlus.edit_sizes Διαστάσεις ρύθμισε
+EPGPlus.font_style_bold Χόνδρο
+EPGPlus.font_style_italic Κυρτών
+EPGPlus.font_style_regular Κανονικό
+EPGPlus.footer_fontbouquetchannelname Επιλεγμένα ονομάτα μπουκέτων/καναλιών
+EPGPlus.footer_fontbuttons Κουμπιά
+EPGPlus.footer_fonteventdescription Τίτλος 1ης επιλεγμένης.μεταδόσεις
+EPGPlus.footer_fonteventshortdescription Τίτλος 2ης επιλεγμένης.μεταδόσεις
+EPGPlus.head Προβλέψη επισκόπησης(EPG)
+EPGPlus.header_font Μενού τίτλος
+EPGPlus.horgap1_height Επάνω hor.ύψος 1
+EPGPlus.horgap2_height Επάνω hor.ύψος 2
+EPGPlus.next_bouquet Μπουκέτο μπροστά
+EPGPlus.options Επιλογές
+EPGPlus.page_down Σελίδα πίσω
+EPGPlus.page_up Σελίδα μπροστά
+EPGPlus.prev_bouquet Μπουκέτα πίσω
+EPGPlus.record Εγγραφή
+EPGPlus.refresh_epg Ανανέωση
+EPGPlus.remind Αλλαγή
+EPGPlus.reset_settings Ακυρώσει ρυθμίσεων
+EPGPlus.save_settings Αποθήκευση των ρυθμίσεων
+EPGPlus.scroll_mode Τρόπος κινήσεις
+EPGPlus.settings Ρυθμίσεις
+EPGPlus.slider_width Πλάτος το Slider
+EPGPlus.stretch_mode Stretch Mode
+EPGPlus.swap_mode Ξεφυλλίσω
+EPGPlus.timeline_fontdate Ημερομηνία χρονικού 
+EPGPlus.timeline_fonttime χρόνος πηγών
+EPGPlus.vergap1_width Πλάτος ver.κενό 1
+EPGPlus.vergap2_width Πλάτος ver.κενό 2
+EPGPlus.view_mode Τρόπος
+GENRE.ARTS.0 Τεχνη /Κουλτούρα
+GENRE.ARTS.1 Καλλιτεχνικές εκπομπές
+GENRE.ARTS.10 Τέχνη-/Κουλτούρα-περιοδικό
+GENRE.ARTS.11 Τρόπος
+GENRE.ARTS.2 Πλαστική τέχνη
+GENRE.ARTS.3 Θρησκεία
+GENRE.ARTS.4 Λαϊκή τέχνη
+GENRE.ARTS.5 Λογοτεχνία
+GENRE.ARTS.6 Έργο/σινεμά
+GENRE.ARTS.7 Πειραματικά έργα
+GENRE.ARTS.8 Ραδιοεκπομπή/Δημοσιογραφικά
+GENRE.ARTS.9 Νέα μέσα ενημέρωσης
+GENRE.CHILDRENs_PROGRAMMES.0 Παιδία /παιδικό πρόγραμμα
+GENRE.CHILDRENs_PROGRAMMES.1 Πρόγραμμα για προσχολικά παιδία
+GENRE.CHILDRENs_PROGRAMMES.2 Πρόγραμμα απασχόλησης απο 6 μέχρι 14 ετών
+GENRE.CHILDRENs_PROGRAMMES.3 Πρόγραμμα απασχόλησης απο 10 μέχρι 16 ετών
+GENRE.CHILDRENs_PROGRAMMES.4 Πρόγραμμα πληροφορίας και εκπαίδευσης
+GENRE.CHILDRENs_PROGRAMMES.5 Παιδικά
+GENRE.DOCUS_MAGAZINES.0 Ντοκιμαντέρ
+GENRE.DOCUS_MAGAZINES.1 Φύση/Ζώα/Περιβάλλων
+GENRE.DOCUS_MAGAZINES.2 Επιστήμη της φύσης και τεχνική
+GENRE.DOCUS_MAGAZINES.3 Ιατρική/Φυσιολογία/Ψυχολογία
+GENRE.DOCUS_MAGAZINES.4 Εξωτερικα/Ταξίδια
+GENRE.DOCUS_MAGAZINES.5 Επιστήμη της κοινωνίας
+GENRE.DOCUS_MAGAZINES.6 Συνεχής επαγγελματική κατάρτιση
+GENRE.DOCUS_MAGAZINES.7 Γλώσσες
+GENRE.MOVIE.0 Έργο/Δραματικό
+GENRE.MOVIE.1 Αστυνομικά/θρίλερ
+GENRE.MOVIE.2 Περιπέτεια/Πολεμικό
+GENRE.MOVIE.3 Επιστημονική φαντασία/Φαντασία/Θρίλερ
+GENRE.MOVIE.4 Κωμωδία
+GENRE.MOVIE.5 Σαπουνόπερα/Μελοδραματικά/Παραδοσιακά
+GENRE.MOVIE.6 Ρομαντικό
+GENRE.MOVIE.7 Κλασικά/Θρησκεύτηκα/Ιστορικό έργο/Δραματικό
+GENRE.MOVIE.8 Ενήλικα έργα/Δραματικό
+GENRE.MUSIC_DANCE.0 Μουσική/Μπαλέτο/Χορός
+GENRE.MUSIC_DANCE.1 Ροκ/Ποπ
+GENRE.MUSIC_DANCE.2 Kλασσική/Μουσικοί
+GENRE.MUSIC_DANCE.3 Παραδοσιακή μουσική
+GENRE.MUSIC_DANCE.4 Jazz
+GENRE.MUSIC_DANCE.5 Μουσικός/Όπερα
+GENRE.MUSIC_DANCE.6 Mπαλέτο
+GENRE.NEWS.0 Ειδήσεις
+GENRE.NEWS.1 Ειδήσεις/Καιρός
+GENRE.NEWS.2 Ειδήσεις/περιοδικού  
+GENRE.NEWS.3 Ντοκιμαντέρ
+GENRE.NEWS.4 Ομιλία/Συνέντευξη
+GENRE.SHOW.0 Παρουσιάζει/παιχνίδι 
+GENRE.SHOW.1 Gameshow/Quiz
+GENRE.SHOW.2 Διάφορα
+GENRE.SHOW.3 Η συζήτηση παρουσιάζει
+GENRE.SOCIAL_POLITICAL.0 Κοινωνικά και πολιτικά γεγονότα/επιχείρηση 
+GENRE.SOCIAL_POLITICAL.1 Περιοδικό/Ρεπορτάζ/Ντοκιμαντέρ
+GENRE.SOCIAL_POLITICAL.2 Επιχείρησεις και Κοινωνικά
+GENRE.SOCIAL_POLITICAL.3 Ιδιαίτερα άτομα
+GENRE.SPORTS.0 Σπορ
+GENRE.SPORTS.1 Mεγάλες(Ολυμπιακή αγώνες,παγκόσμιο πρωτάθλημα.)
+GENRE.SPORTS.10 Ιππασίες
+GENRE.SPORTS.11 Πολεμικέα σπορ
+GENRE.SPORTS.2 Σπορ περιοδικό
+GENRE.SPORTS.3 Ποδόσφαιρο
+GENRE.SPORTS.4 Τένις
+GENRE.SPORTS.5 Ομαδικό σπορ
+GENRE.SPORTS.6 Αθλητικά
+GENRE.SPORTS.7 Mότο σπορ
+GENRE.SPORTS.8 θαλασσινά σπορ
+GENRE.SPORTS.9 Χειμερινό σπορ
+GENRE.TRAVEL_HOBBIES.0 Ταξίδια στον ελεύθερο χρόνο
+GENRE.TRAVEL_HOBBIES.1 Ταξίδια και τουρισμός
+GENRE.TRAVEL_HOBBIES.2 Βιοτεχνία
+GENRE.TRAVEL_HOBBIES.3 Μηχανές
+GENRE.TRAVEL_HOBBIES.4 Σπορ και υγειά
+GENRE.TRAVEL_HOBBIES.5 Μαγειρική
+GENRE.TRAVEL_HOBBIES.6 Αγορά 
+GENRE.TRAVEL_HOBBIES.7 Κήπος
+GENRE.UNKNOWN Άγνωστο
+apidselector.head Επιλογή γλωσσάς
+audiomenu.PCMOffset Ρυθμίσεις ένταση PCM
+audiomenu.analogout Αναλογική έξοδος
+audiomenu.avs avs
+audiomenu.avs_control Έλεγχος όγκου avs/ost
+audiomenu.dolbydigital Dolby ψηφιακό
+audiomenu.head Ρυθμίσεις Ήχου
+audiomenu.lirc lirc
+audiomenu.monoleft Μόνο αριστερά
+audiomenu.monoright Μόνο δεξia
+audiomenu.ost Ανατολικά
+audiomenu.stereo Στερεοφωνικό
+audioplayer.add Προσθέτω
+audioplayer.artist_title Καλλιτέχνης,τίτλος
+audioplayer.building_search_index Δημιουργώ αναζήτησει
+audioplayer.button_select_title_by_id Αναζήτησει n.ID
+audioplayer.button_select_title_by_name Αναζητώ για.όνομα
+audioplayer.defdir Εκκινήσει-καταλογή
+audioplayer.delete Διαγράφω
+audioplayer.deleteall Όλα τα διαγράφω
+audioplayer.enable_sc_metadata Ενεργοποιώ Shoutcast Meta-Daten Parsing
+audioplayer.fastforward Γρήγορη Vorl.
+audioplayer.follow Ακολουθώ τα.τραγούδιa
+audioplayer.head Ήχος Play λίστα
+audioplayer.highprio Υψηλή αποκωδικοποιήσει-προτεραιότητα 
+audioplayer.jump_backwards Προς τα πίσω.επόμενο
+audioplayer.jump_dialog_hint1 Παρακαλώ επόμενο στόχο εισάγετε
+audioplayer.jump_dialog_hint2 (Σχετικό, σε δευτερόλεπτα)
+audioplayer.jump_dialog_title Επόμενο προορισμό εισάγετε
+audioplayer.jump_forwards Επόμενο.άλμα
+audioplayer.keylevel Πλήκτρα-αλλαγής κίνησης
+audioplayer.name Ήχος player
+audioplayer.pause Διάλειμμα
+audioplayer.play Αναπαραγωγή
+audioplayer.playing Τρέχον τραγούδι
+audioplayer.playlist_fileerror_msg Το αρχείο δεν μπορεί να εφαρμοστή:
+audioplayer.playlist_fileoverwrite_msg θέλετε αυτό το αρχείο να αντιγραφή?:
+audioplayer.playlist_name Όνομα αρχείου τις Play λίστα
+audioplayer.playlist_name_hint1 Εισάγετε το αρχείου στην λίστας μέσα
+audioplayer.playlist_name_hint2 Η επέκταση .m3u θα τοποθετηθεί αυτόματα
+audioplayer.reading_files Διάβασε τα στοιχεία μέσα
+audioplayer.repeat_on Repeatmodus Ενεργό
+audioplayer.rewind Γρήγορο Rückl.
+audioplayer.save_playlist Λίστα αποθηκεύω
+audioplayer.screensaver_timeout Ένδειξη εικόνας(λεπτά,0=κλεινό)
+audioplayer.select_title_by_name Αναζητήσει τίτλου με όνομα(SMS)
+audioplayer.show_playlist Ένδειξη λίστας
+audioplayer.shuffle Shuffle
+audioplayer.stop Στοπ
+audioplayer.title_artist Τίτλος,καλλιτέχνης
+audioplayerpicsettings.general Ήχος Player/Εικόνα θεατή
+bookmarkmanager.delete Διαγράφω
+bookmarkmanager.name Bookmarks
+bookmarkmanager.rename Μετονομάζω
+bookmarkmanager.select Επιλέγω
+bouqueteditor.add Προσθέτω
+bouqueteditor.bouquetname Όνομα στο μπουκέτο
+bouqueteditor.delete Διαγράφω
+bouqueteditor.discardingchanges Οιαλλαγές απορρίπτονται.παρακαλώ περιμένετε…
+bouqueteditor.hide Κρύβω
+bouqueteditor.lock Ασφαλίζω
+bouqueteditor.move Μεταθέτω
+bouqueteditor.name Σύνταξη μπουκέτων
+bouqueteditor.newbouquetname Καινούργιο Όνομα στο μπουκέτο
+bouqueteditor.rename Μετονομάζω
+bouqueteditor.return Τελειωμένο
+bouqueteditor.savechanges? θέλατε η αλλαγή να αποθηκευτεί?
+bouqueteditor.savingchanges Η αλλαγή αποθηκευτικέ παρακαλώ περιμένετε ...
+bouqueteditor.switch Κανάλι έγγραφης/διαγράφω
+bouqueteditor.switchmode TV/Ράδιο
+bouquetlist.head Μπουκέτα
+cablesetup.provider Καλωδιακές Υπηρεσίες
+channellist.head Όλα τα κανάλια
+channellist.nonefound Δεν βρέθηκαν κανάλια!\παρακαλώ αναζητήσει κανάλια με\(dbox-πλήκτρο->Σέρβις)
+channellist.since Από %02d:%02d
+colorchooser.alpha Άλφα
+colorchooser.blue Μπλε
+colorchooser.green Πράσινο
+colorchooser.red Κόκκινο
+colormenu.background Χρώμα Βάθους
+colormenu.fade Το μενου εξασθενίστε
+colormenu.font Μέγεθος χαρακτήρα
+colormenu.gtx_alpha Διαφάνεια (GTX)
+colormenu.head Ρυθμίσει χρώμα
+colormenu.menucolors Μενού χρώμα
+colormenu.statusbar Θέσει μπάρας
+colormenu.textcolor Χρώμα κειμένων
+colormenu.themeselect θέμα επίλεκτο
+colormenu.timing OSD Ακυρώνω
+colormenusetup.head Μενού χρώμα
+colormenusetup.menucontent Περιεχόμενο
+colormenusetup.menucontent_inactive Περιεχόμενο απενεργοποιημένο
+colormenusetup.menucontent_selected Επιλεγμένο περιεχόμενα
+colormenusetup.menuhead Σύνορα τίτλου
+colorstatusbar.head Μπάρα-χρωμάτων
+colorthememenu.classic_theme κλασσικό
+colorthememenu.dblue_theme DarkBlue Πρόσοψη
+colorthememenu.dvb2k_theme DVB2000 Πρόσοψη
+colorthememenu.head Επιλέγω πρόσοψη
+colorthememenu.neutrino_theme AZtrino Πρόσοψη
+date.Apr  Απρ
+date.Aug  Αυγ
+date.Dec  Δεκ
+date.Feb  Φευ
+date.Fri  Παρ
+date.Jan  Ιαν
+date.Jul  Ιουλ
+date.Jun  Ιουν
+date.Mar  Μαρ
+date.May  Μαϊ
+date.Mon  Δευ
+date.Nov  Νοε
+date.Oct  Οκτ
+date.Sat  Σαβ
+date.Sep  Σεπ
+date.Sun  Κυρ
+date.Thu  Πεμ
+date.Tue  Τρι
+date.Wed  Τετ
+epgextended.actors Ηθοποιοί
+epgextended.director Σκηνοθέτης
+epgextended.guests Επισκεφτείς
+epgextended.original_title Πρώτη έκδοση
+epgextended.presenter Συντονιστής
+epgextended.year_of_production Έτος παραγωγής
+epglist.noevents Δεν υπάρχει EPG-υπηρεσία.
+epgviewer.More_Screenings Περαιτέρω ημερομηνίες σε αυτό το κανάλι
+epgviewer.nodetailed Καμία αναλυτική πληροφορία διαθέσιμη
+epgviewer.notfound Καμία πληροφορία προγράμματος (EPG) που βρίσκεται
+eventfinder.head Αναζήτηση αναφοράς μέσα EPG
+eventfinder.keyword Λέξη κλειδί
+eventfinder.search Aναζήτηση
+eventfinder.search_within_epg Αναζήτηση μέσα
+eventfinder.search_within_list Αναζήτηση μέσα
+eventfinder.searching Αναζήτηση αναφοράς μέσα EPG ...
+eventfinder.start_search Έναρξης αναζήτησης
+eventlistbar.channelswitch Αλλάζω
+eventlistbar.eventsort Ταξινόμηση
+eventlistbar.recordevent Έγγραφη
+favorites.addchannel Το τρέχον κανάλι το θέλετε στο μπουκέτο\n"στα αγαπημένα μου" Να Αποθηκευτεί.\Αποθηκεύσει χρειάζεται ένα λεπτό ...
+favorites.bouquetname Τα αγαπημένα μου
+favorites.bqcreated Μπουκέτα "τα αγαπημένα"τα πρόσθεσα...\n
+favorites.chadded Το τρέχον κανάλι είναι ήδη στα αγαπημένα  σας… \
+favorites.chalreadyinbq Το καινούργιο κανάλι είναι στα αγαπημένα μου...\
+favorites.finalhint \Τα ακούσια προστιθέμενα κανάλια μπορούν επίσης\με Bouquet να διορθώνεται.
+favorites.menueadd Το κανάλι στα αγαπημένα αποθήκευσε
+favorites.nobouquets Τα αγαπημένα είναι μόνο με ενεργά μπουκέτα δυνατόν.
+filebrowser.delete Διαγράφω
+filebrowser.denydirectoryleave Kατάλογος απόλυτα
+filebrowser.dodelete1 θέλατε
+filebrowser.dodelete2 Να διαγραφτεί?
+filebrowser.filter.active Φίλτρο ανοιχτώ
+filebrowser.filter.inactive Φίλτρο κλειστό
+filebrowser.head Filebrowser
+filebrowser.mark Σήμανση
+filebrowser.nextpage Σελίδα μπροστά
+filebrowser.prevpage Σελίδα πίσω
+filebrowser.scan Αναζήτηση κατάλογου
+filebrowser.select Επιλέγω
+filebrowser.showrights Τα δικαιώματα αρχείων δείχνουν
+filebrowser.sort.date (Ημερομηνία)
+filebrowser.sort.name (Όνομα αρχείου)
+filebrowser.sort.namedirsfirst (Όνομα αρχείου 2)
+filebrowser.sort.size (Μεγάλο)
+filebrowser.sort.type (Τύπος)
+filesystem.is.utf8 Σύστημα αρχείου
+filesystem.is.utf8.option.iso8859.1 ISO-8859-1
+filesystem.is.utf8.option.utf8 UTF-8
+flashupdate.actionreadflash Διαβάσω το λογισμικό
+flashupdate.cantopenfile Το αρχείο δεν μπορεί να ανοίξει
+flashupdate.cantopenmtd Αυτό MTD-Device δεν ανοίγει
+flashupdate.checkupdate Αναζητήσει για καινούργια αναβάθμιση 
+flashupdate.currentreleasecycle Releasezyklus
+flashupdate.currentversion_sep Εγκατεστημένη έκδοση
+flashupdate.currentversiondate Ημερομηνία
+flashupdate.currentversionsnapshot Τύπος Λογισμικού
+flashupdate.currentversiontime Χρόνος
+flashupdate.erasefailed Λάθος διαγράφει
+flashupdate.erasing Διαγράφω το λογισμικό
+flashupdate.experimentalimage Έχετε ένα Snapshot επιλέξει,παρακαλώ προσέξετε,\Το λογισμικό δεν είναι δοκιμασμένο και το Box\μετά την εγκατάσταση να μην δουλεύει.\n\Θέλατε αυτό το λογισμικό να το τρέξτε?
+flashupdate.expertfunctions Ειδικές λειτουργίες
+flashupdate.fileis0bytes Το αρχείο είναι 0 Byte
+flashupdate.fileselector Επιλογή-αρχείου
+flashupdate.flashreadyreboot Το λογισμικό ανανεώθηκε με επιτυχία.\το DBox θα κάνη επανεκκίνηση
+flashupdate.getinfofile Φορτώνω έκδοση πληροφορίες
+flashupdate.getinfofileerror Η πληροφορίες δεν φορτώνουν
+flashupdate.getupdatefile Φορτώνω την αναβάθμιση
+flashupdate.getupdatefileerror Δεν φορτώνει η αναβάθμιση
+flashupdate.globalprogress Συνολικό ποσοστό:
+flashupdate.head Ανανέωση
+flashupdate.md5check Έλεγχο το λογισμικό
+flashupdate.md5sumerror Το λογισμικό έχει λάθος
+flashupdate.msgbox Βρέθηκε καινούργιο λογισμικό:\Ημερομηνία:%s,%s\nBasisImage:%s\nΤύπος Λογισμικό:%s\n\Θέλετε αυτό το Έκδοση να το κατεβάσετε\και να το εγκατάσταση?
+flashupdate.msgbox_manual Χειροκίνητα βρέθηκε ένα καινούργιο λογισμικό:\ημερομηνία:%s,%s\nBasisImage:%s\τύπος λογισμικό:%s\n\n Θέλετε να το εγκατάσταση?
+flashupdate.mtdselector Χωρίσματα-επιλέγω
+flashupdate.programmingflash Προγραμματίζω το λογισμικό
+flashupdate.proxypassword Κωδικός
+flashupdate.proxypassword_hint1 Εισάγετε
+flashupdate.proxypassword_hint2 Proxy-Κωδικό μέσα
+flashupdate.proxyserver Proxy Όνομα
+flashupdate.proxyserver_hint1 Εισάγετε μέσα Proxy όνομα η το IP μέσα (Host:Port)
+flashupdate.proxyserver_hint2 Ένα άδειο κενό δεν υποδείχνει το Proxy
+flashupdate.proxyserver_sep Proxy Σερβερ
+flashupdate.proxyusername Όνομα Χρήστη
+flashupdate.proxyusername_hint1 Εισάγετε μέσα Proxy-Όνομα χρήστη εδώ
+flashupdate.proxyusername_hint2 Μια κενή επιλογή δεν σημαίνει Authentifizierung
+flashupdate.readflash Όλο το λογισμικό διαβάζω
+flashupdate.readflashmtd Μερικά κομμάτια διαβάζω
+flashupdate.ready Τέλειωσε.
+flashupdate.reallyflashmtd Θέλετε την διαδικασία πραγματικά να την εγκαταστήσετε?\n\nΕάν ένα λάθος δεν προκύψει το λογισμικό θα\λειτουργήσει το DBox δεν θα κάνει booten.\n\nεπιλεγμένο λογισμικό: %s\nστο στόχο: %s
+flashupdate.savesuccess Το λογισμικό έγινε επιτυχείς μέσα στο \n όνομα του αρχείο %s τις μνήμης.
+flashupdate.selectimage Διαθέσιμα λογισμικά
+flashupdate.squashfs.noversion Με SquashFS οι αναπροσαρμογές γίνονται εξετάσεις έκδοσης\αυτή τη στιγμή μόνο με τις υποστηρίξεις .\Θέλετε να εγκαταστήσετε πραγματικά αυτό που επιλέγεται το λογισμικό
+flashupdate.titlereadflash Λογισμικό διαβάζω
+flashupdate.titlewriteflash Λογισμικό γράφω
+flashupdate.updatemode Τρόπος αναβαθμίσεις
+flashupdate.updatemode_internet Δίκτυο
+flashupdate.updatemode_manual χειροκίνητα μέσο(ftp)
+flashupdate.url_file Konfig αρχείο
+flashupdate.versioncheck Διερευνήσει έκδοσης
+flashupdate.writeflash Όλο τo λογισμικό ανατρέχω
+flashupdate.writeflashmtd Μερικά κομμάτια ανατρέχω
+flashupdate.wrongbase Η έκδοση παρεκκλίνει, παρακαλώ\πρώτα νέο πλήρης λογισμικό εγκαταστήστε 
+fontmenu.channellist Λίστα καναλιών
+fontmenu.epg EPG
+fontmenu.eventlist Διάχρυση λίστας
+fontmenu.gamelist Λίστα παιχνιδιών
+fontmenu.head Ρυθμίσει μεγάλης γράφεις
+fontmenu.infobar Πληροφορίες
+fontsize.channel_num_zap Κατευθείαν επιλέγω
+fontsize.channellist Λίστα καναλιών
+fontsize.channellist_descr Περιγραφή
+fontsize.channellist_number Νούμερο
+fontsize.epg_date EPG Ημερομηνία
+fontsize.epg_info1 EPG Πληροφορία 1
+fontsize.epg_info2 EPG Πληροφορία 2
+fontsize.epg_title EPG Τίτλους
+fontsize.eventlist_datetime Αποτέλεσμα ημερομηνία/Ώρα
+fontsize.eventlist_itemlarge Αποτέλεσμα μεγάλο
+fontsize.eventlist_itemsmall Αποτέλεσμα μικρό
+fontsize.eventlist_title Αποτέλεσμα Τίτλου
+fontsize.filebrowser_item Αρχείο browser- εισάγετε
+fontsize.gamelist_itemlarge Μεγάλο
+fontsize.gamelist_itemsmall Μικρό
+fontsize.hint Font Θα εγκατασταθεί,\παρακαλώ περιμένετε...
+fontsize.infobar_channame Πληροφορία στο Κανάλι
+fontsize.infobar_info Πληροφορίες
+fontsize.infobar_number Νούμερο πληροφορία
+fontsize.infobar_small Μικρή πληροφορία
+fontsize.menu Kείμενο μενού
+fontsize.menu_info Πληροφορίες μενού
+fontsize.menu_title Τίτλος μενού
+gtxalpha.alpha1 Άλφα 1
+gtxalpha.alpha2 Άλφα 2
+infoviewer.epgnotload Πληροφορίες δεν φορτώθηκαν...
+infoviewer.epgwait Περιμένετε για EPG-πληροφορίες....
+infoviewer.eventlist EPG/Πρόβλεψη
+infoviewer.languages Επιλογή ήχου
+infoviewer.motor_moving Τοποθέτηση Κεραίας
+infoviewer.nocurrent Δεν υπάρχουν πληροφορίες στο πρόγραμμα
+infoviewer.noepg Δεν υπάρχουν EPG πληροφορίες
+infoviewer.notavailable Το κανάλι προς στιγμήν δεν διατίθεται.
+infoviewer.selecttime Ώρα ενάρξεις
+infoviewer.streaminfo Επιλογή
+infoviewer.subchan_disp_pos Ένδειξη κάτω κανάλι
+infoviewer.subservice Προβολή εικόνας
+infoviewer.waittime Αναμένετε το ρόλοι...
+ipsetup.hint_1 Επιλέξτε 0..9 η επαινώ /κάτω
+ipsetup.hint_2 OK Αποθηκεύω, Home Ακυρώνω
+keybindingmenu.RC Τηλεχειριστήριο
+keybindingmenu.addrecord Timer Χρόνο εγγραφής εισάγετε
+keybindingmenu.addremind Ανανέωση Χρονοδιακόπτης εισάγετε
+keybindingmenu.allchannels_on_ok Λίστα καναλιών
+keybindingmenu.bouquetchannels_on_ok Μπουκέτα-Κανάλια
+keybindingmenu.bouquetdown Μπουκέτα πίσω
+keybindingmenu.bouquethandling OK-Πλήκτρο για
+keybindingmenu.bouquetlist_on_ok Μπουκέτα λίστα
+keybindingmenu.bouquetup Μπουκέτα συνεχεία
+keybindingmenu.cancel Λίστα καναλιών κλίστε
+keybindingmenu.channeldown Κανάλι Κάτω
+keybindingmenu.channellist Λίστα καναλιών
+keybindingmenu.channelup Κανάλια επάνω
+keybindingmenu.head Ρυθμίσεις-πλήκτρων
+keybindingmenu.lastchannel Τελευταίο κανάλι
+keybindingmenu.modechange Αλλαγή τρόπου
+keybindingmenu.pagedown Σελίδα κάτω ξεφυλλίζω
+keybindingmenu.pageup Σελίδα πάνο ξεφυλλίζω
+keybindingmenu.quickzap Γρήγορη αλλαγή
+keybindingmenu.repeatblock Καθυστερήσει επανάληψη
+keybindingmenu.repeatblockgeneric Καθυστερήσει ενάρξεις
+keybindingmenu.sort Αλλαγή Ταξινομήσεις
+keybindingmenu.subchanneldown Κάτω κανάλι πίσω
+keybindingmenu.subchannelup Το κάτω κανάλι συνεχεία
+keybindingmenu.tvradiomode Τηλεόραση-/Ράδιο
+keybindingmenu.zaphistory Ταξινομήσει Μπουκέτα
+keychooser.head Καινούργιο πλήκτρο ρύθμισε
+keychooser.text1 Παρακαλώ πλήκτρο δώστε
+keychooser.text2 Για ακυρώσει περιμένετε..
+keychoosermenu.currentkey Επιλεγμένο πλήκτρο τώρα
+keychoosermenu.setnew Καινούργιο πλήκτρο ρύθμισε
+keychoosermenu.setnone Κανένα πλήκτρο
+languagesetup.head Ρυθμίσεις γλώσσας
+languagesetup.select Γλώσσα
+lcdcontroler.brightness Κανονική φωτεινότητα
+lcdcontroler.brightnessstandby Σταθερή φωτεινότητα
+lcdcontroler.contrast Ευκρίνεια
+lcdmenu.autodimm Αυτόματη dimmen
+lcdmenu.dim_brightness Φωτεινότητα με το dimm-άκυρο
+lcdmenu.dim_time dimm-άκυρο
+lcdmenu.head LCD Ρυθμίσει οθόνης
+lcdmenu.inverse Αναστρέψτε
+lcdmenu.lcdcontroler Αντίθεση/φωτεινότητα
+lcdmenu.power Ισχύς
+lcdmenu.statusline Νέα γραμμή
+lcdmenu.statusline.both Βήματα ένταση του ήχου
+lcdmenu.statusline.playtime Πρόοδος μετάδοσης
+mainmenu.audioplayer Ήχος player
+mainmenu.clearsectionsd EPG Ανανέωση
+mainmenu.games Παιχνίδια
+mainmenu.head Κεντρικό Μενού
+mainmenu.movieplayer Movieplayer
+mainmenu.pausesectionsd Επιλέξτε EPG
+mainmenu.pictureviewer Επιλέγω εικόνες
+mainmenu.radiomode Ράδιο
+mainmenu.reboot Επανεκκίνηση
+mainmenu.recording Εγγράφη
+mainmenu.recording_start Εκκινήσει
+mainmenu.recording_stop Στοπ
+mainmenu.scartmode Scart-Είσοδος
+mainmenu.scripts Skripte
+mainmenu.service Υπηρεσία
+mainmenu.settings Ρυθμίσεις
+mainmenu.shutdown Τέλος λειτουργίας
+mainmenu.sleeptimer Sleep Χρονόμετρο
+mainmenu.tvmode Τηλεόραση
+mainsettings.audio Ήχος
+mainsettings.head Ρυθμίσεις
+mainsettings.keybinding Ρυθμίσεις πλήκτρων
+mainsettings.language Γλώσσα
+mainsettings.lcd LC-Οθόνη
+mainsettings.misc Διάφορες ρυθμίσεις
+mainsettings.network Κάρτα δικτύου
+mainsettings.recording Έγγραφη
+mainsettings.savesettingsnow Τις ρύθμισης τις αποθηκεύω
+mainsettings.savesettingsnow_hint Η ρύθμισης τώρα θα αποθηκευτούν\Παρακαλώ περιμένετε...
+mainsettings.streaming Movieplayer
+mainsettings.video Βίντεο
+menu.back Πίσω
+messagebox.back Πίσω
+messagebox.cancel Άκυρο
+messagebox.discard θέλατε την αλλαγή να την ακυρώσετε?
+messagebox.error Λάθος
+messagebox.info Πληροφορίες
+messagebox.no Όχι
+messagebox.yes Ναι
+miscsettings.general Διάφορα
+miscsettings.head Διάφορες Ρυθμίσεις
+miscsettings.infobar_sat_display Ένδειξη δορυφόρους
+miscsettings.shutdown_count Εντελώς σβήστε κατόπιν
+miscsettings.shutdown_count_hint1 Χρονόμετρο σε λεπτά μετά από μερικό σβήσιμο
+miscsettings.shutdown_count_hint2 Τέλειος κλειστό σε (0=κλειστό).
+miscsettings.shutdown_real Μερικό σβήσιμο
+miscsettings.shutdown_real_rcdelay Καθυστερήσει ολικό σβήσιμο
+miscsettings.virtual_zap_mode Πραγματικός τρόπος
+miscsettings.epg_cache EPG-Cache (Μέρες)
+miscsettings.epg_cache_hint1 EPG-Τα στοιχεία εκ των προτέρων?
+miscsettings.epg_cache_hint2 Ένδειξη στις ημέρες
+miscsettings.epg_dir EPG Λίστα μνήμης
+miscsettings.epg_head EPG-Ρυθμίσεις
+miscsettings.epg_max_events Μέγ.γεγονότα
+miscsettings.epg_max_events_hint1 Ποσά γεγονότα θέλατε max.στην μνήμη?
+miscsettings.epg_max_events_hint2 Σταθερό 6000
+miscsettings.epg_old_events EPG Απορρίπτω σε (Ώρες.)
+miscsettings.epg_old_events_hint1 Πόσο διάρκεια EPG-τα στοιχεία τα κρατώ?
+miscsettings.epg_old_events_hint2 Εισάγεται σε ώρες
+motorcontrol.head Εγκατάσταση-μοτέρ
+moviebrowser.option_browser Ένδειξη επιλογείς
+moviebrowser.book_clear_all Διαγράφει όλα
+moviebrowser.menu_save Αλλαγές αποθηκεύω
+moviebrowser.menu_save_all Υπόθεση έναρξης σε όλες τις ορατές πληροφορίες ταινιών
+moviebrowser.info_head_update Περιεχόμενο σε όλο το ορατό κατάστημα πληροφοριών ταινιών
+moviebrowser.update_if_dest_empty_only Αναλάβετε μόνο εάν ένας στόχος κενός
+moviebrowser.serie_auto_create Οι σειρές ορίζουν αυτόματα
+moviebrowser.load_default Φορτίσει  προ ρυθμίσεις
+moviebrowser.browser_row_head Ρύθμισε στήλες
+moviebrowser.browser_row_nr Αριθμό στήλης
+moviebrowser.browser_row_item Πληροφορία στήλης
+moviebrowser.browser_row_width Φάρδος στήλης
+moviebrowser.reload_at_start Φορτία πληροφοριών ταινιών πάλι με την έναρξη
+moviebrowser.remount_at_start Η αποθήκη ταινιών συνδέει με την έναρξη
+moviebrowser.dir_head Πρόσθετες λίστες
+moviebrowser.dir Πορεία
+moviebrowser.use_dir Χρήση λίστας
+moviebrowser.use_rec_dir Λίστα έγγραφης χρησιμοποιώ
+moviebrowser.use_movie_dir Χρήση λίστα απόδοσης
+moviebrowser.hide_series Κρυμμένο σήριαλ
+moviebrowser.last_record_max_items Τελευτά γραμμή που είδα
+moviebrowser.last_play_max_items Τελευτά γραμμή που λαμβάνεται'
+moviebrowser.browser_frame_high Ένδειξη πάνω γωνία 
+moviebrowser.book_head Σήμανση
+moviebrowser.book_lastmoviestop Τελευταία αναπαραγωγή σταματάω:
+moviebrowser.book_movieend Τέλος ταινίας:
+moviebrowser.book_moviestart Έναρξη ταινίας:
+moviebrowser.book_name Όνομα:
+moviebrowser.book_new Καινούργια σήμανση
+moviebrowser.book_position Θέσει:
+moviebrowser.book_type Άλμα (<0 πίσω, >0 μπροστά):
+moviebrowser.book_type_backward Επανάληψη
+moviebrowser.book_type_forward Στο επόμενο
+moviebrowser.edit_book Bookmark Αλλαγή
+moviebrowser.edit_book_name_info1 Καινούργιο όνομα σήμανσης
+moviebrowser.edit_book_pos_info1 Νέα θέσει (s)
+moviebrowser.edit_book_type_info1 Kαινούργιο μήκος άλματος (s)
+moviebrowser.edit_book_type_info2 <0 Πίσω,>0 μπροστά 0:τίποτα
+moviebrowser.edit_serie Όνομα του σήριαλ
+moviebrowser.error_no_movies Δεν βρίσκει ταινία
+moviebrowser.foot_filter Φίλτρο:
+moviebrowser.foot_play Ταινία αναπαραγωγή
+moviebrowser.foot_sort Ταξινόμηση
+moviebrowser.head TS Φιλμ αρχείο
+moviebrowser.head_filter Ταινία με κατηγόρια φιλτράρισε:
+moviebrowser.head_playlist Τελευταία που είδα:
+moviebrowser.head_recordlist Τελευταία έγγραφη:
+moviebrowser.hint_jumpbackward Πίσω βήμα σε 5 λ\'0'το επόμενο να δείτε 
+moviebrowser.hint_jumpforward Επόμενη διαφημίσει σε 5 λ\'0'να δείτε
+moviebrowser.hint_movieend Τέλος φιλμ σε 5 λ\n '0'το επόμενο να δείτε 
+moviebrowser.hint_newbook_backward Καινούργια επανάληψη\n 'Μπλε' για τέλος θέσει
+moviebrowser.hint_newbook_forward Καινούργια Άλμα διαφήμισης\n 'Μπλε' για τέλος θέσει 
+moviebrowser.info_audio Ήχος
+moviebrowser.info_channel Κανάλι
+moviebrowser.info_filename Όνομα
+moviebrowser.info_genre_major Κατηγορία
+moviebrowser.info_genre_minor Κατηγορία
+moviebrowser.info_head Πληροφορία ταινίας
+moviebrowser.info_info1 Πληροφορία 1
+moviebrowser.info_length Διάρκεια (λεπτά)
+moviebrowser.info_parental_lockage Απελευθέρωση ηλικίας
+moviebrowser.info_parental_lockage_0year πάντα
+moviebrowser.info_parental_lockage_12year 12 Χρόνων
+moviebrowser.info_parental_lockage_16year 16 Χρόνων
+moviebrowser.info_parental_lockage_18year 18 Χρόνων
+moviebrowser.info_parental_lockage_6year 6 Χρόνων
+moviebrowser.info_parental_lockage_always Όχι
+moviebrowser.info_path Λίστα
+moviebrowser.info_prevplaydate Τελευταία αναπαραγωγή 
+moviebrowser.info_prodcountry Κράτος
+moviebrowser.info_prodyear Χρονολογία
+moviebrowser.info_quality Ποιότητα
+moviebrowser.info_recorddate Ημερομηνία έγγραφης
+moviebrowser.info_serie Σήριαλ
+moviebrowser.info_size Μεγάλο αρχείο (MB)
+moviebrowser.info_title Τίτλος
+moviebrowser.info_videoformat Εικόνα
+moviebrowser.menu_directories_head Λίστα
+moviebrowser.menu_help_head Βοήθεια 
+moviebrowser.menu_main_bookmarks Σήμανση
+moviebrowser.menu_main_head Ρυθμίσεις
+moviebrowser.menu_nfs_head NFS Ρυθμίσεις
+moviebrowser.menu_parental_lock_activated Ενεργοποιημένο
+moviebrowser.menu_parental_lock_activated_no όχι
+moviebrowser.menu_parental_lock_activated_yes Ναι
+moviebrowser.menu_parental_lock_activated_no_temp όχι (temporär)
+moviebrowser.menu_parental_lock_head Προστασία για ανήλικα
+moviebrowser.menu_parental_lock_rate_head Κλείδωσε την ταινία από
+moviebrowser.scan_for_movies Αναζητήσει ταινίας...
+moviebrowser.serie_head Σειρές
+moviebrowser.serie_name Αλλαγή ονόμα
+moviebrowser.short_audio Ήχος
+moviebrowser.short_book Δείκτης
+moviebrowser.short_channel Κανάλι
+moviebrowser.short_country Κράτος
+moviebrowser.short_filename Όνομα
+moviebrowser.short_format Τύπος
+moviebrowser.short_genre_major Κατηγορία
+moviebrowser.short_genre_minor Κατηγορία
+moviebrowser.short_info1 Πληροφορία 1
+moviebrowser.short_info2 Πληροφορία 2
+moviebrowser.short_length Λεπτά
+moviebrowser.short_parental_lockage FSK
+moviebrowser.short_path Διαδρομή
+moviebrowser.short_prevplaydate Τελευταίο
+moviebrowser.short_prodyear Χρονολογία
+moviebrowser.short_quality * (Ποιότητα)
+moviebrowser.short_recorddate Ημερομηνία
+moviebrowser.short_serie Σειρές
+moviebrowser.short_size MB
+moviebrowser.short_title Τίτλος
+moviebrowser.start_head Έναρξης ταινίας από τη θέση:
+moviebrowser.start_record_start Έναρξη έγγραφης
+movieplayer.bookmark Bookmarks
+movieplayer.bookmarkname Bookmark Όνομα
+movieplayer.bookmarkname_hint1 Δώστε τα ονόματα
+movieplayer.bookmarkname_hint2 Για καινούργιο Bookmark δώσε
+movieplayer.buffering Αποθήκευση...
+movieplayer.defdir Έναρξη-λίστας.
+movieplayer.defplugin Εκκίνηση-Plugin
+movieplayer.dvdplayback DVD
+movieplayer.fileplayback Αρχείο via VLC
+movieplayer.goto Άλμα στο..
+movieplayer.goto.h1 = -> Απόλυτο άλμα
+movieplayer.goto.h2 +,- -> Σχετικό άλμα
+movieplayer.head Movieplayer
+movieplayer.nostreamingserver Δεν γίνεται επικοινωνία\στο Streaming σερβερ της υπηρεσίας.
+movieplayer.pleasewait Παρακαλώ περιμένετε.\Η συνδέσει γίνετε Streamingserver προετοιμάζετε.
+movieplayer.toomanybookmarks Έχετε επιλέξει πολλά Bookmarks μέσα.\Πρέπει πρώτα να διαγραφτεί ένα άλλο.
+movieplayer.tshelp1 Στοπ
+movieplayer.tshelp10 ca. 10 Λεπτά πίσω
+movieplayer.tshelp11 ca. 10 Λεπτά μπροστά
+movieplayer.tshelp12 Βοήθεια:http://www.giggo.de/dbox2/movieplayer.html\n
+movieplayer.tshelp2 Επιλέγω τον ήχου
+movieplayer.tshelp3 Διάλειμμα/συνεχίζω
+movieplayer.tshelp4 Bookmark Τοποθετώ
+movieplayer.tshelp5 Διαθέσιμος χρόνος
+movieplayer.tshelp6 ca. 1 Λεπτό πίσω
+movieplayer.tshelp7 ca. 1 Λεπτό μπροστά
+movieplayer.tshelp8 ca. 5 Λεπτά πίσω
+movieplayer.tshelp9 ca. 5 Λεπτά μπροστά
+movieplayer.tsplayback TS Αναπαραγωγή
+movieplayer.vcdplayback (S)VCD
+movieplayer.vlchelp1 Στοπ
+movieplayer.vlchelp10 ca. 10 Λεπτά πίσω
+movieplayer.vlchelp11 ca. 10 Λεπτά πίσω
+movieplayer.vlchelp12 Βοήθεια: http://www.giggo.de/dbox2/movieplayer.html\n
+movieplayer.vlchelp2 Resync
+movieplayer.vlchelp3 Διάλειμμα/Συνεχίζω
+movieplayer.vlchelp4 Bookmark Τοποθετώ
+movieplayer.vlchelp5 Ο χρόνος εξασθενίζει μέσα
+movieplayer.vlchelp6 ca. 1 Λεπτό πίσω
+movieplayer.vlchelp7 ca. 1 Λεπτό μπροστά
+movieplayer.vlchelp8 ca. 5 Λεπτά πίσω
+movieplayer.vlchelp9 ca. 5 Λεπτά μπροστά
+movieplayer.wrongvlcversion Η λειτουργία δεν είναι δυνατή με τη χρησιμοποιημένη έκδοση του VLC
+networkmenu.broadcast Broadcast
+networkmenu.dhcp DHCP
+networkmenu.gateway Σταθερή Gateway
+networkmenu.head Ρυθμίσεις κάρτας δικτύου
+networkmenu.ipaddress IP-Διεύθυνση
+networkmenu.mount NFS/CIFS/FTPFS
+networkmenu.nameserver Όνομα υπηρεσίες 
+networkmenu.netmask Μάσκα δίκτυο
+networkmenu.ntpenable Syncronisation via
+networkmenu.ntprefresh NTP/DVB-Αναζωογονήστε
+networkmenu.ntprefresh_hint1 NTP/DVB-Zeitsyncronisierung σε λεπτά
+networkmenu.ntprefresh_hint2 Επανεκκίνηση/EPG-επιτυχείς
+networkmenu.ntpserver NTP-Υπηρεσίες
+networkmenu.ntpserver_hint1 NTP-Server z.b: ntp1.ptb.de
+networkmenu.ntpserver_hint2 Επανεκκίνηση /EPG-Reset επιτυχείς
+networkmenu.ntptitle Ρυθμίσεις ώρας 
+networkmenu.setupnow Οι τοποθετήσεις δικτύων ορίζουν τώρα
+networkmenu.setuponstartup Καθορισμένο δίκτυο κατά την έναρξη
+networkmenu.show aktive Ένδειξη ρύθμισης κάρτας
+networkmenu.test Δοκιμή δίκτυο
+nfs.alreadymounted Λίστας έτοιμη gemountet.
+nfs.automount Στην έναρξη mounten
+nfs.dir Λίστα /Απελευθέρωση
+nfs.ip Υπηρεσίες IP διεύθυνση
+nfs.localdir Τοπική λίστα
+nfs.mount Κάρτα ρύθμιση λίστας mounten
+nfs.mount_options Mount-Επιλογές
+nfs.mounterror Mount-Λάθος
+nfs.mounterror_notsup Σύστημα διαχείρισης δεν υποστηρίζετε.
+nfs.mountnow Τώρα mounten
+nfs.mountok Mount Επιτυχείς
+nfs.mounttimeout Mount-Λάθος:Άκυρο
+nfs.password Κωδικό
+nfs.remount Λίστα ανανέωσε mounten
+nfs.type Τύπος
+nfs.type_cifs CIFS
+nfs.type_lufs FTPFS
+nfs.type_nfs NFS
+nfs.umount Λίστα κάρτας δικτύου unmounten
+nfs.umounterror Umount-Λάθος
+nfs.username Όνομα χρήστη
+nfsmenu.head NFS/CIFS/FTPFS Ρυθμίσεις
+nvod.percentage (%d%% Πέρασε)
+nvod.starting (Να αρχίσει σε %d λεπτά)
+nvodselector.directormode Τρόπος-εικόνας
+nvodselector.head Αρχικό χρόνο επιλέγω
+nvodselector.subservice Υπό υπηρεσίες
+options.default Την προηγούμενη ρύθμιση χρησιμοποιώ
+options.fb framebuffer
+options.null null
+options.off Κλειστό
+options.on Ανοιχτό
+options.serial Σειριακά
+parentallock.changepin PIN-Σταθερό κωδικό
+parentallock.changepin_hint1 Δώστε τον καινούργιο κωδικό μέσα!
+parentallock.changetolocked Για κλειδωμένα μπουκέτα
+parentallock.head Προστασία ανήλικων PIN Κωδικό
+parentallock.lockage Πρόγραμμα
+parentallock.lockage12 Από 12 χρόνων κλειδωμένα
+parentallock.lockage16 Από 16 χρόνων κλειδωμένα
+parentallock.lockage18 Από 18 χρόνων κλειδωμένα
+parentallock.lockedchannel Κλειδωμένα προγράμματα...
+parentallock.lockedprogram Κλειδωμένα προγράμματα (FSK από %d)
+parentallock.never Όχι
+parentallock.onsignal Τα σταλμένα προ κλειδώστε
+parentallock.parentallock Προστασία ανήλικων
+parentallock.prompt Δώσε κωδικό
+pictureviewer.decode_server_ip Decoding-Server IP
+pictureviewer.decode_server_port Decoding-Server Port
+pictureviewer.defdir Έναρξη-λίστα.
+pictureviewer.head Θεατής εικόνων
+pictureviewer.help1 Τρόπος-μενού
+pictureviewer.help10 Ένδειξη-τρόπου
+pictureviewer.help11 Εικόνα που διαβάζεται πάλι
+pictureviewer.help12 Προηγούμενη εικόνα
+pictureviewer.help13 Επόμενη εικόνα
+pictureviewer.help14 Zoom Έξω
+pictureviewer.help15 Zoom Μέσα
+pictureviewer.help16 Scroll Επάνω
+pictureviewer.help17 Scroll Αριστερά
+pictureviewer.help18 Scroll Δεξιά
+pictureviewer.help19 Scroll Κάτω
+pictureviewer.help2 Ένδειξη εικόνα
+pictureviewer.help20 Αλλαγής Ταξινομήσεις
+pictureviewer.help21 Εικόνα διαβάζω
+pictureviewer.help22 Τρόπος αποσύνδεσης
+pictureviewer.help3 Αλλαγής ταξινομήσεις
+pictureviewer.help4 Εικόνα διαβάζω
+pictureviewer.help5 Diashow-Τρόπος
+pictureviewer.help6 Προηγούμενη εικόνα
+pictureviewer.help7 Επόμενη εικόνα
+pictureviewer.help8 Αλλαγής ταξινομήσεις
+pictureviewer.help9 Τρόπος αποσυνδέσεις
+pictureviewer.resize.color_average σύνθετος
+pictureviewer.resize.none Δεν υπάρχει
+pictureviewer.resize.simple Απλό
+pictureviewer.scaling Ξελέπισμα
+pictureviewer.show Ένδειξη
+pictureviewer.slide_time Diaschau-Ένδειξη χρόνου
+pictureviewer.slideshow κοιτάξτε
+pictureviewer.sortorder Ταξινομήσει.σειράς.αλλάζω
+pictureviewer.sortorder.date (Ημερομηνία)
+pictureviewer.sortorder.filename (Όνομα αρχείου)
+ping.ok ist erreichbar (ping)
+ping.protocol Δεν επικοινωνεί (Host or protocol Λάθος)
+ping.socket Δεν επικοινωνεί (Socket Λάθος)
+ping.unreachable Δεν επικοινωνεί (Λάθος)
+pinprotection.head Ερωτήσει κωδικού
+pinprotection.wrongcode Δώστε τον κωδικό ακόμα μια φορά!
+plugins.result Pluginausgabe
+rclock.lockmsg Το τηλεχειριστήριο από dbox2 θα κλειδωθεί.Για να ξεκλειδώσετε Παρακαλώ \<κόκκινο> και <DBOX> Τηλεχειριστήριο Πατήστε
+rclock.menueadd FB Κλειδώστε
+rclock.title Τηλεχειριστήριο κλειδώστε
+rclock.unlockmsg Τηλεχειριστήριο επανενεργοποιημένος...
+recordingmenu.apids Προ Ρυθμίσει για τον ήχος
+recordingmenu.apids_ac3 AC3 Ήχο εγγραφείς
+recordingmenu.apids_alt Σιμά ήχου εγγραφείς
+recordingmenu.apids_std Σταθερό Ήχο έγγραφης
+recordingmenu.choose_direct_rec_dir Στην γρήγορη έγγραφη.επιλογή κατάλογου
+recordingmenu.defdir Λίστα εγγραφείς
+recordingmenu.epg_for_filename Μεγάλο όνομα αρχείου (με EPG-αρχείου)
+recordingmenu.file Απευθείας (αρχεία)
+recordingmenu.filesettings Ρυθμίσεις απευθείας έγγραφης
+recordingmenu.head Ρυθμίσεις εγγραφείς
+recordingmenu.help Συσκευή εγγραφείς:\n-----------------------\Σέρβις:\στο PC με βοήθεια έναν  Streaming-πρόγραμμα \n\n(αναλογικό) Videorekorder:\nμέσο VCR-έξοδος \απευθείας (αρχείο):\από ένα per NFS gemountetes λίστα \η ένα εσωτερικό σκληρό\nTS: SPTS-Mode οδηγοί φορτώνω\nPES: SPTS-Mode οδηγοί δεν φορτώνω\n\n\nMaximale Dateigröße:\n----------------------\nNFS V2: 2 GB (2048 MB)\nNFS V3: fast unendlich (0 MB)\nFAT: 2 GB (2048 MB)\nFAT32: 4 GB (4096 MB)
+recordingmenu.no_scart Πατημένο Scart-αλλάζω
+recordingmenu.off κλεισθώ
+recordingmenu.record_in_spts_mode in SPTS-τρόπος εγγραφείς
+recordingmenu.recording_type Συσκευή εγγραφείς
+recordingmenu.ringbuffers ένδειξη. Ringpuffer
+recordingmenu.server Υπηρεσίες
+recordingmenu.server_ip Υπηρεσίες εγγραφείς IP
+recordingmenu.server_mac Mac Διεύθυνση
+recordingmenu.server_port Υπηρεσία εγγραφείς Port
+recordingmenu.server_wakeup Υπηρεσία εγγραφείς WOL
+recordingmenu.setupnow Τις ρυθμίσεις τώρα αποθηκεύω
+recordingmenu.splitsize Max. αρχείο μεγάλο (MB)
+recordingmenu.stopplayback Playback Κρατάω
+recordingmenu.stopsectionsd Sectionsd Κρατάω
+recordingmenu.stream_vtxt_pid Videotext Σημείωση βιντεοτέξ
+recordingmenu.use_fdatasync Σύγχρονη επιστολή (fdatasync)
+recordingmenu.use_o_sync Σύγχρονη επιστολή (O_SYNC)
+recordingmenu.vcr Videorekorder
+recordingmenu.zap_on_announce Umschalten bei Ankündigung
+recordtimer.announce Η έγγραφη ξεκινά σε λίγα λεπτά.
+repeatblocker.hint_1 Λιγότερο χρόνο σε λεπτά μετάξι 2 πατημένα πλήκτρα
+repeatblocker.hint_2 0 Κλείσε το μπλόκο κλειστό (κόκκινο είναι " ")
+satsetup.diseqc DiSEqC
+satsetup.diseqc10 DiSEqC 1.0
+satsetup.diseqc11 DiSEqC 1.1
+satsetup.diseqc12 DiSEqC 1.2
+satsetup.diseqcrepeat DiSEqC-Επανάληψη
+satsetup.extended DiSEqC-Ρυθμίσεις
+satsetup.extended_motor Μοτέρ-ρυθμίσεις
+satsetup.minidiseqc Mini-DiSEqC
+satsetup.motorcontrol Χειροκίνητο μοτέρ εγκατάσταση
+satsetup.nodiseqc Κανένα DiSEqC
+satsetup.satellite Δορυφόροι
+satsetup.savesettingsnow Οι ρυθμίσεις αποθηκεύουν τώρα
+satsetup.smatvremote SMATV Μακρινός συντονισμός
+scants.abort_body Θέλατε η ανίχνευση να ακυρωθεί?
+scants.abort_header Ακυρώνω την ανίχνευση καναλιών
+scants.actcable Καλώδιο:
+scants.actsatellite Δορυφόροι:
+scants.bouquet Μπουκέτα
+scants.bouquet_create Καινούργιο ανοίγω
+scants.bouquet_erase Διαγράφω
+scants.bouquet_leave Μην αλλάξτε
+scants.bouquet_satellite Μπουκέτα-Δορυφόρων
+scants.bouquet_update Ανανεώσει
+scants.channel Κανάλι:
+scants.failed Αναζητήσει καναλιών απέτυχε!
+scants.finished Η αναζητήσει καναλιών τελείωσε με επιτυχία!
+scants.freqdata Συχνότητα:
+scants.head Αναζητήσει κανάλια
+scants.numberofdataservices Στοιχεία
+scants.numberofradioservices Ράδιο
+scants.numberoftotalservices Όλα
+scants.numberoftvservices TV
+scants.provider Υπηρεσίες:
+scants.startnow Έναρξη αναζήτησης καναλιών
+scants.transponders Αναμεταδότες:
+screensetup.lowerright Γωνία κάτω δεξιά
+screensetup.upperleft Γωνία πανό αριστερά
+servicemenu.getplugins Plugins Επαναφορτίσει
+servicemenu.getplugins_hint Plugins φορτώνω,\παρακαλώ περιμένετε...
+servicemenu.head Υπηρεσίες
+servicemenu.reload Λίστα καναλιών φορτώνω
+servicemenu.reload_hint Λίστα καναλιών φορτώνω,\παρακαλώ περιμένετε...
+servicemenu.restart AZtrino επανεκκίνηση
+servicemenu.restart_failed Επανεκκίνηση από AZtrino schlug fehl.
+servicemenu.restart_hint AZtrino κάνει επανεκκίνηση...
+servicemenu.restart_refused_recording Έγγραφη τρέχει επανεκκίνηση δεν είναι δεχτή. 
+servicemenu.scants Αναζητήσει καναλιών
+servicemenu.ucodecheck UCodes έλεγχο
+servicemenu.update Αναβαθμίσεις-λογισμικού
+settings.help Βοήθεια
+settings.missingoptionsconffile AZtrino-ρυθμίσεις μεγαλώσανε.\η καινούργιες θα παραμείνουν σταθερές.
+settings.noconffile Η AZtrino-ρύθμισης δεν\βρεθήκανε.θα παραμείνουν η Ίδιες.
+settings.pos_bottom_left Κάτω δεξιά
+settings.pos_bottom_right Κάτω αριστερά
+settings.pos_top_left Πανό αριστερά
+settings.pos_top_right Πανό δεξιά
+shutdowntimer.announce Το Box σε ένα 1 λεπτό. θα κλήση.\nΚλείνω ακυρώνω?
+shutdown.recoding_query Εγγράφει τρέχει. Θέλατε να κλήση?
+sleeptimerbox.announce Χρονόμετρο ύπνου σε 1 λεπτό.
+sleeptimerbox.hint1 Χρόνος πτώσης σε λεπτά. (000=κλειστό)
+sleeptimerbox.hint2 Το dbox2 μετά από αυτών τον χρόνο κλήση.
+sleeptimerbox.title Χρονόμετρο ύπνου
+streamfeatures.head Χαρακτηριστικό 
+streaminfo.aratio Σχέση
+streaminfo.aratio_unknown Σχέση:άγνωστη
+streaminfo.audiotype Ακουστικός τύπος
+streaminfo.audiotype_unknown Ακουστικός τύπος:άγνωστος
+streaminfo.bitrate Ποσοστό δυαδικών ψηφίων
+streaminfo.framerate Ποσοστό πλαισίων
+streaminfo.framerate_unknown Ποσοστό πλαισίων:άγνωστο
+streaminfo.head Τεχνικές πληροφορίες
+streaminfo.not_available Μη διαθέσιμες
+streaminfo.resolution Αναλύσει
+streaminfo.signal Σήμα
+streaming.buffer_overflow Η έγγραφη διακόπηκε δυστυχώς,\nδεδομένου ότι τα στοιχεία δεν μπόρεσαν να γραφτούν αρκετά γρήγορα.
+streaming.busy Οι διαδικασίες εγγραφείς είναι ενεργές.\nΗ αποδοχή πρέπει να ολοκληρωθεί πραγματικά, \nκάνει ένα καινούριο ξεκίνημα της AZtrino. 
+streaming.dir_not_writable Η λίστα έγγραφη δεν είναι αντιγράφεται.\nΟι έγγραφες δεν είναι δυνατές επομένως.
+streaming.success Η έγγραφη ολοκληρώθηκε επιτυχώς.
+streaming.write_error Η έγγραφη διακόπηκε δυστυχώς,\nΔεδομένου ότι ένα λάθος προέκυψε κατά τη διάρκεια του γραψίματος των στοιχείων.
+streaming.write_error_open Η έγγραφη διακόπηκε δυστυχώς,\nΔεδομένου ότι το κατάλληλο αρχείο δεν μπόρεσε να ανοίξουν στην επιστολή.
+streamingmenu.352x288 352x288
+streamingmenu.352x576 352x576
+streamingmenu.480x576 480x576
+streamingmenu.704x576 704x576
+streamingmenu.head Movieplayer Ρυθμίσεις
+streamingmenu.mpeg1 MPEG1
+streamingmenu.mpeg2 MPEG2
+streamingmenu.off Άνεργο
+streamingmenu.on Ενεργό
+streamingmenu.server_ip Streamingserver IP
+streamingmenu.server_port Streamingserver Port
+streamingmenu.streaming_audiorate Ακουστικό ποσοστό
+streamingmenu.streaming_force_avi_rawaudio Δύναμη AC3 στο avi 
+streamingmenu.streaming_force_transcode_video Διακωδικοποιήστε.επίσης mpg/vcd Βίντεο 
+streamingmenu.streaming_resolution Αναλύσει
+streamingmenu.streaming_server_cddrive DVD Συνέλευση κίνησης 
+streamingmenu.streaming_server_startdir Λίστα (VLC)
+streamingmenu.streaming_transcode_audio Transcod. Ήχο (dvd/vcd/mpg)
+streamingmenu.streaming_transcode_video_codec MPEG Βίντεο Codec
+streamingmenu.streaming_type Streamingserver
+streamingmenu.streaming_videorate Βίντεο ποσοστού στοιχείων
+streamingserver.noconnect Καμία σύνδεση στο Streamingserver.\εγγραφή θα διακοπή.
+stringinput.caps Μεγάλα-/μικρά γράμματα
+stringinput.clear Διαγράφει όλα 
+timer.eventrecord.msg Η μετάδοση σημειώθηκε για την εγγραφή.
+timer.eventrecord.title  Εγγραφή σημειώθηκε
+timer.eventtimed.msg Η μετάδοση σημειώθηκε.
+timer.eventtimed.title Σημείωση μετάδοσης
+timerbar.channelswitch Διακόπτης
+timerbar.recordevent Εγγραφή
+timerlist.alarmtime Χρόνος συναγερμών
+timerlist.apids Σήμα ήχου
+timerlist.apids_dflt Προετοιμασμένο σήμα ήχου έγγραφης.
+timerlist.bouquetselect Επιλεγώ μπουκέτο
+timerlist.channel Κανάλι
+timerlist.channelselect Επιλεγώ κανάλι
+timerlist.delete Διαγράψτε
+timerlist.menumodify Επεξεργασία χρονόμετρο
+timerlist.menunew Καινούργιο χρονόμετρο
+timerlist.message Ειδήσεις
+timerlist.moderadio Ράδιο κανάλια
+timerlist.modeselect Τρόπος επιλογείς
+timerlist.modetv TV κανάλια
+timerlist.modify Επεξεργασίες
+timerlist.name Χρονόμετρο λίστας
+timerlist.new Καινούργιο χρονόμετρο
+timerlist.overlapping_timer Επικάλυψη χρονομέτρων. Νέο χρονόμετρο εντούτοις που τίθεται επάνω; 
+timerlist.plugin Plugin
+timerlist.program.unknown Πρόγραμμα άγνωστο
+timerlist.recording_dir Λίστα εγγραφείς
+timerlist.reload ξαναφόρτωμα
+timerlist.repeat επαναλάβετε
+timerlist.repeat.biweekly 2-Φορές την εβδομάδα
+timerlist.repeat.byeventdescription Δείτε τα χρονόμετρα
+timerlist.repeat.daily Καθημερινά
+timerlist.repeat.fourweekly 4-εβδομαδιαίος 
+timerlist.repeat.friday Πα
+timerlist.repeat.monday Δε
+timerlist.repeat.monthly Μηνιαία
+timerlist.repeat.once μεμονωμένα
+timerlist.repeat.saturday Σα
+timerlist.repeat.sunday Κυρ
+timerlist.repeat.thursday Πεμ
+timerlist.repeat.tuesday Τρι
+timerlist.repeat.unknown Άγνωστο
+timerlist.repeat.wednesday Τετ
+timerlist.repeat.weekdays Εργάσιμες μέρες
+timerlist.repeat.weekly Εβδομαδιαίος
+timerlist.repeatcount Επαναλάβετε
+timerlist.repeatcount.help1 Αριθμός παρατηρήσεων χρονομέτρων
+timerlist.repeatcount.help2 0 Για τον απεριόριστο αριθμό
+timerlist.save Χρονόμετρο αποθηκεύω
+timerlist.standby SB Modus
+timerlist.standby.off Εφεδρεία μακριά
+timerlist.standby.on Εφεδρεία επάνω
+timerlist.stoptime stoptime
+timerlist.type Τύπος χρονομέτρου
+timerlist.type.execplugin Plugin Εφαρμόστε
+timerlist.type.nextprogram Επόμενο πρόγραμμα
+timerlist.type.record Έγγραφη
+timerlist.type.remind Υπενθυμίστε
+timerlist.type.shutdown Κλείσιμο
+timerlist.type.sleeptimer Χρονόμετρο ύπνου
+timerlist.type.standby Εφεδρικός
+timerlist.type.unknown Άγνωστο
+timerlist.type.zapto Διακόπτης
+timerlist.weekdays Εργάσιμες μέρες
+timerlist.weekdays.hint_1 Δε Τρι Τετ Πεμ Πα Σα Κυρ
+timerlist.weekdays.hint_2 'X'=Χρονόμετρο '-' Κανένα χρονόμετρο
+timersettings.record_safety_time_after Διόρθωση τέλος έγγραφης
+timersettings.record_safety_time_after.hint_1 Διόρθωση χρόνο σε  λεπτά. (00=), στο τέλος
+timersettings.record_safety_time_after.hint_2 ο χρόνος του αντίστοιχου χρονομέτρου προστίθεται
+timersettings.record_safety_time_before Έναρξη έγγραφης -διόρθωσε
+timersettings.record_safety_time_before.hint_1 Χρόνο διορθώσεις σε λεπτά .(00=), στην εκκινήσει
+timersettings.record_safety_time_before.hint_2 Το αντίστοιχο χρονόμετρο που βγάζεται
+timersettings.separator Ρυθμίσεις χρονομέτρων
+timing.chanlist Κατάλογος καναλιών
+timing.epg Epg
+timing.filebrowser Filebrowser
+timing.head OSD Διαλείμματα
+timing.hint_1 Εξασθενίζοντας εγκαίρως στο λεπτό., εκείνοι το OSD στη TV
+timing.hint_2 Το ένα δείχνει (μόνιμη εξασθένιση μέσα με 0.)
+timing.infobar Πληροφορία
+timing.menu  Μενού
+timing.numericzap Διακόπτης με αριθμητικό πλήκτρο
+ucodecheck.avia500 Avia 500
+ucodecheck.avia600 Avia 600
+ucodecheck.cam-alpha Cam-Alpha
+ucodecheck.head UCode έλεγχος
+ucodecheck.ucode UCode
+ucodes.failure Η προσοχή, εκείνα τα µCodes δεν βρέθηκε!\n\παρακαλώ με FTP (η με DBox-BootManager)\φόρτισε, και έναρξη DBox πάλι!
+usermenu.button_blue Μενού χρηστή 'μπλε'
+usermenu.button_green Μενού χρηστή 'πράσινο'
+usermenu.button_red Μενού χρηστή 'κόκκινο'
+usermenu.button_yellow Μενού χρηστή 'κίτρινο'
+usermenu.head Μενού χρηστή
+usermenu.item_bar ---- Χωρισμός ----
+usermenu.item_epg_misc EPG Λειτουργίες
+usermenu.item_none  
+usermenu.item_vtxt Τελετέξ
+usermenu.name Όνομα
+videomenu.csync Sync.-Διορθώσεις
+videomenu.head Βίντεο-ρυθμίσεις 
+videomenu.osd OSD
+videomenu.rgb_centering RGB-Να στραφεί
+videomenu.screensetup OSD-οργάνωση οθόνης
+videomenu.tv-scart TV Scart
+videomenu.vcr-scart VCR Scart
+videomenu.vcrsignal VCR-Έξοδος σήμα
+videomenu.vcrsignal_composite CVBS
+videomenu.vcrsignal_svideo S-Βίντεο
+videomenu.vcrswitch Scart-Είσοδο αυτόματοι
+videomenu.videoformat Τηλεοπτικό σχήμα
+videomenu.videoformat_169 16:9
+videomenu.videoformat_43 4:3 (LB)
+videomenu.videoformat_autodetect Αυτόματοι
+zapit.scantype Επιλογή-υπηρεσιών
+zapit.scantype.all Όλες οι υπηρεσίες
+zapit.scantype.radio Μόνο ράδιο 
+zapit.scantype.tv Μόνο TV
+zapit.scantype.tvradio TV & ράδιο
+zaptotimer.announce Σε ένα λεπτό γίνει η αλλαγή.
+servicemenu.imageinfo Λογισμικό πληροφορείς 
+imageinfo.creator Κατασκευαστής:
+imageinfo.date Ημερομηνία:
+imageinfo.dokumentation Oδηγίες:
+imageinfo.forum Forum:
+imageinfo.head Λογισμικό πληροφορίες
+imageinfo.homepage Homepage:
+imageinfo.image Λογισμικό:
+imageinfo.license Χορηγώ:
+imageinfo.version Έκδοση:
+options.on.without_messages (Δεν υπάρχει πληροφορία)μέσα

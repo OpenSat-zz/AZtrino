@@ -1,0 +1,4 @@
+Makefile.in
+libnhttpd_tuxboxapi.a
+Makefile
+*.deps

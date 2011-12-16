@@ -1,0 +1,81 @@
+hashtab.o: hashtab.c \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/stdlib.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/features.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/predefs.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/cdefs.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wordsize.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/gnu/stubs.h \
+ /home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/include/stddef.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/types.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/types.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/typesizes.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/time.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/endian.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/endian.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/byteswap.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/select.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/select.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/sigset.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/time.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/sysmacros.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/pthreadtypes.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/alloca.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/string.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/xlocale.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/string.h \
+ /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/string2.h \
+ xmltok/xmldef.h hashtab.h
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/stdlib.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/features.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/predefs.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/cdefs.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/wordsize.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/gnu/stubs.h:
+
+/home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/include/stddef.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/types.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/types.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/typesizes.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/time.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/endian.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/endian.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/byteswap.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/select.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/select.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/sigset.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/time.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/sys/sysmacros.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/pthreadtypes.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/alloca.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/string.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/xlocale.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/string.h:
+
+/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/bits/string2.h:
+
+xmltok/xmldef.h:
+
+hashtab.h:
