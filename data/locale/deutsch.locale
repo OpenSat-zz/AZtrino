@@ -763,6 +763,7 @@ networkmenu.setupnow Netzwerkeinstellungen jetzt zuweisen
 networkmenu.setuponstartup Beim Starten Netzwerk setzen
 networkmenu.show aktive Netzwerkeinstellungen zeigen
 networkmenu.test Netzwerk testen
+networkmenu.wireless Setup wireless
 nfs.alreadymounted Verzeichnis bereits gemountet.
 nfs.automount Beim Start mounten
 nfs.dir Verzeichnis/Freigabe
@@ -1162,6 +1163,16 @@ videomenu.dbdr_none aus
 videomenu.dbdr_deblock deBlock
 videomenu.dbdr_both deBlock & deRing
 videomenu.enabled_modes Videosysteme auf der VF-Taste
+wireless.head Searching wireless networks
+wireless.essid ESSID
+wireless.crypt Encryption
+wireless.password Password
+wireless.none None
+wireless.notfound No wireless networks found, please enter the data manually.
+wireless.now Conect now
+wireless.wep WEP
+wireless.wpa WPA
+wireless.wpa2 WPA2
 zapit.scantype Service-Auswahl
 zapit.scantype.all Alle Services
 zapit.scantype.radio Nur Radio

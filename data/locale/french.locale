@@ -664,6 +664,7 @@ networkmenu.setupnow Régler le réseau maintenant
 networkmenu.setuponstartup Régler le réseau au démarrage
 networkmenu.show montrer le régalge du réseau actif
 networkmenu.test tester le réseau maintenant
+networkmenu.wireless Régler wireless
 nfs.alreadymounted repértoire déja monté
 nfs.automount monter au démarrage
 nfs.dir Répertoire/paratge
@@ -999,6 +1000,16 @@ videomenu.videoformat Format
 videomenu.videoformat_169 16:9
 videomenu.videoformat_43 4:3 (LB)
 videomenu.videoformat_autodetect Détection automatique
+wireless.head Searching wireless networks
+wireless.essid ESSID
+wireless.crypt Encryption
+wireless.password Password
+wireless.none None
+wireless.notfound No wireless networks found, please enter the data manually.
+wireless.now Conect now
+wireless.wep WEP
+wireless.wpa WPA
+wireless.wpa2 WPA2
 zapit.scantype scan for services
 zapit.scantype.all all services
 zapit.scantype.radio only radio

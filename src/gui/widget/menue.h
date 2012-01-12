@@ -333,6 +333,7 @@ class CMenuWidget : public CMenuTarget
 		~CMenuWidget();
 
 		virtual void addItem(CMenuItem* menuItem, const bool defaultselected = false);
+		virtual void editItem(int n, CMenuItem* menuItem);
 		bool hasItem();
 		virtual void paint();
 		virtual void hide();
@@ -395,5 +396,6 @@ class CMenuSelectorTarget : public CMenuTarget
 extern CMenuSeparator * const GenericMenuSeparator;
 extern CMenuSeparator * const GenericMenuSeparatorLine;
 extern CMenuForwarder * const GenericMenuBack;
+extern CMenuForwarder * const GenericMenuNext;
 
 #endif

@@ -24,14 +24,14 @@
 #include <map>
 #include <string>
 #include <sstream>
+#include <string.h>
+#include <dirent.h>
 
-/*
- * Known bugs:
- * -----------
- *
- * - extension of lines across multiple lines using \ is not supported
- * 
- */
+#include <iwlib.h>
+
+
+
+
 
 bool read_file(const std::string filename, std::list<std::string> &line)
 {
@@ -370,4 +370,283 @@ bool setDhcpAttributes(const std::string name, const bool automatic_start)
 	std::map<std::string, std::string> attribute;
 
 	return write_interface("/etc/network/interfaces", name, automatic_start, "inet", "dhcp", attribute);
+}
+
+
+
+
+std::string print_scanning_token (struct iw_event * event)
+{
+	std::string result;
+  /* Now, let's decode the event */
+  switch (event->cmd)
+    {
+    case SIOCGIWESSID:
+	char
+	  essid[IW_ESSID_MAX_SIZE + 1];
+	if ((event->u.essid.pointer) && (event->u.essid.length))
+	  memcpy (essid, event->u.essid.pointer, event->u.essid.length);
+	essid[event->u.essid.length] = '\0';
+	if (event->u.essid.flags) {
+	  result = essid;
+	  }
+      break;
+
+    case SIOCGIWMODE:
+      if (event->u.mode == 1) { result = "Ad-Hoc"; }
+      else if (event->u.mode == 3) { result = "Managed"; }
+      else result = "Unknown";
+      break;
+
+    case IWEVQUAL:
+      {
+		/*char buffer[128];
+		WIFI_PRINT_STATS(buffer, event);
+			result = buffer;
+		*/
+			break;
+
+      }
+    case SIOCGIWENCODE:
+	if (event->u.data.flags & IW_ENCODE_DISABLED) {
+	  result = "off" ;
+	} else {
+	  result =  "on" ;
+	}
+	break;
+   default:
+      break;
+
+  }                           /* switch(event->cmd) */
+
+  return result;
+}
+
+
+std::string*  getWirelessNetworks( char *iface)
+{
+	//print_scanning_info(0,dev,NULL,0);
+	//iw_get_kernel_we_version();
+
+	std::string networks[20];
+
+	 /* add 1, then: number of networks found */
+	    int netcount = -1;
+	    int socket=0;
+	    struct iwreq wrq;
+	    unsigned char buffer[IW_SCAN_MAX_DATA];	/* Results */
+	    struct timeval tv;				/* Select timeout */
+	    int	timeout = 5000000;			/* 5s */
+	    char *	interface_name = "ra0";
+
+	    //networks== new char[31][20];
+	    if(!socket)
+	    	socket = iw_sockets_open();
+	    	//return;
+	    //if (interface_name.empty())
+		//return NULL;
+
+	    /* Init timeout value -> 250ms */
+	    tv.tv_sec = 0;
+	    tv.tv_usec = 250000;
+
+	    /*
+	     * Here we should look at the command line args and set the IW_SCAN_ flags
+	     * properly
+	     */
+	    wrq.u.param.flags = IW_SCAN_DEFAULT;
+	    wrq.u.param.value = 0;	/* Later */
+
+	    /* Initiate Scanning */
+	    wrq.u.data.pointer = NULL;
+	    wrq.u.data.flags = 0;
+	    wrq.u.data.length = 0;
+
+	    if (iw_set_ext(socket, interface_name, SIOCSIWSCAN, &wrq) < 0)
+	      {
+			if (errno != EPERM)
+			  {
+				printf("Interface does not support scanning (errno= %d %s)\n", errno);
+				return networks;
+			  }
+			/* If we don't have the permission to initiate the scan, we may
+			 * still have permission to read left-over results.
+			 * But, don't wait !!! */
+			tv.tv_usec = 0;
+	      }
+	    timeout -= tv.tv_usec;
+
+
+
+	    /* Forever */
+	    while (1)
+	      {
+		fd_set rfds;		/* File descriptors for select */
+		int last_fd;		/* Last fd */
+		int ret;
+
+		/* Guess what ? We must re-generate rfds each time */
+		FD_ZERO (&rfds);
+		last_fd = -1;
+
+		/* In here, add the rtnetlink fd in the list */
+
+		/* Wait until something happens */
+		// ret = select (last_fd + 1, &rfds, NULL, NULL, &tv);
+		ret = sleep(3);
+
+		/* Check if there was an error */
+		if (ret > 0)
+		  {
+		    if (errno == EAGAIN || errno == EINTR)
+		      continue;
+		   printf("Unhandled signal - aborting scan...\n");
+		    return networks;
+		  }
+
+		/* Check if there was a timeout */
+		if (ret == 0)
+		  {
+		    /* Try to read the results */
+		    wrq.u.data.pointer = (char *) buffer;
+		    wrq.u.data.flags = 0;
+		    wrq.u.data.length = sizeof (buffer);
+		    if (iw_get_ext	(socket, interface_name, SIOCGIWSCAN,
+			 &wrq) < 0)
+		      {
+			/* Check if results not available yet */
+			// if (errno == EAGAIN)
+			  // {
+			    /* Restart timer for only 100ms */
+			    //tv.tv_sec = 0;
+			    //tv.tv_usec = 100000;
+			    //timeout -= tv.tv_usec;
+			    //if (timeout > 0)
+			    //  continue;	/* Try again later */
+			  //}
+
+			/* Bad error */
+			printf("Failed to read scan data - aborting scan...\n" );
+			return networks;
+		      }
+		    else
+		      /* We have the results, go to process them */
+		      break;
+		  }
+
+		/* In here, check if event and event type
+		 * if scan event, read results. All errors bad & no reset timeout */
+	      }
+
+	    if (wrq.u.data.length)
+	      {
+		struct iw_event
+		  iwe;
+		struct stream_descr
+		  stream;
+		int
+		  ret;
+		int nnet=0;
+
+		printf("Searching networks\n");
+
+		iw_init_event_stream (&stream, (char *) buffer, wrq.u.data.length);
+		do
+		  {
+		    /* Extract an event and print it */
+
+		    ret = iw_extract_event_stream(&stream, &iwe, WIRELESS_EXT);
+
+		    /* Currently, we only return the ESSIDs. We could
+		       collect further data, but that's something for
+		       maybe KDE 3.5 */
+
+		    /* The first token is about ESSID. So if we see that, create a
+		       new row. If it's something else, it belongs to the network
+		       before. */
+
+		    if (ret > 0) {
+		      if (iwe.cmd == SIOCGIWESSID) {
+			 netcount++;
+			 //printf("Count networks: %d\n", netcount );
+			 //networks[nnet]=netcount;
+			 //nnet++;
+			 std::string tempnet = print_scanning_token (&iwe);
+			 if (!tempnet.empty())
+				{
+				 //networks->setText( netcount, 0, tempnet );
+
+				 networks[nnet]=tempnet;
+				 nnet++;
+
+				 //printf("NETWORK: %s\n", tempnet.c_str());
+				}
+				else
+				{
+					//networks->setText( netcount, 0, "(hidden cell)");
+					printf("(hidden cell)\n");
+				}
+		      }
+		      if (iwe.cmd == SIOCGIWMODE) {
+		    	     std::string tempresult= print_scanning_token (&iwe);
+	                 //networks->setText( netcount, 1, tempresult );
+	                // printf("RESULT: %s\n", tempresult.c_str());
+
+		      }
+	              if (iwe.cmd == IWEVQUAL) {
+	            	 std::string tempresult= print_scanning_token (&iwe);
+			 // crop the result... it's a little too verbose
+			 // find everything between the first : and the first ' '
+			 //tempresult = tempresult.mid(tempresult.find(':') + 1, tempresult.find( ' ', tempresult.find(':') ) - tempresult.find(':') );
+	                // networks->setText( netcount, 2, tempresult );
+	                //printf("RESULT2: %s\n", tempresult.c_str());
+		      }
+		      if (iwe.cmd == SIOCGIWENCODE) {
+			   std::string tempresult = print_scanning_token (&iwe);
+			   //networks->setText( netcount, 3, tempresult );
+			   printf("RESULT3: %s\n", tempresult.c_str());
+		      }
+		    }
+
+		  }
+		while (ret > 0);
+	      }
+
+	    //for (int i = 0; i<4; i++ ) networks->adjustColumn(i);
+
+	    return networks;
+
+}
+
+char*	getWirelessInterface(void)
+{
+	//list<string> interfaceNames;
+	DIR* sysDir = opendir("/sys/class/net");
+	struct dirent* sysDirEntry = 0;
+	char iface[6]="null";
+
+	if(!sysDir)
+	    return "null";
+
+	while((sysDirEntry = readdir(sysDir)))
+	    {
+	        std::string interfaceName(sysDirEntry->d_name);
+	        char ifacepath[35]="/sys/class/net/";
+
+	         if(interfaceName[0] == '.')
+	             continue;
+
+	         //interfaceNames.push_back(interfaceName);
+	         printf("Found %s \n", interfaceName.c_str());
+	         sprintf(ifacepath,"/sys/class/net/%s/wireless/",interfaceName.c_str());
+	         if(chdir(ifacepath) == 0)
+	         {
+	        	 sprintf(iface,interfaceName.c_str());
+	         	 return iface;
+	         }
+	    }
+
+	closedir(sysDir);
+	return iface;
+
 }

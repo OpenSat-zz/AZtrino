@@ -2,7 +2,7 @@
 
 # libtool - Provide generalized library-building support services.
 # Generated automatically by config.status (tuxbox-neutrino) 1.0.1
-# Libtool was configured on host thempra-laptop:
+# Libtool was configured on host debaz:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 #
 #   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2004, 2005,
@@ -132,7 +132,7 @@ old_postuninstall_cmds=""
 LTCC="mipsel-oe-linux-gcc"
 
 # LTCC compiler flags.
-LTCFLAGS="-Wall -g0 -O2 	 -D__KERNEL_STRICT_NAMES -DAZBOX_GEN_1 	-I/home/thempra/github/AZtrino/include -I/home/thempra/github/AZtrino/include/linux/dvb -I/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/freetype2 	-I/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/gstreamer-0.10 -I/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/glib-2.0 -I/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/include/libxml2"
+LTCFLAGS="-Wall -g0 -O2 	 -D__KERNEL_STRICT_NAMES -DAZBOX_GEN_1 	-I/home/tommy/OE/neutrino_test/include -I/home/tommy/OE/neutrino_test/include/linux/dvb -I/home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/include/freetype2 	-I/home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/include/gstreamer-0.10 -I/home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/include/glib-2.0 -I/home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/include/libxml2"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p'"
@@ -234,10 +234,10 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3 /home/thempra/OE/azboxme/build/tmp/cross/mipsel/mipsel-oe-linux/lib /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/lib /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/lib"
+sys_lib_search_path_spec="/home/tommy/OE/azboxhd/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3 /home/tommy/OE/azboxhd/build/tmp/cross/mipsel/mipsel-oe-linux/lib /home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/lib /home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/lib"
 
 # Run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/mesa /lib/i486-linux-gnu /usr/lib/i486-linux-gnu /usr/lib/alsa-lib /usr/local/lib "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /lib/i486-linux-gnu /usr/lib/i486-linux-gnu /usr/local/lib "
 
 # Whether dlopen is supported.
 dlopen_support=unknown
@@ -254,7 +254,7 @@ striplib="mipsel-oe-linux-strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="/home/thempra/OE/azboxme/build/tmp/cross/mipsel/mipsel-oe-linux/bin/ld"
+LD="/home/tommy/OE/azboxhd/build/tmp/cross/mipsel/mipsel-oe-linux/bin/ld"
 
 # Commands used to build an old-style archive.
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$oldlib"
@@ -470,7 +470,7 @@ compiler_lib_search_path=""
 #       compiler:		$LTCC
 #       compiler flags:		$LTCFLAGS
 #       linker:		$LD (gnu? $with_gnu_ld)
-#       $progname:		(GNU libtool) 2.2.6b Debian-2.2.6b-2ubuntu1
+#       $progname:		(GNU libtool) 2.2.6b Debian-2.2.6b-2
 #       automake:		$automake_version
 #       autoconf:		$autoconf_version
 #
@@ -478,7 +478,7 @@ compiler_lib_search_path=""
 
 PROGRAM=ltmain.sh
 PACKAGE=libtool
-VERSION="2.2.6b Debian-2.2.6b-2ubuntu1"
+VERSION="2.2.6b Debian-2.2.6b-2"
 TIMESTAMP=""
 package_revision=1.3017
 
@@ -8916,7 +8916,7 @@ build_old_libs=`case $build_libtool_libs in yes) echo no;; *) echo yes;; esac`
 # ### BEGIN LIBTOOL TAG CONFIG: CXX
 
 # The linker used to build libraries.
-LD="/home/thempra/OE/azboxme/build/tmp/cross/mipsel/mipsel-oe-linux/bin/ld"
+LD="/home/tommy/OE/azboxhd/build/tmp/cross/mipsel/mipsel-oe-linux/bin/ld"
 
 # Commands used to build an old-style archive.
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$oldlib"
@@ -9047,17 +9047,17 @@ file_list_spec=""
 hardcode_action=immediate
 
 # The directories searched by this compiler when creating a shared library.
-compiler_lib_search_dirs="/home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3 /home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/../../../../mipsel-oe-linux/lib /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/lib /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/lib"
+compiler_lib_search_dirs="/home/tommy/OE/azboxhd/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3 /home/tommy/OE/azboxhd/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/../../../../mipsel-oe-linux/lib /home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/lib /home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/lib"
 
 # Dependencies to place before and after the objects being linked to
 # create a shared library.
-predep_objects="/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/lib/crti.o /home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/crtbeginS.o"
-postdep_objects="/home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/crtendS.o /home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/lib/crtn.o"
+predep_objects="/home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/lib/crti.o /home/tommy/OE/azboxhd/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/crtbeginS.o"
+postdep_objects="/home/tommy/OE/azboxhd/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/crtendS.o /home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/lib/crtn.o"
 predeps=""
 postdeps="-lstdc++ -lm -lgcc_s -lc -lgcc_s"
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3 -L/home/thempra/OE/azboxme/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/../../../../mipsel-oe-linux/lib -L/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/lib -L/home/thempra/OE/azboxme/build/tmp/staging/mipsel-oe-linux/usr/lib"
+compiler_lib_search_path="-L/home/tommy/OE/azboxhd/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3 -L/home/tommy/OE/azboxhd/build/tmp/cross/mipsel/lib/gcc/mipsel-oe-linux/4.4.3/../../../../mipsel-oe-linux/lib -L/home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/lib -L/home/tommy/OE/azboxhd/build/tmp/staging/mipsel-oe-linux/usr/lib"
 
 # ### END LIBTOOL TAG CONFIG: CXX

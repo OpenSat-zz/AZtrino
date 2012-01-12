@@ -1,7 +1,7 @@
 INCLUDES = \
-	-I../../src/libeventserver \
-	-I../../lib/ \
-	-I../../src/ 
+	-I../../../neutrino/src/libeventserver \
+	-I../../../neutrino/lib/ \
+	-I../../../neutrino/src/ 
 
 lib_LTLIBRARIES = libazbox.la
 libazbox_la_SOURCES = audio_cs.cpp dmx_cs.cpp dvb-ci.cpp init_cs.cpp playback_cs.cpp pwrmngr.cpp record_cs.cpp video_cs.cpp cool.cpp \

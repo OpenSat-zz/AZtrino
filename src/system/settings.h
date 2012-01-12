@@ -198,6 +198,13 @@ struct SNeutrinoSettings
 	char network_nfs_recordingdir[100];
 	char timeshiftdir[100];
 
+#define NETWORK_WIRELESS_NR_OF_ENTRIES 9
+	char network_wireless_essid[NETWORK_NFS_NR_OF_ENTRIES][31];
+	char network_wireless_bssid[NETWORK_NFS_NR_OF_ENTRIES][31];
+	int network_wireless_encrypt[NETWORK_NFS_NR_OF_ENTRIES];
+	char network_wireless_password[NETWORK_NFS_NR_OF_ENTRIES][31];
+
+
 	//recording
 	int  recording_type;
 	int  recording_stopplayback;

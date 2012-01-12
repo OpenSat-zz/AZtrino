@@ -664,6 +664,7 @@ networkmenu.setupnow configurar a rede
 networkmenu.setuponstartup ligar a rede no arranque
 networkmenu.show mostrar as definições das ligações activas
 networkmenu.test testar ligação agora
+networkmenu.wireless configurar sans fil
 nfs.alreadymounted directório já montado
 nfs.automount montar no arranque
 nfs.dir directório/partilha
@@ -999,6 +1000,16 @@ videomenu.videoformat Formato
 videomenu.videoformat_169 16:9
 videomenu.videoformat_43 4:3 (LB)
 videomenu.videoformat_autodetect Auto-detectar
+wireless.head Searching wireless networks
+wireless.essid ESSID
+wireless.crypt Encryption
+wireless.password Password
+wireless.none None
+wireless.notfound No wireless networks found, please enter the data manually.
+wireless.now Conect now
+wireless.wep WEP
+wireless.wpa WPA
+wireless.wpa2 WPA2
 zapit.scantype scan for services
 zapit.scantype.all all services
 zapit.scantype.radio only radio

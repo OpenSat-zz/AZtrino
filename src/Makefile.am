@@ -71,4 +71,5 @@ neutrino_LDADD = \
 	-lvorbisfile -lvorbis -logg \
 	-lungif \
 	-ljpeg \
+	-liw \
 	-lrt -lpthread

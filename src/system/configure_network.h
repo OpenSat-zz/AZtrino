@@ -39,6 +39,15 @@ class CNetworkConfig
 	bool modified_from_orig(void);
 
  public:
+ 	enum EncryptType
+ 	{
+ 		NONE  = 0,
+ 		WEP = 1,
+ 		WPA = 2,
+ 		WPA2 = 3
+ 	};
+
+ public:
 	bool        automatic_start;
 	std::string address;
 	std::string netmask;
@@ -53,6 +62,10 @@ class CNetworkConfig
 
 	void startNetwork(void);
 	void stopNetwork(void);
+
+	static void startWirelessNetwork(char *  iface);
+	static void connectWirelessNetwork(char * iface,char * essid, int encrypt, char * password );
+	static void stopWirelessNetwork(void);
 };
 
 #endif /* __configure_network_h__ */

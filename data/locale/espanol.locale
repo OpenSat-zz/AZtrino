@@ -763,6 +763,7 @@ networkmenu.setupnow Configurar red
 networkmenu.setuponstartup Configurar red al inicio
 networkmenu.show Mostrar la configuración de red activa
 networkmenu.test Prueba de la red
+networkmenu.wireless Configurar wireless
 nfs.alreadymounted El directorio ya montado
 nfs.automount Montar al inicio
 nfs.dir Directorio / Compartir
@@ -1162,6 +1163,16 @@ videomenu.dbdr_none ninguno
 videomenu.dbdr_deblock de-block
 videomenu.dbdr_both de-block+de-ring
 videomenu.enabled_modes Modo VF activado
+wireless.head Buscar redes inalambricas
+wireless.essid ESSID
+wireless.crypt Cifrado
+wireless.password Contraseña
+wireless.none Ninguno
+wireless.notfound No se han encontrado redes wireless, por favor, introduzca los datos manualmente.
+wireless.now Conectar ahora
+wireless.wep WEP
+wireless.wpa WPA
+wireless.wpa2 WPA2
 zapit.scantype Exploración de servicios
 zapit.scantype.all Todos los servicios
 zapit.scantype.radio Solo radio

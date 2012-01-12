@@ -379,10 +379,6 @@ void CNeutrinoApp::setupColors_loadtheme(const char * fileName)
 	if(!themefile.loadConfig(fileName))
 		return;
 
-	//diseqcMode = themefile.getInt32("diseqcMode"  , diseqcMode);
-	//strcpy(satNameNoDiseqc, themefile.getString("satNameNoDiseqc", satNameNoDiseqc).c_str());
-	//strcpy(TP_freq, themefile.getString("TP_freq", "10100000").c_str());
-
 	g_settings.menu_Head_alpha = themefile.getInt32("menu_Head_alpha"  , 0);
 	g_settings.menu_Head_red   = themefile.getInt32("menu_Head_red"  , 0);
 	g_settings.menu_Head_green = themefile.getInt32("menu_Head_green"  , 0);
@@ -2275,22 +2271,35 @@ int CNeutrinoApp::run(int argc, char **argv)
 	InitFontSettings(fontSettings);
 	InitColorSettings(colorSettings, fontSettings);
 
+	//Initial wizard
 	if (display_language_selection) {
 		hintBox->hide();
 		int ret = languageSettings.exec(NULL, "");
+		languageSettings.editItem(1, GenericMenuBack);
 
 		if(ret != menu_return::RETURN_EXIT_ALL)
+		{
 			videoSettings->exec(NULL, "");
+			videoSettings->editItem(1, GenericMenuBack);
+		}
 		if(ret != menu_return::RETURN_EXIT_ALL)
+		{
 			colorSettings.exec(NULL, "");
+			colorSettings.editItem(1, GenericMenuBack);
+		}
 		if(ret != menu_return::RETURN_EXIT_ALL)
 			if(tzSelect)
 				tzSelect->exec(NULL);
 		if(ret != menu_return::RETURN_EXIT_ALL)
+		{
 			networkSettings.exec(NULL, "");
+			networkSettings.editItem(1, GenericMenuBack);
+		}
 		if(ret != menu_return::RETURN_EXIT_ALL)
+		{
 			scanSettings.exec(NULL, "");
-
+			scanSettings.editItem(1, GenericMenuBack);
+		}
 		videoDecoder->StopPicture();
 	}
 
@@ -3536,6 +3545,7 @@ void CNeutrinoApp::standbyMode( bool bOnOff )
 	//printf( ( bOnOff ) ? "mode: standby on\n" : "mode: standby off\n" );
 	if( bOnOff ) {
 		puts("[neutrino.cpp] executing " NEUTRINO_ENTER_STANDBY_SCRIPT ".");
+		system("echo 2 > //proc//led");
 		if (system(NEUTRINO_ENTER_STANDBY_SCRIPT) != 0)
 			perror(NEUTRINO_ENTER_STANDBY_SCRIPT " failed");
 
@@ -3583,6 +3593,7 @@ void CNeutrinoApp::standbyMode( bool bOnOff )
 			cpuFreq->SetCpuFreq(g_settings.standby_cpufreq * 1000 * 1000);
 	} else {
 		// Active standby off
+		system("echo 1 > //proc//led");
 		cpuFreq->SetCpuFreq(g_settings.cpufreq * 1000 * 1000);
 
 		powerManager->SetStandby(false, false);

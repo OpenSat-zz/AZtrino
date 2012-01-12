@@ -23,6 +23,8 @@
 #include "configure_network.h"
 #include "libnet.h"             /* netGetNameserver, netSetNameserver   */
 #include "network_interfaces.h" /* getInetAttributes, setInetAttributes */
+
+
 #include <stdlib.h>             /* system                               */
 
 #ifdef AZBOX_GEN_1
@@ -118,4 +120,59 @@ void CNetworkConfig::stopNetwork(void)
 {
 	//mysystem("ifdown eth0", NULL, NULL);
 	system("/sbin/ifdown eth0");
+}
+
+void CNetworkConfig::startWirelessNetwork(char * iface)
+{
+	char cmd[100];
+	sprintf(cmd,"/sbin/ifconfig %s up",iface);
+	system(cmd);
+
+	//mysystem((char *) "ifup",  (char *) "-v",  (char *) "eth0");
+}
+
+void CNetworkConfig::connectWirelessNetwork(char * iface,char * essid, int encrypt,char * password )
+{
+	char cmd[100];
+	//iwc
+	//iwconfig wlan0 essid "nombre_de_la_red"
+	//iwconfig wlan0 key "la_clave_que_corresponde_a_la_red"
+	//dhclient wlan0
+	sprintf(cmd,"/sbin/iwconfig %s mode managed",iface);
+	system(cmd);
+	printf ("############## %s\n",cmd);
+	if ((encrypt == CNetworkConfig::NONE) || (encrypt == CNetworkConfig::WEP))
+	{
+		sprintf(cmd,"/sbin/iwconfig %s essid %s",iface,essid);
+		system(cmd);
+		printf ("############## %s\n",cmd);
+
+		if (encrypt == CNetworkConfig::WEP)
+		{
+			sprintf(cmd,"/sbin/iwconfig %s key %s",iface,password);
+			system(cmd);
+			printf ("############## %s\n",cmd);
+		}
+	}
+	else if ((encrypt == CNetworkConfig::WPA) || (encrypt == CNetworkConfig::WPA2))
+	{
+		sprintf(cmd,"echo %s | wpa_passphrase %s  >  /etc/wpa_supplicant/wpa_supplicant.conf",password,essid);
+		system(cmd);
+		sprintf(cmd,"wpa_supplicant  -B -w -c /etc/wpa_supplicant/wpa_supplicant.conf -Dralink -i%s",iface);
+		system(cmd);
+	}
+
+
+	sprintf(cmd,"/sbin/udhcpc -i  %s",iface);
+	system(cmd);
+	printf ("############## %s\n",cmd);
+
+	//mysystem((char *) "ifup",  (char *) "-v",  (char *) "eth0");
+
+}
+
+ void CNetworkConfig::stopWirelessNetwork(void)
+{
+	//mysystem("ifdown eth0", NULL, NULL);
+	system("/sbin/ifdown ra0");
 }

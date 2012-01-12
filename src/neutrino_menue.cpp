@@ -107,6 +107,7 @@
 #include "gui/imageinfo.h"
 #include "gui/movieplayer.h"
 #include "gui/nfs.h"
+#include "gui/wireless.h"
 #include "gui/pictureviewer.h"
 #include "gui/motorcontrol.h"
 #include "gui/filebrowser.h"
@@ -279,7 +280,8 @@ const CMenuOptionChooser::keyval FLASHUPDATE_UPDATEMODE_OPTIONS[FLASHUPDATE_UPDA
 CVideoSettings::CVideoSettings() : CMenuWidget(LOCALE_VIDEOMENU_HEAD, "video.raw"), RGBCSyncControler(LOCALE_VIDEOMENU_RGB_CENTERING, &g_settings.video_csync)
 {
 	addItem(GenericMenuSeparator);
-	addItem(GenericMenuBack);
+	addItem(GenericMenuNext);
+
 	addItem(new CMenuSeparator(CMenuSeparator::LINE | CMenuSeparator::STRING, LOCALE_VIDEOMENU_TV_SCART));
 
 //	if (system_rev == 0x06) {
@@ -1361,7 +1363,7 @@ printf("Adding cable menu for %s position %d\n", sit->second.name.c_str(), sit->
 	}
 
 	settings.addItem(GenericMenuSeparator);
-	settings.addItem(GenericMenuBack);
+	settings.addItem(GenericMenuNext);
 	settings.addItem(new CMenuForwarder(LOCALE_MAINSETTINGS_SAVESETTINGSNOW, true, NULL, this, "savesettings", CRCInput::RC_red, NEUTRINO_ICON_BUTTON_RED));
 	settings.addItem(GenericMenuSeparatorLine);
 
@@ -1627,10 +1629,12 @@ void CNeutrinoApp::InitMiscSettings(CMenuWidget &miscSettings)
 #endif
 }
 
+
 void CNeutrinoApp::InitLanguageSettings(CMenuWidget &languageSettings)
 {
 	languageSettings.addItem(GenericMenuSeparator);
-	languageSettings.addItem(GenericMenuBack);
+
+	languageSettings.addItem(GenericMenuNext);
 	languageSettings.addItem(GenericMenuSeparatorLine);
 
 	struct dirent **namelist;
@@ -1796,7 +1800,7 @@ void CNeutrinoApp::InitNetworkSettings(CMenuWidget &networkSettings)
 	CMenuOptionChooser* oj = new CMenuOptionChooser(LOCALE_NETWORKMENU_SETUPONSTARTUP, &network_automatic_start, OPTIONS_OFF0_ON1_OPTIONS, OPTIONS_OFF0_ON1_OPTION_COUNT, true);
 
 	networkSettings.addItem(GenericMenuSeparator);
-	networkSettings.addItem(GenericMenuBack);
+	networkSettings.addItem(GenericMenuNext);
 	networkSettings.addItem(GenericMenuSeparatorLine);
 
 	networkSettings.addItem( oj );
@@ -1806,6 +1810,9 @@ void CNeutrinoApp::InitNetworkSettings(CMenuWidget &networkSettings)
 
 	networkSettings.addItem(GenericMenuSeparatorLine);
 
+	networkSettings.addItem(new CMenuForwarder(LOCALE_NETWORKMENU_WIRELESS , true, NULL, new CWIRELESSSearchGui(), NULL, CRCInput::RC_blue, NEUTRINO_ICON_BUTTON_BLUE));
+
+	networkSettings.addItem(GenericMenuSeparatorLine);
 
 	network_dhcp = networkConfig.inet_static ? 0 : 1;
 	oj = new CMenuOptionChooser(LOCALE_NETWORKMENU_DHCP, &network_dhcp, OPTIONS_OFF0_ON1_OPTIONS, OPTIONS_OFF0_ON1_OPTION_COUNT, true, dhcpNotifier);
@@ -2248,7 +2255,7 @@ void CNeutrinoApp::InitColorSettings(CMenuWidget &colorSettings, CMenuWidget &fo
 {
 	CScreenSetup  * ScreenSetup = new CScreenSetup();
 	colorSettings.addItem(GenericMenuSeparator);
-	colorSettings.addItem(GenericMenuBack);
+	colorSettings.addItem(GenericMenuNext);
 	colorSettings.addItem(GenericMenuSeparatorLine);
 
 	CMenuWidget *colorSettings_Themes = new CMenuWidget(LOCALE_COLORTHEMEMENU_HEAD, NEUTRINO_ICON_SETTINGS);

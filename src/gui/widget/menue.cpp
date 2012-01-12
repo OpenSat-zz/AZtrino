@@ -55,9 +55,11 @@
 CMenuSeparator CGenericMenuSeparator;
 CMenuSeparator CGenericMenuSeparatorLine(CMenuSeparator::LINE);
 CMenuForwarder CGenericMenuBack(LOCALE_MENU_BACK);
+CMenuForwarder CGenericMenuNext(LOCALE_INFOVIEWER_NEXT);
 CMenuSeparator * const GenericMenuSeparator = &CGenericMenuSeparator;
 CMenuSeparator * const GenericMenuSeparatorLine = &CGenericMenuSeparatorLine;
 CMenuForwarder * const GenericMenuBack = &CGenericMenuBack;
+CMenuForwarder * const GenericMenuNext = &CGenericMenuNext;
 
 void CMenuItem::init(const int X, const int Y, const int DX, const int OFFX)
 {
@@ -138,6 +140,12 @@ void CMenuWidget::addItem(CMenuItem* menuItem, const bool defaultselected)
 	if (defaultselected)
 		selected = items.size();
 	items.push_back(menuItem);
+
+}
+
+void CMenuWidget::editItem(int pos, CMenuItem* menuItem)
+{
+	items.at(pos)=menuItem;
 }
 
 bool CMenuWidget::hasItem()
@@ -396,7 +404,7 @@ int CMenuWidget::exec(CMenuTarget* parent, const std::string &)
 
 			if ( msg <= CRCInput::RC_MaxRC )
 			{
-				// recalculate timeout für RC-Tasten
+				// recalculate timeout fï¿½r RC-Tasten
 				timeoutEnd = CRCInput::calcTimeoutEnd(g_settings.timing[SNeutrinoSettings::TIMING_MENU] == 0 ? 0xFFFF : g_settings.timing[SNeutrinoSettings
 ::TIMING_MENU]);
 			}
