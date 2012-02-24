@@ -79,6 +79,37 @@ std::map <transponder_id_t, transponder> scantransponders;// TP list to scan
 std::map <transponder_id_t, transponder> scanedtransponders;// global TP list for current scan
 std::map <transponder_id_t, transponder> nittransponders;
 
+
+
+
+
+struct blind_Channel
+{
+	unsigned int m_uiFrequency_kHz;		///< The satellite carrier frequency, in a unit of kHz. This member is used ONLY for carrying back information from blind scan.
+	unsigned int m_uiSymbolRate_Hz;		///< The symbol rate in a unit of Hz.
+	unsigned int m_Flags;					///< Other informations like the signal standard and IQ spectrum \sa CI_FLAG_DVBS, CI_FLAG_DVBS2, CI_FLAG_IQ_SWAPPED ...
+};
+
+struct blind_Channels
+{
+	unsigned short uiFinished;
+	unsigned short uiChannelCount;
+	unsigned short uiNextStartFreq_100kHz;
+	struct blind_Channel channels[256];
+};
+
+FILE* fp;
+FILE* fpstop;
+
+unsigned short uiOLDStartFreq_100kHz=0;
+unsigned short uiOLDChannelCount=0;
+struct blind_Channels p;
+char infos[1024] = { 0 };
+char polarization[11] = "";
+int numFreq=0;
+bool isblindscan= false;
+
+
 #define TIMER_START()			\
         static struct timeval tv, tv2;	\
         static unsigned int msec;	\
@@ -145,13 +176,39 @@ int add_to_scan(transponder_id_t TsidOnid, FrontendParameters *feparams, uint8_t
 	if(tI == scanedtransponders.end()) {
 		DBG("[scan] insert tp-id %llx freq %d rate %d\n", TsidOnid, feparams->frequency, cable? feparams->u.qam.symbol_rate : feparams->u.qpsk.symbol_rate );
 		if(fromnit) {
-			if(nittransponders.find(TsidOnid) == nittransponders.end()) {
+			if(nittransponders.find(TsidOnid) == nittransponders.end()){// && !isblindscan) {
 				printf("[scan] insert tp-id %llx freq %d pol %d rate %d\n", TsidOnid, feparams->frequency, polarity, cable? feparams->u.qam.symbol_rate : feparams->u.qpsk.symbol_rate );
-				nittransponders.insert (
+
+				if (isblindscan)
+				{
+					//Check to don't repeat freqs by NIT
+					bool isrepeat=false;
+					//printf("########## Size:%d  \n",nittransponders.size());
+					for (tI = nittransponders.begin(); tI != nittransponders.end(); tI++) {
+						 //printf("########## Size:%d => FREQ: %d  SYMRATE%d\n",nittransponders.size(),tI->second.feparams.frequency,tI->second.feparams.u.qpsk.symbol_rate);
+						 //printf("########## Size:%d => FREQ: %d  SYMRATE%d\n\n",nittransponders.size(),feparams->frequency,feparams->u.qpsk.symbol_rate);
+
+						 if ((tI->second.feparams.frequency == feparams->frequency) &&(tI->second.feparams.u.qpsk.symbol_rate == feparams->u.qpsk.symbol_rate))
+						 {
+							 isrepeat=true;
+							 //printf("########## REPE (%d)\n\n",feparams->frequency);
+						 }
+						}
+					if (!isrepeat)
+						nittransponders.insert (
+											std::pair <transponder_id_t, transponder> (
+												TsidOnid,
+												transponder ( (TsidOnid >> 16) &0xFFFF,
+													TsidOnid &0xFFFF, *feparams, polarity)));
+				}
+				else
+				{
+					nittransponders.insert (
 						std::pair <transponder_id_t, transponder> (
 							TsidOnid,
 							transponder ( (TsidOnid >> 16) &0xFFFF,
 								TsidOnid &0xFFFF, *feparams, polarity)));
+				}
 			}
 		}
 		else {
@@ -622,11 +679,319 @@ void * scan_transponder(void * arg)
 	scantransponders.clear();
 	scanedtransponders.clear();
 	nittransponders.clear();
-	if(cable) 
+	if(cable)
 		DBG("[scan_transponder] done scan freq %d rate %d fec %d mod %d\n", TP->feparams.frequency, TP->feparams.u.qam.symbol_rate, TP->feparams.u.qam.fec_inner,TP->feparams.u.qam.modulation);
 	else
 		DBG("[scan_transponder] done scan freq %d rate %d fec %d pol %d\n", TP->feparams.frequency, TP->feparams.u.qpsk.symbol_rate, TP->feparams.u.qpsk.fec_inner, TP->polarization);
 
 
 	pthread_exit(0);
+}
+
+
+
+void  getBlindFreqs (int scan_mode,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP)
+	{
+		int done=0;
+		int error=0;
+
+		int uiCnt;
+			done=0;
+			p = { 0, };
+
+
+			 fp = fopen("/proc/avlblind","w");
+			 printf("Setting data for blind scan \n");
+			 strcpy(infos,"1 ");
+			 strcat(infos,startFreq);
+			 strcat(infos," ");
+			 strcat(infos,endFreq);
+			 strcat(infos," ");
+			 strcat(infos,pol);
+			 strcat(infos," ");
+			 strcat(infos,tone);
+			 fwrite(infos,1,strlen(infos),fp); //"1 X Y Z T" > /proc/avlblind   (X-> start frequency in Mhz for tuner/demod (AVL can go from 965 till 2100), not transponder frequency, Y-> stop frequency for tuner/demod, Z = 0/1 vertical(13v)/horizontal(18v)   polarisation), T = 0/1 (22Khz TONE OFF/ON), setting sym rate no need ,it's allready set for min/max blind scan mode
+			 fclose(fp);
+
+			 fp = fopen("/proc/avlblind","w");
+			 printf("Start kernel thread for blind scan \n\n");
+			 strcpy(infos,"2 "); // "2" > /proc/avlblind
+			 fwrite(infos,1,1,fp);
+			 fclose(fp);
+
+			if (atoi(pol))
+				strcpy(polarization, "HORIZONTAL");
+			 else
+				strcpy(polarization,"VERTICAL");
+			usleep(4000);
+
+
+			char providerName[32] = "";
+			strcpy(providerName, scanProviders.size() > 0 ? scanProviders.begin()->second.c_str() : "unknown provider");
+	 		eventServer->sendEvent(CZapitClient::EVT_SCAN_SATELLITE, CEventServer::INITID_ZAPIT, providerName, strlen(providerName) + 1);
+
+			eventServer->sendEvent ( CZapitClient::EVT_SCAN_NUM_TRANSPONDERS, CEventServer::INITID_ZAPIT, &numFreq, sizeof(numFreq));
+
+			 while(p.uiFinished != 1) //wait till driver finished scanning, for now no safe way to stop blind scan if user request it
+			  {
+					fp = fopen("/proc/avlblind","r");
+					fread(&p,1,sizeof(p),fp);
+					printf("\rStatus: found %d, scanning freq %d",p.uiChannelCount,p.uiNextStartFreq_100kHz);
+					fclose(fp);
+					usleep(1000);
+
+
+					if (uiOLDStartFreq_100kHz!=p.uiNextStartFreq_100kHz)
+					{
+						uiOLDStartFreq_100kHz=p.uiNextStartFreq_100kHz;
+						int fq=uiOLDStartFreq_100kHz/10;
+						eventServer->sendEvent ( CZapitClient::EVT_SCAN_REPORT_FREQUENCY, CEventServer::INITID_ZAPIT, &fq, sizeof(fq));
+					}
+					if (uiOLDChannelCount!=p.uiChannelCount)
+					{
+						uiOLDChannelCount=p.uiChannelCount;
+						numFreq++;
+						printf("Freqs found total: %i", numFreq);
+						eventServer->sendEvent ( CZapitClient::EVT_SCAN_NUM_TRANSPONDERS, CEventServer::INITID_ZAPIT,
+																						&numFreq, sizeof(numFreq));
+					}
+					if (done)
+					{
+						break;
+					}
+					if(abort_scan)
+					{
+				 			found_channels = 0;
+							break;
+					}
+
+			  }
+			 uiOLDChannelCount=0;
+			 printf("\n");
+			 for(uiCnt=0; uiCnt<p.uiChannelCount; uiCnt++)
+			 {
+				char freq[100];
+				char type[9];
+				char iq[8];
+				int transpFreq=0;
+
+				printf("Ch%u:  RF: %d MHz SymbolRate: %d MHz %s ",
+							uiCnt+1,
+							(p.channels[uiCnt].m_uiFrequency_kHz),
+							(p.channels[uiCnt].m_uiSymbolRate_Hz),
+							polarization);
+
+
+				switch((p.channels[uiCnt].m_Flags & CI_FLAG_DVBS2_BIT_MASK)>>CI_FLAG_DVBS2_BIT)
+				{
+					case CI_FLAG_DVBS:
+						 printf("DVBS ");
+						 sprintf(type,"DVBS ");
+						 break;
+					case CI_FLAG_DVBS2:
+						 printf("DVBS2 ");
+						 sprintf(type,"DVBS2 ");
+						 break;
+					case CI_FLAG_DVBSDTV:
+						 printf("DTV ");
+						 sprintf(type,"DTV ");
+						 break;
+					case CI_FLAG_DVBSDTV_AMC:
+						 printf("AMC ");
+						 sprintf(type,"AMC ");
+						 break;
+					case CI_FLAG_DVBS2_UNDEF:
+						 printf("Unknown ");
+						 sprintf(type,"Unknown ");
+						 break;
+				}
+				switch((p.channels[uiCnt].m_Flags & CI_FLAG_IQ_BIT_MASK)>>CI_FLAG_IQ_BIT)
+				{
+					case CI_FLAG_IQ_NO_SWAPPED:
+						 printf("Normal");
+						 sprintf(iq,"Normal ");
+						 break;
+					case CI_FLAG_IQ_SWAPPED:
+						 printf("Invert");
+						 sprintf(iq,"Invert ");
+				}
+				if (p.channels[uiCnt].m_uiFrequency_kHz < 11700000)
+					transpFreq=p.channels[uiCnt].m_uiFrequency_kHz+9750000;
+				else
+					transpFreq=p.channels[uiCnt].m_uiFrequency_kHz+10600000;
+				printf(" TransponderFreq: %d \n", transpFreq );
+
+
+				sprintf(freq,"RF: %d MHz SymbolRate: %d MHz %s %s %s ",
+								(p.channels[uiCnt].m_uiFrequency_kHz),
+								(p.channels[uiCnt].m_uiSymbolRate_Hz),
+								polarization,type,iq);
+
+				TP_params TP;
+
+					TP.scan_mode = scan_mode;
+					TP.feparams.frequency = transpFreq;
+					TP.feparams.u.qpsk.symbol_rate =p.channels[uiCnt].m_uiSymbolRate_Hz;
+					if (atoi(pol)==1)
+							TP.polarization = 0;
+					else
+						TP.polarization = 1;
+					if(strncmp (type,"DVB-S ",6)==0 ) {
+						//TP.feparams.u.qam.modulation	= 8-PSK;
+						TP.feparams.u.qpsk.fec_inner = FEC_AUTO;
+					} else {
+						TP.feparams.u.qam.modulation	= QPSK;
+						TP.feparams.u.qam.fec_inner	= FEC_NONE;
+
+					}
+				listTP.push_back(TP);
+			  }
+
+
+}
+
+void *start_scanblindthread(void *scanmode)
+{
+	printf ("start_scanthread\n");
+	CZapitClient myZapitClient;
+	numFreq=1;
+	abort_scan=0;
+	//sleep(7);
+	TP_params TP;
+		bool reply;
+		std::list<TP_params> listTP;
+		isblindscan=true;
+		frontend->Close();
+		scantransponders.clear();
+		scanedtransponders.clear();
+		nittransponders.clear();
+		//For testing - only for developers
+		//getBlindFreqs (scan_mode, 1, "950","1000","0","0", listTP);
+		//getBlindFreqs (scan_mode, 0, "1100","1200","0","1", listTP);
+		//getBlindFreqs (scan_mode, 0, "1900","1949","1","0", listTP);
+		//getBlindFreqs (scan_mode, 0, "2100","2200","1","1", listTP);
+
+
+		//Load firmware to blindscan
+	 	 int nclose=1;
+	 	 fpstop = fopen("/proc/avlblindstop","w");
+	 	 printf("Stopping all  scan previous\n");
+	 	 fwrite(&nclose,sizeof(int),1,fpstop); // 1 > /proc/avlblindstop, Stop all
+	 	 fclose(fpstop);
+
+	 	 fp = fopen("/proc/avlblind","w");
+		 printf("Setting tuner in blind scan mode\n");
+		 strcpy(infos,"0 ");
+		 fwrite(infos,1,1,fp); // "0" > /proc/avlblind, Need to be done only once
+		 fclose(fp);
+
+		 sleep(1);
+
+
+		 if (myZapitClient.isPlayBackActive())
+		 				printf("isPlayBackActive\n");
+		 			else
+		 				printf("NO isPlayBackActive\n");
+		 myZapitClient.stopPlayBack();
+
+		 			usleep(1000);
+
+		 			if (myZapitClient.isPlayBackActive())
+		 				printf("isPlayBackActive\n");
+		 			else
+		 				printf("NO isPlayBackActive\n");
+
+
+		//Start real blind scan
+		getBlindFreqs (scan_mode, "965","1949","0","0", listTP);
+		getBlindFreqs (scan_mode, "1100","2200","0","1", listTP);
+		getBlindFreqs (scan_mode, "965","1949","1","0", listTP);
+		getBlindFreqs (scan_mode, "1100","2200","1","1", listTP);
+
+		// getBlindFreqs (scan_mode, "1900","2100","1","1", listTP);
+
+		char providerName[32] = "";
+		prov_found = 0;
+			 	        found_transponders = 0;
+			 	        found_channels = 0;
+			 	        processed_transponders = 0;
+			 	        found_tv_chans = 0;
+			 	        found_radio_chans = 0;
+			 	        found_data_chans = 0;
+			 		fake_tid = fake_nid = 1;
+
+		 while( !listTP.empty() )
+		 	    {
+			 	// printf("############### Scan TP%i", listTP.size());
+		 		 TP = listTP.front();
+
+		 		t_satellite_position satellitePosition = 0;
+
+		 		scanBouquetManager = new CBouquetManager();
+
+		 		cable = (frontend->getInfo()->type == FE_QAM);
+
+		 		strcpy(providerName, scanProviders.size() > 0 ? scanProviders.begin()->second.c_str() : "unknown provider");
+
+		 		satellitePosition = scanProviders.begin()->first;
+		 		printf("[scan_transponder] scanning sat %s position %d\n", providerName, satellitePosition);
+		 		eventServer->sendEvent(CZapitClient::EVT_SCAN_SATELLITE, CEventServer::INITID_ZAPIT, providerName, strlen(providerName) + 1);
+
+		 		scan_mode = TP.scan_mode;
+		 		TP.feparams.inversion = INVERSION_AUTO;
+
+		 		if (!cable) {
+		 			printf("[scan_transponder] freq %d rate %d fec %d pol %d NIT %s\n", TP.feparams.frequency, TP.feparams.u.qpsk.symbol_rate, TP.feparams.u.qpsk.fec_inner, TP.polarization, scan_mode ? "no" : "yes");
+		 		} else
+		 			printf("[scan_transponder] freq %d rate %d fec %d mod %d\n", TP.feparams.frequency, TP.feparams.u.qam.symbol_rate, TP.feparams.u.qam.fec_inner, TP.feparams.u.qam.modulation);
+
+		 	        if (cable) {
+		 	                /* build special transponder for cable with satfeed */
+		 	                build_bf_transponder(&(TP.feparams), satellitePosition);
+		 	        } else {
+		 			/* read network information table */
+		 			fake_tid++; fake_nid++;
+		 			status = add_to_scan(
+		 				CREATE_TRANSPONDER_ID_FROM_SATELLITEPOSITION_ORIGINALNETWORK_TRANSPORTSTREAM_ID(TP.feparams.frequency/1000, satellitePosition, fake_nid, fake_tid),
+		 				&TP.feparams, TP.polarization);
+
+		 		}
+		 		get_sdts(satellitePosition);
+
+		 		if(abort_scan)
+		 			found_channels = 0;
+
+
+
+		 		 listTP.pop_front();
+		 	    }
+		 if(abort_scan)
+		 		found_channels = 0;
+
+
+		 	if(found_channels) {
+		 		SaveServices(true);
+		 		scanBouquetManager->saveBouquets(bouquetMode, providerName);
+		 	        g_bouquetManager->saveBouquets();
+		 	        //g_bouquetManager->sortBouquets();
+		 	        //g_bouquetManager->renumServices();
+		 	        g_bouquetManager->clearAll();
+//		 		g_bouquetManager->loadBouquets();
+		 		stop_scan(true);
+		 		myZapitClient.reloadCurrentServices();
+		 	} else {
+		 		stop_scan(false);
+		 		frontend->setTsidOnid(0);
+		 		zapit(live_channel_id, 0);
+		 	}
+		 	scantransponders.clear();
+		 	scanedtransponders.clear();
+		 	nittransponders.clear();
+
+		 	DBG("[scan_transponder] done scan freq %d rate %d fec %d pol %d\n", TP.feparams.frequency, TP.feparams.u.qpsk.symbol_rate, TP.feparams.u.qpsk.fec_inner, TP.polarization);
+
+
+		 	isblindscan= false;
+		 	pthread_exit(0);
+
 }

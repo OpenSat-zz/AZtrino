@@ -426,11 +426,37 @@ int cVideo::SetVideoSystem(int video_system, bool remember)
 #ifdef AZBOX_GEN_1
 	//Write vstring to file
 	FILE * pFile;
+	FILE * modelFile;
 	pFile = fopen ("/etc/.vstring","w");
-	fprintf (pFile, "-null %s %s %s %s %s -audio_engine 0 -sf 48000\n", MehdmiModes[video_system][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
+	modelFile = fopen ("/proc/model","r");
+
+	if ( modelFile != NULL )
+	   {
+	      char line [ 3 ]; /* or other suitable maximum line size */
+
+	      fgets ( line, sizeof line, modelFile ); /* read a line */
+	      fputs ( line, stdout ); /* write the line */
+	      if (strncmp(line,"me",2)==0)
+	      {
+	      	 printf("Detected model Azbox ME\n");
+	       	 fprintf (pFile, "%s %s %s %s %s -audio_engine 0 -sf 48000 &\n", MehdmiModes[video_system][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
+	      }
+	      else
+	      {
+	       	printf("It's not a Azbox ME\n");
+	       	fprintf (pFile, "%s %s %s %s %s -audio_engine 0 -sf 48000\n", MehdmiModes[video_system][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
+	      }
+
+	      fclose ( modelFile );
+	   }
+	   else
+	   {
+	      printf ( "Error in /proc/model\n" ); /* why didn't the file open? */
+	   }
+
 	fclose (pFile);
 //ComponentModes[video_system][1],
-	printf("-null %s %s %s %s %s -audio_engine 0 -sf 48000\n", MehdmiModes[video_system][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
+	printf("%s %s %s %s %s -audio_engine 0 -sf 48000\n", MehdmiModes[video_system][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
 //ComponentModes[video_system][1]
 #else
 	int fd = open("/proc/stb/video/videomode", O_RDWR);
@@ -671,7 +697,6 @@ void cVideo::setContrast(int val)
 {
 	printf("%s:%s - val=%d\n", FILENAME, __FUNCTION__, val);
 }
-
 
 void cVideo::SetFastBlank(bool onoff)
 {

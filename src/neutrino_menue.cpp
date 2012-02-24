@@ -1322,6 +1322,7 @@ printf("Adding cable menu for %s position %d\n", sit->second.name.c_str(), sit->
 	manualScan->addItem(new CMenuForwarder(LOCALE_SCANTS_TEST, true, NULL, scanTs, "test", CRCInput::RC_yellow, NEUTRINO_ICON_BUTTON_YELLOW));
 	manualScan->addItem(new CMenuForwarder(LOCALE_SCANTS_STARTNOW, true, NULL, scanTs, "manual", CRCInput::RC_blue, NEUTRINO_ICON_BUTTON_BLUE));
 
+
 	CMenuWidget* autoScan = new CMenuWidget(LOCALE_SATSETUP_AUTO_SCAN, NEUTRINO_ICON_SETTINGS);
 	autoScan->addItem(GenericMenuSeparator);
 	autoScan->addItem(GenericMenuBack);
@@ -1330,6 +1331,7 @@ printf("Adding cable menu for %s position %d\n", sit->second.name.c_str(), sit->
 	autoScan->addItem(useNit);
 	autoScan->addItem(scanPids);
 	autoScan->addItem(new CMenuForwarder(LOCALE_SCANTS_STARTNOW, true, NULL, scanTs, "auto", CRCInput::RC_blue, NEUTRINO_ICON_BUTTON_BLUE));
+	autoScan->addItem(new CMenuForwarder(LOCALE_SCANTS_STARTBLINDNOW, true, NULL, scanTs, "blind", NULL, NULL));
 
 	CMenuOptionChooser* ojDiseqc = NULL;
 	CMenuOptionNumberChooser * ojDiseqcRepeats = NULL;

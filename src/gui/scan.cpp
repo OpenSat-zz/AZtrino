@@ -65,6 +65,7 @@ extern CFrontend * frontend;
 #define NEUTRINO_SCAN_STOP_SCRIPT	CONFIGDIR "/scan.stop"
 #define NEUTRINO_SCAN_SETTINGS_FILE	CONFIGDIR "/scan.conf"
 TP_params TP;
+std::list<TP_params> listTP;
 
 #define RED_BAR 40
 #define YELLOW_BAR 70
@@ -99,6 +100,7 @@ int CScanTs::exec(CMenuTarget* parent, const std::string & actionKey)
 	sat_iterator_t sit;
 	bool scan_all = actionKey == "all";
 	bool test = actionKey == "test";
+	bool blindscan = actionKey == "blind";
 	bool manual = (actionKey == "manual") || test;
 	CZapitClient::ScanSatelliteList satList;
 	CZapitClient::commandSetScanSatelliteList sat;
@@ -131,6 +133,17 @@ int CScanTs::exec(CMenuTarget* parent, const std::string & actionKey)
 	CVFD::getInstance()->setMode(CVFD::MODE_MENU_UTF8);
 
 //printf("[neutrino] scan_mode %d TP_freq %s TP_rate %s TP_fec %d TP_pol %d\n", get_set.scan_mode, get_set.TP_freq, get_set.TP_rate, get_set.TP_fec, get_set.TP_pol);
+
+	if(blindscan) {
+		CVFD::getInstance()->setMode(CVFD::MODE_STANDBY);
+		CVFD::getInstance()->setMode(CVFD::MODE_MENU_UTF8);
+
+		//std::list<TP_params> listTP;
+		scan_pids = true;
+
+		//g_Zapit->getBlindFreqs(get_set.scan_mode, listTP);
+
+	}
 
 	if(manual) {
 		scan_pids = true;
@@ -206,6 +219,8 @@ int CScanTs::exec(CMenuTarget* parent, const std::string & actionKey)
 		success = g_Zapit->tune_TP(TP);
 	} else if(manual)
 		success = g_Zapit->scan_TP(TP);
+	else if(blindscan)
+		success = g_Zapit->scan_blind(get_set.scan_mode);
 	else
 		success = g_Zapit->startScan(scan_mode);
 
@@ -283,9 +298,12 @@ int CScanTs::handleMsg(neutrino_msg_t msg, neutrino_msg_data_t data)
 			break;
 			
 		case NeutrinoMessages::EVT_SCAN_NUM_TRANSPONDERS:
+			printf("Msg: EVT_SCAN_NUM_TRANSPONDERS");
 			sprintf(buffer, "%d", data);
 			paintLine(xpos2, ypos_transponder, w - 95, buffer);
 			total = data;
+			if (done>=total)
+				total=done;
 			snprintf(str, 255, "scan: %d/%d", done, total);
 			CVFD::getInstance()->showMenuText(0, str, -1, true);
 			break;
@@ -293,6 +311,8 @@ int CScanTs::handleMsg(neutrino_msg_t msg, neutrino_msg_data_t data)
 		case NeutrinoMessages::EVT_SCAN_REPORT_NUM_SCANNED_TRANSPONDERS:
 			if (total == 0) data = 0;
 			done = data;
+			if (done>=total)
+				total=done;
 			sprintf(buffer, "%d/%d", done, total);
 			paintLine(xpos2, ypos_transponder, w - 95, buffer);
 			snprintf(str, 255, "scan %d/%d", done, total);

@@ -9,7 +9,10 @@
 
 #include "bouquets.h"
 
+
 void save_settings (bool write);
+void  getBlindFreqs (int scan_mode,int init_blind,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP);
+void *start_scanblindthread(void *);
 void *start_scanthread(void *);
 int start_scan(bool scan_mode);
 

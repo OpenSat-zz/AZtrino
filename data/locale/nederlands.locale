@@ -336,7 +336,7 @@ extra.zapit_restore Herstel kanalenlijst vanuit /tmp
 extra.zapit_rezap_time Re-Zap on emu switch time
 extra.zapit_save_last_chan Sla laatste kanaal op
 extra.zapit_scan_sdt Scan SDT voor updates
-extra.zapit_scanpids Scan/Gebruik pids
+extra.zapit_scanpids Scan/gebruik pids
 extra.zapit_sdt_changed Kanalen gewijzigd. Lijst opnieuw laden.
 extra.zapit_sort_names Sorteer kanalen op naam
 extra.zapit_write_names Kanaal namen opslaan
@@ -591,7 +591,7 @@ keybindingmenu.bouquetchannels_on_ok Actueel bouquet
 keybindingmenu.bouquetdown Bouquet terug
 keybindingmenu.bouquethandling Bouquet-controle
 keybindingmenu.bouquetlist_on_ok Bouquet-lijst
-keybindingmenu.bouquetup volgende Bouquet
+keybindingmenu.bouquetup Volgende Bouquet
 keybindingmenu.cancel Kanalenlijst sluiten
 keybindingmenu.channeldown Kanaal omlaag
 keybindingmenu.channellist Kanalenlijst
@@ -665,7 +665,7 @@ mainsettings.savesettingsnow_hint Instellingen opslaan.\nEen ogenblik...
 mainsettings.streaming Films afspelen
 mainsettings.timezone Tijdzone
 mainsettings.video Video instellingen
-menu.back Terug
+menu.back Volgende / Terug
 messagebox.back Terug
 messagebox.cancel Annuleren
 messagebox.discard Niet uitvoeren?
@@ -1079,8 +1079,8 @@ rfmod.finetune Fijnafstemming
 rfmod.rfmod RF Modulator
 rfmod.standby Modulator inschakelen
 rfmod.test Testpatroon
-satsetup.auto_scan Automatisch zoeken op geselecteerde satelliet
-satsetup.auto_scan_all Automatisch zoeken op meerdere satellieten
+satsetup.auto_scan Automatisch zoeken geselecteerde sat.
+satsetup.auto_scan_all Automatisch zoeken meerdere sat.
 satsetup.comm_input Commited ingang
 satsetup.diseqc DiSEqC
 satsetup.diseqc_advanced Geavanceerd
@@ -1132,6 +1132,7 @@ scants.numberoftotalservices Totaal
 scants.numberoftvservices TV
 scants.provider Aanbieder:
 scants.select_tp Selecteer transponder
+scants.startblindnow Start blindscan
 scants.startnow Start zoekopdracht
 scants.test Test signaal
 scants.transponders Transponders:

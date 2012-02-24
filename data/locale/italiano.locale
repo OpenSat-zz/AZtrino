@@ -826,6 +826,7 @@ scants.numberofradioservices Radio
 scants.numberoftotalservices Totali
 scants.numberoftvservices TV
 scants.provider Provider:
+scants.startblindnow Start blind scan
 scants.startnow inizia scansione
 scants.transponders Transponders:
 screensetup.lowerright verde = margine basso destro

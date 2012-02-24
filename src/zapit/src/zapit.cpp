@@ -698,6 +698,35 @@ void parseScanInputXml(void)
 	}
 }
 
+
+
+int start_scanBlind(int scan_mode)
+{
+	if (!scanInputParser) {
+		parseScanInputXml();
+		if (!scanInputParser) {
+			WARN("scan not configured");
+			return -1;
+		}
+	}
+
+	scan_runs = 1;
+	stopPlayBack(true);
+
+    pmt_stop_update_filter(&pmt_update_fd);
+
+	found_transponders = 0;
+	found_channels = 0;
+
+	if (pthread_create(&scan_thread, 0, start_scanblindthread,  (void*)scan_mode)) {
+		ERROR("pthread_create");
+		scan_runs = 0;
+		return -1;
+	}
+	//pthread_detach(scan_thread);
+	return 0;
+}
+
 /*
  * return 0 on success
  * return -1 otherwise
@@ -984,6 +1013,14 @@ DBG("[zapit] sending EVT_SERVICES_CHANGED\n");
 		eventServer->sendEvent(CZapitClient::EVT_BOUQUETS_CHANGED, CEventServer::INITID_ZAPIT);
   	        break;
   	}
+	case CZapitMessages::CMD_SCANBLINDSTART: {
+			int scan_mode;
+			CBasicServer::receive_data(connfd, &scan_mode, sizeof(scan_mode));
+
+			if (start_scanBlind(scan_mode) == -1)
+				eventServer->sendEvent(CZapitClient::EVT_SCAN_FAILED, CEventServer::INITID_ZAPIT);
+			break;
+		}
 	case CZapitMessages::CMD_SCANSTART: {
 		int scan_mode;
 		CBasicServer::receive_data(connfd, &scan_mode, sizeof(scan_mode));
@@ -1081,7 +1118,7 @@ printf("[zapit] TP_id %d freq %d rate %d fec %d pol %d\n", TP.TP_id, TP.feparams
 			//FIXME not ready
 			//if(satellitePositions.find(channel->getSatellitePosition()) != satellitePositions.end()) 
 			channel = 0;
-		}
+			}
 		stopPlayBack(true);
         	pmt_stop_update_filter(&pmt_update_fd);
 		scan_runs = 1;

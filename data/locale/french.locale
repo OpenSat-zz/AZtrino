@@ -827,6 +827,7 @@ scants.numberofradioservices Radio
 scants.numberoftotalservices Total
 scants.numberoftvservices TV
 scants.provider Provider(Fournisseur):
+scants.startblindnow Start blind scan
 scants.startnow commencer le Balayage
 scants.transponders Transpondeurs:
 screensetup.lowerright Vert = réglage du bas à droite

@@ -29,17 +29,20 @@
 
 /* libevent */
 #include <eventserver.h>
+#include <stdlib.h>
 
 
 #include <zapit/client/zapitclient.h>
 #include <zapit/client/msgtypes.h>
 #include <zapit/client/zapittools.h>
 
+
+
 const unsigned char   CZapitClient::getVersion   () const
 {
+
 	return CZapitMessages::ACTVERSION;
 }
-
 const          char * CZapitClient::getSocketName() const
 {
 	return ZAPIT_UDS_NAME;
@@ -583,6 +586,17 @@ bool CZapitClient::scan_TP(TP_params TP)
 	close_connection();
 	return reply;
 }
+
+bool CZapitClient::scan_blind(int scan_mode)
+{
+	bool reply = send(CZapitMessages::CMD_SCANBLINDSTART, (char*)&scan_mode, sizeof(scan_mode));
+
+	close_connection();
+
+	return reply;
+
+}
+
 bool CZapitClient::tune_TP(TP_params TP)
 {
 	bool reply = send(CZapitMessages::CMD_TUNE_TP, (char*)&TP, sizeof(TP));

@@ -950,6 +950,7 @@ const char *locale_real_names[] = {
 	"scants.numberoftotalservices",
 	"scants.numberoftvservices",
 	"scants.provider",
+	"scants.startblindnow",
 	"scants.startnow",
 	"scants.test",
 	"scants.transponders",

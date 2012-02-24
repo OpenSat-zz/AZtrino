@@ -648,8 +648,8 @@ int CNeutrinoApp::loadSetup(const char * fname)
 	}
 	strcpy( g_settings.network_nfs_audioplayerdir, configfile.getString( "network_nfs_audioplayerdir", "/media/sda1/music" ).c_str() );
 	strcpy( g_settings.network_nfs_picturedir, configfile.getString( "network_nfs_picturedir", "/media/sda1/pictures" ).c_str() );
-	strcpy( g_settings.network_nfs_moviedir, configfile.getString( "network_nfs_moviedir", "/media/sda1/movies" ).c_str() );
-	strcpy( g_settings.network_nfs_recordingdir, configfile.getString( "network_nfs_recordingdir", "/media/sda1/movies" ).c_str() );
+	strcpy( g_settings.network_nfs_moviedir, configfile.getString( "network_nfs_moviedir", "/media/sda1/movie" ).c_str() );
+	strcpy( g_settings.network_nfs_recordingdir, configfile.getString( "network_nfs_recordingdir", "/media/sda1/movie" ).c_str() );
 	strcpy( g_settings.timeshiftdir, configfile.getString( "timeshiftdir", "" ).c_str() );
 
 	g_settings.temp_timeshift = configfile.getInt32( "temp_timeshift", 0 );

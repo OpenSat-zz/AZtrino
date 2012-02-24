@@ -946,6 +946,7 @@ scants.numberofradioservices Radio
 scants.numberoftotalservices Gesamt
 scants.numberoftvservices TV
 scants.provider Anbieter:
+scants.startblindnow Start blind scan
 scants.startnow Kanalsuche starten
 scants.test Empfang Test
 scants.transponders Transponder:
