@@ -53,6 +53,9 @@ extern CEventServer *eventServer;
 #define WEST	1
 #define USALS
 
+
+int bsScan_mode = 0;
+int bsNumFreq=0;
 static struct dtv_property clr_cmdargs[] = {
 	{ DTV_CLEAR,		{}, { 0			} },
 };
@@ -171,6 +174,268 @@ CFrontend::~CFrontend(void)
 	close(fd);
 }
 
+int CFrontend::getDescriptorFrontend()
+{
+	return fd;
+	}
+
+
+int CFrontend::getInfo( int lof, unsigned int verbose, std::list<TP_params> &listTP) {
+
+
+	uint16_t snr, snr_percent, signal;
+		int dtv_frequency_prop = 0;
+		int dtv_symbol_rate_prop = 0;
+		int dtv_inner_fec_prop = 0;
+	//	fe_status_t status;
+	//	ioctl(fefd, FE_READ_STATUS, &status);
+		if ((ioctl(fd, FE_READ_SIGNAL_STRENGTH, &signal)) == -1) {
+	         perror("[ERROR] FE_READ_SIGNAL_STRENGTH failed \n");
+	         return -1;
+		 }
+		if ((ioctl(fd, FE_READ_SNR, &snr)) == -1) {
+	         perror("[ERROR] FE_READ_SNR failed \n");
+	         return -1;
+		 }
+		snr_percent = (snr * 100) / 0xffff;
+
+		struct dtv_property cmdseq_arg[10];
+		cmdseq_arg[0].cmd = DTV_DELIVERY_SYSTEM;
+		cmdseq_arg[1].cmd = DTV_FREQUENCY;
+		cmdseq_arg[2].cmd = DTV_VOLTAGE;
+		cmdseq_arg[3].cmd = DTV_SYMBOL_RATE;
+		cmdseq_arg[4].cmd = DTV_MODULATION;
+		cmdseq_arg[5].cmd = DTV_INNER_FEC;
+		cmdseq_arg[6].cmd = DTV_INVERSION;
+		cmdseq_arg[7].cmd = DTV_ROLLOFF;
+		cmdseq_arg[8].cmd = DTV_PILOT;
+		struct dtv_properties cmdseq;
+
+		cmdseq.num = 9;
+		cmdseq.props = cmdseq_arg;
+
+		if ((ioctl(fd, FE_GET_PROPERTY, &cmdseq)) == -1) {
+		      perror("[ERROR] FE_GET_PROPERTY getinfo failed \n");
+		      return -1;
+		}
+
+		printf("[GET INFO] %d, %d, %d, %d, %d, %d, %d, %d \n",cmdseq.props[0].u.data,cmdseq.props[1].u.data,cmdseq.props[2].u.data,cmdseq.props[3].u.data,cmdseq.props[4].u.data,cmdseq.props[5].u.data,cmdseq.props[6].u.data,cmdseq.props[7].u.data,cmdseq.props[8].u.data);
+		int dtv_delivery_system_prop = cmdseq.props[0].u.data;
+	//	dtv_frequency_prop = cmdseq.props[1].u.data;
+		int dtv_voltage_prop = cmdseq.props[2].u.data;
+		//dtv_symbol_rate_prop = cmdseq.props[3].u.data;
+		int dtv_modulation_prop = cmdseq.props[4].u.data;
+		dtv_inner_fec_prop = cmdseq.props[5].u.data;
+		int dtv_inversion_prop = cmdseq.props[6].u.data;
+		int dtv_rolloff_prop = cmdseq.props[7].u.data;
+		int dtv_pilot_prop = cmdseq.props[8].u.data;
+	//	int dtv_tone_prop = cmdseq.props[9].u.data;
+	//	int dtv_bandwidth_hz_prop = cmdseq.props[10].u.data;
+		int currentfreq;
+		int currentpol;
+		int currentsr;
+		int currentsys;
+		int currentfec;
+		int currentmod;
+		int currentinv;
+		int currentrol;
+		int currentpil;
+		extern int lastfreq;
+		extern int lastpol;
+		extern int lastsr;
+		extern int lastsys;
+		extern int lastfec;
+		extern int lastmod;
+		extern int lastinv;
+		extern int lastrol;
+		extern int lastpil;
+
+		struct dvb_frontend_parameters qp;
+		ioctl(fd, FE_GET_FRONTEND, &qp);
+		dtv_frequency_prop = qp.frequency;
+		dtv_symbol_rate_prop = qp.u.qpsk.symbol_rate;
+	//	dtv_inner_fec_prop = qp.u.qpsk.fec_inner;
+
+		currentfreq = dtv_frequency_prop / FREQ_MULT;
+		currentpol = dtv_voltage_prop;
+		currentsr = dtv_symbol_rate_prop / FREQ_MULT;
+		currentsys = dtv_delivery_system_prop;
+		currentfec = dtv_inner_fec_prop;
+		currentmod = dtv_modulation_prop;
+		currentinv = dtv_inversion_prop;
+		currentrol = dtv_rolloff_prop;
+		currentpil = dtv_pilot_prop;
+
+
+		//if (verbose || (snr > 0 && dtv_frequency_prop > 0)) {
+		if (verbose || (((snr * 100) / 0xffff) > 50 && (currentpol != lastpol || currentfreq != lastfreq
+			|| currentsr != lastsr || currentsys != lastsys || currentfec != lastfec
+			|| currentmod != lastmod || currentinv != lastinv || currentrol != lastrol
+			|| currentpil != lastpil))) {
+
+			char freq[100];
+			char polarization[11] = "VERTICAL";
+			char type[9];
+			char iq[8];
+
+			lastfreq = currentfreq;
+			lastpol = currentpol;
+			lastsr = currentsr;
+			lastsys = currentsys;
+			lastfec = currentfec;
+			lastmod = currentmod;
+			lastinv = currentinv;
+			lastrol = currentrol;
+			lastpil = currentpil;
+
+			if (lof >= 1 && lof <= CBAND_LOF && dtv_frequency_prop != 0)
+				printf("%-5d ", lof - currentfreq);
+			else if (dtv_frequency_prop != 0)
+				printf("%-5d ", currentfreq + lof);
+			else
+				printf("%-5d ", dtv_frequency_prop);
+
+			switch (dtv_voltage_prop) {
+				case 0: printf("V "); strcpy(polarization, "VERTICAL"); break;
+				case 1: printf("H "); strcpy(polarization, "HORIZONTAL");break;
+				case 2: printf("N "); break;
+			}
+
+			printf("%-5d ", currentsr);
+			printf("SIG %3u%% ", (signal * 100) / 0xffff);
+			printf("SNR %3u%% ", (snr * 100) / 0xffff);
+
+			switch (dtv_delivery_system_prop) {
+				case 4:  printf("DSS    "); break;
+				case 5:  printf("DVB-S  "); sprintf(type,"DVBS ");break;
+				case 6:  printf("DVB-S2 "); sprintf(type,"DVBS2 ");break;
+				default: printf("SYS(%d) ", dtv_delivery_system_prop); sprintf(type,"DVBS "); break;
+			}
+
+			switch (dtv_modulation_prop) {
+				case 0: printf("QPSK "); break;
+				case 9: printf("8PSK "); break;
+				default: printf("MOD(%d) ", dtv_modulation_prop); break;
+			}
+
+			switch (dtv_inner_fec_prop) {
+				case 0: printf("FEC_NONE ");  break;
+				case 1: printf("FEC_1_2  ");   break;
+				case 2: printf("FEC_2_3  ");   break;
+				case 3: printf("FEC_3_4  ");   break;
+				case 4: printf("FEC_4_5  ");   break;
+				case 5: printf("FEC_5_6  ");   break;
+				case 6: printf("FEC_6_7  ");   break;
+				case 7: printf("FEC_7_8  ");   break;
+				case 8: printf("FEC_8_9  ");   break;
+				case 9: printf("FEC_AUTO ");  break;
+				case 10: printf("FEC_3_5  ");  break;
+				case 11: printf("FEC_9_10 "); break;
+				default: printf("FEC (%d)  ", dtv_inner_fec_prop); break;
+			}
+
+			switch (dtv_inversion_prop) {
+				case 0:  printf("INV_OFF "); sprintf(iq,"Normal "); break;
+				case 1:  printf("INV_ON  "); sprintf(iq,"Invert "); break;
+				case 2:  printf("INVAUTO "); sprintf(iq,"Normal "); break;
+				default: printf("INV (%d) ", dtv_inversion_prop); break;
+			}
+
+
+			switch (dtv_pilot_prop) {
+				case 0:  printf("PIL_ON  ");   break;
+				case 1:  printf("PIL_OFF ");  break;
+				case 2:  printf("PILAUTO "); break;
+				default: printf("PIL (%d) ", dtv_pilot_prop); break;
+			}
+
+			switch (dtv_rolloff_prop) {
+				case 0:  printf("ROL_35\n");   break;
+				case 1:  printf("ROL_20\n");   break;
+				case 2:  printf("ROL_25\n");   break;
+				case 3:  printf("ROL_AUTO\n"); break;
+				default: printf("ROL (%d)\n", dtv_rolloff_prop); break;
+			}
+
+			int currenttp= currentfreq;
+			if (currentfreq < 1170000)
+				currenttp = (currentfreq) +9750;
+			else
+				currenttp = (currentfreq) +10600;
+			sprintf(freq,"RF: %d Hz SymRate: %d - %s %s %s",
+					currenttp,currentsr*1000, polarization,type,iq);
+
+
+			eventServer->sendEvent ( CZapitClient::EVT_SCAN_REPORT_FREQUENCY, CEventServer::INITID_ZAPIT, &currenttp, sizeof(currenttp));
+
+			TP_params TP;
+
+			TP.scan_mode = bsScan_mode;
+			TP.feparams.frequency = currenttp*1000;
+			TP.feparams.u.qpsk.symbol_rate =currentsr*1000;
+			if (atoi(polarization)==1)
+				TP.polarization = 0;
+			else
+				TP.polarization = 1;
+			if(strncmp (type,"DVB-S ",6)==0 ) {
+			//TP.feparams.u.qam.modulation	= 8-PSK;
+				TP.feparams.u.qpsk.fec_inner = FEC_AUTO;
+			} else {
+				TP.feparams.u.qam.modulation	= QPSK;
+				TP.feparams.u.qam.fec_inner	= FEC_NONE;
+			}
+			listTP.push_back(TP);
+
+
+			//printf("%s\n",freq);
+			//freqAvail(freq);
+			bsNumFreq++;
+			//statusChanged();
+
+			eventServer->sendEvent ( CZapitClient::EVT_SCAN_NUM_TRANSPONDERS, CEventServer::INITID_ZAPIT,
+																									&bsNumFreq, sizeof(bsNumFreq));
+			//For debug
+			sprintf(freq,"RF: %d Hz SymRate: %d - %s %s %s SIGNAL: %3u SNR: %3u",
+								currenttp,currentsr*1000, polarization,type,iq, (signal * 100) / 0xffff, (snr * 100) / 0xffff);
+			FILE* fpdebug = fopen("/tmp/blindscan","a+");
+			fwrite(freq, 1, strlen(freq), fpdebug);
+			fwrite("\n\r", 1, strlen("\n\r"), fpdebug);
+			fclose(fpdebug);
+
+		}
+		return 1;
+	}
+int CFrontend::setInput(int tpfreq, int symrate, int polarity, int fec, int delsys, int tone) {
+
+	printf ("[SET INPUT] %d, %d, %d, %d, %d, %d \n", delsys, tpfreq, symrate, tone, polarity, fec);
+	struct dtv_property p[10];
+	p[0].cmd = DTV_CLEAR;
+	p[1].cmd = DTV_DELIVERY_SYSTEM; p[1].u.data = delsys;
+	p[2].cmd = DTV_FREQUENCY;       p[2].u.data = tpfreq*1000;
+	p[3].cmd = DTV_SYMBOL_RATE;      p[3].u.data = symrate*1000;
+	p[4].cmd = DTV_TONE;     p[4].u.data = tone;
+	p[5].cmd = DTV_VOLTAGE;       p[5].u.data = polarity;
+	p[6].cmd = DTV_INNER_FEC;       p[6].u.data = fec;
+	p[7].cmd = DTV_TUNE;
+
+	struct dtv_properties dtv_prop;
+
+	dtv_prop.num = 8;
+	dtv_prop.props = p;
+	 //ioctl(fefd, FE_SET_PROPERTY, &cmdseq);
+	 if ((ioctl(fd, FE_SET_PROPERTY, &dtv_prop)) == -1) {
+         perror("[ERROR] FE_SET_PROPERTY FE_SET_PROPERTY, DTV_FREQUENCY, DTV_SYMBOL_RATE, ... failed \n");
+         return -1;
+	 }
+
+	 int currenttp= tpfreq;
+		 if (tpfreq < 1170000)
+		 	currenttp = (tpfreq) +9750;
+		 else
+		 	currenttp = (tpfreq) +10600;
+		 eventServer->sendEvent ( CZapitClient::EVT_SCAN_REPORT_FREQUENCY, CEventServer::INITID_ZAPIT, &currenttp, sizeof(currenttp));
+	 return 1;
+}
 void CFrontend::Open(void)
 {
 	printf("[fe0] open frontend\n");

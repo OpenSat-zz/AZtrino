@@ -310,6 +310,9 @@ extra.timeshift_pause Timeshift pauze
 extra.timezone Tijd zone
 extra.tp_fec FEC
 extra.tp_freq Frequentie
+extra.tp_freq_ini Start Freq. 
+extra.tp_freq_end End Freq. 
+extra.tp_freq_tone Tone
 extra.tp_mod Modulatie
 extra.tp_mod_128 QAM/128
 extra.tp_mod_16 QAM/16
@@ -318,6 +321,10 @@ extra.tp_mod_32 QAM/32
 extra.tp_mod_64 QAM/64
 extra.tp_pol Polarisatie
 extra.tp_pol_h H
+extra.tp_pol_both Both
+extra.tp_tone_both Both
+extra.tp_tone_off Low
+extra.tp_tone_on High
 extra.tp_rate Symboolwaarde
 extra.tp.pol_v V
 extra.update_dir Doelmap voor updates
@@ -1132,6 +1139,7 @@ scants.numberoftotalservices Totaal
 scants.numberoftvservices TV
 scants.provider Aanbieder:
 scants.select_tp Selecteer transponder
+scants.blind_scan Blind scan
 scants.startblindnow Start blindscan
 scants.startnow Start zoekopdracht
 scants.test Test signaal

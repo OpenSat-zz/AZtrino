@@ -587,9 +587,17 @@ bool CZapitClient::scan_TP(TP_params TP)
 	return reply;
 }
 
-bool CZapitClient::scan_blind(int scan_mode)
+bool CZapitClient::scan_blind(int scan_mode, int startfreq, int endfreq, int rate, int pol, int tone)
 {
-	bool reply = send(CZapitMessages::CMD_SCANBLINDSTART, (char*)&scan_mode, sizeof(scan_mode));
+	BLINDSCAN_params blindparams;
+	blindparams.scan_mode = scan_mode;
+	blindparams.startfreq = startfreq;
+	blindparams.endfreq = endfreq;
+	blindparams.polarization = pol;
+	blindparams.tone = tone;
+	blindparams.rate = rate;
+
+	bool reply = send(CZapitMessages::CMD_SCANBLINDSTART, (char*)&blindparams, sizeof(blindparams));
 
 	close_connection();
 

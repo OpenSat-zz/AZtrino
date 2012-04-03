@@ -20,6 +20,7 @@
  */
 
 #include <fcntl.h>
+#include <sys/ioctl.h>
 #include <unistd.h>
 #include <math.h>
 #include <sys/time.h>
@@ -39,6 +40,8 @@
 #include <zapit/frontend_c.h>
 #include <xmlinterface.h>
 
+
+
 extern CBouquetManager *g_bouquetManager;
 extern transponder_list_t transponders; //  defined in zapit.cpp
 extern tallchans allchans;   //  defined in zapit.cpp
@@ -56,6 +59,22 @@ extern int useGotoXX;
 extern int motorRotationSpeed;
 extern CFrontend *frontend;
 extern xmlDocPtr scanInputParser;
+
+int fefd;
+
+int lastfreq;
+int lastpol;
+int lastsr;
+int lastsys;
+int lastfec;
+int lastmod;
+int lastinv;
+int lastrol;
+int lastpil;
+
+char polarization[11] = "";
+
+
 
 void SaveServices(bool tocopy);
 int zapit(const t_channel_id channel_id, bool in_nvod, bool forupdate = 0, bool nowait = 0);
@@ -79,7 +98,7 @@ std::map <transponder_id_t, transponder> scantransponders;// TP list to scan
 std::map <transponder_id_t, transponder> scanedtransponders;// global TP list for current scan
 std::map <transponder_id_t, transponder> nittransponders;
 
-
+int f;
 
 
 
@@ -105,7 +124,7 @@ unsigned short uiOLDStartFreq_100kHz=0;
 unsigned short uiOLDChannelCount=0;
 struct blind_Channels p;
 char infos[1024] = { 0 };
-char polarization[11] = "";
+//char polarization[11] = "";
 int numFreq=0;
 bool isblindscan= false;
 
@@ -690,7 +709,11 @@ void * scan_transponder(void * arg)
 
 
 
-void  getBlindFreqs (int scan_mode,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP)
+/*********************************************************************************************/
+/******************** BLIND SCAN AVL 2108 ****************************************************/
+/*********************************************************************************************/
+
+void  getBlindFreqsAVL2108 (int scan_mode,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP)
 	{
 		int done=0;
 		int error=0;
@@ -707,9 +730,9 @@ void  getBlindFreqs (int scan_mode,char* startFreq,char* endFreq,char* pol,char*
 			 strcat(infos," ");
 			 strcat(infos,endFreq);
 			 strcat(infos," ");
-			 strcat(infos,pol);
-			 strcat(infos," ");
 			 strcat(infos,tone);
+			 strcat(infos," ");
+			 strcat(infos,pol);
 			 fwrite(infos,1,strlen(infos),fp); //"1 X Y Z T" > /proc/avlblind   (X-> start frequency in Mhz for tuner/demod (AVL can go from 965 till 2100), not transponder frequency, Y-> stop frequency for tuner/demod, Z = 0/1 vertical(13v)/horizontal(18v)   polarisation), T = 0/1 (22Khz TONE OFF/ON), setting sym rate no need ,it's allready set for min/max blind scan mode
 			 fclose(fp);
 
@@ -744,7 +767,11 @@ void  getBlindFreqs (int scan_mode,char* startFreq,char* endFreq,char* pol,char*
 					if (uiOLDStartFreq_100kHz!=p.uiNextStartFreq_100kHz)
 					{
 						uiOLDStartFreq_100kHz=p.uiNextStartFreq_100kHz;
-						int fq=uiOLDStartFreq_100kHz/10;
+						int fq=uiOLDStartFreq_100kHz*100;
+						if (fq < 1170000)
+							fq = (fq +9750000)/1000;
+						else
+							fq = (fq +10600000)/1000;
 						eventServer->sendEvent ( CZapitClient::EVT_SCAN_REPORT_FREQUENCY, CEventServer::INITID_ZAPIT, &fq, sizeof(fq));
 					}
 					if (uiOLDChannelCount!=p.uiChannelCount)
@@ -850,63 +877,212 @@ void  getBlindFreqs (int scan_mode,char* startFreq,char* endFreq,char* pol,char*
 
 }
 
-void *start_scanblindthread(void *scanmode)
+/*********************************************************************************************/
+/********************* BLIND SCAN STV090X *****************************************************/
+/*********************************************************************************************/
+
+
+void getBlindFreqsSTV090x (int startfreq, int endfreq, int symrate,
+	int step, unsigned int scan_v, unsigned int scan_h, int lof,
+	unsigned int interactive, int fec, unsigned int adapter,
+	unsigned int verbose, int delsys,
+	unsigned int monitor, unsigned int polarity, int retune,
+	unsigned int monitor_retune, int tone, std::list<TP_params> &listTP) {
+	int r;
+	int error=1;
+
+
+	/*
+	sleep(5);
+	char fedev[128];
+	snprintf(fedev, sizeof(fedev), FEDEV, 0, 0);
+	fefd = open(fedev, O_RDWR | O_NONBLOCK);
+
+	//frontend->Close();
+	fefd=frontend->getDescriptorFrontend();
+	if (fefd == -1)
+	{
+		perror("open_port: Unable to open\n");
+		return;
+	}
+*/
+
+	char providerName[32] = "";
+	strcpy(providerName, scanProviders.size() > 0 ? scanProviders.begin()->second.c_str() : "unknown provider");
+	eventServer->sendEvent(CZapitClient::EVT_SCAN_SATELLITE, CEventServer::INITID_ZAPIT, providerName, strlen(providerName) + 1);
+	eventServer->sendEvent ( CZapitClient::EVT_SCAN_NUM_TRANSPONDERS, CEventServer::INITID_ZAPIT, &numFreq, sizeof(numFreq));
+
+	for (f = startfreq; f <= endfreq; f += step) {
+		for (r = retune; r > 0; r -= 1) {
+			//if (done) break;
+			//if (verbose)
+				printf("Tuning LBAND: %d \n", f / FREQ_MULT);
+			//statusChanged();
+			//error=tune( f, symrate, polarity, fec, delsys, tone);
+			error=frontend->setInput( f, symrate, polarity, fec, delsys, tone);
+			//frontend->setInput(192,f, polarity);
+			usleep(500000);
+			frontend->getInfo( lof, verbose,listTP);
+			usleep(500000);
+			frontend->getInfo( lof, verbose,listTP);
+			usleep(500000);
+			//getinfo(lof, verbose,listTP);
+
+
+			//progress=(((f)-startfreq)*100/(endfreq-startfreq));
+			//statusChanged();
+
+		}
+		if (error!=1)
+		{
+			printf("Can't tuned\n");
+			close(fefd);
+			break;
+		}
+	}
+	close(fefd);
+
+	outer:;
+}
+
+
+/*********************************************************************************************/
+/****************** GENERIC CALL TO BLIND SCAN ***********************************************/
+/*********************************************************************************************/
+
+void *start_scanblindthread(void *blindparams)
 {
-	printf ("start_scanthread\n");
 	CZapitClient myZapitClient;
+
+	printf ("################start_scanthread\n");
+	BLINDSCAN_params* bp = (BLINDSCAN_params*)blindparams;
+
+	FILE * modelFile;
+	modelFile = fopen ("/proc/model","r");
+	char STBmodel [ 3 ];
+
+	char c_startfreq[6];
+	char c_endfreq[6];
+	int i_startfreq=bp->startfreq;
+	int i_endfreq=bp->endfreq;
+	//char* endfreq=(bp->endfreq);
+	int scanpol=bp->polarization;
+	int scantone=bp->tone;
+	int scanrate=bp->rate/100;
+
+	if (i_startfreq==0) i_startfreq = 10700;
+	if (i_endfreq==0) i_endfreq = 12750;
+	if (scanrate==0) scanrate = 27500;
+
+	if (i_startfreq < 11700)
+		i_startfreq = i_startfreq -9750;
+	else
+		i_startfreq = i_startfreq -10600;
+
+	if (i_endfreq < 11700)
+		i_endfreq = i_endfreq -9750;
+		else
+			i_endfreq = i_endfreq -10600;
+
+
+	sprintf(c_startfreq,"%d",i_startfreq);
+	sprintf(c_endfreq,"%d",i_endfreq);
+
+	if ( modelFile != NULL )
+			/* or other suitable maximum line size */
+			fgets ( STBmodel, sizeof STBmodel, modelFile ); /* read a line */
+
+
 	numFreq=1;
 	abort_scan=0;
 	//sleep(7);
 	TP_params TP;
-		bool reply;
-		std::list<TP_params> listTP;
-		isblindscan=true;
-		frontend->Close();
-		scantransponders.clear();
-		scanedtransponders.clear();
-		nittransponders.clear();
-		//For testing - only for developers
-		//getBlindFreqs (scan_mode, 1, "950","1000","0","0", listTP);
-		//getBlindFreqs (scan_mode, 0, "1100","1200","0","1", listTP);
-		//getBlindFreqs (scan_mode, 0, "1900","1949","1","0", listTP);
-		//getBlindFreqs (scan_mode, 0, "2100","2200","1","1", listTP);
+	bool reply;
+	std::list<TP_params> listTP;
+	isblindscan=true;
+	frontend->Close();
+	scantransponders.clear();
+	scanedtransponders.clear();
+	nittransponders.clear();
+	//For testing - only for developers
+	//getBlindFreqs (scan_mode, 1, "950","1000","0","0", listTP);
+	//getBlindFreqs (scan_mode, 0, "1100","1200","0","1", listTP);
+	//getBlindFreqs (scan_mode, 0, "1900","1949","1","0", listTP);
+	//getBlindFreqs (scan_mode, 0, "2100","2200","1","1", listTP);
+
+	//if (myZapitClient.isPlayBackActive())
+	//	printf("isPlayBackActive\n");
+	//else
+	//	printf("NO isPlayBackActive\n");
 
 
 		//Load firmware to blindscan
-	 	 int nclose=1;
-	 	 fpstop = fopen("/proc/avlblindstop","w");
-	 	 printf("Stopping all  scan previous\n");
-	 	 fwrite(&nclose,sizeof(int),1,fpstop); // 1 > /proc/avlblindstop, Stop all
-	 	 fclose(fpstop);
+	 int nclose=1;
 
-	 	 fp = fopen("/proc/avlblind","w");
-		 printf("Setting tuner in blind scan mode\n");
-		 strcpy(infos,"0 ");
-		 fwrite(infos,1,1,fp); // "0" > /proc/avlblind, Need to be done only once
-		 fclose(fp);
-
-		 sleep(1);
-
-
-		 if (myZapitClient.isPlayBackActive())
-		 				printf("isPlayBackActive\n");
-		 			else
-		 				printf("NO isPlayBackActive\n");
+	 	 // If is ME model
+	 if (strncmp(STBmodel,"me",2)==0)
+	 {
 		 myZapitClient.stopPlayBack();
 
-		 			usleep(1000);
+		 	usleep(1000);
+			 fpstop = fopen("/proc/avlblindstop","w");
+			 printf("Stopping all  scan previous\n");
+			 fwrite(&nclose,sizeof(int),1,fpstop); // 1 > /proc/avlblindstop, Stop all
+			 fclose(fpstop);
 
-		 			if (myZapitClient.isPlayBackActive())
-		 				printf("isPlayBackActive\n");
-		 			else
-		 				printf("NO isPlayBackActive\n");
+			 fp = fopen("/proc/avlblind","w");
+			 printf("Setting tuner in blind scan mode\n");
+			 strcpy(infos,"0 ");
+			 fwrite(infos,1,1,fp); // "0" > /proc/avlblind, Need to be done only once
+			 fclose(fp);
+
+			 sleep(1);
+	 }
 
 
 		//Start real blind scan
-		getBlindFreqs (scan_mode, "965","1949","0","0", listTP);
-		getBlindFreqs (scan_mode, "1100","2200","0","1", listTP);
-		getBlindFreqs (scan_mode, "965","1949","1","0", listTP);
-		getBlindFreqs (scan_mode, "1100","2200","1","1", listTP);
+		//getBlindFreqs (scan_mode, "965","1949","0","0", listTP);
+		//getBlindFreqs (scan_mode, "1100","2200","0","1", listTP);
+		//getBlindFreqs (scan_mode, "965","1949","1","0", listTP);
+		//getBlindFreqs (scan_mode, "1100","2200","1","1", listTP);
+
+		if ((scantone==0) || (scantone==1))
+				{
+					if ((scanpol==0) || (scanpol==2))
+					{
+						if (strncmp(STBmodel,"me",2)==0)
+							getBlindFreqsAVL2108 (scan_mode, c_startfreq,c_endfreq,"0","0", listTP);
+						else
+							getBlindFreqsSTV090x(i_startfreq, i_endfreq, scanrate,	20, 1, 1, 0, 0, 9,	0,  0, 0, 0, VERTICAL, 1, 0, 0, listTP);  //With out 22hz
+					}
+					if ((scanpol==0) || (scanpol==1))
+					{
+						if (strncmp(STBmodel,"me",2)==0)
+							getBlindFreqsAVL2108 (scan_mode, c_startfreq,c_endfreq,"0","1", listTP);
+						else
+							getBlindFreqsSTV090x(i_startfreq, i_endfreq, scanrate,	20, 1, 1, 0, 0, 9,	0, 0, 0, 0, HORIZONTAL, 1, 0, 0, listTP);  //With out 22hz
+					}
+				}
+		if ((scantone==0) || (scantone==2))
+				{
+					if ((scanpol==0) || (scanpol==2))
+					{
+						if (strncmp(STBmodel,"me",2)==0)
+							getBlindFreqsAVL2108 (scan_mode, c_startfreq,c_endfreq,"1","0", listTP);
+						else
+							getBlindFreqsSTV090x(i_startfreq, i_endfreq, scanrate,	20, 1, 1, 0, 0, 9,	0,  0, 0, 0, VERTICAL, 1, 0, 1, listTP);  //With 22hz
+					}
+
+					if ((scanpol==0) || (scanpol==1))
+					{
+						if (strncmp(STBmodel,"me",2)==0)
+							getBlindFreqsAVL2108 (scan_mode, c_startfreq,c_endfreq,"1","1", listTP);
+						else
+							getBlindFreqsSTV090x(i_startfreq, i_endfreq, scanrate,	20, 1, 1, 0, 0, 9,	0,  0, 0, 0, HORIZONTAL, 1, 0, 1, listTP);  //With 22hz
+					}
+				}
+
+
 
 		// getBlindFreqs (scan_mode, "1900","2100","1","1", listTP);
 

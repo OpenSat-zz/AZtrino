@@ -827,6 +827,7 @@ scants.numberofradioservices Rádio
 scants.numberoftotalservices Total
 scants.numberoftvservices TV
 scants.provider Operador:
+scants.blind_scan Blind scan
 scants.startblindnow Start blind scan
 scants.startnow Começar Busca
 scants.transponders Transpondedor:
@@ -1033,10 +1034,17 @@ extra.zap_cycle Zapping na lista de canais
 extra.sms_channel sms-mode channel
 extra.manual_scan Manual scan
 extra.tp_freq Frequencia
+extra.tp_freq_ini Start Freq. 
+extra.tp_freq_end End Freq. 
+extra.tp_freq_tone Tone
 extra.tp_rate Symbol rate
 extra.tp_pol Polarização
 extra.tp.pol_v V
 extra.tp_pol_h H
+extra.tp_pol_both Both
+extra.tp_tone_both Both
+extra.tp_tone_off Low
+extra.tp_tone_on High
 extra.tp_fec FEC
 extra.fec_1_2 1/2
 extra.fec_2_3 2/3

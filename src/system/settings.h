@@ -55,6 +55,7 @@ struct SNeutrinoSettings
 	int saturation;
 	int contrast;
 	int hue;
+	int color_space;
 
 	//misc
 	int shutdown_real;
@@ -535,7 +536,10 @@ class CScanSettings
 	int		TP_fec;
 	int		TP_pol;
 	int		TP_mod;
+	int		TP_tone;
 	char		TP_freq[10];
+	char		TP_startfreq[10];
+	char		TP_endfreq[10];
 	char		TP_rate[9];
 
 	CScanSettings();

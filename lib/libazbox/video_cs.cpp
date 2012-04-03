@@ -384,20 +384,28 @@ int cVideo::Flush(void)
 
 /* set video_system */
 //2
-int cVideo::SetVideoSystem(int video_system, bool remember)
+int cVideo::SetVideoSystem(int video_system, int color_space, bool remember)
 {
 
 	const char *MehdmiModes[][2] = {
-	{"VIDEO_STD_480P", 	"-digital -cs rgb_16_235 -f HDMI_480p60"},
-	{"VIDEO_STD_576P", 	"-digital -cs rgb_16_235 -f HDMI_576p50"},
-	{"VIDEO_STD_720P50", 	"-digital -cs rgb_16_235 -f HDMI_720p50"},
-	{"VIDEO_STD_720P60", 	"-digital -cs rgb_16_235 -f HDMI_720p60"},
-	{"VIDEO_STD_1080I50", 	"-digital -cs rgb_16_235 -f HDMI_1080i50"},
-	{"VIDEO_STD_1080I60", 	"-digital -cs rgb_16_235 -f HDMI_1080i60"},
-	{"VIDEO_STD_1080P50", 	"-digital -cs rgb_16_235 -f HDMI_1080p50"},
-	{"VIDEO_STD_1080P60", 	"-digital -cs rgb_16_235- f HDMI_1080p60"},
+	{"VIDEO_STD_480P", 	"-digital -f HDMI_480p60"},
+	{"VIDEO_STD_576P", 	"-digital -f HDMI_576p50"},
+	{"VIDEO_STD_720P50", 	"-digital -f HDMI_720p50"},
+	{"VIDEO_STD_720P60", 	"-digital -f HDMI_720p60"},
+	{"VIDEO_STD_1080I50", 	"-digital -f HDMI_1080i50"},
+	{"VIDEO_STD_1080I60", 	"-digital -f HDMI_1080i60"},
+	{"VIDEO_STD_1080P50", 	"-digital -f HDMI_1080p50"},
+	{"VIDEO_STD_1080P60", 	"-digital -f HDMI_1080p60"},
 	};
 	
+	const char *colorSpaceModes[][2] = {
+		{"0", 	" -cs yuv_709 "},
+		{"1", 	" -cs xv_601 "},
+		{"2", 	" -cs xv_709 "},
+		{"3", 	" -cs rgb_0_255 "},
+		{"4", 	" -cs rgb_16_235 "},
+		};
+
 	const char *ComponentModes[][2] = {
 	{"VIDEO_STD_480P", "-component -f 480p60"},
 	{"VIDEO_STD_576P", "-component -f 576p50"},
@@ -439,12 +447,12 @@ int cVideo::SetVideoSystem(int video_system, bool remember)
 	      if (strncmp(line,"me",2)==0)
 	      {
 	      	 printf("Detected model Azbox ME\n");
-	       	 fprintf (pFile, "%s %s %s %s %s -audio_engine 0 -sf 48000 &\n", MehdmiModes[video_system][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
+	       	 fprintf (pFile, "%s %s %s %s %s %s -audio_engine 0 -sf 48000  -hdmi_rx f -hdmi 1 -hdmi_reset_gpio 14 &\n", MehdmiModes[video_system][1],colorSpaceModes[color_space][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
 	      }
 	      else
 	      {
 	       	printf("It's not a Azbox ME\n");
-	       	fprintf (pFile, "%s %s %s %s %s -audio_engine 0 -sf 48000\n", MehdmiModes[video_system][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
+	       	fprintf (pFile, "-null %s %s %s %s %s %s -audio_engine 0 -sf 48000  \n", MehdmiModes[video_system][1],colorSpaceModes[color_space][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
 	      }
 
 	      fclose ( modelFile );
@@ -454,9 +462,10 @@ int cVideo::SetVideoSystem(int video_system, bool remember)
 	      printf ( "Error in /proc/model\n" ); /* why didn't the file open? */
 	   }
 
+
 	fclose (pFile);
 //ComponentModes[video_system][1],
-	printf("%s %s %s %s %s -audio_engine 0 -sf 48000\n", MehdmiModes[video_system][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
+	printf("%s %s %s %s %s %s -audio_engine 0 -sf 48000  -hdmi_rx f -hdmi 1 -hdmi_reset_gpio 14 \n", MehdmiModes[video_system][1], colorSpaceModes[color_space][1], az_asp, ComponentModes[video_system][1], AnalogModes[video_system][1], az_asp);
 //ComponentModes[video_system][1]
 #else
 	int fd = open("/proc/stb/video/videomode", O_RDWR);

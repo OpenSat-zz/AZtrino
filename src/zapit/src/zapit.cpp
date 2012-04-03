@@ -700,7 +700,7 @@ void parseScanInputXml(void)
 
 
 
-int start_scanBlind(int scan_mode)
+int start_scanBlind(BLINDSCAN_params blindparams)
 {
 	if (!scanInputParser) {
 		parseScanInputXml();
@@ -718,7 +718,7 @@ int start_scanBlind(int scan_mode)
 	found_transponders = 0;
 	found_channels = 0;
 
-	if (pthread_create(&scan_thread, 0, start_scanblindthread,  (void*)scan_mode)) {
+	if (pthread_create(&scan_thread, 0, start_scanblindthread,  &blindparams)) {
 		ERROR("pthread_create");
 		scan_runs = 0;
 		return -1;
@@ -1014,10 +1014,10 @@ DBG("[zapit] sending EVT_SERVICES_CHANGED\n");
   	        break;
   	}
 	case CZapitMessages::CMD_SCANBLINDSTART: {
-			int scan_mode;
-			CBasicServer::receive_data(connfd, &scan_mode, sizeof(scan_mode));
+			BLINDSCAN_params blindparams;
+			CBasicServer::receive_data(connfd, &blindparams, sizeof(blindparams));
 
-			if (start_scanBlind(scan_mode) == -1)
+			if (start_scanBlind(blindparams) == -1)
 				eventServer->sendEvent(CZapitClient::EVT_SCAN_FAILED, CEventServer::INITID_ZAPIT);
 			break;
 		}

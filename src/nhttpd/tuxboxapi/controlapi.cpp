@@ -1720,20 +1720,16 @@ std::string CControlAPI::YexecuteScript(CyhookHandler *hh, std::string cmd)
 	{
 		fullfilename = PLUGIN_DIRS[i]+"/"+script;
 		FILE *test =fopen(fullfilename.c_str(),"r"); // use fopen: popen does not work
+		//printf("Try to open: %s\n",fullfilename.c_str());
 		if( test != NULL )
 		{
 			fclose(test);
 			chdir(PLUGIN_DIRS[i].c_str());
-			FILE *f = popen( (fullfilename+" "+para).c_str(),"r"); //execute
-			if (f != NULL)
-			{
-				found = true;
 
-				char output[1024];
-				while (fgets(output,1024,f)) // get script output
-					result += output;
-				pclose(f);
-			}
+			printf("Launch: %s\n",(fullfilename+" "+para).c_str());
+			found = true;
+			system((fullfilename+" "+para).c_str());
+
 		}
 	}
 	chdir(cwd);

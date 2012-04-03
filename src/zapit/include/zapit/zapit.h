@@ -11,7 +11,14 @@
 
 
 void save_settings (bool write);
-void  getBlindFreqs (int scan_mode,int init_blind,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP);
+void getBlindFreqsAVL2108 (int scan_mode,int init_blind,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP);
+void getBlindFreqsSTV090x (int startfreq, int endfreq, int symrate,
+	int step, unsigned int scan_v, unsigned int scan_h, int lof,
+	unsigned int interactive, int fec, unsigned int adapter,
+	unsigned int verbose, int delsys,
+	unsigned int monitor, unsigned int polarity, int retune,
+	unsigned int monitor_retune, int tone, std::list<TP_params> &listTP);
+
 void *start_scanblindthread(void *);
 void *start_scanthread(void *);
 int start_scan(bool scan_mode);

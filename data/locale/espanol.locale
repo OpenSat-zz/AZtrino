@@ -946,6 +946,7 @@ scants.numberofradioservices Radio
 scants.numberoftotalservices Total
 scants.numberoftvservices TV
 scants.provider Proveedor:
+scants.blind_scan Escaneo de busqueda ciega
 scants.startblindnow Iniciar busqueda ciega
 scants.startnow Iniciar escaneo
 scants.test Comprobar la señal
@@ -1143,6 +1144,7 @@ videomenu.panscan2 14:9 Pan&Scan
 videomenu.letterbox Letterbox
 videomenu.fullscreen Pantalla completa
 videomenu.auto Auto
+videomenu.colorspace Espacio de color
 videomenu.screen Pantalla
 videomenu.brightness Brillo
 videomenu.contrast Contraste
@@ -1220,10 +1222,17 @@ extra.zap_cycle Ciclo Zap
 extra.sms_channel Modo de canal SMS
 extra.manual_scan Escaneo manual
 extra.tp_freq Frequencia
+extra.tp_freq_ini Freq. Inicio
+extra.tp_freq_end Freq. Fin
+extra.tp_freq_tone Tono
 extra.tp_rate Ratio de símbolo
 extra.tp_pol Polarización
 extra.tp.pol_v V
 extra.tp_pol_h H
+extra.tp_pol_both Ambos
+extra.tp_tone_both Ambos
+extra.tp_tone_off Bajo
+extra.tp_tone_on Alto
 extra.tp_fec FEC
 extra.fec_1_2 1/2
 extra.fec_2_3 2/3

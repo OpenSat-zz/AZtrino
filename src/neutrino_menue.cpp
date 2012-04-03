@@ -247,6 +247,16 @@ const CMenuOptionChooser::keyval VIDEOMENU_43MODE_OPTIONS[VIDEOMENU_43MODE_OPTIO
 	{ DISPLAY_AR_MODE_VERTICALCENTER, NONEXISTANT_LOCALE, "Vertical Center"	}
 };
 
+#define COLORS_SPACE_OPTIONS_COUNT 5
+const CMenuOptionChooser::keyval COLORS_SPACE_OPTIONS[COLORS_SPACE_OPTIONS_COUNT] =
+{
+	{ 0, NONEXISTANT_LOCALE,"YUV-709" },
+	{ 1, NONEXISTANT_LOCALE,"XV-601" },
+	{ 2, NONEXISTANT_LOCALE, "XV-709" },
+	{ 3, NONEXISTANT_LOCALE, "RGB 0-255"},
+	{ 4, NONEXISTANT_LOCALE, "RGB 16-235"}
+};
+
 /* numbers corresponding to video.cpp from zapit */
 //#define VIDEOMENU_VIDEOMODE_OPTION_COUNT 8
 const CMenuOptionChooser::keyval VIDEOMENU_VIDEOMODE_OPTIONS[VIDEOMENU_VIDEOMODE_OPTION_COUNT] =
@@ -293,12 +303,15 @@ CVideoSettings::CVideoSettings() : CMenuWidget(LOCALE_VIDEOMENU_HEAD, "video.raw
 	addItem(new CMenuOptionChooser(LOCALE_VIDEOMENU_VIDEOMODE, &g_settings.video_Mode, VIDEOMENU_VIDEOMODE_OPTIONS, VIDEOMENU_VIDEOMODE_OPTION_COUNT, true, this, CRCInput::RC_nokey, "", true));
 	addItem(new CMenuOptionChooser(LOCALE_VIDEOMENU_VIDEOFORMAT, &g_settings.video_Format, VIDEOMENU_VIDEOFORMAT_OPTIONS, VIDEOMENU_VIDEOFORMAT_OPTION_COUNT, true, this));
 	addItem(new CMenuOptionChooser(LOCALE_VIDEOMENU_43MODE, &g_settings.video_43mode, VIDEOMENU_43MODE_OPTIONS, VIDEOMENU_43MODE_OPTION_COUNT, true, this));
+	addItem(new CMenuOptionChooser(LOCALE_COLOR_SPACE, &g_settings.color_space, COLORS_SPACE_OPTIONS, COLORS_SPACE_OPTIONS_COUNT, true, this));
 
 	addItem(new CMenuSeparator(CMenuSeparator::LINE | CMenuSeparator::STRING, LOCALE_VIDEOMENU_SCREEN));
 	addItem(new CMenuOptionNumberChooser(LOCALE_VIDEOMENU_BRIGHTNESS, &g_settings.brightness, true, 0, 255, this));
 	addItem(new CMenuOptionNumberChooser(LOCALE_VIDEOMENU_CONTRAST, &g_settings.contrast, true, 0, 255, this));
 	addItem(new CMenuOptionNumberChooser(LOCALE_VIDEOMENU_HUE, &g_settings.hue, true, 0, 128, this));
 	addItem(new CMenuOptionNumberChooser(LOCALE_VIDEOMENU_SATURATION, &g_settings.saturation, true, 0, 255, this));
+
+
 
 
 //	addItem(new CMenuOptionChooser(LOCALE_VIDEOMENU_DBDR, &g_settings.video_dbdr, VIDEOMENU_DBDR_OPTIONS, VIDEOMENU_DBDR_OPTION_COUNT, true, this));
@@ -445,7 +458,7 @@ bool CVideoSettings::changeNotify(const neutrino_locale_t OptionName, void *)
 	{
 		printf("2.Changing Videomode\n");
 		videoDecoder->setAspectRatio(g_settings.video_Format, g_settings.video_43mode);
-		videoDecoder->SetVideoSystem(g_settings.video_Mode);
+		videoDecoder->SetVideoSystem(g_settings.video_Mode,g_settings.color_space);
 		frameBuffer->resize(g_settings.video_Mode);
 		
 		//Make sure screen stays centered
@@ -473,7 +486,7 @@ bool CVideoSettings::changeNotify(const neutrino_locale_t OptionName, void *)
 				g_settings.video_Mode = prev_video_mode;
 				g_settings.video_Format = prev_asp_mode;
 				videoDecoder->setAspectRatio(g_settings.video_Format, g_settings.video_43mode);
-				videoDecoder->SetVideoSystem(g_settings.video_Mode);
+				videoDecoder->SetVideoSystem(g_settings.video_Mode,g_settings.color_space);
 				frameBuffer->resize(g_settings.video_Mode);
 				//Make sure screen stays centered
 				g_settings.screen_StartX = 0;
@@ -1025,6 +1038,22 @@ const CMenuOptionChooser::keyval SATSETUP_SCANTP_POL[SATSETUP_SCANTP_POL_COUNT] 
 	{ 1, LOCALE_EXTRA_POL_V }
 };
 
+#define SATSETUP_SCANTP_POL_BLIND_COUNT 3
+const CMenuOptionChooser::keyval SATSETUP_SCANTP_POL_BLIND[SATSETUP_SCANTP_POL_BLIND_COUNT] =
+{
+	{ 0, LOCALE_EXTRA_POL_BOTH },
+	{ 1, LOCALE_EXTRA_POL_H },
+	{ 2, LOCALE_EXTRA_POL_V }
+};
+
+#define SATSETUP_SCANTP_TONE_COUNT 3
+const CMenuOptionChooser::keyval SATSETUP_SCANTP_TONE[SATSETUP_SCANTP_TONE_COUNT] =
+{
+		{ 0, LOCALE_EXTRA_TONE_BOTH },
+		{ 1, LOCALE_EXTRA_TONE_OFF  },
+		{ 2, LOCALE_EXTRA_TONE_ON }
+};
+
 #if 0
 /*Cable*/
 #define CABLESETUP_SCANTP_MOD_COUNT 7
@@ -1184,6 +1213,13 @@ void CNeutrinoApp::InitScanSettings(CMenuWidget &settings)
 	CMenuWidget* satOnOff = NULL;
 	sat_iterator_t sit;
 
+	char STBmodel [ 3 ];
+	FILE * modelFile;
+		modelFile = fopen ("/proc/model","r");
+
+	if ( modelFile != NULL )
+					/* or other suitable maximum line size */
+					fgets ( STBmodel, sizeof STBmodel, modelFile ); /* read a line */
 	if(g_info.delivery_system == DVB_S) {
 		satSelect = new CMenuOptionStringChooser(LOCALE_SATSETUP_SATELLITE, scanSettings.satNameNoDiseqc, true, NULL, CRCInput::RC_red, NEUTRINO_ICON_BUTTON_RED, true);
 		satOnOff = new CMenuWidget(LOCALE_SATSETUP_SATELLITE, NEUTRINO_ICON_SETTINGS);
@@ -1248,16 +1284,23 @@ printf("Adding cable menu for %s position %d\n", sit->second.name.c_str(), sit->
 	satfindMenu->addItem(satSelect);
 
 	int freq_length = (g_info.delivery_system == DVB_S) ? 8 : 6;
-
+	int freq_blind_length =5;
 	CStringInput*		freq = new CStringInput(LOCALE_EXTRA_FREQ, (char *) scanSettings.TP_freq, freq_length, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
+	CStringInput*		startfreq = new CStringInput(LOCALE_EXTRA_FREQ_INI, (char *) scanSettings.TP_startfreq, freq_blind_length, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
+	CStringInput*		endfreq = new CStringInput(LOCALE_EXTRA_FREQ_END, (char *) scanSettings.TP_endfreq, freq_blind_length, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
 	CStringInput*		rate = new CStringInput(LOCALE_EXTRA_RATE, (char *) scanSettings.TP_rate, 8, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
 	CMenuForwarder *	Freq = new CMenuForwarder(LOCALE_EXTRA_FREQ, true, scanSettings.TP_freq, freq, "", CRCInput::convertDigitToKey(1));
+	CMenuForwarder *	startFreq = new CMenuForwarder(LOCALE_EXTRA_FREQ_INI, true, scanSettings.TP_startfreq, startfreq, "", CRCInput::convertDigitToKey(1));
+	CMenuForwarder *	endFreq = new CMenuForwarder(LOCALE_EXTRA_FREQ_END, true, scanSettings.TP_endfreq, endfreq, "", CRCInput::convertDigitToKey(1));
 	CMenuForwarder *	Rate = new CMenuForwarder(LOCALE_EXTRA_RATE, true, scanSettings.TP_rate, rate, "", CRCInput::convertDigitToKey(2));
 
 	int fec_count = (g_info.delivery_system == DVB_S) ? SATSETUP_SCANTP_FEC_COUNT : CABLESETUP_SCANTP_FEC_COUNT;
 
 	CMenuOptionChooser*	fec = new CMenuOptionChooser(LOCALE_EXTRA_FEC, (int *)&scanSettings.TP_fec, SATSETUP_SCANTP_FEC, fec_count, true, NULL, CRCInput::convertDigitToKey(3), "", true);
 	CMenuOptionChooser*	mod_pol = NULL;
+	CMenuOptionChooser*	tone = new CMenuOptionChooser(LOCALE_EXTRA_TONE, (int *)&scanSettings.TP_tone, SATSETUP_SCANTP_TONE, SATSETUP_SCANTP_TONE_COUNT, true, NULL, CRCInput::convertDigitToKey(4));;
+	CMenuOptionChooser*	pol_blind = new CMenuOptionChooser(LOCALE_EXTRA_POL, (int *)&scanSettings.TP_pol, SATSETUP_SCANTP_POL_BLIND, SATSETUP_SCANTP_POL_BLIND_COUNT, true, NULL, CRCInput::convertDigitToKey(4));
+
 
 	if (g_info.delivery_system == DVB_S)
 		mod_pol = new CMenuOptionChooser(LOCALE_EXTRA_POL, (int *)&scanSettings.TP_pol, SATSETUP_SCANTP_POL, SATSETUP_SCANTP_POL_COUNT, true, NULL, CRCInput::convertDigitToKey(4));
@@ -1331,7 +1374,25 @@ printf("Adding cable menu for %s position %d\n", sit->second.name.c_str(), sit->
 	autoScan->addItem(useNit);
 	autoScan->addItem(scanPids);
 	autoScan->addItem(new CMenuForwarder(LOCALE_SCANTS_STARTNOW, true, NULL, scanTs, "auto", CRCInput::RC_blue, NEUTRINO_ICON_BUTTON_BLUE));
-	autoScan->addItem(new CMenuForwarder(LOCALE_SCANTS_STARTBLINDNOW, true, NULL, scanTs, "blind", NULL, NULL));
+
+
+	CMenuWidget* blindScan = new CMenuWidget(LOCALE_SCANTS_STARTBLINDNOW, NEUTRINO_ICON_SETTINGS);
+	blindScan->addItem(GenericMenuSeparator);
+	blindScan->addItem(GenericMenuBack);
+	blindScan->addItem(GenericMenuSeparatorLine);
+	blindScan->addItem(satSelect);
+	blindScan->addItem(startFreq);
+	blindScan->addItem(endFreq);
+
+	if (strncmp(STBmodel,"me",2)!=0)
+		blindScan->addItem(Rate);
+
+	blindScan->addItem(pol_blind);
+	blindScan->addItem(tone);
+	blindScan->addItem(useNit);
+	blindScan->addItem(scanPids);
+	blindScan->addItem(new CMenuForwarder(LOCALE_SCANTS_STARTBLINDNOW, true, NULL, scanTs, "blind", CRCInput::RC_blue, NEUTRINO_ICON_BUTTON_BLUE));
+
 
 	CMenuOptionChooser* ojDiseqc = NULL;
 	CMenuOptionNumberChooser * ojDiseqcRepeats = NULL;
@@ -1366,7 +1427,7 @@ printf("Adding cable menu for %s position %d\n", sit->second.name.c_str(), sit->
 
 	settings.addItem(GenericMenuSeparator);
 	settings.addItem(GenericMenuNext);
-	settings.addItem(new CMenuForwarder(LOCALE_MAINSETTINGS_SAVESETTINGSNOW, true, NULL, this, "savesettings", CRCInput::RC_red, NEUTRINO_ICON_BUTTON_RED));
+	settings.addItem(new CMenuForwarder(LOCALE_MAINSETTINGS_SAVESETTINGSNOW, true, NULL, this, "savesettings", NULL, NULL));
 	settings.addItem(GenericMenuSeparatorLine);
 
 	settings.addItem(ojScantype);
@@ -1381,6 +1442,7 @@ printf("Adding cable menu for %s position %d\n", sit->second.name.c_str(), sit->
 
 	settings.addItem(new CMenuForwarder(LOCALE_SATSETUP_MANUAL_SCAN, true, NULL, manualScan, "", CRCInput::RC_green, NEUTRINO_ICON_BUTTON_GREEN));
 	settings.addItem(new CMenuForwarder(LOCALE_SATSETUP_AUTO_SCAN, true, NULL, autoScan, "", CRCInput::RC_yellow, NEUTRINO_ICON_BUTTON_YELLOW));
+	settings.addItem(new CMenuForwarder(LOCALE_SCANTS_STARTBLINDNOW, true, NULL, blindScan, "", CRCInput::RC_red, NEUTRINO_ICON_BUTTON_RED));
 
 	if(g_info.delivery_system == DVB_S) {
 		settings.addItem(fautoScanAll);

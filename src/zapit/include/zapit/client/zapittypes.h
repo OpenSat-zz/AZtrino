@@ -127,6 +127,17 @@ typedef struct TP_parameter
 	struct dvb_frontend_parameters feparams;
 } TP_params;
 
+
+typedef struct BLINDSCAN_parameter
+{
+	int scan_mode;
+	int startfreq;
+	int endfreq;
+	int polarization;
+	int tone;
+	int rate;
+} BLINDSCAN_params;
+
 /* complete channel-parameters in a struct */
 typedef struct Channel_parameter
 {

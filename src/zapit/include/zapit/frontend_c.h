@@ -76,6 +76,39 @@ typedef struct dvb_frontend_parameters FrontendParameters;
 
 class CFrontend
 {
+#define SLEEP_TIME 20000
+#define HORIZONTAL SEC_VOLTAGE_18
+#define VERTICAL SEC_VOLTAGE_13
+#define NOPOLARITY SEC_VOLTAGE_OFF
+#define SCAN_H 1
+#define SCAN_V 1
+#define SCAN_N 0
+#define FEC 9
+#define TONE SEC_TONE_OFF
+#define CBAND_LOF 5150
+#define INTERACTIVE 0
+#define MONITOR 0
+#define MONITOR_RETUNE 0
+#define DELSYS 0
+#define RETUNE 1
+#define ADAPTER 0
+#define FRONTEND 0
+#define RUN_BLINDSCAN 0
+#define VERBOSE 0
+#define FREQ_MULT 1000
+#define STARTFREQ 950
+#define ENDFREQ 1450
+#define LBAND_MAX 2150
+#define SYMRATE 1000
+#define STEP 20
+#define LOF 0
+#define COMMITTED 0
+#define UNCOMMITTED 0
+#define SITE_LAT 0
+#define SITE_LONG 0
+#define SAT_LONG 0
+#define FEDEV "/dev/dvb/adapter%d/frontend%d"
+
 	private:
 		int fd;
 
@@ -167,9 +200,13 @@ class CFrontend
 		uint32_t 			getRate ();
                 void Close();
                 void Open();
+                int getDescriptorFrontend();
 		bool sendUncommittedSwitchesCommand(int input);
 		bool setInput(CZapitChannel *channel, bool nvod);
 		void setInput(t_satellite_position satellitePosition, uint32_t frequency, uint8_t polarization);
+		int  setInput(int tpfreq, int symrate, int polarity, int fec, int delsys, int tone);
+		int getInfo( int lof, unsigned int verbose, std::list<TP_params> &listTP);
+
 		bool setDiseqcSimple(int sat_no, const uint8_t pol, const uint32_t frequency);
 		void setDiseqc(int sat_no, const uint8_t pol, const uint32_t frequency);
 		void setMasterSlave(bool _slave) { slave = _slave; };

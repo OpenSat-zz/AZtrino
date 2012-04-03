@@ -187,7 +187,7 @@ class cVideo
 #endif
 		
 		/* set video_system */
-		int SetVideoSystem(int video_system, bool remember = true);
+		int SetVideoSystem(int video_system, int color_space, bool remember = true);
 		int SetStreamType(VIDEO_FORMAT type);
 		void SetSyncMode(AVSYNC_TYPE mode);
 		void ShowPicture(const char * fname);

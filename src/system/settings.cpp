@@ -166,8 +166,12 @@ bool CScanSettings::loadSettings(const char * const fileName, const delivery_sys
 	TP_fec = configfile.getInt32("TP_fec", 1);
 	TP_pol = configfile.getInt32("TP_pol", 0);
 	TP_mod = configfile.getInt32("TP_mod", 3);
+	TP_tone = configfile.getInt32("TP_tone", 2);
 	strcpy(TP_freq, configfile.getString("TP_freq", "10100000").c_str());
+	strcpy(TP_startfreq, configfile.getString("TP_freq", "10700000").c_str());
+	strcpy(TP_endfreq, configfile.getString("TP_freq", "12750000").c_str());
 	strcpy(TP_rate, configfile.getString("TP_rate", "27500000").c_str());
+
 #if HAVE_DVB_API_VERSION >= 3
 	if(TP_fec == 4) TP_fec = 5;
 #endif	
@@ -184,12 +188,16 @@ bool CScanSettings::saveSettings(const char * const fileName)
 	configfile.setInt32( "scanType", scanType );
 	configfile.setString( "satNameNoDiseqc", satNameNoDiseqc );
 	
+
 	configfile.setInt32("scan_mode", scan_mode);
 	configfile.setInt32("TP_fec", TP_fec);
 	configfile.setInt32("TP_pol", TP_pol);
 	configfile.setInt32("TP_mod", TP_mod);
 	configfile.setString("TP_freq", TP_freq);
+	configfile.setString("TP_startfreq", TP_startfreq);
+	configfile.setString("TP_stopfreq", TP_endfreq);
 	configfile.setString("TP_rate", TP_rate);
+	configfile.setInt32( "TP_tone", TP_tone );
 	configfile.setInt32("scanSectionsd", scanSectionsd );
 
 	if(configfile.getModifiedFlag())

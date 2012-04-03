@@ -1,5 +1,5 @@
 /*
-  Client-Interface für zapit  -   DBoxII-Project
+  Client-Interface fï¿½r zapit  -   DBoxII-Project
 
   License: GPL
 
@@ -24,6 +24,8 @@
 
 #include <string>
 #include <vector>
+#include <list>
+
 
 /* zapit */
 #include "zapittypes.h"
@@ -244,6 +246,30 @@ class CZapitClient:public CBasicClient
 	};
 
 
+
+
+#define CI_FLAG_IQ_BIT                  0x00        /// bit 0
+#define CI_FLAG_IQ_BIT_MASK             0x01        /// one bit
+#define CI_FLAG_IQ_NO_SWAPPED           0x00		/// IQ is not swapped
+#define CI_FLAG_IQ_SWAPPED              0x01		/// IQ is swapped
+
+#define CI_FLAG_DVBS2_BIT                0x02		/// bit 4, 3, 2
+#define CI_FLAG_DVBS2_BIT_MASK           0x1c		/// three bits
+#define CI_FLAG_DVBS 	                 0x00		/// DVB-S standard
+#define CI_FLAG_DVBS2                    0x01		/// DVB-S2 standard
+#define CI_FLAG_DVBSDTV                  0x02		/// DirectTV DVBs
+#define CI_FLAG_DVBSDTV_AMC              0x03		/// DirectTV DVBS2
+#define CI_FLAG_DVBS2_UNDEF              0x04       /// Do not know the standard
+
+#define CI_FLAG_IQ_AUTO_BIT				0x05		/// bit 5
+#define CI_FLAG_IQ_AUTO_BIT_MASK		0x20        /// one bit
+#define CI_FLAG_IQ_AUTO_BIT_OFF			0x00        /// Do not do auto swapp IQ and try again
+#define CI_FLAG_IQ_AUTO_BIT_AUTO		0x01        /// Auto swapp IQ and try again
+
+#define CI_FLAG_LOCK_MODE_BIT			0x06		/// bit 6 controls channel lock mode
+#define CI_FLAG_LOCK_MODE_BIT_MASK		0x40		/// Lock mode bit mask
+
+
  public:
 	/*****************************/
 	/*                           */
@@ -379,6 +405,8 @@ class CZapitClient:public CBasicClient
 	bool stopScan();
 	/* start manual scan */
 	bool scan_TP(TP_params TP);
+	bool scan_blind(int scan_mode, int startfreq, int endfreq, int rate, int pol, int tone);
+	void getBlindFreqs (int scan_mode,int init_blind,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP);
 
 	/* query if ts-scan is ready - response gives status */
 	bool isScanReady(unsigned int &satellite, unsigned int &processed_transponder, unsigned int &transponder, unsigned int &services );
