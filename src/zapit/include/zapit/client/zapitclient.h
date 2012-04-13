@@ -406,7 +406,15 @@ class CZapitClient:public CBasicClient
 	/* start manual scan */
 	bool scan_TP(TP_params TP);
 	bool scan_blind(int scan_mode, int startfreq, int endfreq, int rate, int pol, int tone);
-	void getBlindFreqs (int scan_mode,int init_blind,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP);
+	void getBlindFreqsAVL2108 (int scan_mode,int init_blind,char* startFreq,char* endFreq,char* pol,char* tone, std::list<TP_params> &listTP);
+	void getBlindFreqsSTV090x (int startfreq, int endfreq, int symrate,
+			int step, unsigned int scan_v, unsigned int scan_h, int lof,
+			unsigned int interactive, int fec, unsigned int adapter,
+			unsigned int verbose, int delsys,
+			unsigned int monitor, unsigned int polarity, int retune,
+			unsigned int monitor_retune, int tone, std::list<TP_params> &listTP);
+
+
 
 	/* query if ts-scan is ready - response gives status */
 	bool isScanReady(unsigned int &satellite, unsigned int &processed_transponder, unsigned int &transponder, unsigned int &services );

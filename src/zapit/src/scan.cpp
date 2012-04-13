@@ -954,13 +954,12 @@ void *start_scanblindthread(void *blindparams)
 {
 	CZapitClient myZapitClient;
 
-	printf ("################start_scanthread\n");
+	printf ("start_scanthread\n");
 	BLINDSCAN_params* bp = (BLINDSCAN_params*)blindparams;
 
 	FILE * modelFile;
 	modelFile = fopen ("/proc/model","r");
 	char STBmodel [ 3 ];
-
 	char c_startfreq[6];
 	char c_endfreq[6];
 	int i_startfreq=bp->startfreq;
@@ -984,7 +983,6 @@ void *start_scanblindthread(void *blindparams)
 		else
 			i_endfreq = i_endfreq -10600;
 
-
 	sprintf(c_startfreq,"%d",i_startfreq);
 	sprintf(c_endfreq,"%d",i_endfreq);
 
@@ -1004,39 +1002,30 @@ void *start_scanblindthread(void *blindparams)
 	scantransponders.clear();
 	scanedtransponders.clear();
 	nittransponders.clear();
-	//For testing - only for developers
-	//getBlindFreqs (scan_mode, 1, "950","1000","0","0", listTP);
-	//getBlindFreqs (scan_mode, 0, "1100","1200","0","1", listTP);
-	//getBlindFreqs (scan_mode, 0, "1900","1949","1","0", listTP);
-	//getBlindFreqs (scan_mode, 0, "2100","2200","1","1", listTP);
-
-	//if (myZapitClient.isPlayBackActive())
-	//	printf("isPlayBackActive\n");
-	//else
-	//	printf("NO isPlayBackActive\n");
-
-
-		//Load firmware to blindscan
 	 int nclose=1;
 
-	 	 // If is ME model
+	 // If is ME model
 	 if (strncmp(STBmodel,"me",2)==0)
 	 {
+
 		 myZapitClient.stopPlayBack();
+		 usleep(2000);
 
-		 	usleep(1000);
-			 fpstop = fopen("/proc/avlblindstop","w");
-			 printf("Stopping all  scan previous\n");
-			 fwrite(&nclose,sizeof(int),1,fpstop); // 1 > /proc/avlblindstop, Stop all
-			 fclose(fpstop);
+		 //Load firmware to blindscan
 
-			 fp = fopen("/proc/avlblind","w");
-			 printf("Setting tuner in blind scan mode\n");
-			 strcpy(infos,"0 ");
-			 fwrite(infos,1,1,fp); // "0" > /proc/avlblind, Need to be done only once
-			 fclose(fp);
+		fpstop = fopen("/proc/avlblindstop","w");
+		printf("Stopping all  scan previous\n");
+		fwrite(&nclose,sizeof(int),1,fpstop); // 1 > /proc/avlblindstop, Stop all
+		fclose(fpstop);
 
-			 sleep(1);
+		fp = fopen("/proc/avlblind","w");
+		printf("Setting tuner in blind scan mode\n");
+		strcpy(infos,"0 ");
+		fwrite(infos,1,1,fp); // "0" > /proc/avlblind, Need to be done only once
+		fclose(fp);
+
+		usleep(1000);
+
 	 }
 
 
