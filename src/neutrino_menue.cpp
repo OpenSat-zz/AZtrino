@@ -1283,12 +1283,14 @@ printf("Adding cable menu for %s position %d\n", sit->second.name.c_str(), sit->
 	}
 	satfindMenu->addItem(satSelect);
 
+
 	int freq_length = (g_info.delivery_system == DVB_S) ? 8 : 6;
 	int freq_blind_length =5;
+	int rate_blind_length=5;
 	CStringInput*		freq = new CStringInput(LOCALE_EXTRA_FREQ, (char *) scanSettings.TP_freq, freq_length, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
 	CStringInput*		startfreq = new CStringInput(LOCALE_EXTRA_FREQ_INI, (char *) scanSettings.TP_startfreq, freq_blind_length, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
 	CStringInput*		endfreq = new CStringInput(LOCALE_EXTRA_FREQ_END, (char *) scanSettings.TP_endfreq, freq_blind_length, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
-	CStringInput*		rate = new CStringInput(LOCALE_EXTRA_RATE, (char *) scanSettings.TP_rate, 8, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
+	CStringInput*		rate = new CStringInput(LOCALE_EXTRA_RATE, (char *) scanSettings.TP_rate, rate_blind_length, NONEXISTANT_LOCALE, NONEXISTANT_LOCALE, "0123456789");
 	CMenuForwarder *	Freq = new CMenuForwarder(LOCALE_EXTRA_FREQ, true, scanSettings.TP_freq, freq, "", CRCInput::convertDigitToKey(1));
 	CMenuForwarder *	startFreq = new CMenuForwarder(LOCALE_EXTRA_FREQ_INI, true, scanSettings.TP_startfreq, startfreq, "", CRCInput::convertDigitToKey(1));
 	CMenuForwarder *	endFreq = new CMenuForwarder(LOCALE_EXTRA_FREQ_END, true, scanSettings.TP_endfreq, endfreq, "", CRCInput::convertDigitToKey(1));

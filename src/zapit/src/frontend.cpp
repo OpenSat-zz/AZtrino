@@ -187,12 +187,12 @@ int CFrontend::getInfo( int lof, unsigned int verbose, std::list<TP_params> &lis
 		int dtv_frequency_prop = 0;
 		int dtv_symbol_rate_prop = 0;
 		int dtv_inner_fec_prop = 0;
-	//	fe_status_t status;
-	//	ioctl(fefd, FE_READ_STATUS, &status);
+
 		if ((ioctl(fd, FE_READ_SIGNAL_STRENGTH, &signal)) == -1) {
 	         perror("[ERROR] FE_READ_SIGNAL_STRENGTH failed \n");
 	         return -1;
 		 }
+
 		if ((ioctl(fd, FE_READ_SNR, &snr)) == -1) {
 	         perror("[ERROR] FE_READ_SNR failed \n");
 	         return -1;
@@ -219,7 +219,7 @@ int CFrontend::getInfo( int lof, unsigned int verbose, std::list<TP_params> &lis
 		      return -1;
 		}
 
-		printf("[GET INFO] %d, %d, %d, %d, %d, %d, %d, %d \n",cmdseq.props[0].u.data,cmdseq.props[1].u.data,cmdseq.props[2].u.data,cmdseq.props[3].u.data,cmdseq.props[4].u.data,cmdseq.props[5].u.data,cmdseq.props[6].u.data,cmdseq.props[7].u.data,cmdseq.props[8].u.data);
+		//printf("[GET INFO - FE_GET_PROPERTY] %d, %d, %d, %d, %d, %d, %d, %d \n",cmdseq.props[0].u.data,cmdseq.props[1].u.data,cmdseq.props[2].u.data,cmdseq.props[3].u.data,cmdseq.props[4].u.data,cmdseq.props[5].u.data,cmdseq.props[6].u.data,cmdseq.props[7].u.data,cmdseq.props[8].u.data);
 		int dtv_delivery_system_prop = cmdseq.props[0].u.data;
 	//	dtv_frequency_prop = cmdseq.props[1].u.data;
 		int dtv_voltage_prop = cmdseq.props[2].u.data;
@@ -250,12 +250,16 @@ int CFrontend::getInfo( int lof, unsigned int verbose, std::list<TP_params> &lis
 		extern int lastrol;
 		extern int lastpil;
 
+
 		struct dvb_frontend_parameters qp;
-		ioctl(fd, FE_GET_FRONTEND, &qp);
+		if ((fop(ioctl, FE_GET_FRONTEND, &qp)) == -1) {
+		      perror("[ERROR] FE_GET_FRONTEND getinfo failed \n");
+		      return -1;
+		}
+
 		dtv_frequency_prop = qp.frequency;
 		dtv_symbol_rate_prop = qp.u.qpsk.symbol_rate;
-	//	dtv_inner_fec_prop = qp.u.qpsk.fec_inner;
-
+		//	dtv_inner_fec_prop = qp.u.qpsk.fec_inner;
 		currentfreq = dtv_frequency_prop / FREQ_MULT;
 		currentpol = dtv_voltage_prop;
 		currentsr = dtv_symbol_rate_prop / FREQ_MULT;
@@ -266,8 +270,7 @@ int CFrontend::getInfo( int lof, unsigned int verbose, std::list<TP_params> &lis
 		currentrol = dtv_rolloff_prop;
 		currentpil = dtv_pilot_prop;
 
-
-		//if (verbose || (snr > 0 && dtv_frequency_prop > 0)) {
+		//printf("[GET INFO - FE_GET_FRONTEND] currentfreq: %d, currentpol: %d, currentsr: %d, currentsys: %d, currentfec: %d,, currentmod: %d\n",currentfreq,currentpol,currentsr,currentsys,currentfec,currentmod);
 		if (verbose || (((snr * 100) / 0xffff) > 50 && (currentpol != lastpol || currentfreq != lastfreq
 			|| currentsr != lastsr || currentsys != lastsys || currentfec != lastfec
 			|| currentmod != lastmod || currentinv != lastinv || currentrol != lastrol
@@ -386,11 +389,7 @@ int CFrontend::getInfo( int lof, unsigned int verbose, std::list<TP_params> &lis
 			}
 			listTP.push_back(TP);
 
-
-			//printf("%s\n",freq);
-			//freqAvail(freq);
 			bsNumFreq++;
-			//statusChanged();
 
 			eventServer->sendEvent ( CZapitClient::EVT_SCAN_NUM_TRANSPONDERS, CEventServer::INITID_ZAPIT,
 																									&bsNumFreq, sizeof(bsNumFreq));
@@ -422,20 +421,23 @@ int CFrontend::setInput(int tpfreq, int symrate, int polarity, int fec, int dels
 
 	dtv_prop.num = 8;
 	dtv_prop.props = p;
-	 //ioctl(fefd, FE_SET_PROPERTY, &cmdseq);
-	 if ((ioctl(fd, FE_SET_PROPERTY, &dtv_prop)) == -1) {
+
+	if ((fop(ioctl, FE_SET_PROPERTY, &dtv_prop)) == -1) {
          perror("[ERROR] FE_SET_PROPERTY FE_SET_PROPERTY, DTV_FREQUENCY, DTV_SYMBOL_RATE, ... failed \n");
          return -1;
 	 }
 
 	 int currenttp= tpfreq;
-		 if (tpfreq < 1170000)
-		 	currenttp = (tpfreq) +9750;
-		 else
-		 	currenttp = (tpfreq) +10600;
-		 eventServer->sendEvent ( CZapitClient::EVT_SCAN_REPORT_FREQUENCY, CEventServer::INITID_ZAPIT, &currenttp, sizeof(currenttp));
+	 if (currenttp < 1170000)
+	 	currenttp = currenttp +9750;
+	 else
+	 	currenttp = currenttp +10600;
+
+	 eventServer->sendEvent ( CZapitClient::EVT_SCAN_REPORT_FREQUENCY, CEventServer::INITID_ZAPIT, &currenttp, sizeof(currenttp));
+
 	 return 1;
 }
+
 void CFrontend::Open(void)
 {
 	printf("[fe0] open frontend\n");

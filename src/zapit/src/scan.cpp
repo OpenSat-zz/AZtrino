@@ -891,22 +891,6 @@ void getBlindFreqsSTV090x (int startfreq, int endfreq, int symrate,
 	int r;
 	int error=1;
 
-
-	/*
-	sleep(5);
-	char fedev[128];
-	snprintf(fedev, sizeof(fedev), FEDEV, 0, 0);
-	fefd = open(fedev, O_RDWR | O_NONBLOCK);
-
-	//frontend->Close();
-	fefd=frontend->getDescriptorFrontend();
-	if (fefd == -1)
-	{
-		perror("open_port: Unable to open\n");
-		return;
-	}
-*/
-
 	char providerName[32] = "";
 	strcpy(providerName, scanProviders.size() > 0 ? scanProviders.begin()->second.c_str() : "unknown provider");
 	eventServer->sendEvent(CZapitClient::EVT_SCAN_SATELLITE, CEventServer::INITID_ZAPIT, providerName, strlen(providerName) + 1);
@@ -914,23 +898,16 @@ void getBlindFreqsSTV090x (int startfreq, int endfreq, int symrate,
 
 	for (f = startfreq; f <= endfreq; f += step) {
 		for (r = retune; r > 0; r -= 1) {
-			//if (done) break;
-			//if (verbose)
-				printf("Tuning LBAND: %d \n", f / FREQ_MULT);
-			//statusChanged();
-			//error=tune( f, symrate, polarity, fec, delsys, tone);
+			printf("Tuning LBAND: %d \n", f / FREQ_MULT);
 			error=frontend->setInput( f, symrate, polarity, fec, delsys, tone);
-			//frontend->setInput(192,f, polarity);
 			usleep(500000);
 			frontend->getInfo( lof, verbose,listTP);
 			usleep(500000);
 			frontend->getInfo( lof, verbose,listTP);
 			usleep(500000);
 			//getinfo(lof, verbose,listTP);
-
-
-			//progress=(((f)-startfreq)*100/(endfreq-startfreq));
-			//statusChanged();
+			if(abort_scan)
+						return;
 
 		}
 		if (error!=1)
@@ -967,11 +944,11 @@ void *start_scanblindthread(void *blindparams)
 	//char* endfreq=(bp->endfreq);
 	int scanpol=bp->polarization;
 	int scantone=bp->tone;
-	int scanrate=bp->rate/100;
+	int scanrate=bp->rate;
 
-	if (i_startfreq==0) i_startfreq = 10700;
-	if (i_endfreq==0) i_endfreq = 12750;
-	if (scanrate==0) scanrate = 27500;
+	if ((i_startfreq==0) || (i_startfreq<10700)|| (i_startfreq>12750)) i_startfreq = 10700;
+	if ((i_endfreq==0)|| (i_endfreq<10700)|| (i_endfreq>12750)) i_endfreq = 12750;
+	if ((scanrate==0)|| (scanrate<1000)|| (scanrate > 45000)) scanrate = 22000;
 
 	if (i_startfreq < 11700)
 		i_startfreq = i_startfreq -9750;
@@ -1004,12 +981,15 @@ void *start_scanblindthread(void *blindparams)
 	nittransponders.clear();
 	 int nclose=1;
 
+
+	 myZapitClient.stopPlayBack();
+	 			usleep(2000);
+
 	 // If is ME model
 	 if (strncmp(STBmodel,"me",2)==0)
 	 {
 
-		 myZapitClient.stopPlayBack();
-		 usleep(2000);
+
 
 		 //Load firmware to blindscan
 
@@ -1037,15 +1017,17 @@ void *start_scanblindthread(void *blindparams)
 
 		if ((scantone==0) || (scantone==1))
 				{
-					if ((scanpol==0) || (scanpol==2))
+					if (((scanpol==0) || (scanpol==2))&&(!abort_scan))
 					{
 						if (strncmp(STBmodel,"me",2)==0)
 							getBlindFreqsAVL2108 (scan_mode, c_startfreq,c_endfreq,"0","0", listTP);
+
 						else
 							getBlindFreqsSTV090x(i_startfreq, i_endfreq, scanrate,	20, 1, 1, 0, 0, 9,	0,  0, 0, 0, VERTICAL, 1, 0, 0, listTP);  //With out 22hz
 					}
-					if ((scanpol==0) || (scanpol==1))
+					if (((scanpol==0) || (scanpol==1))&&(!abort_scan))
 					{
+
 						if (strncmp(STBmodel,"me",2)==0)
 							getBlindFreqsAVL2108 (scan_mode, c_startfreq,c_endfreq,"0","1", listTP);
 						else
@@ -1054,20 +1036,23 @@ void *start_scanblindthread(void *blindparams)
 				}
 		if ((scantone==0) || (scantone==2))
 				{
-					if ((scanpol==0) || (scanpol==2))
+					if (((scanpol==0) || (scanpol==2))&&(!abort_scan))
 					{
+
 						if (strncmp(STBmodel,"me",2)==0)
 							getBlindFreqsAVL2108 (scan_mode, c_startfreq,c_endfreq,"1","0", listTP);
 						else
 							getBlindFreqsSTV090x(i_startfreq, i_endfreq, scanrate,	20, 1, 1, 0, 0, 9,	0,  0, 0, 0, VERTICAL, 1, 0, 1, listTP);  //With 22hz
+
 					}
 
-					if ((scanpol==0) || (scanpol==1))
+					if (((scanpol==0) || (scanpol==1)) &&(!abort_scan))
 					{
 						if (strncmp(STBmodel,"me",2)==0)
 							getBlindFreqsAVL2108 (scan_mode, c_startfreq,c_endfreq,"1","1", listTP);
 						else
 							getBlindFreqsSTV090x(i_startfreq, i_endfreq, scanrate,	20, 1, 1, 0, 0, 9,	0,  0, 0, 0, HORIZONTAL, 1, 0, 1, listTP);  //With 22hz
+
 					}
 				}
 

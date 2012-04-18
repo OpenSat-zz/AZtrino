@@ -200,10 +200,6 @@ bool CScanSettings::saveSettings(const char * const fileName)
 	configfile.setInt32( "TP_tone", TP_tone );
 	configfile.setInt32("scanSectionsd", scanSectionsd );
 
-	printf("################## TP_startfreq %s\n",TP_startfreq);
-	printf("##################  TP_endfreq %s\n",TP_endfreq);
-	printf("################## TP_rate %s\n",TP_rate);
-
 	if(configfile.getModifiedFlag())
 		configfile.saveConfig(fileName);
 
