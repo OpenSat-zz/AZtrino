@@ -342,7 +342,7 @@ _remount:
 	}
 
 	if(!res) {
-		sprintf(cmd, "%s/movies", dst);
+		sprintf(cmd, "%s/movie", dst);
 		safe_mkdir((char *) cmd);
 		sprintf(cmd, "%s/pictures", dst);
 		safe_mkdir((char *) cmd);

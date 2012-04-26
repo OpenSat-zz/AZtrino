@@ -776,11 +776,92 @@ void  getBlindFreqsAVL2108 (int scan_mode,char* startFreq,char* endFreq,char* po
 					}
 					if (uiOLDChannelCount!=p.uiChannelCount)
 					{
+
+						char freq[100];
+						char type[9];
+						char iq[8];
+						int transpFreq=0;
+
 						uiOLDChannelCount=p.uiChannelCount;
 						numFreq++;
 						printf("Freqs found total: %i", numFreq);
 						eventServer->sendEvent ( CZapitClient::EVT_SCAN_NUM_TRANSPONDERS, CEventServer::INITID_ZAPIT,
 																						&numFreq, sizeof(numFreq));
+						printf("\nCh%u:  RF: %d MHz SymbolRate: %d MHz %s \n",
+												numFreq-1,
+												(p.channels[p.uiChannelCount-1].m_uiFrequency_kHz),
+												(p.channels[p.uiChannelCount-1].m_uiSymbolRate_Hz),
+												polarization);
+
+						switch((p.channels[p.uiChannelCount-1].m_Flags & CI_FLAG_DVBS2_BIT_MASK)>>CI_FLAG_DVBS2_BIT)
+							{
+							case CI_FLAG_DVBS:
+								 printf("DVBS ");
+								 sprintf(type,"DVBS ");
+								 break;
+							case CI_FLAG_DVBS2:
+								 printf("DVBS2 ");
+								 sprintf(type,"DVBS2 ");
+								 break;
+							case CI_FLAG_DVBSDTV:
+								 printf("DTV ");
+								 sprintf(type,"DTV ");
+								 break;
+							case CI_FLAG_DVBSDTV_AMC:
+								 printf("AMC ");
+								 sprintf(type,"AMC ");
+								 break;
+							case CI_FLAG_DVBS2_UNDEF:
+								 printf("Unknown ");
+								 sprintf(type,"Unknown ");
+								 break;
+							}
+						switch((p.channels[p.uiChannelCount-1].m_Flags & CI_FLAG_IQ_BIT_MASK)>>CI_FLAG_IQ_BIT)
+							{
+							case CI_FLAG_IQ_NO_SWAPPED:
+								printf("Normal");
+								sprintf(iq,"Normal ");
+								break;
+							case CI_FLAG_IQ_SWAPPED:
+								printf("Invert");
+								sprintf(iq,"Invert ");
+							}
+						if (p.channels[p.uiChannelCount-1].m_uiFrequency_kHz < 11700000)
+							transpFreq=p.channels[p.uiChannelCount-1].m_uiFrequency_kHz+9750000;
+						else
+							transpFreq=p.channels[p.uiChannelCount-1].m_uiFrequency_kHz+10600000;
+						printf(" TransponderFreq: %d \n", transpFreq );
+
+
+						sprintf(freq,"RF: %d MHz SymbolRate: %d MHz %s %s %s ",
+													(p.channels[p.uiChannelCount-1].m_uiFrequency_kHz),
+													(p.channels[p.uiChannelCount-1].m_uiSymbolRate_Hz),
+													polarization,type,iq);
+
+						TP_params TP;
+
+						TP.scan_mode = scan_mode;
+						TP.feparams.frequency = transpFreq;
+						TP.feparams.u.qpsk.symbol_rate =p.channels[p.uiChannelCount-1].m_uiSymbolRate_Hz;
+						if (atoi(pol)==1)
+								TP.polarization = 0;
+						else
+								TP.polarization = 1;
+						if(strncmp (type,"DVB-S ",6)==0 ) {
+								//TP.feparams.u.qam.modulation	= 8-PSK;
+								TP.feparams.u.qpsk.fec_inner = FEC_AUTO;
+						} else {
+								TP.feparams.u.qam.modulation	= QPSK;
+								TP.feparams.u.qam.fec_inner	= FEC_NONE;
+						}
+						listTP.push_back(TP);
+
+						//For debug
+						FILE* fpdebug = fopen("/tmp/blindscan","a+");
+						fwrite(freq, 1, strlen(freq), fpdebug);
+						fwrite("\n\r", 1, strlen("\n\r"), fpdebug);
+						fclose(fpdebug);
+
 					}
 					if (done)
 					{
@@ -794,85 +875,8 @@ void  getBlindFreqsAVL2108 (int scan_mode,char* startFreq,char* endFreq,char* po
 
 			  }
 			 uiOLDChannelCount=0;
-			 printf("\n");
-			 for(uiCnt=0; uiCnt<p.uiChannelCount; uiCnt++)
-			 {
-				char freq[100];
-				char type[9];
-				char iq[8];
-				int transpFreq=0;
-
-				printf("Ch%u:  RF: %d MHz SymbolRate: %d MHz %s ",
-							uiCnt+1,
-							(p.channels[uiCnt].m_uiFrequency_kHz),
-							(p.channels[uiCnt].m_uiSymbolRate_Hz),
-							polarization);
 
 
-				switch((p.channels[uiCnt].m_Flags & CI_FLAG_DVBS2_BIT_MASK)>>CI_FLAG_DVBS2_BIT)
-				{
-					case CI_FLAG_DVBS:
-						 printf("DVBS ");
-						 sprintf(type,"DVBS ");
-						 break;
-					case CI_FLAG_DVBS2:
-						 printf("DVBS2 ");
-						 sprintf(type,"DVBS2 ");
-						 break;
-					case CI_FLAG_DVBSDTV:
-						 printf("DTV ");
-						 sprintf(type,"DTV ");
-						 break;
-					case CI_FLAG_DVBSDTV_AMC:
-						 printf("AMC ");
-						 sprintf(type,"AMC ");
-						 break;
-					case CI_FLAG_DVBS2_UNDEF:
-						 printf("Unknown ");
-						 sprintf(type,"Unknown ");
-						 break;
-				}
-				switch((p.channels[uiCnt].m_Flags & CI_FLAG_IQ_BIT_MASK)>>CI_FLAG_IQ_BIT)
-				{
-					case CI_FLAG_IQ_NO_SWAPPED:
-						 printf("Normal");
-						 sprintf(iq,"Normal ");
-						 break;
-					case CI_FLAG_IQ_SWAPPED:
-						 printf("Invert");
-						 sprintf(iq,"Invert ");
-				}
-				if (p.channels[uiCnt].m_uiFrequency_kHz < 11700000)
-					transpFreq=p.channels[uiCnt].m_uiFrequency_kHz+9750000;
-				else
-					transpFreq=p.channels[uiCnt].m_uiFrequency_kHz+10600000;
-				printf(" TransponderFreq: %d \n", transpFreq );
-
-
-				sprintf(freq,"RF: %d MHz SymbolRate: %d MHz %s %s %s ",
-								(p.channels[uiCnt].m_uiFrequency_kHz),
-								(p.channels[uiCnt].m_uiSymbolRate_Hz),
-								polarization,type,iq);
-
-				TP_params TP;
-
-					TP.scan_mode = scan_mode;
-					TP.feparams.frequency = transpFreq;
-					TP.feparams.u.qpsk.symbol_rate =p.channels[uiCnt].m_uiSymbolRate_Hz;
-					if (atoi(pol)==1)
-							TP.polarization = 0;
-					else
-						TP.polarization = 1;
-					if(strncmp (type,"DVB-S ",6)==0 ) {
-						//TP.feparams.u.qam.modulation	= 8-PSK;
-						TP.feparams.u.qpsk.fec_inner = FEC_AUTO;
-					} else {
-						TP.feparams.u.qam.modulation	= QPSK;
-						TP.feparams.u.qam.fec_inner	= FEC_NONE;
-
-					}
-				listTP.push_back(TP);
-			  }
 
 
 }
@@ -982,6 +986,8 @@ void *start_scanblindthread(void *blindparams)
 	 int nclose=1;
 
 
+	 FILE* fpdebug = fopen("/tmp/blindscan","w");
+	 fclose(fpdebug);
 	 myZapitClient.stopPlayBack();
 	 			usleep(2000);
 
@@ -1091,7 +1097,7 @@ void *start_scanblindthread(void *blindparams)
 		 		TP.feparams.inversion = INVERSION_AUTO;
 
 		 		if (!cable) {
-		 			printf("[scan_transponder] freq %d rate %d fec %d pol %d NIT %s\n", TP.feparams.frequency, TP.feparams.u.qpsk.symbol_rate, TP.feparams.u.qpsk.fec_inner, TP.polarization, scan_mode ? "no" : "yes");
+		 			printf("[scan_transponder] freq %d rate %d fec %d pol %d NIT %s\n",  TP.feparams.frequency, TP.feparams.u.qpsk.symbol_rate, TP.feparams.u.qpsk.fec_inner, TP.polarization, scan_mode ? "no" : "yes");
 		 		} else
 		 			printf("[scan_transponder] freq %d rate %d fec %d mod %d\n", TP.feparams.frequency, TP.feparams.u.qam.symbol_rate, TP.feparams.u.qam.fec_inner, TP.feparams.u.qam.modulation);
 

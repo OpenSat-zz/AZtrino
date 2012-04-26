@@ -667,7 +667,7 @@ void CMovieBrowser::initDevelopment(void)
 {
 	TRACE("[mb]->initDevelopment\r\n");
 	std::string name;
-	name = "/mnt/movies/";
+	name = "/mnt/movie/";
     //addDir(name);
 	name = "/mnt/record/";
     //addDir(name);

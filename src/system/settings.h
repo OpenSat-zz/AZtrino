@@ -540,7 +540,7 @@ class CScanSettings
 	char		TP_freq[10];
 	char		TP_startfreq[10];
 	char		TP_endfreq[10];
-	char		TP_rate[9];
+	char		TP_rate[10];
 
 	CScanSettings();
 

@@ -691,9 +691,14 @@ struct dvb_frontend_event CFrontend::getEvent(void)
 		if (pfd.revents & (POLLIN | POLLPRI)) {
 			TIMER_STOP("[fe0] poll has event after");
 			memset(&event, 0, sizeof(struct dvb_frontend_event));
+			//usleep(100000);
+			//sleep(1);
+
 			ret = ioctl(fd, FE_GET_EVENT, &event);
+
 			if (ret < 0) {
 				perror("CFrontend::getEvent ioctl");
+				ret = ioctl(fd, FE_GET_EVENT, &event);
 				continue;
 			}
 			printf("[fe0] poll events %d status %d\n", pfd.revents, event.status);

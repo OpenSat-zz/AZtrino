@@ -487,6 +487,8 @@ int CNeutrinoApp::loadSetup(const char * fname)
 	g_settings.current_volume = configfile.getInt32("current_volume", 100);
 	g_settings.channel_mode = configfile.getInt32("channel_mode", LIST_MODE_PROV);
 	g_settings.video_csync = configfile.getInt32( "video_csync", 0 );
+	g_settings.color_space = configfile.getInt32("video_color_space", 4);
+
 
 	g_settings.brightness = configfile.getInt32("video_brightness", 128);
 	g_settings.contrast = configfile.getInt32("video_contrast", 128);
@@ -1002,6 +1004,7 @@ void CNeutrinoApp::saveSetup(const char * fname)
 	configfile.setInt32( "video_Format", g_settings.video_Format );
 	configfile.setInt32( "video_43mode", g_settings.video_43mode );
 	configfile.setInt32( "video_brightness", g_settings.brightness );
+	configfile.setInt32( "video_color_space", g_settings.color_space );
 	configfile.setInt32( "video_contrast", g_settings.contrast );
 	configfile.setInt32( "video_hue", g_settings.hue );
 	configfile.setInt32( "video_saturation", g_settings.saturation );

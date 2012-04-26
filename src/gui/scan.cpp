@@ -222,7 +222,7 @@ int CScanTs::exec(CMenuTarget* parent, const std::string & actionKey)
 	else if(blindscan)
 	{
 
-		success = g_Zapit->scan_blind(get_set.scan_mode,atoi(get_set.TP_startfreq),atoi(get_set.TP_rate), atoi(get_set.TP_endfreq), get_set.TP_pol, get_set.TP_tone);
+		success = g_Zapit->scan_blind(get_set.scan_mode,atoi(get_set.TP_startfreq), atoi(get_set.TP_endfreq), atoi(get_set.TP_rate), get_set.TP_pol, get_set.TP_tone);
 	}
 	else
 		success = g_Zapit->startScan(scan_mode);
