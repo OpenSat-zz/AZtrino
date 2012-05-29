@@ -160,6 +160,7 @@ typedef struct TP_map
 
 #define MAX_LNB 64 
 typedef struct Zapit_config {
+	int tuner;
 	int motorRotationSpeed;
 	int writeChannelsNames;
 	int makeRemainingChannelsBouquet;

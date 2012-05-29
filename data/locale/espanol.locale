@@ -1,499 +1,499 @@
-INTERNAL ERROR - PLEASE REPORT INTERVAL ERROR - CONTACT YOUR DEALER
-AUDIOSelectMenue.head Selección de sonido
-EPGMenu.epgplus Ver lista de eventos
+INTERNAL ERROR - PLEASE REPORT INTERNAL ERROR - CONTACT YOUR DEALER
+AUDIOSelectMenue.head Selección de audio
+EPGMenu.epgplus Ver la lista de eventos
 EPGMenu.eventinfo Detalles del programa actual
 EPGMenu.eventlist Lista de eventos del programa actual
-EPGMenu.head EPG - Información de programa
+EPGMenu.head EPG - Información del programa
 EPGMenu.streaminfo Información técnica
-EPGPlus.actions Aciones 
-EPGPlus.bybouquet_mode por bouquet
-EPGPlus.bypage_mode por página
+EPGPlus.actions Acciones 
+EPGPlus.bybouquet_mode Modo por bouquet
+EPGPlus.bypage_mode Modo por página
 EPGPlus.change_font_size Tamaño de fuente
 EPGPlus.change_font_style Estilo de fuente
 EPGPlus.change_size tamaño
 EPGPlus.channelentry_font Fuente del canal
 EPGPlus.channelentry_separationlineheight altura de la línea de separación
 EPGPlus.channelentry_width ancho
-EPGPlus.channelevententry_font Fuente de eventos
+EPGPlus.channelevententry_font Fuente de los eventos
 EPGPlus.edit_fonts editar fuentes
 EPGPlus.edit_sizes editar tamaños
-EPGPlus.font_style_bold Estilo negrita
-EPGPlus.font_style_italic Estilo cursiva
-EPGPlus.font_style_regular Estilo regular
-EPGPlus.footer_fontbouquetchannelname bouquet de pie de pagina
-EPGPlus.footer_fontbuttons botones de pie de pagina
-EPGPlus.footer_fonteventdescription eventos de pie de pagina
-EPGPlus.footer_fonteventshortdescription eventos cortos de pie de pagina
-EPGPlus.head Ver lista de eventos (EPG Plus)
-EPGPlus.header_font fuente de la cabecera
+EPGPlus.font_style_bold Negrita
+EPGPlus.font_style_italic Cursiva
+EPGPlus.font_style_regular Regular
+EPGPlus.footer_fontbouquetchannelname fuente-pie de página
+EPGPlus.footer_fontbuttons fuente-botones pie de página
+EPGPlus.footer_fonteventdescription fuente-eventos pie de página
+EPGPlus.footer_fonteventshortdescription fuente-eventos cortos pie de página
+EPGPlus.head  Lista de eventos (EPG Plus)
+EPGPlus.header_font fuente-cabecera
 EPGPlus.horgap1_height alto1
 EPGPlus.horgap2_height alto2
-EPGPlus.next_bouquet próximo bouquet
-EPGPlus.options opciones
-EPGPlus.page_down Abajo
-EPGPlus.page_up Arriba
-EPGPlus.prev_bouquet bouquet previo
+EPGPlus.next_bouquet bouquet siguiente
+EPGPlus.options Opciones
+EPGPlus.page_down Bajar
+EPGPlus.page_up Subir
+EPGPlus.prev_bouquet bouquet anterior
 EPGPlus.record Grabar
 EPGPlus.refresh_epg Refrescar
 EPGPlus.remind Horario
-EPGPlus.reset_settings Reinicializar configuración
-EPGPlus.save_settings Guardar configuración
-EPGPlus.scroll_mode Modo deslizador
-EPGPlus.select_font_name Nombre de la fuente
+EPGPlus.reset_settings Reinicializar la configuración
+EPGPlus.save_settings Guardar la configuración
+EPGPlus.scroll_mode Modo scroll
+EPGPlus.select_font_name Nombre de fuente
 EPGPlus.settings configuración
-EPGPlus.slider_width Ancho del deslizador
-EPGPlus.stretch_mode Modo Extender
-EPGPlus.swap_mode Intercambio de modos
-EPGPlus.timeline_fontdate Fuente del Dia
-EPGPlus.timeline_fonttime Fuente de la Hora
+EPGPlus.slider_width Ancho del scroll
+EPGPlus.stretch_mode Modo ampliar
+EPGPlus.swap_mode Intercambiar modos
+EPGPlus.timeline_fontdate Fuente de Dia
+EPGPlus.timeline_fonttime Fuente de Hora
 EPGPlus.vergap1_width ancho1
 EPGPlus.vergap2_width ancho2
-EPGPlus.view_mode modo de vista
-GENRE.ARTS.0 artes / cultura
-GENRE.ARTS.1 artes escenicas
-GENRE.ARTS.10 magazines artes / cultura
-GENRE.ARTS.11 moda
-GENRE.ARTS.2 bellas artes
-GENRE.ARTS.3 religión
-GENRE.ARTS.4 cultura popular / artes tradicionales
-GENRE.ARTS.5 literatura
-GENRE.ARTS.6 pelicula/cine
-GENRE.ARTS.7 cine experimental / video
-GENRE.ARTS.8 radiodifusión / prensa
-GENRE.ARTS.9 nuevos medios de comunicación
-GENRE.CHILDRENs_PROGRAMMES.0 infantil / juvenil
-GENRE.CHILDRENs_PROGRAMMES.1 preescolar
-GENRE.CHILDRENs_PROGRAMMES.2 entretenimiento de 6 a 14
-GENRE.CHILDRENs_PROGRAMMES.3 entretenimiento de 10 a 16
-GENRE.CHILDRENs_PROGRAMMES.4 Informativos / educativos / programas escolares
-GENRE.CHILDRENs_PROGRAMMES.5 Dibujos animados / títeres
-GENRE.DOCUS_MAGAZINES.0 Documentación / Revista
-GENRE.DOCUS_MAGAZINES.1 Naturaleza / Animales / Medio ambiente
-GENRE.DOCUS_MAGAZINES.2 Tecnología / Ciencias Exactas y Naturales
-GENRE.DOCUS_MAGAZINES.3 Medicina / Fisiología / Psicología
-GENRE.DOCUS_MAGAZINES.4 Países extranjeros / Expediciones
-GENRE.DOCUS_MAGAZINES.5 Sociales / Ciencias Espirituales
-GENRE.DOCUS_MAGAZINES.6 Educacion superior
+EPGPlus.view_mode Modo de vista
+GENRE.ARTS.0 Artes/Cultura
+GENRE.ARTS.1 Artes escénicas
+GENRE.ARTS.10 Artes/Magazines culturales
+GENRE.ARTS.11 Moda
+GENRE.ARTS.2 Bellas Artes
+GENRE.ARTS.3 Religión
+GENRE.ARTS.4 Cultura popular/Artes tradicionales
+GENRE.ARTS.5 Literatura
+GENRE.ARTS.6 Película/Cine
+GENRE.ARTS.7 Cine experimental/Vídeo
+GENRE.ARTS.8 Radiodifusión/Prensa
+GENRE.ARTS.9 Nuevos medios
+GENRE.CHILDRENs_PROGRAMMES.0 Infantil/Juvenil
+GENRE.CHILDRENs_PROGRAMMES.1 Preescolar
+GENRE.CHILDRENs_PROGRAMMES.2 Entretenimiento de 6 a 14 años
+GENRE.CHILDRENs_PROGRAMMES.3 Entretenimiento de 10 a 16 años
+GENRE.CHILDRENs_PROGRAMMES.4 Informativos/Educativos/Programas escolares
+GENRE.CHILDRENs_PROGRAMMES.5 Dibujos animados/Marionetas
+GENRE.DOCUS_MAGAZINES.0 Documentación/Revista
+GENRE.DOCUS_MAGAZINES.1 Naturaleza/Animales/Medio ambiente
+GENRE.DOCUS_MAGAZINES.2 Tecnologia/Ciencias Naturales
+GENRE.DOCUS_MAGAZINES.3 Medicina/Fisiología/Psicología
+GENRE.DOCUS_MAGAZINES.4 Otros países/Expediciones
+GENRE.DOCUS_MAGAZINES.5 Sociales/Ciencias espirituales
+GENRE.DOCUS_MAGAZINES.6 Educación superior
 GENRE.DOCUS_MAGAZINES.7 Idiomas
-GENRE.MOVIE.0 Cine / Drama
-GENRE.MOVIE.1 Policíaco / Thriller
-GENRE.MOVIE.2 Adventuras / Oeste / Guerra
-GENRE.MOVIE.3 Ciencia ficción / Fantasía / Terror
+GENRE.MOVIE.0 Cine/Drama
+GENRE.MOVIE.1 Policíaco/Thriller
+GENRE.MOVIE.2 Aventuras/Western/Bélico
+GENRE.MOVIE.3 Ciencia-ficción/Fantasía/Terror
 GENRE.MOVIE.4 Comedia
-GENRE.MOVIE.5 Melodrama / Folklórica
-GENRE.MOVIE.6 Romance
-GENRE.MOVIE.7 Clásica / Religioso / Histórico / Drama
-GENRE.MOVIE.8 Adultos / Drama
-GENRE.MUSIC_DANCE.0 Música / ballet / danza
-GENRE.MUSIC_DANCE.1 Rock / pop
-GENRE.MUSIC_DANCE.2 Musica clasica
-GENRE.MUSIC_DANCE.3 Folk / musica tradicional
+GENRE.MOVIE.5 Enredo/Melodrama/Folklórico
+GENRE.MOVIE.6 Romántico
+GENRE.MOVIE.7 Clásico/Religión/Histórico/Drama
+GENRE.MOVIE.8 Adultos/Drama
+GENRE.MUSIC_DANCE.0 Música/Ballet/Danza
+GENRE.MUSIC_DANCE.1 Rock/Pop
+GENRE.MUSIC_DANCE.2 Música clásica
+GENRE.MUSIC_DANCE.3 Folk/Música tradicional
 GENRE.MUSIC_DANCE.4 Jazz
-GENRE.MUSIC_DANCE.5 Musical / opera
+GENRE.MUSIC_DANCE.5 Musical/Opera
 GENRE.MUSIC_DANCE.6 Ballet
 GENRE.NEWS.0 Noticias
-GENRE.NEWS.1 Noticias / Previsión meteorológica
+GENRE.NEWS.1 Noticias/Previsión meteorológica
 GENRE.NEWS.2 Magazine de noticias
 GENRE.NEWS.3 Documental
-GENRE.NEWS.4 Discusión / Entrevista / Debate
-GENRE.SHOW.0 Espectáculos / Juegos
-GENRE.SHOW.1 Juegos / Concurso
+GENRE.NEWS.4 Discusión/Entrevista/Debate
+GENRE.SHOW.0 Espectáculos/Juegos
+GENRE.SHOW.1 Juegos/Concursos
 GENRE.SHOW.2 Espectáculo de variedades
 GENRE.SHOW.3 Tertulia del espectáculo
-GENRE.SOCIAL_POLITICAL.0 Eventos sociales y políticos / de negocios
-GENRE.SOCIAL_POLITICAL.1 Revistas / Reportajes / Documental
-GENRE.SOCIAL_POLITICAL.2 Economía / Sociedad de asesoramiento
+GENRE.SOCIAL_POLITICAL.0 Eventos sociales y políticos/de negocios
+GENRE.SOCIAL_POLITICAL.1 Revistas/Reportajes/Documental
+GENRE.SOCIAL_POLITICAL.2 Economía/Información social
 GENRE.SOCIAL_POLITICAL.3 Personas notables
 GENRE.SPORTS.0 Deportes
-GENRE.SPORTS.1 Eventos especiales (Juegos Olímpicos, Copa del Mundo, etc)
+GENRE.SPORTS.1 Eventos especiales (Juegos Olímpicos, Mundiales, etc)
 GENRE.SPORTS.10 Ecuestre
-GENRE.SPORTS.11 Deportes marciales
-GENRE.SPORTS.2 Magazine de deportes
+GENRE.SPORTS.11 Artes marciales
+GENRE.SPORTS.2 Magazine deportivo
 GENRE.SPORTS.3 Fútbol
-GENRE.SPORTS.4 Tenis / Squash
-GENRE.SPORTS.5 Deportes de equipo (excluido el fútbol)
+GENRE.SPORTS.4 Tenis/Squash
+GENRE.SPORTS.5 Deportes de equipo (excepto fútbol)
 GENRE.SPORTS.6 Atletismo
 GENRE.SPORTS.7 Motor 
 GENRE.SPORTS.8 Deportes acuáticos
 GENRE.SPORTS.9 Deportes de invierno
-GENRE.TRAVEL_HOBBIES.0 Viajes y ocio
-GENRE.TRAVEL_HOBBIES.1 Turismo / viajes
+GENRE.TRAVEL_HOBBIES.0 Ocio y Viajes
+GENRE.TRAVEL_HOBBIES.1 Turismo/Viajes
 GENRE.TRAVEL_HOBBIES.2 Artesanía
-GENRE.TRAVEL_HOBBIES.3 Automovilismo
+GENRE.TRAVEL_HOBBIES.3 Motor
 GENRE.TRAVEL_HOBBIES.4 Fitness y salud
-GENRE.TRAVEL_HOBBIES.5 Cocina
-GENRE.TRAVEL_HOBBIES.6 Publicidad / compras
+GENRE.TRAVEL_HOBBIES.5 Gastronomía
+GENRE.TRAVEL_HOBBIES.6 Publicidad/Compras
 GENRE.TRAVEL_HOBBIES.7 Jardinería
 GENRE.UNKNOWN Desconocido
-apidselector.head Seleccione el idioma
+apidselector.head Selección de idioma
 audiomenu.PCMOffset Disminuir el volumen PCM
 audiomenu.analogout Salida analógica
 audiomenu.avs AVS
 audiomenu.avs_control Control de volumen avs/ost
 audiomenu.dolbydigital Dolby Digital
-audiomenu.head Ajustes de audio
+audiomenu.head Configuración de audio
 audiomenu.lirc lirc
-audiomenu.monoleft Mono izquierda
-audiomenu.monoright Mono derecha
+audiomenu.monoleft Mono izquierdo
+audiomenu.monoright Mono derecho
 audiomenu.ost ost
-audiomenu.stereo Estereo
+audiomenu.stereo Estéreo
 audiomenu.hdmi_dd DD codificado en HDMI
 audiomenu.spdif_dd DD codificado en SPDIF
-audiomenu.avsync A/V de sincronización
-audiomenu.avsync_am Audio maestro
+audiomenu.avsync Sincronización de A/V
+audiomenu.avsync_am Audio principal
 audiomenu.clockrec Temporizador de grabación
 audioplayer.add Añadir
 audioplayer.add_ic Icecast
 audioplayer.add_loc Lista local de radios
 audioplayer.add_sc Shoutcast
 audioplayer.artist_title Artista, Título
-audioplayer.building_search_index Construyendo indice de busqueda
+audioplayer.building_search_index Creando el índice de búsqueda
 audioplayer.button_select_title_by_id Buscar por ID
 audioplayer.button_select_title_by_name Buscar por nombre
-audioplayer.defdir Dirección de inicio
+audioplayer.defdir Directorio inicial de musica
 audioplayer.delete Borrar
 audioplayer.deleteall Borrar todo
-audioplayer.display_order Mostrar
-audioplayer.enable_sc_metadata Activar metadatos de  shoutcast
-audioplayer.fastforward Avance rapido.
+audioplayer.display_order Ordenar por
+audioplayer.enable_sc_metadata Activar metadatos de shoutcast
+audioplayer.fastforward Avance rápido.
 audioplayer.follow Selección automática
-audioplayer.head Lista de reproduccion de música
-audioplayer.highprio Alta prioridad de decodificación
+audioplayer.head Lista de reproducción de musica
+audioplayer.highprio ¿Prioridad alta en la decodificación?
 audioplayer.spectrum lcd a-spectrum
-audioplayer.jump_backwards Saltar hacia atrás
-audioplayer.jump_dialog_hint1 Por favor, introduzca destino del salto
+audioplayer.jump_backwards Salto hacia atrás
+audioplayer.jump_dialog_hint1 Introduzca el destino del salto
 audioplayer.jump_dialog_hint2 (en segundos)
-audioplayer.jump_dialog_title Introduzca salto
-audioplayer.jump_forwards Saltar hacia delante
-audioplayer.keylevel Key level
-audioplayer.load_radio_stations Carga radios por internet
+audioplayer.jump_dialog_title Introduzca el salto
+audioplayer.jump_forwards Salto hacia adelante
+audioplayer.keylevel Clave de nivel
+audioplayer.load_radio_stations Cargar radios de internet
 audioplayer.name Reproductor de Musica
-audioplayer.pause Pausar
+audioplayer.pause Pausa
 audioplayer.play Reproducir
 audioplayer.playing  Pista actual
-audioplayer.playlist_fileerror_msg El archivo no se puede crear:
-audioplayer.playlist_fileoverwrite_msg ¿Desea sobrescribir el archivo:
-audioplayer.playlist_fileoverwrite_title sobrescribir?
+audioplayer.playlist_fileerror_msg No se puede crear el archivo:
+audioplayer.playlist_fileoverwrite_msg Quiere sobreescribir el archivo:
+audioplayer.playlist_fileoverwrite_title ¿sobreescribir?
 audioplayer.playlist_name Nombre de archivo de la lista de reproducción
-audioplayer.playlist_name_hint1 Por favor, escriba el nombre de la lista de reproducción
-audioplayer.playlist_name_hint2 La extensión. M3u se añadirá automáticamente
+audioplayer.playlist_name_hint1 Escriba el nombre de la lista de reproducción
+audioplayer.playlist_name_hint2 La extensión .m3u se añadirà automáticamente
 audioplayer.reading_files Leyendo archivos
-audioplayer.receiving_list Recibiendo lista, por favor espere
-audioplayer.repeat_on enable Modo de repetición
+audioplayer.receiving_list Recibiendo la lista. Por favor, espere
+audioplayer.repeat_on Activar el modo Repetición
 audioplayer.rewind Rebobinar
 audioplayer.save_playlist Guardar la lista de reproducción
-audioplayer.screensaver_timeout Tiempo de espera del protector de pantalla (min, 0=deshabilitado)
-audioplayer.select_title_by_name Buscar título por nombre (SMS)
-audioplayer.show_playlist Mostrar lista de reproducción
+audioplayer.screensaver_timeout Espera (min) protector de pantalla (0=deshabilitado)
+audioplayer.select_title_by_name Buscar título por nombre
+audioplayer.show_playlist Mostrar la lista de reproducción
 audioplayer.shuffle Aleatorio
 audioplayer.stop Parar
 audioplayer.title_artist Título, Artista
-audioplayerpicsettings.general Reproductor de Música / Visor de Imágenes
+audioplayerpicsettings.general Reproductor de musica/Visor de imágenes
 bookmarkmanager.delete Borrar
 bookmarkmanager.name Marcadores
 bookmarkmanager.rename Renombrar
-bookmarkmanager.select Selecionar
+bookmarkmanager.select Seleccionar
 bouqueteditor.add Añadir
-bouqueteditor.bouquetname Nombre de bouquets
+bouqueteditor.bouquetname Nombre del bouquet
 bouqueteditor.delete Borrar
-bouqueteditor.discardingchanges Descartar los cambios. Por favor, sea paciente.
+bouqueteditor.discardingchanges Anulando los cambios. Por favor, espere.
 bouqueteditor.hide Ocultar
 bouqueteditor.lock Bloquear
 bouqueteditor.move Mover
-bouqueteditor.name Editor de Bouquet 
-bouqueteditor.newbouquetname Nuevo nombre de bouquets
+bouqueteditor.name Editor de Bouquets 
+bouqueteditor.newbouquetname Nombre del nuevo bouquet
 bouqueteditor.rename Renombrar
-bouqueteditor.return Listo
-bouqueteditor.savechanges? ¿Desea guardar los cambios?
-bouqueteditor.savingchanges Guardando los cambios. Por favor, espere ...
-bouqueteditor.switch Añadir / Quitar
-bouqueteditor.switchmode Televisión / Radio
+bouqueteditor.return Aceptar
+bouqueteditor.savechanges? ¿Guardar los cambios?
+bouqueteditor.savingchanges Guardando los cambios. Por favor, espere.
+bouqueteditor.switch Añadir/Eliminar
+bouqueteditor.switchmode Televisión/Radio
 bouquetlist.head Bouquets
 cablesetup.provider Proveedor de cable
 channellist.edit Editar
 channellist.epgtext_align_left Izquierda
 channellist.epgtext_align_right Derecha
-channellist.extended Extender lista de canales
-channellist.head Todos los servicios
-channellist.nonefound No se Han encontrado canales!\nPor favor ejecute una búsqueda\n(Tecla MENU -> servicio)
+channellist.extended Ampliar la lista de canales
+channellist.head Todos los canales
+channellist.nonefound No se ha encontrado ningún canal!\nHaga otra búsqueda\n(Tecla MENU -> canales)
 channellist.since desde %02d:%02d
-channellist.start comienza %02d:%02d
+channellist.start inicio %02d:%02d
 channellist.favs Favoritos
 channellist.provs Proveedores
 channellist.sats Satélites
 channellist.history Historial
-channellist.current_tp Transponder actual
-channellist.make_hdlist Crear lista de canales en HD
+channellist.current_tp Transpondedor actual
+channellist.make_hdlist Crear lista de canales HD
 colorchooser.alpha Alfa
 colorchooser.blue Azul
 colorchooser.green Verde
 colorchooser.red Rojo
 colormenu.background Fondo
-colormenu.fade Fade menus
-colormenu.font Tamaño de la fuente 
+colormenu.fade Fade menús
+colormenu.font Tamaño de fuente 
 colormenu.gtx_alpha Transparencia (GTX)
 colormenu.head Configuración de Color 
-colormenu.menucolors Menu de colores
+colormenu.menucolors Menú de colores
 colormenu.statusbar Barra de Información
 colormenu.textcolor Color del texto
 colormenu.themeselect Seleccione un tema
-colormenu.timing Tiempo OSD
+colormenu.timing Duración de OSD
 colormenusetup.head Colores del menú
-colormenusetup.menucontent Ventana-Contenido
-colormenusetup.menucontent_inactive Ventana-Contenido inactiva
-colormenusetup.menucontent_selected Ventana-Contenido selecionada
+colormenusetup.menucontent Ventana-contenido
+colormenusetup.menucontent_inactive Ventana-contenido inactivo
+colormenusetup.menucontent_selected Ventana-contenido seleccionado
 colormenusetup.menuhead Cabecera del menú
 colorstatusbar.head Barra de información
 colorstatusbar.text Barra de información
 colorthememenu.classic_theme Tema Clásico
-colorthememenu.dblue_theme Tema Azul Oscuro
+colorthememenu.dblue_theme Tema Azul oscuro
 colorthememenu.dvb2k_theme Tema DVB2000
-colorthememenu.newgeneration_theme Tema Nueva Generacion
+colorthememenu.newgeneration_theme Tema Nueva Generación
 colorthememenu.red_theme Tema Rojo
 colorthememenu.head Selector de Temas
-colorthememenu.neutrino_theme Tema AZtrino
+colorthememenu.neutrino_theme Tema Aztrino
 colorthememenu.gray Tema Gris
 date.Apr  Abr
 date.Aug  Ago
 date.Dec  Dic
 date.Feb  Feb
-date.Fri  Vie
+date.Fri  Vi
 date.Jan  Ene
 date.Jul  Jul
 date.Jun  Jun
 date.Mar  Mar
 date.May  May
-date.Mon  Lun
+date.Mon  Lu
 date.Nov  Nov
 date.Oct  Oct
-date.Sat  Sab
+date.Sat  Sa
 date.Sep  Sep
-date.Sun  Dom
-date.Thu  Jue
-date.Tue  Mar
-date.Wed  Mie
+date.Sun  Do
+date.Thu  Ju
+date.Tue  Ma
+date.Wed  Mi
 epgextended.actors Actores
 epgextended.director Director
 epgextended.guests Invitados
-epgextended.original_title Título Original
-epgextended.presenter Presenter
-epgextended.year_of_production Año de Producción
+epgextended.original_title Título original
+epgextended.presenter Presentador
+epgextended.year_of_production Año de producción
 epglist.noevents EPG no disponible...
 epgviewer.More_Screenings Más proyecciones en este canal
 epgviewer.nodetailed Información detallada no disponible
-epgviewer.notfound EPG no encontrado
-eventfinder.head Buscar en EPG
+epgviewer.notfound No se ha encontrado EPG
+eventfinder.head Buscar en la EPG
 eventfinder.keyword Palabra clave
 eventfinder.search Buscar
-eventfinder.search_within_epg Buscar dentro de
-eventfinder.search_within_list Buscar dentro de
-eventfinder.searching Buscar por palabra clave en el EPG...
+eventfinder.search_within_epg Buscar en la EPG
+eventfinder.search_within_list Buscar en la lista
+eventfinder.searching Buscar en la EPG por palabra clave...
 eventfinder.start_search  Iniciar búsqueda
 eventlistbar.channelswitch Planificador
 eventlistbar.eventsort Clasificación
 eventlistbar.recordevent Grabar
-favorites.addchannel El canal actual se añadirán \nto al bouquet "Mis favoritos". \n Esto tomará unos segundos...
+favorites.addchannel El canal actual se añadirá\nal bouquet "Mis favoritos".\nEsto tardará unos segundos...
 favorites.bouquetname Mis favoritos
-favorites.bqcreated Bouquet "Mis favoritos" ha sido creado...\n
-favorites.chadded El canal actual se ha añadido a su lista de favoritos...\n
-favorites.chalreadyinbq El canal actual se encuentra ya en su lista de favoritos...\n
-favorites.finalhint \nUtilice el editor de bouquet para modificar su lista de favoritos.\n
-favorites.menueadd Añadir canal a favoritos
-favorites.nobouquets Favoritos están disponibles solamente con Bouquets activados.
-favorites.copy Copia bouquet a favoritos
+favorites.bqcreated Se ha creado "Mis favoritos"\n
+favorites.chadded El canal actual se ha añadido a la lista de favoritos\n
+favorites.chalreadyinbq El canal actual ya está en la lista de favoritos\n
+favorites.finalhint \nUtilice el editor de bouquets para modificar los favoritos.\n
+favorites.menueadd Añadir el canal a favoritos
+favorites.nobouquets Los favoritos sólo están disponibles activando los Bouquets.
+favorites.copy Copiar el bouquet a favoritos
 filebrowser.delete Borrar
-filebrowser.denydirectoryleave Directorio de inicio absoluto
+filebrowser.denydirectoryleave Directorio absoluto de inicio
 filebrowser.dodelete1 Borrar
 filebrowser.dodelete2 ?
-filebrowser.filter.active Filtro habilitado
-filebrowser.filter.inactive Filtro deshabilitado
+filebrowser.filter.active Desactivar filtro
+filebrowser.filter.inactive Activar filtro
 filebrowser.head Explorador de archivos
 filebrowser.mark Marca
-filebrowser.nextpage Página Siguiente
-filebrowser.prevpage Página Previa
-filebrowser.scan Escaneando carpeta
+filebrowser.nextpage Página siguiente
+filebrowser.prevpage Página anterior
+filebrowser.scan Escaneando la carpeta...
 filebrowser.select Seleccionar
-filebrowser.showrights Mostrar los derechos de archivo
+filebrowser.showrights Mostrar los permisos de archivo
 filebrowser.sort.date (fecha)
-filebrowser.sort.name (nombre de fichero)
-filebrowser.sort.namedirsfirst (nombre de fichero2)
+filebrowser.sort.name (nombre de archivo)
+filebrowser.sort.namedirsfirst (nombre de archivo2)
 filebrowser.sort.size (tamaño)
 filebrowser.sort.type (tipo)
-filesystem.is.utf8 Sistema de ficheros
+filesystem.is.utf8 Sistema de archivos
 filesystem.is.utf8.option.iso8859.1 ISO-8859-1
 filesystem.is.utf8.option.utf8 UTF-8
-flashupdate.actionreadflash Leyendo
+flashupdate.actionreadflash Se está leyendo
 flashupdate.cantopenfile No se puede abrir el archivo
 flashupdate.cantopenmtd No se puede abrir el dispotivo mtd
-flashupdate.checkupdate Buscar una nueva version
-flashupdate.currentreleasecycle Ciclo de liberacion
+flashupdate.checkupdate Buscar una versión nueva
+flashupdate.currentreleasecycle Ciclo de lanzamiento
 flashupdate.currentversion_sep Versión actual
 flashupdate.currentversiondate Fecha
 flashupdate.currentversionsnapshot Tipo de imagen
 flashupdate.currentversiontime Hora
-flashupdate.erasefailed Fallo en el borrado de memoria flash
-flashupdate.erasing Borrando flash
-flashupdate.experimentalimage La imagen que ha seleccionado es una versión no probada, esto significa\n que su equipo tal vez no arranque después de la actualización.\n\n¿Estas seguiro que quieres actualizar a esta versión?
+flashupdate.erasefailed El borrado de la flash ha fallado
+flashupdate.erasing Borrando la flash
+flashupdate.experimentalimage La imagen que ha seleccionado no se ha probado, esto significa\nque el Azbox podría no arrancar después de actualizar\n\n¿Seguro que quiere actualizar a esta versión?
 flashupdate.expertfunctions Funciones para expertos
 flashupdate.fileis0bytes El tamaño del archivo es 0 Bytes
 flashupdate.fileselector Selector de archivos
-flashupdate.flashreadyreboot La imagen fue instalada con éxito.\nEl equipo se reiniciará ahora.
-flashupdate.getinfofile Obetener información de la versión
-flashupdate.getinfofileerror No se puede obetener información de la versión
-flashupdate.getupdatefile Obetener actualizacion
-flashupdate.getupdatefileerror No se puede obtener actualización
-flashupdate.globalprogress Progreso Global:
+flashupdate.flashreadyreboot La imagen se ha instalado correctamente.\nEl Azbox se reiniciará.
+flashupdate.getinfofile Obtener información de la versión
+flashupdate.getinfofileerror No hay información de ninguna versión
+flashupdate.getupdatefile Obtener actualización
+flashupdate.getupdatefileerror No se puede obtener la actualización
+flashupdate.globalprogress Progreso global:
 flashupdate.head actualización de software
 flashupdate.md5check Comprobando la imagen
 flashupdate.md5sumerror La imagen tiene errores
-flashupdate.msgbox Encontrado el siguiente archivo nuevo:\Fecha: %s, %s\nImagen base: %s\nTipo: %s\n\n¿Quiere descargar e instalar esta versión?
-flashupdate.msgbox_manual Found the following new image:\nFecha: %s, %s\nImagen base: %s\nTipo de Imagen: %s\n\n¿Desea instalar esta versión ahora?
-flashupdate.mtdselector Selector de Partitición
+flashupdate.msgbox Se ha encontrado este archivo nuevo:\nFecha: %s, %s\nImagen base: %s\nTipo: %s\n\n¿Desea descargar e instalar esta versión?
+flashupdate.msgbox_manual Se ha encontrado esta imagen nueva:\nFecha: %s, %s\nImagen base: %s\nTipo de imagen: %s\n\n¿Desea instalar esta versión?
+flashupdate.mtdselector Selector de Particiones
 flashupdate.programmingflash Programando la flash
 flashupdate.proxypassword Contraseña
-flashupdate.proxypassword_hint1 Introduzca la contraseña del servidor proxy
-flashupdate.proxypassword_hint2 una entrada vacía significa que no hay proxy-auth
-flashupdate.proxyserver Nombre de host
-flashupdate.proxyserver_hint1 Introduzca el nombre de servidor proxy o IP, usar equipo:puerto
-flashupdate.proxyserver_hint2 a empty entry means no proxy
-flashupdate.proxyserver_sep Proxyserver
+flashupdate.proxypassword_hint1 Introduzca la contraseña del servidor proxy.
+flashupdate.proxypassword_hint2 Una entrada sin datos significa que no hay proxy-auth.
+flashupdate.proxyserver Nombre del host
+flashupdate.proxyserver_hint1 Introduzca el nombre (o la IP) del proxy (Host:Puerto).
+flashupdate.proxyserver_hint2 Una entrada sin datos significa que no hay proxy.
+flashupdate.proxyserver_sep Servidor Proxy
 flashupdate.proxyusername Usuario
-flashupdate.proxyusername_hint1 Introduzca el usuario del servidor proxy
-flashupdate.proxyusername_hint2 una entrada vacía significa que no hay proxy-auth
+flashupdate.proxyusername_hint1 Introduzca el nombre de usuario del proxy.
+flashupdate.proxyusername_hint2 Una entrada sin datos significa que no hay proxy-auth.
 flashupdate.readflash Leer toda la imagen
-flashupdate.readflashmtd Leer una particion
-flashupdate.ready Listo
-flashupdate.reallyflashmtd ¿Esta seguro que quiere flashearlo?\n\nSi ocurre un error o la imagen no es\nvalida, el equipo no se iniciará después de flashear.\n\nNombre de imagen: %s\nTarget: %s
-flashupdate.savesuccess La imagen se ha guardado correctamente \nbajo %s.
-flashupdate.selectimage Imágenes disponibles / Archivos
-flashupdate.squashfs.noversion La version de SquashFS actualmente solo esta soportado cuando se actualiza a traver de web.\n¿Está seguro que desea instalar esta imagen?
-flashupdate.titlereadflash Leyendo Flash
-flashupdate.titlewriteflash Escribiendo Flash
+flashupdate.readflashmtd Leer una partición
+flashupdate.ready Hecho
+flashupdate.reallyflashmtd ¿Seguro que desea actualizar?\n\nSi hay algún fallo o la imagen no sirve,\nel Azbox no arrancará después de actualizar.\n\nNombre de la imagen: %s\nDestino: %s
+flashupdate.savesuccess La imagen se ha guardado correctamente \ncomo %s.
+flashupdate.selectimage Imágenes/Archivos disponibles
+flashupdate.squashfs.noversion La comprobación de versiones SquashFS actualmente sólo es posible cuando se actualiza desde Internet.\n¿Seguro que desea instalar esta imagen?
+flashupdate.titlereadflash Leyendo la Flash
+flashupdate.titlewriteflash Escribiendo la Flash
 flashupdate.updatemode Modo de actualización
 flashupdate.updatemode_internet Internet
-flashupdate.updatemode_manual Manual (ftp)
-flashupdate.url_file Fichero de configuracion
-flashupdate.versioncheck Comprobando version
+flashupdate.updatemode_manual Manual (FTP)
+flashupdate.url_file archivo de configuración
+flashupdate.versioncheck Comprobando la versión
 flashupdate.writeflash Escribir toda la imagen
-flashupdate.writeflashmtd Escribir una particion
-flashupdate.wrongbase Su ciclo de lanzamiento es diferente.\n¿Desea continuar? 
+flashupdate.writeflashmtd Escribir una partición
+flashupdate.wrongbase El ciclo de lanzamiento es diferente.\n¿Desea continuar? 
 fontmenu.channellist Lista de canales
 fontmenu.epg EPG
 fontmenu.eventlist Lista de eventos
 fontmenu.gamelist Lista de Juegos
-fontmenu.head Configuración del tamaño de la fuente
+fontmenu.head Configuración del tamaño de fuente
 fontmenu.infobar Barra de información
 fontsize.channel_num_zap Selección directa
 fontsize.channellist Lista de canales
 fontsize.channellist_descr Descripción
-fontsize.channellist_number Numero
-fontsize.epg_date EPG Fecha
-fontsize.epg_info1 EPG Info 1
-fontsize.epg_info2 EPG Info 2
-fontsize.epg_title EPG Titulo
-fontsize.eventlist_datetime fecha / hora
+fontsize.channellist_number Número
+fontsize.epg_date EPG - Fecha
+fontsize.epg_info1 EPG - Info 1
+fontsize.epg_info2 EPG - Info 2
+fontsize.epg_title EPG - Título
+fontsize.eventlist_datetime Fecha/Hora
 fontsize.eventlist_itemlarge Grande
 fontsize.eventlist_itemsmall Pequeña
-fontsize.eventlist_title Titulo
+fontsize.eventlist_title Título
 fontsize.filebrowser_item Explorador de elementos
 fontsize.gamelist_itemlarge Grande
 fontsize.gamelist_itemsmall Pequeña
-fontsize.hint Inicializando fuente,\nplease wait...
-fontsize.infobar_channame Nombre de canal
+fontsize.hint Inicializando la fuente,\nespere...
+fontsize.infobar_channame Nombre del canal
 fontsize.infobar_info Información
-fontsize.infobar_number Numbero
+fontsize.infobar_number Número
 fontsize.infobar_small Pequeña
 fontsize.menu Texto del menú
-fontsize.menu_info Menú Información
-fontsize.menu_title Menú Título
+fontsize.menu_info Información del menú
+fontsize.menu_title Título del menú
 gtxalpha.alpha1 Alfa 1
 gtxalpha.alpha2 Alfa 2
-infoviewer.epgnotload EPG no cargado....
-infoviewer.epgwait Esperando EPG...
+infoviewer.epgnotload No se ha cargado la EPG
+infoviewer.epgwait Esperando la EPG...
 infoviewer.eventlist Lista de eventos
 infoviewer.languages Audio
-infoviewer.motor_moving Posicionando antena
-infoviewer.next Siguiente
-infoviewer.nocurrent No hay información disponible para el programa actual
+infoviewer.motor_moving Moviendo la antena
+infoviewer.next Continuar
+infoviewer.nocurrent No se dispone de información para el programa actual
 infoviewer.noepg EPG no disponible
 infoviewer.notavailable Canal no disponible
 infoviewer.now Ahora
 infoviewer.selecttime Selección de tiempo
 infoviewer.streaminfo Características
 infoviewer.subchan_disp_pos Mostar subcanal
-infoviewer.subservice Subservicios
+infoviewer.subservice Subcanales
 infoviewer.waittime Esperando...
-ipsetup.hint_1 Usar 0..9, o usar Arriba/Abajo,
-ipsetup.hint_2 OK, guardado, LAME! aborta
-keybindingmenu.RC Key repeat-blocker
-keybindingmenu.addrecord Añade temporizador de grabación
-keybindingmenu.addremind Añade temporizador de zapto
-keybindingmenu.allchannels_on_ok Todos los servicos
+ipsetup.hint_1 Utilice 0..9, o Subir/Bajar,
+ipsetup.hint_2 OK guarda, EXIT cancela
+keybindingmenu.RC Retardo de repetición de tecla
+keybindingmenu.addrecord Añadir un temporizador de grabación
+keybindingmenu.addremind Añadir temporizador "Cambiar a"
+keybindingmenu.allchannels_on_ok Todos los canales
 keybindingmenu.bouquetchannels_on_ok Bouquet actual
 keybindingmenu.bouquetdown Bouquet anterior
 keybindingmenu.bouquethandling Bouquet-control
-keybindingmenu.bouquetlist_on_ok Bouquet-lista
-keybindingmenu.bouquetup próximo Bouquet
-keybindingmenu.cancel close Lista de canales
-keybindingmenu.channeldown Canal abajo
+keybindingmenu.bouquetlist_on_ok Lista de bouquetes
+keybindingmenu.bouquetup Bouquet siguiente
+keybindingmenu.cancel Cerrar la lista de canales
+keybindingmenu.channeldown Bajar canal
 keybindingmenu.channellist Lista de canales
-keybindingmenu.channelup Canal arriba
-keybindingmenu.head Configuración de combinación de teclas
-keybindingmenu.lastchannel Quick Zap
+keybindingmenu.channelup Subir canal
+keybindingmenu.head Configuración de atajos de teclado
+keybindingmenu.lastchannel Cambio rápido
 keybindingmenu.modechange Cambio de modo
-keybindingmenu.pagedown Página hacia abajo
-keybindingmenu.pageup Página hacia arriba
-keybindingmenu.quickzap Quickzap
-keybindingmenu.repeatblock Repetición de retardo
+keybindingmenu.pagedown Bajar página
+keybindingmenu.pageup Subir página
+keybindingmenu.quickzap Zapping rápido
+keybindingmenu.repeatblock Retardo de la repetición
 keybindingmenu.repeatblockgeneric Retardo genérico
-keybindingmenu.sort cambiar el orden
-keybindingmenu.subchanneldown Subcanal abajo
-keybindingmenu.subchannelup Subcanal arriba
+keybindingmenu.sort Cambiar orden
+keybindingmenu.subchanneldown Bajar subcanal
+keybindingmenu.subchannelup Subir subcanal
 keybindingmenu.tvradiomode Modo TV/Radio
 keybindingmenu.zaphistory Historial de zapping
-keychooser.head Configurar nueva tecla
-keychooser.text1 Por favor, presione la nueva tecla
-keychooser.text2 espere unos segundos para abortar
+keychooser.head Configurar otra tecla
+keychooser.text1 Pulse la nueva tecla
+keychooser.text2 espere unos segundos para cancelar
 keychoosermenu.currentkey Tecla actual
-keychoosermenu.setnew  Configurar nueva tecla
-keychoosermenu.setnone sin tecla
+keychoosermenu.setnew Configurar una nueva tecla
+keychoosermenu.setnone Sin tecla
 languagesetup.head Configuración de idioma
 languagesetup.select Configuración de idioma
 lcdcontroler.brightness Brillo normal
-lcdcontroler.brightnessstandby  Brillo de espera
+lcdcontroler.brightnessstandby Brillo en standby
 lcdcontroler.contrast Contraste
 lcdmenu.autodimm Atenuación automática
-lcdmenu.dim_brightness Brillo después de tiempo de espera tenue
+lcdmenu.dim_brightness Brillo después del tiempo atenuado
 lcdmenu.dim_time Tiempo de espera para atenuar
-lcdmenu.head Configuración VFD
-lcdmenu.inverse Invertido
-lcdmenu.lcdcontroler brillo / contraste
-lcdmenu.power Energia
+lcdmenu.head Configuración de VFD
+lcdmenu.inverse Inverso
+lcdmenu.lcdcontroler Brillo/Contraste
+lcdmenu.power ON/OFF
 lcdmenu.statusline Linea de estado
-lcdmenu.statusline.both Volumen / reproducción
+lcdmenu.statusline.both Volumen/Reproducción
 lcdmenu.statusline.playtime Reproducción
 lcdmenu.statusline.volume Volumen
-mainmenu.audioplayer Reproductor de Música
-mainmenu.clearsectionsd Limpiar caché EPG
+mainmenu.audioplayer Reproductor de musica
+mainmenu.clearsectionsd Limpiar la caché de EPG
 mainmenu.games Juegos
 mainmenu.head Menú Principal
-mainmenu.movieplayer Reproductor de Películas
-mainmenu.pausesectionsd Leer EPG
-mainmenu.pictureviewer Visor de Imágenes
+mainmenu.movieplayer Reproductor de películas
+mainmenu.pausesectionsd Leer la EPG
+mainmenu.pictureviewer Visor de imágenes
 mainmenu.radiomode Radio
 mainmenu.reboot Reiniciar
-mainmenu.recording Recording settings
+mainmenu.recording Configuración de grabación
 mainmenu.recording_start Iniciar
 mainmenu.recording_stop Parar
 mainmenu.scartmode Modo Scart
 mainmenu.scripts Scripts
-mainmenu.service Servicios
+mainmenu.service Canales
 mainmenu.settings Configuración
-mainmenu.shutdown Apagar
+mainmenu.shutdown Apagado
 mainmenu.sleeptimer Temporizador
 mainmenu.tvmode Televisión
-mainsettings.audio Configuración de sonido
-mainsettings.osd Configuración OSD
+mainsettings.audio Configuración de audio
+mainsettings.osd Configuración de OSD
 mainsettings.head Configuración
 mainsettings.keybinding Configuración de teclas
 mainsettings.language Idioma
@@ -502,166 +502,166 @@ mainsettings.lcd Visor VFD
 mainsettings.misc Otras configuraciones
 mainsettings.network Configuración de red
 mainsettings.recording Grabación
-mainsettings.savesettingsnow Guardar configuración
-mainsettings.savesettingsnow_hint Guardando la configuración,\npor favor espere...
-mainsettings.screen Configuracón de pantalla
-mainsettings.streaming Reproductor de Películas
-mainsettings.video Configuración de video
-menu.back Atras
-messagebox.back Atras
+mainsettings.savesettingsnow Guardar la configuración
+mainsettings.savesettingsnow_hint Guardando la configuración,\nespere
+mainsettings.screen Configuración de pantalla
+mainsettings.streaming Reproductor de películas
+mainsettings.video Configuración de vídeo
+menu.back Atrás
+messagebox.back Atrás
 messagebox.cancel Cancelar
-messagebox.discard Descartar cambios?
+messagebox.discard ¿Descartar los cambios?
 messagebox.error Error
 messagebox.info Información
 messagebox.no No
-messagebox.yes Sí
+messagebox.yes Si
 miscsettings.bootinfo Mostrar información al inicio
-miscsettings.bootmenu Mostrar menú de arranque
+miscsettings.bootmenu Mostrar el menú de arranque
 miscsettings.channellist Lista de canales
-miscsettings.channellist_epgtext_align Alinear el texto del programa
+miscsettings.channellist_epgtext_align Alineación texto de programa
 miscsettings.driver_boot Driver y opciones de arranque
-miscsettings.fb_destination Expertos! Consola de arranque
+miscsettings.fb_destination Experto! Consola de arranque
 miscsettings.general General
-miscsettings.head Ajustes varios
-miscsettings.hwsections Utilice secciones de hardware
-miscsettings.infobar_sat_display Mostrar satélite en la barra de información
-miscsettings.shutdown_count Apagar después de
-miscsettings.shutdown_count_hint1 Tiempo (en minutos) para cambiar el modo de espera
-miscsettings.shutdown_count_hint2 Modo de espera profundo (0 = deshabilitado).
+miscsettings.head Otras configuraciones
+miscsettings.hwsections Utilizar secciones de hardware
+miscsettings.infobar_sat_display Mostrar el satélite en la barra de información
+miscsettings.shutdown_count Apagar después de (min)
+miscsettings.shutdown_count_hint1 Tiempo (min) para cambiar de standby
+miscsettings.shutdown_count_hint2 a reposo profundo (0 = deshabilitado).
 miscsettings.noaviawatchdog Activar vigilancia AVIA
 miscsettings.noenxwatchdog Activar vigilancia ENX
-miscsettings.pmtupdate Permitir actualizar PMT
-miscsettings.shutdown_real Habilitar el modo de espera
-miscsettings.shutdown_real_rcdelay Apagado con retardado
+miscsettings.pmtupdate Habilitar actualizar PMT
+miscsettings.shutdown_real Habilitar el modo standby
+miscsettings.shutdown_real_rcdelay Retardo de apagado
 miscsettings.sptsmode Utilizar el modo spts
-miscsettings.virtual_zap_mode Virtual zap
-miscsettings.epg_cache EPG-Cache (Days)
-miscsettings.epg_cache_hint1 ¿Cuánto tiempo estan los datos de EPG en caché en el futuro?
-miscsettings.epg_cache_hint2 Establecido en dias.
-miscsettings.epg_dir EPG guardar ruta
-miscsettings.epg_extendedcache EPG descripción larga (horas)
-miscsettings.epg_extendedcache_hint1 Cuánto tiempo desea que se extiendan las descripciones EPG
-miscsettings.epg_extendedcache_hint2 cacheadas? (Establecer en horas)
-miscsettings.epg_head Configuración EPG
-miscsettings.epg_max_events Max. Eventos
-miscsettings.epg_max_events_hint1 ¿Cuántos eventos se deben almacenar?
-miscsettings.epg_max_events_hint2 normalmente 6000, 0 sin limite
-miscsettings.epg_old_events EPG remover despues de (std.)
-miscsettings.epg_old_events_hint1 ¿Cuánto tiempo se almacena los datos EPG  después de que el tiempo de espera?
-miscsettings.epg_old_events_hint2 Establecido en horas
-miscsettings.epg_save Save/Restore EPG en reinicio
-motorcontrol.head Buscador de Satélites
+miscsettings.virtual_zap_mode Zapping virtual
+miscsettings.epg_cache Caché de EPG (Dias)
+miscsettings.epg_cache_hint1 ¿Cuánto tiempo desea mantener la EPG
+miscsettings.epg_cache_hint2 en memoria? (dias).
+miscsettings.epg_dir Ruta donde guardar la EPG
+miscsettings.epg_extendedcache Descripción larga (horas) de EPG
+miscsettings.epg_extendedcache_hint1 ¿Para cuántas horas desea descargar
+miscsettings.epg_extendedcache_hint2 las descripciones de EPG en la memoria?.
+miscsettings.epg_head Configuración de EPG
+miscsettings.epg_max_events Número máximo de eventos
+miscsettings.epg_max_events_hint1 ¿Cuántos eventos desea guardar?
+miscsettings.epg_max_events_hint2 normalmente 6000, 0 = sin límite
+miscsettings.epg_old_events Eliminación de la EPG después de (h)
+miscsettings.epg_old_events_hint1 ¿Cuántas horas se mantendrà la EPG en memoria
+miscsettings.epg_old_events_hint2 después de que se acabe el tiempo de espera?
+miscsettings.epg_save Guardar/Rest. EPG en reinicio
+motorcontrol.head Buscador de satélites
 motorcontrol.user_menu Menú de usuario
-motorcontrol.install_menu Menú de isntalación
-motorcontrol.step_west Step/Drive Motor Oeste (b,c)
-motorcontrol.step_east Step/Drive Motor Este (b,c)
-motorcontrol.halt Halt Motor
-motorcontrol.west_limit Establecer límite oeste (soft)
-motorcontrol.east_limit Establecer límite este (soft)
-motorcontrol.enable_limit Habilitar limites (soft)
-motorcontrol.disable_limit Deshabilitar limites (soft)
+motorcontrol.install_menu Menú de instalación
+motorcontrol.step_west Mover al Oeste - Pasos/Continuo (b,c)
+motorcontrol.step_east Mover al Este - Pasos/Continuo (b,c)
+motorcontrol.halt Parar el motor
+motorcontrol.west_limit Habilitar el límite Oeste (soft)
+motorcontrol.east_limit Habilitar el límite Este (soft)
+motorcontrol.enable_limit Habilitar los límites (soft)
+motorcontrol.disable_limit Deshabilitar los límites (soft)
 motorcontrol.ref_position Ir a la posición de referencia
-motorcontrol.calc_positions (Re)-Calcular Posiciones
-motorcontrol.pos_increase Aumenta la posición de motor (a)
-motorcontrol.pos_decrease Decrementar la posición de motor (a)
-motorcontrol.step_drive Switch step / drive Mode (b)
-motorcontrol.store Store Posición Motor  (a)
+motorcontrol.calc_positions (Re)calcular las posiciones
+motorcontrol.pos_increase Aumentar la posición del motor (a)
+motorcontrol.pos_decrease Disminuir la posición del motor (a)
+motorcontrol.step_drive Intercambiar Pasos/Continuo (b)
+motorcontrol.store Guardar la posición del motor (a)
 motorcontrol.step_increase Aumentar el tamaño del paso (c)
 motorcontrol.step_decrease Disminuir el tamaño del paso (c)
 motorcontrol.goto Ir a la posición del motor (a)
-motorcontrol.notdef No se utiliza
-motorcontrol.motor_pos (a) Posición de motor:
-motorcontrol.settings Ajustes de control de motores
-motorcontrol.movement (b) Movemiento:
-motorcontrol.step_mode Modo Step
-motorcontrol.drive_mode Modo Drive
-motorcontrol.drive_mode_auto Modo Drive / auto stop
-motorcontrol.timed_mode Tiempo de espera en modo Step
+motorcontrol.notdef Sin uso
+motorcontrol.motor_pos (a) Posición del motor:
+motorcontrol.settings Ajustes de control del motor
+motorcontrol.movement (b) Movimiento:
+motorcontrol.step_mode Modo por Pasos
+motorcontrol.drive_mode Modo Continuo
+motorcontrol.drive_mode_auto Modo Continuo/auto stop
+motorcontrol.timed_mode Tiempo de espera en 'Pasos'
 motorcontrol.step_size (c) Tamaño del paso:
-motorcontrol.stop_moving Parada en señal de buena (en movimiento)
-motorcontrol.stop_stopped Parada en señal de buena (parado)
-motorcontrol.no_mode No importa
-motorcontrol.msec Millisegundos
+motorcontrol.stop_moving Parar con buena señal (movimiento)
+motorcontrol.stop_stopped Parar con buena señal (parado)
+motorcontrol.no_mode Sin efecto
+motorcontrol.msec Milisegundos
 motorcontrol.status Estado
-motorcontrol.sat_pos Posicion de Satellite (Modo step):
+motorcontrol.sat_pos Posición del Satélite (Modo Pasos):
 moviebrowser.option_browser Opciones del explorador
 moviebrowser.book_clear_all Borrar todos
-moviebrowser.menu_save Guardar cambios
-moviebrowser.menu_save_all Iniciar la actualización de información de la película
-moviebrowser.info_head_update Guardar los cambios de la informacion de la película
-moviebrowser.update_if_dest_empty_only Copia sólo si el destino está vacío 
+moviebrowser.menu_save Guardar los cambios
+moviebrowser.menu_save_all Actualizar la información de la película
+moviebrowser.info_head_update Guardar los cambios de la información de película
+moviebrowser.update_if_dest_empty_only Copiar sólo si el destino está vacío
 moviebrowser.serie_auto_create Auto crear serie
 moviebrowser.load_default Cargar la configuración por defecto
-moviebrowser.browser_row_head Configuración de la fila
+moviebrowser.browser_row_head Configuración de fila
 moviebrowser.browser_row_nr Número de filas
-moviebrowser.browser_row_item Fila de elementos
+moviebrowser.browser_row_item Campo de la fila
 moviebrowser.browser_row_width Ancho de fila
-moviebrowser.reload_at_start Actualizar información de películas en el arranque
+moviebrowser.reload_at_start Actualizar la información al arrancar
 moviebrowser.remount_at_start Volver a montar en el arranque
 moviebrowser.dir_head Rutas adicionales
 moviebrowser.dir Ruta
-moviebrowser.use_dir Usar directorio
-moviebrowser.use_rec_dir Usar directorio de grabaciones
-moviebrowser.use_movie_dir Usar directorio de peliculas
-moviebrowser.hide_series Hide series
+moviebrowser.use_dir Utilizar el directorio
+moviebrowser.use_rec_dir Utilizar el directorio de grabaciones
+moviebrowser.use_movie_dir Utilizar el directorio de películas
+moviebrowser.hide_series Ocultar series
 moviebrowser.last_record_max_items Número de líneas de la última grabación
 moviebrowser.last_play_max_items Número de líneas de la última reproducción
-moviebrowser.browser_frame_high Altura del explorador [Pixel]
+moviebrowser.browser_frame_high Altura del explorador [Píxeles]
 moviebrowser.book_head Marcadores
-moviebrowser.book_lastmoviestop Parada de la ultima reproduccion:
+moviebrowser.book_lastmoviestop Parada de la última reproducción:
 moviebrowser.book_movieend Final de la película:
 moviebrowser.book_moviestart Inicio de la película:
 moviebrowser.book_name Nombre:
 moviebrowser.book_new Nuevo marcador
 moviebrowser.book_position Posición:
-moviebrowser.book_type Salto (<0 back , >0 for):
+moviebrowser.book_type Salto (<0 atrás, >0 adelante):
 moviebrowser.book_type_backward Repetir
 moviebrowser.book_type_forward Saltar hasta
-moviebrowser.edit_book Cambiar marcador
-moviebrowser.edit_book_name_info1 Introducir nuevo nombre de marcador
+moviebrowser.edit_book Cambiar de marcador
+moviebrowser.edit_book_name_info1 Introduzca el nombre del nuevo marcador
 moviebrowser.edit_book_name_info2 Información del nombre del marcador
-moviebrowser.edit_book_pos_info1 Introducir nueva posicion (s)
-moviebrowser.edit_book_pos_info2 
-moviebrowser.edit_book_type_info1 Introducir nuevo longitud de salto(s)
-moviebrowser.edit_book_type_info2 <0 atras , >0 adelante, 0: none
-moviebrowser.edit_serie Introducir nombre de la serie
-moviebrowser.error_no_movies No se han encontrado peliculas
+moviebrowser.edit_book_pos_info1 Introduzca la nueva posición (s)
+moviebrowser.edit_book_pos_info2 Información de la nueva posición
+moviebrowser.edit_book_type_info1 Introduzca la longitud del nuevo salto (s)
+moviebrowser.edit_book_type_info2 <0 atrás, >0 adelante, 0: ninguno
+moviebrowser.edit_serie Introduzca el nombre de la serie
+moviebrowser.error_no_movies No se ha encontrado ninguna película
 moviebrowser.foot_filter Filtrar:
-moviebrowser.foot_play Reproducir película
+moviebrowser.foot_play Reproducir la película
 moviebrowser.foot_sort Ordenar:
-moviebrowser.head TS Explorador de películas
-moviebrowser.head_filter Filtrar peliculas por categoria:
-moviebrowser.head_playlist Ultima reproducción:
-moviebrowser.head_recordlist Ultima grabacion:
-moviebrowser.hint_jumpbackward Salto atras en 5 s\n '0' para cancelar 
-moviebrowser.hint_jumpforward Salto adelante en 5 s\n '0' para cancelar
-moviebrowser.hint_movieend Final de la pelicula en 5 s\n '0' para cancelar
-moviebrowser.hint_newbook_backward Nuevo salto atras\n 'azul' para posicion final
-moviebrowser.hint_newbook_forward Nuevo salto adelante\n 'azul' para posicion final
-moviebrowser.info_audio Audio
+moviebrowser.head Explorador de películas .ts
+moviebrowser.head_filter Filtrar las películas por categoria:
+moviebrowser.head_playlist Última reproducción:
+moviebrowser.head_recordlist Última grabación:
+moviebrowser.hint_jumpbackward Saltar hacia atrás en 5 s\n '0' para cancelar 
+moviebrowser.hint_jumpforward Saltar adelante en 5 s\n '0' para cancelar
+moviebrowser.hint_movieend Final de la película en 5 s\n '0' para cancelar
+moviebrowser.hint_newbook_backward Nuevo salto hacia atrás\n 'azul' va a la posición final
+moviebrowser.hint_newbook_forward Nuevo salto adelante\n 'azul' va a la posición final
+moviebrowser.info_audio Idioma
 moviebrowser.info_channel Canal
 moviebrowser.info_filename Nombre
 moviebrowser.info_genre_major Género
 moviebrowser.info_genre_minor Género
 moviebrowser.info_head Información de la película
-moviebrowser.info_info1 Informacion 1
-moviebrowser.info_length Duracion (Min)
-moviebrowser.info_parental_lockage Edad de bloqueo paterno
-moviebrowser.info_parental_lockage_0year siempre
+moviebrowser.info_info1 Información 1
+moviebrowser.info_length Duración (min)
+moviebrowser.info_parental_lockage Edad para el control parental
+moviebrowser.info_parental_lockage_0year 0 años
 moviebrowser.info_parental_lockage_12year 12 años
 moviebrowser.info_parental_lockage_16year 16 años
 moviebrowser.info_parental_lockage_18year 18 años
 moviebrowser.info_parental_lockage_6year 6 años
-moviebrowser.info_parental_lockage_always nunca 
+moviebrowser.info_parental_lockage_always siempre 
 moviebrowser.info_path Ruta
-moviebrowser.info_prevplaydate Fecha ultima reproduccion
-moviebrowser.info_prodcountry Pais
+moviebrowser.info_prevplaydate Fecha de la última reproducción
+moviebrowser.info_prodcountry País
 moviebrowser.info_prodyear Año
 moviebrowser.info_quality Calidad
-moviebrowser.info_recorddate Fecha de grabacion
+moviebrowser.info_recorddate Fecha de grabación
 moviebrowser.info_serie Serie
-moviebrowser.info_size Tamaño de fichero (MB)
-moviebrowser.info_title Titulo
+moviebrowser.info_size Tamaño de archivo (MB)
+moviebrowser.info_title Título
 moviebrowser.info_videoformat Imagen
 moviebrowser.menu_directories_head Rutas
 moviebrowser.menu_help_head Ayuda
@@ -672,386 +672,386 @@ moviebrowser.menu_parental_lock_activated Activado
 moviebrowser.menu_parental_lock_activated_no no
 moviebrowser.menu_parental_lock_activated_yes si
 moviebrowser.menu_parental_lock_activated_no_temp no (temporalmente)
-moviebrowser.menu_parental_lock_head Bloqueo Parental
-moviebrowser.menu_parental_lock_rate_head Bloqueo de las películas de
-moviebrowser.scan_for_movies Escaneo de películas ...
+moviebrowser.menu_parental_lock_head Control parental
+moviebrowser.menu_parental_lock_rate_head Bloquear las películas de
+moviebrowser.scan_for_movies Buscar películas...
 moviebrowser.serie_head Serie
 moviebrowser.serie_name Cambiar nombre
 moviebrowser.short_audio Audio
-moviebrowser.short_book Libro
-moviebrowser.short_channel Canal
-moviebrowser.short_country País
-moviebrowser.short_filename Nombre
+moviebrowser.short_book Marcador
+moviebrowser.short_channel  Canal
+moviebrowser.short_country Pais
+moviebrowser.short_filename  Nombre
 moviebrowser.short_format Formato
-moviebrowser.short_genre_major Genero
-moviebrowser.short_genre_minor Genero
-moviebrowser.short_info1 Info 1
+moviebrowser.short_genre_major Género
+moviebrowser.short_genre_minor Género
+moviebrowser.short_info1  Info 1
 moviebrowser.short_info2 Info 2
 moviebrowser.short_length Min
-moviebrowser.short_parental_lockage Edad
-moviebrowser.short_path Ruta
-moviebrowser.short_prevplaydate Ultimo
-moviebrowser.short_prodyear Año
-moviebrowser.short_quality * (calidad)
-moviebrowser.short_recorddate Fecha
+moviebrowser.short_parental_lockage  Edad
+moviebrowser.short_path  Ruta
+moviebrowser.short_prevplaydate  Último
+moviebrowser.short_prodyear  Año
+moviebrowser.short_quality  Calidad
+moviebrowser.short_recorddate  Fecha
 moviebrowser.short_serie Serie
-moviebrowser.short_size MB
-moviebrowser.short_title Titulo
-moviebrowser.start_head Reproducir pelicula desde:
-moviebrowser.start_record_start Inicio de pelicula
+moviebrowser.short_size  Tamaño
+moviebrowser.short_title  Título
+moviebrowser.start_head Reproducir la película desde:
+moviebrowser.start_record_start Inicio de la película
 movieplayer.bookmark Marcadores
-movieplayer.bookmarkname Nombre de marcador
-movieplayer.bookmarkname_hint1 Escriba un nombre para su nuevo marcador
+movieplayer.bookmarkname Nombre del marcador
+movieplayer.bookmarkname_hint1 Escriba un nombre para el nuevo marcador
 movieplayer.bookmarkname_hint2 
-movieplayer.buffering Buffering...
-movieplayer.defdir Dir. inicio
-movieplayer.defplugin Start-Plugin
+movieplayer.buffering Almacenando...
+movieplayer.defdir Dir. de inicio
+movieplayer.defplugin Plugin de inicio
 movieplayer.dvdplayback DVD
-movieplayer.fileplayback Reproducción de ficheros
+movieplayer.fileplayback Reproducción de archivos
 movieplayer.goto Saltar a ...
 movieplayer.goto.h1 = -> Salto absoluto
 movieplayer.goto.h2 +,- -> Salto relativo
 movieplayer.head Reproductor de películas
 movieplayer.nostreamingserver No se puede conectar con el servidor de streaming.
 movieplayer.pesplayback Reproducción PES (Experimental)
-movieplayer.pleasewait Por favor espere.\nConectando al servidor de streaming ...
-movieplayer.toomanybookmarks Hay muchos marcadores.\nNecesita eliminar uno de ellos para continuar.
+movieplayer.pleasewait Espere.\nConectando con el servidor de streaming...
+movieplayer.toomanybookmarks Hay demasiados marcadores.\nElimine alguno.
 movieplayer.tshelp1 Parar 
-movieplayer.tshelp10 Aprox. 10 minutos atras
+movieplayer.tshelp10 Aprox. 10 minutos hacia atrás
 movieplayer.tshelp11 Saltar aprox. 10 minutos
 movieplayer.tshelp12 Ayuda: http://www.giggo.de/dbox2/movieplayer.html\n 
 movieplayer.tshelp2 Seleccionar pista de audio
-movieplayer.tshelp3 Pausa / Continuar
+movieplayer.tshelp3 Pausa/Continuar
 movieplayer.tshelp4 Crear marcador
 movieplayer.tshelp5 Mostrar el progreso
-movieplayer.tshelp6 Aprox. 1 minuto atras
+movieplayer.tshelp6 Aprox. 1 minuto hacia atrás
 movieplayer.tshelp7 Saltar aprox. 1 minuto
-movieplayer.tshelp8 Aprox. 5 minutes atras
+movieplayer.tshelp8 Aprox. 5 minutos hacia atrás
 movieplayer.tshelp9 Saltar aprox. 5 minutos
 movieplayer.tsplayback Reproducir TS
 movieplayer.vcdplayback (S)VCD
-movieplayer.vlchelp1 Parar 
-movieplayer.vlchelp10 Aprox. 10 minutos atras
+movieplayer.vlchelp1 Parar
+movieplayer.vlchelp10 Aprox. 10 minutos hacia atrás
 movieplayer.vlchelp11 Saltar aprox. 10 minutos
 movieplayer.vlchelp12 Ayuda: http://www.giggo.de/dbox2/movieplayer.html\n 
 movieplayer.vlchelp2 Resincronizar 
-movieplayer.vlchelp3 Pausa / Continuar
+movieplayer.vlchelp3 Pausa/Continuar
 movieplayer.vlchelp4 Crear marcador
-movieplayer.vlchelp5 Crear marcador
-movieplayer.vlchelp6 Aprox. 1 minuto atras
+movieplayer.vlchelp5 Mostrar progreso
+movieplayer.vlchelp6 Aprox. 1 minuto hacia atrás
 movieplayer.vlchelp7 Saltar aprox. 1 minuto
-movieplayer.vlchelp8 Aprox. 5 minutes atras
+movieplayer.vlchelp8 Aprox. 5 minutos hacia atrás
 movieplayer.vlchelp9 Saltar aprox. 5 minutos
 movieplayer.wrongvlcversion Esta característica no es compatible con la versión actual de VLC
-networkmenu.broadcast Broadcast
+networkmenu.broadcast Última IP permitida
 networkmenu.dhcp DHCP
-networkmenu.gateway Puerta de enlace por defecto
+networkmenu.gateway Puerta de enlace
 networkmenu.head Configuración de red
-networkmenu.ipaddress Direccion IP
+networkmenu.ipaddress Dirección IP
 networkmenu.mount NFS/CIFS/FTPFS
-networkmenu.nameserver Nombre del servidor
-networkmenu.netmask Mascara de red
-networkmenu.ntpenable Sincronizacion
+networkmenu.nameserver Servidor de nombres
+networkmenu.netmask Máscara de red
+networkmenu.ntpenable Sincronización
 networkmenu.ntprefresh Refresco NTP/DVB
-networkmenu.ntprefresh_hint1 Tiempo de sincronizacion NTP/DVB (en minutos)
-networkmenu.ntprefresh_hint2 Necesita de reiniciar o restablecer la EPG
+networkmenu.ntprefresh_hint1 Intervalo de refresco NTP/DVB (min.)
+networkmenu.ntprefresh_hint2 Es necesario reiniciar (o refrescar la EPG)
 networkmenu.ntpserver Servidor NTP
-networkmenu.ntpserver_hint1 Servidor NTP ejemplo: ntp1.ptb.de
-networkmenu.ntpserver_hint2 Necesita de reiniciar o restablecer la EPG
-networkmenu.ntptitle Tiempo de sincronizacion
-networkmenu.setupnow Configurar red
-networkmenu.setuponstartup Configurar red al inicio
-networkmenu.show Mostrar la configuración de red activa
-networkmenu.test Prueba de la red
-networkmenu.wireless Configurar wireless
-nfs.alreadymounted El directorio ya montado
-nfs.automount Montar al inicio
-nfs.dir Directorio / Compartir
+networkmenu.ntpserver_hint1 Servidor NTP de ejemplo: ntp1.ptb.de
+networkmenu.ntpserver_hint2 Es necesario reiniciar (o refrescar la EPG)
+networkmenu.ntptitle Sincronización de hora
+networkmenu.setupnow Configuración de red
+networkmenu.setuponstartup Habilitar la red al iniciar
+networkmenu.show Mostrar la configuración actual de red
+networkmenu.test Comprobación de red
+networkmenu.wireless Configurar redes Wi-Fi
+nfs.alreadymounted El directorio ya está montado
+nfs.automount Montar al iniciar
+nfs.dir Directorio/Compartir
 nfs.ip Servidor IP
 nfs.localdir Directorio local
-nfs.mount Montar volumen de red
+nfs.mount Montar dispositivo de red
 nfs.mount_options Opciones de montaje
 nfs.mounterror Error de montaje
-nfs.mounterror_notsup Sistema de ficheros no soportado
-nfs.mountnow Montar ahora
-nfs.mountok Montado con éxito
-nfs.mounttimeout Error de montaje: sobrepasado el tiempo de espera
+nfs.mounterror_notsup Sistema de archivos no soportado
+nfs.mountnow Montarlo ahora
+nfs.mountok Montaje correcto
+nfs.mounttimeout Error de montaje: se ha sobrepasado el tiempo de espera
 nfs.password Contraseña
 nfs.remount Remontar directorios
 nfs.type Tipo
 nfs.type_cifs CIFS
 nfs.type_lufs FTPFS
 nfs.type_nfs NFS
-nfs.umount Desmontar volumen de red
-nfs.umounterror Error desmontando volumen
+nfs.umount Desmontar dispositivo de red
+nfs.umounterror Error al desmontar el dispositivo
 nfs.username Usuario
 nfsmenu.head Configuración NFS/CIFS/FTPFS 
 nvod.percentage (%d%% cargado)
-nvod.starting (iniciando en %d min)
+nvod.starting (Se iniciará en %d min)
 nvodselector.directormode Modo directo
-nvodselector.head Seleccionar tiempo de inicio
-nvodselector.subservice Selecionar Subservicio
-options.default Restaurar los valores predeterminados
+nvodselector.head Seleccione la hora de inicio
+nvodselector.subservice Seleccione Subcanal
+options.default Restaurar los valores por defecto
 options.fb Framebuffer
 options.null Nulo
-options.off Apagado
-options.on Encendido
+options.off desactivado
+options.on activado
 options.serial Serie
-parentallock.changepin Cambiar codigo PIN
-parentallock.changepin_hint1 Ingrese su nuevo código PIN para la protección parental!
+parentallock.changepin Cambiar el código PIN
+parentallock.changepin_hint1 Introduzca el nuevo PIN para el control parental
 parentallock.changetolocked En bouquets bloqueados
-parentallock.head Entre codigo PIN para bloqueo parental
+parentallock.head Introduzca el PIN para el control parental
 parentallock.lockage Bloquear programas
 parentallock.lockage12 desde 12 años
 parentallock.lockage16 desde 16 años
 parentallock.lockage18 desde 18 años
-parentallock.lockedchannel Remitente bloqueado...
+parentallock.lockedchannel Remitente bloqueado
 parentallock.lockedprogram Programa bloqueado (desde %d años)
 parentallock.never Nunca
-parentallock.onsignal Transmision bloqueada
-parentallock.parentallock Protección parental
-parentallock.prompt Preguntar por el PIN
-pictureviewer.decode_server_ip decodificar ip del servidor
-pictureviewer.decode_server_port decodificar puerto del servidor
-pictureviewer.defdir Dir. de inicio
-pictureviewer.head Visor de Imágenes
-pictureviewer.help1 Modo menu
+parentallock.onsignal Emisión bloqueada
+parentallock.parentallock Control parental
+parentallock.prompt Requerir el PIN
+pictureviewer.decode_server_ip IP del servidor de decodificación
+pictureviewer.decode_server_port puerto del servidor de decodificación
+pictureviewer.defdir Directorio de inicio de imágenes
+pictureviewer.head Visor de imágenes
+pictureviewer.help1 Modo menú
 pictureviewer.help10 Modo visualizador
-pictureviewer.help11 Releer imagen
+pictureviewer.help11 Releer la imagen
 pictureviewer.help12 Imagen previa
 pictureviewer.help13 Imagen siguiente
-pictureviewer.help14 Zoom alejar
-pictureviewer.help15 Zoom acercar
-pictureviewer.help16 Deslizar arriba
-pictureviewer.help17 Deslizar izquierda
-pictureviewer.help18 Deslizar derecha
-pictureviewer.help19 Deslizar abajo
-pictureviewer.help2 Mostrar imagen
-pictureviewer.help20 Cambiar orden de clasificación
+pictureviewer.help14 Alejar
+pictureviewer.help15 Acercar
+pictureviewer.help16 Subir
+pictureviewer.help17 Mover a la izquierda
+pictureviewer.help18 Mover a la derecha
+pictureviewer.help19 Bajar
+pictureviewer.help2 Mostrar la imagen
+pictureviewer.help20 Cambiar el orden de clasificación
 pictureviewer.help21 Releer imagen (no escalar)
 pictureviewer.help22 Salir
-pictureviewer.help3 Cambiar orden de clasificación
-pictureviewer.help4 No escalar imagen
-pictureviewer.help5 Diashow mode
+pictureviewer.help3 Cambiar el orden de clasificación
+pictureviewer.help4 No escalar la imagen
+pictureviewer.help5 Modo diashow
 pictureviewer.help6 Imagen previa
 pictureviewer.help7 Imagen siguiente
-pictureviewer.help8 Cambiar orden de clasificación
+pictureviewer.help8 Cambiar el orden de clasificación
 pictureviewer.help9 Salir
 pictureviewer.resize.color_average Avanzado
 pictureviewer.resize.none Ninguno
 pictureviewer.resize.simple Simple
-pictureviewer.scaling Escalado
+pictureviewer.scaling Modo de escalado
 pictureviewer.show mostrar
-pictureviewer.slide_time Tiempo de visualización de la presentación
-pictureviewer.slideshow Presentación de imágenes
-pictureviewer.sortorder Cambiar orden de clasificación
+pictureviewer.slide_time Visualización (seg) de las diapositivas
+pictureviewer.slideshow Auto-presentación
+pictureviewer.sortorder Cambiar el orden de clasificación
 pictureviewer.sortorder.date (fecha)
 pictureviewer.sortorder.filename (nombre)
-ping.ok Alcanzable (ping)
-ping.protocol Destino inalcanzable (error del host o protocolo)
-ping.socket Destino inalcanzable (erro de socket)
-ping.unreachable Destino inalcanzable
-pinprotection.head Introducir codigo PIN
-pinprotection.wrongcode El codigo PIN es erroneo! Intentelo de nuevo.
+ping.ok Accesible (ping)
+ping.protocol Destino no accesible (error del host o de protocolo)
+ping.socket Destino no accesible (error de socket)
+ping.unreachable Destino no accesible
+pinprotection.head Introduzca el código PIN
+pinprotection.wrongcode PIN incorrecto! Vuelva a intentarlo.
 plugins.result Plugin de salida
-rclock.lockmsg Su mando a distancia será bloqueado. \nPara desbloquearlo, pulse <ROJO> \n y <MENU>  en su mando a distancia.
-rclock.menueadd Mando a distancia bloqueado
-rclock.title Bloquear mando a distancia
+rclock.lockmsg Esto bloqueará el mando a distancia.\nPara desbloquearlo, pulse <ROJO> \ny <MENU> en el mando.
+rclock.menueadd Bloquear mando
+rclock.title Bloquear el mando a distancia
 rclock.unlockmsg Mando a distancia reactivado.
-recordingmenu.apids Streams de audio por defecto
-recordingmenu.apids_ac3 Grabar AC3 streams
-recordingmenu.apids_alt Grabar streams alternativos
-recordingmenu.apids_std Grabar stream estandar
-recordingmenu.choose_direct_rec_dir Elija directorio de grabación
+recordingmenu.apids Canales de audio por defecto
+recordingmenu.apids_ac3 Grabar los canales AC3
+recordingmenu.apids_alt Grabar los canales alternativos
+recordingmenu.apids_std Grabar el canal estándar
+recordingmenu.choose_direct_rec_dir Elija el directorio de grabación
 recordingmenu.defdir Directorio de grabación
 recordingmenu.tsdir Directorio de Timeshift 
-recordingmenu.epg_for_filename Nombres largos (con datos EPG)
-recordingmenu.file Directa (fichero)
+recordingmenu.epg_for_filename Nombres largos (con datos de EPG)
+recordingmenu.file Directo (archivo)
 recordingmenu.filesettings Configuración de grabación directa
-recordingmenu.head Configuración de grabaciones
-recordingmenu.help Elementos de grabación:\n--------------------------\nservidor:\nutilizando el software de streaming en el PC\n\n(analógico) vcr:\nusando la salida de vídeo\n\ndirecta (fichero):\ndirectamente en un directorio NFS montado\no en un disco duro interno\nTS: usar modo spts \nPES: no usar modo spts\n\n\nTamaño máximo de fichero\n---------------------\nNFS V2: 2 GB (2048 MB)\nNFS V3: casi ilimitada (0 MB)\nFAT: 2 GB (2048 MB)\nFAT32: 4 GB (4096 MB)
-recordingmenu.no_scart No cambie a modo de euroconector
+recordingmenu.head Ajustes de grabación
+recordingmenu.help Dispositivos de grabación:\n--------------------------\nServidor:\nUsar el software de streaming en el PC\n\nVCR (analógico):\Usar la salida de vídeo\n\nDirecto (archivo):\nDirectamente en un directorio NFS\nmontado, o en un disco duro interno\nTS: utilizar el modo spts\nPES: no utilizar el modo spts\n\n\nTamaño máximo de archivo\n---------------------\nNFS V2: 2 GB (2048 MB)\nNFS V3: casi ilimitada (0 MB)\nFAT: 2 GB (2048 MB)\nFAT32: 4 GB (4096 MB)
+recordingmenu.no_scart No cambiar al modo euroconector
 recordingmenu.off Apagar
-recordingmenu.record_in_spts_mode Cambiar a modo spts antes de grabar
-recordingmenu.recording_type Elemento de grabación
-recordingmenu.ringbuffers Numero de ringbuffers
+recordingmenu.record_in_spts_mode Cambiar al modo spts antes de grabar
+recordingmenu.recording_type Dispositivo de grabación
+recordingmenu.ringbuffers Número de ringbuffers
 recordingmenu.save_in_channeldir Guardar en el directorio del canal
 recordingmenu.server Servidor
-recordingmenu.server_ip Grabando IP del servidor 
-recordingmenu.server_mac Direccion MAC
-recordingmenu.server_port Grabando puerto del servidor
-recordingmenu.server_wakeup Grabando servidor WOL 
-recordingmenu.setupnow Activar cambios
-recordingmenu.splitsize Tamaño maximo de fichero (MB)
-recordingmenu.stopplayback Parar reproducción
-recordingmenu.stopsectionsd Parar secciones sd
-recordingmenu.stream_vtxt_pid Grabacion de teletexto
+recordingmenu.server_ip Grabando la IP del servidor 
+recordingmenu.server_mac Dirección MAC
+recordingmenu.server_port Grabando el puerto del servidor
+recordingmenu.server_wakeup Grabando el servidor WOL 
+recordingmenu.setupnow Activar los cambios
+recordingmenu.splitsize Tamaño máximo de archivo (MB)
+recordingmenu.stopplayback Parar la reproducción
+recordingmenu.stopsectionsd Parar las secciones
+recordingmenu.stream_vtxt_pid Grabar teletexto
 recordingmenu.stream_pmt_pid Grabar PMT
-recordingmenu.use_fdatasync Escritura sincrona (fdatasync)
-recordingmenu.use_o_sync Escritura sincrona (O_SYNC)
+recordingmenu.use_fdatasync Escritura síncrona (fdatasync)
+recordingmenu.use_o_sync Escritura síncrona (O_SYNC)
 recordingmenu.vcr vcr
-recordingmenu.zap_on_announce Anuncio de Zap en la grabacion
-recordtimer.announce La grabación se iniciará en pocos minutos
-repeatblocker.hint_1 Menor tiempo (en ms) para reconocer las pulsaciones de teclado 2
-repeatblocker.hint_2 Introduzca 0 para cambiar el bloqueador (boton rojo es el espacio)
+recordingmenu.zap_on_announce Aviso de zapping en grab.
+recordtimer.announce La grabación empezarà en pocos minutos
+repeatblocker.hint_1 Disminuir el retardo (ms) de las dobles pulsaciones.
+repeatblocker.hint_2 Introduzca 0 para cambiar de blocker (rojo = espacio)
 satsetup.diseqc DiSEqC
 satsetup.diseqc10 DiSEqC 1.0
 satsetup.diseqc11 DiSEqC 1.1
 satsetup.diseqc12 DiSEqC 1.2
 satsetup.diseqc_advanced Avanzado
 satsetup.diseqc_order Orden de entrada
-satsetup.diseqc_com_uncom Confirmado / no confirmado
-satsetup.diseqc_uncom_com No confirmado / Confirmado
-satsetup.diseqcrepeat Repite DiSEqC
-satsetup.extended Configuración de DiSEqC
-satsetup.extended_motor Configuración de Motor
+satsetup.diseqc_com_uncom Dedicado/no dedicado
+satsetup.diseqc_uncom_com No dedicadoado/dedicado
+satsetup.diseqcrepeat Repetir DiSEqC
+satsetup.extended Configuración del DiSEqC
+satsetup.extended_motor Configuración de motor
 satsetup.minidiseqc Mini-DiSEqC
-satsetup.motorcontrol Configuración de Motor manual
+satsetup.motorcontrol Configuración manual del motor
 satsetup.nodiseqc sin DiSEqC
 satsetup.satellite Satélite
-satsetup.savesettingsnow Guardar configuración
-satsetup.smatvremote Ajuste remoto SMATV
-satsetup.sat_setup Configuración de entrada de satélites / LNB
-satsetup.do_scan Incluir todos en el escaneo
+satsetup.savesettingsnow Guardar la configuración
+satsetup.smatvremote Configuración remota de SMATV
+satsetup.sat_setup Configuración de satélites/LNB
+satsetup.do_scan Incluir todos en la búsqueda
 satsetup.lofl LNB Low Offset
 satsetup.lofh LNB High Offset
 satsetup.lofs LNB switch Offset
 satsetup.diseqc_input Entrada Diseqc
-satsetup.uncomm_input Entrada sin confirmar
-satsetup.comm_input Entrada confirmada
-satsetup.motor_pos Posición de rotor
+satsetup.uncomm_input Entrada no dedicada
+satsetup.comm_input Entrada dedicada
+satsetup.motor_pos Posición del motor
 satsetup.auto_scan Escaneo automático de satélite
-satsetup.auto_scan_all Escaneo automático de multiples satelites
-satsetup.manual_scan Escaneo de frecuencia manual
-satsetup.use_nit Usar NIT
-satsetup.use_usals Usar USALS
-satsetup.usals_repeat Repetir comandos USALS
-scants.abort_body Realmente desea abortar la busqueda?
-scants.abort_header Busqueda de canales abortado
+satsetup.auto_scan_all Escaneo automático de varios satélites
+satsetup.manual_scan Escaneo manual de frecuencias
+satsetup.use_nit Utilizar NIT
+satsetup.use_usals Utilizar USALS
+satsetup.usals_repeat Repetir comando USALS
+scants.abort_body ¿Desea cancelar la búsqueda?
+scants.abort_header Se ha cancelado la búsqueda de canales
 scants.actcable Cable:
-scants.actsatellite Satellite:
+scants.actsatellite Satélite:
 scants.bouquet Bouquet
 scants.bouquet_create Crear nuevo
 scants.bouquet_erase Borrar todos
-scants.bouquet_leave Dejar actuales
-scants.bouquet_satellite Bouquet de satelite
+scants.bouquet_leave Mantener el actual
+scants.bouquet_satellite Bouquet de satélite
 scants.bouquet_update Actualizar
 scants.channel Canal:
-scants.failed Fallo en el escaneo de transpondedores!
-scants.finished Escaneo de transpondedores finalizado con exito!
+scants.failed La búsqueda ha fallado
+scants.finished Búsqueda finalizada correctamente
 scants.freqdata Frecuencia:
-scants.head Escanear transponder
+scants.head Escanear transpondedor
 scants.numberofdataservices Datos
 scants.numberofradioservices Radio
 scants.numberoftotalservices Total
 scants.numberoftvservices TV
 scants.provider Proveedor:
-scants.blind_scan Escaneo de busqueda ciega
-scants.startblindnow Iniciar busqueda ciega
-scants.startnow Iniciar escaneo
-scants.test Comprobar la señal
+scants.blind_scan Búsqueda ciega
+scants.startblindnow Iniciar la búsqueda ciega
+scants.startnow Iniciar búsqueda
+scants.test Comprobación de señal
 scants.transponders Transpondedores:
-scants.select_tp Select transpondedor
-screensetup.lowerright Green = configuración de abajo a la derecha
-screensetup.upperleft Red = configuración superior izquierda
+scants.select_tp Seleccione un transpondedor
+screensetup.lowerright Verde: inferior derecha
+screensetup.upperleft Rojo: superior izquierda
 servicemenu.getplugins Recargar plugins
-servicemenu.getplugins_hint Recargando plugins,\npor favor espere.
-servicemenu.head Servicios
-servicemenu.reload Recargar lista de canales
-servicemenu.reload_hint Recargando lista de canales,\npor favor espere.
-servicemenu.restart Reiniciado GUI (AZtrino)
-servicemenu.restart_failed Fallo en el reinicio
-servicemenu.restart_hint Reiniciando, por favor espere
-servicemenu.restart_refused_recording No es posible reiniciar, grabacion en proceso
-servicemenu.scants Servicio de escaneo
+servicemenu.getplugins_hint Recargando los plugins,\nespere.
+servicemenu.head Canales
+servicemenu.reload Recargar la lista de canales
+servicemenu.reload_hint Recargando la lista de canales,\nespere.
+servicemenu.restart Reiniciar GUI
+servicemenu.restart_failed El reinicio ha fallado
+servicemenu.restart_hint Reiniciando GUI, espere
+servicemenu.restart_refused_recording No se puede reiniciar, hay una grabación en curso
+servicemenu.scants Búsqueda de canales
 servicemenu.ucodecheck Comprobar ucodes
 servicemenu.update Actualización de Software
 settings.help Ayuda
-settings.missingoptionsconffile La configuración de AZtrino ha sido actualizada.\nNuevas opciones se ha establecido por defecto.
-settings.noconffile No se ha encontrado configuraciónes de AZtrino.\nUtilizando los valores predeterminados.
-settings.pos_bottom_left Abajo a la izquierda
-settings.pos_bottom_right Abajo a la derecha
-settings.pos_top_left Arriba a la izquierda
-settings.pos_top_right Arriba a la derecha
-shutdowntimer.announce El equipo se apagara en 1 min.\nCancelar el apagado?
-shutdown.recoding_query Realmente quieres detener la grabación?
-sleeptimerbox.announce Temporizador de apagado en 1 min
-sleeptimerbox.hint1 Tiempo de apagado en mininutos. (000=desactivado)
-sleeptimerbox.hint2 El STB se apagará después de este tiempo.
-sleeptimerbox.title Temporizador de apagado
+settings.missingoptionsconffile La configuración de Aztrino se ha actualizado.\nSe han establecido nuevas opciones por defecto.
+settings.noconffile No hay ninguna configuración de Aztrino.\nSe utilizarán los valores por defecto.
+settings.pos_bottom_left Inferior izquierda
+settings.pos_bottom_right Inferior derecha
+settings.pos_top_left Superior izquierda
+settings.pos_top_right Superior derecha
+shutdowntimer.announce El Azbox se apagará en 1 min.\n¿Desea cancelar el apagado?
+shutdown.recoding_query ¿Seguro que quiere parar la grabación?
+sleeptimerbox.announce Temporizador de reposo en 1 min
+sleeptimerbox.hint1 Tiempo (min) para ir a reposo. (000=desactivado)
+sleeptimerbox.hint2 El Azbox se apagarà después de este tiempo.
+sleeptimerbox.title Temporizador de standby
 streamfeatures.head Características
 streaminfo.aratio Relación de aspecto
 streaminfo.aratio_unknown Relación de aspecto: desconocida
-streaminfo.audiotype Tipo de Audio
-streaminfo.audiotype_unknown Tipo de Audio: desconocida
+streaminfo.audiotype Tipo de audio
+streaminfo.audiotype_unknown Tipo de audio: desconocido
 streaminfo.bitrate Bitrate
 streaminfo.framerate Framerate
 streaminfo.framerate_unknown Framerate: desconocido
-streaminfo.head Información de Stream
+streaminfo.head Información del canal
 streaminfo.not_available No disponible
 streaminfo.resolution Resolución
-streaminfo.signal Recepción de señal
-streaming.buffer_overflow La grabación fue abortada, \n ya que los datos no se podían escribir lo suficientemente rápido.
-streaming.busy Uno o varios procesos de grabación esta activo. \n Si usted encuentra este mensaje y no se activa la grabación, por favor reinicie AZtrino.
-streaming.dir_not_writable No se puede escribir en el directorio de grabación. \n La grabación no se realizará.
-streaming.success La grabación ha terminado con éxito.
-streaming.write_error La grabación fue abortada, \n, se ha producido un error durante el proceso de escritura.
-streaming.write_error_open La grabación fue abortada, \n debido a que el archivo de destino no se pudo abrir.
+streaminfo.signal Señal recibida
+streaming.buffer_overflow Se ha cancelado la grabación,\nporque los datos no se escriben con suficiente rapidez.
+streaming.busy Hay uno o más procesos de grabación activos.\nSi aparece este mensaje y no se activa la grabación, reinicie Aztrino.
+streaming.dir_not_writable Error de escritura en el directorio de grabación.\nNo se realizará la grabación.
+streaming.success La grabación ha finalizado correctamente.
+streaming.write_error Se ha cancelado la grabación,\nse ha producido un error durante la escritura.
+streaming.write_error_open Se ha cancelado la grabación:\nno se ha podido abrir el archivo de destino.
 streamingmenu.352x288 352x288
 streamingmenu.352x576 352x576
 streamingmenu.480x576 480x576
 streamingmenu.704x576 704x576
-streamingmenu.head Configuración de Reproductor de películas
+streamingmenu.head Configuración del Reproductor de vídeos
 streamingmenu.mpeg1 MPEG1
 streamingmenu.mpeg2 MPEG2
-streamingmenu.off Off
-streamingmenu.on On
+streamingmenu.off Apagado
+streamingmenu.on Encendido
 streamingmenu.server_ip IP del servidor de streaming
 streamingmenu.server_port Puerto del servidor de streaming
-streamingmenu.streaming_audiorate Datarate audio
-streamingmenu.streaming_force_avi_rawaudio Forzar AC3 para AVI
-streamingmenu.streaming_force_transcode_video Transcode MPG/VCD video
+streamingmenu.streaming_audiorate Bitrate de audio
+streamingmenu.streaming_force_avi_rawaudio Forzar AC3 para los AVI
+streamingmenu.streaming_force_transcode_video Transcod. vídeos MPG/VCD
 streamingmenu.streaming_resolution Resolución
 streamingmenu.streaming_server_cddrive Unidad DVD
 streamingmenu.streaming_server_startdir Directorio (VLC)
-streamingmenu.streaming_transcode_audio Transcode audio (DVD/VCD/MPG)
-streamingmenu.streaming_transcode_video_codec MPEG video codec
+streamingmenu.streaming_transcode_audio Transcod. audio (DVD/VCD/MPG)
+streamingmenu.streaming_transcode_video_codec Codec de vídeo MPEG
 streamingmenu.streaming_type Servidor de Streaming
-streamingmenu.streaming_videorate Datarate video
-streamingserver.noconnect No hay conexión con el servidor de streaming.\n Grabación cancelada.
-stringinput.caps caps / no caps
+streamingmenu.streaming_videorate Bitrate de vídeo
+streamingserver.noconnect No hay conexión con el servidor de streaming.\nSe ha cancelado la grabación.
+stringinput.caps Mayús/Minúsculas
 stringinput.clear Borrar todo
-timer.eventrecord.msg   ... por hacer, o no hacerse
-timer.eventrecord.title Horario de Grabación
-timer.eventtimed.msg El evento está programado. \n El  se encenderá y \n cambiará a este canal en el momento dado.
-timer.eventtimed.title Programa de actos
-timerbar.channelswitch Horario
+timer.eventrecord.msg   ...para hacer, o no hacer
+timer.eventrecord.title Horario de la grabación
+timer.eventtimed.msg El evento está programado.\n El Azbox se encenderá y\ncambiará a este canal en el momento preciso.
+timer.eventtimed.title Evento programado
+timerbar.channelswitch Programación
 timerbar.recordevent Grabar
 timerlist.alarmtime Alarma de tiempo
-timerlist.apids Audio PIDs
-timerlist.apids_dflt Grabar streams de audio por defecto
+timerlist.apids PIDs de audio
+timerlist.apids_dflt Grabar los canales de audio predeterminados
 timerlist.bouquetselect Elegir bouquet
 timerlist.channel Canal
 timerlist.channelselect Elegir canal
 timerlist.delete Borrar
-timerlist.menumodify Modificar temporizador
+timerlist.menumodify Modificar el temporizador
 timerlist.menunew Nuevo temporizador
 timerlist.message Mensaje
 timerlist.moderadio Canales de radio
-timerlist.modeselect Seleccion de modo
+timerlist.modeselect Selección de modo
 timerlist.modetv Canales de TV
 timerlist.modify Modificar
 timerlist.name Lista de temporizadores
 timerlist.new Nuevo temporizador
-timerlist.overlapping_timer Conflicto entre temporizadores. Crear el temporizador de todos modos?
+timerlist.overlapping_timer Hay un conflicto entre temporizadores. Aún así, ¿Desea crear el temporizador?
 timerlist.plugin Plugin
 timerlist.program.unknown Programa desconocido
 timerlist.recording_dir Directorio de grabación
 timerlist.reload Recargar
 timerlist.repeat Repetir
 timerlist.repeat.biweekly Dos veces por semana
-timerlist.repeat.byeventdescription Ver temporizador
-timerlist.repeat.daily Diariamente
+timerlist.repeat.byeventdescription Ver el temporizador
+timerlist.repeat.daily Diario
 timerlist.repeat.fourweekly Cuatro veces por semana
 timerlist.repeat.friday Vi
 timerlist.repeat.monday Lu
@@ -1065,74 +1065,74 @@ timerlist.repeat.unknown Desconocido
 timerlist.repeat.wednesday Mi
 timerlist.repeat.weekdays De lunes a viernes
 timerlist.repeat.weekly Semanalmente
-timerlist.repeatcount Repite 
-timerlist.repeatcount.help1 Cantidad de repeticiones de temporizador
+timerlist.repeatcount Repeticiones 
+timerlist.repeatcount.help1 Cantidad de repeticiones del temporizador
 timerlist.repeatcount.help2 0 para repeticiones ilimitadas
-timerlist.save Guardar temporizador
+timerlist.save Guardar el temporizador
 timerlist.standby Modo SB
-timerlist.standby.off Abandonar modo en espera
-timerlist.standby.on Entrar en modo en espera
-timerlist.stoptime Detener el tiempo
+timerlist.standby.off Salir de reposo
+timerlist.standby.on Entrar en reposo
+timerlist.stoptime Hora de parada
 timerlist.type Tipo de temporizador
-timerlist.type.execplugin Ejecutar plugin
-timerlist.type.nextprogram Proximo programa
+timerlist.type.execplugin Ejecutar el plugin
+timerlist.type.nextprogram Programa siguiente
 timerlist.type.record Grabar
 timerlist.type.remind Recordar
 timerlist.type.shutdown Apagar
 timerlist.type.sleeptimer Temporizador de apagado
-timerlist.type.standby  Modo en espera
+timerlist.type.standby En reposo
 timerlist.type.unknown Desconocido
 timerlist.type.zapto Cambiar a
-timerlist.weekdays Días de la semana
+timerlist.weekdays Dias de la semana
 timerlist.weekdays.hint_1 Lu Ma Mi Ju Vi Sa Do
 timerlist.weekdays.hint_2 'X'=temporizador '-' sin temporizador
-timersettings.record_safety_time_after Dejar de grabar el tiempo de corrección
-timersettings.record_safety_time_after.hint_1 tiempo de corrección en min. (00=deshabilitado). Este tiempo
-timersettings.record_safety_time_after.hint_2 será añadido a detener el tiempo de cada temporizador de grabación.
-timersettings.record_safety_time_before Inicio de la corrección en tiempo.
-timersettings.record_safety_time_before.hint_1 Corrección en tiempo. (00=deshabilitado). Este tiempo
-timersettings.record_safety_time_before.hint_2 se deducirá de cada temporizador de grabación.
+timersettings.record_safety_time_after Corrección de la hora de parada
+timersettings.record_safety_time_after.hint_1 Corrección de hora en min. (00=deshab.). Este tiempo
+timersettings.record_safety_time_after.hint_2 se añadirá a los temporizadores de grabación.
+timersettings.record_safety_time_before Corrección de la hora de inicio.
+timersettings.record_safety_time_before.hint_1 Corrección de hora en min. (00=deshab.). Este tiempo
+timersettings.record_safety_time_before.hint_2 se restará de los temporizadores de grabación.
 timersettings.separator Configuración de temporizadores
 timing.chanlist Lista de canales
 timing.epg EPG
-timing.filebrowser Explorador de ficheros
-timing.head Tiempos de espera de OSD 
-timing.hint_1 Time in sec. Despuesde este tiempo
-timing.hint_2 Infobar desaparecerá
+timing.filebrowser Explorador de archivos
+timing.head Tiempo de espera del OSD 
+timing.hint_1 Después de este tiempo, la barra
+timing.hint_2 de info desaparecerá. (seg's)
 timing.infobar Barra de información
 timing.menu Menú
-timing.numericzap Zap numéricos
+timing.numericzap Zapping numérico
 ucodecheck.avia500 Avia 500
 ucodecheck.avia600 Avia 600
 ucodecheck.cam-alpha Cam-Alpha
 ucodecheck.head Comprobar UCode
 ucodecheck.ucode UCode
-ucodes.failure ATENCION, No pueden encontrarse los µCodes!\n\nPor favor, subalos via FTP (o con el Azbox-BootManager),\ndespues reinicie su equipo!
+ucodes.failure ATENCIÓN, NO se han encontrado los µCodes!\n\nCárguelos via FTP (o con Azbox-BootManager),\ny después reinicie el Azbox.
 upnpbrowser.head Explorador UPnP
-upnpbrowser.noservers No se han encontrador servidores UPnP
-upnpbrowser.rescan Escanear otra vez
-upnpbrowser.scanning Escaneado servidores UPnP
+upnpbrowser.noservers No se ha encontrado ningún servidor UPnP
+upnpbrowser.rescan Volver a escanear
+upnpbrowser.scanning Buscando servidores UPnP...
 usermenu.button_blue Menú de usuario azul
 usermenu.button_green Menú de usuario verde
 usermenu.button_red Menú de usuario rojo
 usermenu.button_yellow Menú de usuario amarillo
-usermenu.head Menu de usuario
+usermenu.head Menú de usuario
 usermenu.item_bar ---- Interno ----
-usermenu.item_epg_misc Funciones EPG
+usermenu.item_epg_misc Funciones de EPG
 usermenu.item_none Nada
 usermenu.item_vtxt Teletexto
 usermenu.name Nombre
 videomenu.csync corrección de la sincronización
-videomenu.head Configuración de video
+videomenu.head Configuración de vídeo
 videomenu.osd OSD
 videomenu.rgb_centering centrado de RGB
-videomenu.screensetup Configuración de la pantalla
-videomenu.tv-scart Video
+videomenu.screensetup Configuración de pantalla
+videomenu.tv-scart Vídeo
 videomenu.vcr-scart VCR Scart
-videomenu.vcrsignal Tipo de salida de señal VCR
+videomenu.vcrsignal Tipo de salida de la señal VCR
 videomenu.vcrsignal_composite CVBS
-videomenu.vcrsignal_svideo S-Video
-videomenu.vcrswitch Cambiar Scart automaticamente
+videomenu.vcrsignal_svideo S-Vídeo
+videomenu.vcrswitch Cambiar Scart automáticamente
 videomenu.videoformat Formato
 videomenu.videoformat_169 16:9
 videomenu.videoformat_43 4:3
@@ -1149,8 +1149,8 @@ videomenu.screen Pantalla
 videomenu.brightness Brillo
 videomenu.contrast Contraste
 videomenu.hue Color
-videomenu.saturation Saturacion
-videomenu.analog_mode Salida de video analógico
+videomenu.saturation Saturación
+videomenu.analog_mode Salida de vídeo analógico
 videomenu.analog_sd_rgb_scart RGB en scart (SD)
 videomenu.analog_sd_rgb_cinch RGB en cinch (SD)
 videomenu.analog_sd_yprpb_scart YPbPr en scart (SD)
@@ -1166,36 +1166,36 @@ videomenu.dbdr_none ninguno
 videomenu.dbdr_deblock de-block
 videomenu.dbdr_both de-block+de-ring
 videomenu.enabled_modes Modo VF activado
-wireless.head Buscar redes inalambricas
+wireless.head Buscando redes WiFi...
 wireless.essid ESSID
 wireless.crypt Cifrado
 wireless.password Contraseña
-wireless.none Ninguno
-wireless.notfound No se han encontrado redes wireless, por favor, introduzca los datos manualmente.
+wireless.none Ninguna
+wireless.notfound No se ha encontrado ninguna red WiFi, introduzca los datos manualmente.
 wireless.now Conectar ahora
 wireless.wep WEP
 wireless.wpa WPA
 wireless.wpa2 WPA2
-zapit.scantype Exploración de servicios
-zapit.scantype.all Todos los servicios
-zapit.scantype.radio Solo radio
-zapit.scantype.tv Solo TV
+zapit.scantype Búsqueda de canales
+zapit.scantype.all Todos los canales
+zapit.scantype.radio Sólo radio
+zapit.scantype.tv Sólo TV
 zapit.scantype.tvradio TV & Radio
-zaptotimer.announce Cronómetro Zapto en un minuto
-extra.english English
-extra.dboxinfo Información sobre Azbox
-extra.scan_mode Modo de escaneo
-extra.start_tostandby Arranque en modo de espera
-extra.rotor_swap Intercambio de rotor este / oeste
-extra.use_log Log en /tmp/log
+zaptotimer.announce Temporizador Zapto en un minuto
+extra.english Inglés
+extra.dboxinfo Información del Azbox
+extra.scan_mode Modo de búsqueda
+extra.start_tostandby Arrancar en modo de espera
+extra.rotor_swap Intercambiar giro este/oeste
+extra.use_log Log a /tmp/log
 extra.spts_mode Modo SPTS
 extra.hw_sect Secciones de hardware 
-extra.logo Logo número
+extra.logo Número del logo
 extra.scan_full Completo
-extra.scan_fast Rapido
+extra.scan_fast Rápido
 hdd_slow Lento
 hdd_middle Medio
-hdd_fast Rapido
+hdd_fast Rápido
 hdd_ext3 Ext3fs
 hdd_reiser Reiserfs
 hdd_1min 1 min.
@@ -1207,30 +1207,30 @@ hdd_60min 60 min.
 hdd_sleep Tiempo para entrar en reposo
 hdd_noise Control de ruido
 hdd_activate Activar los ajustes
-hdd_fs Sistema de ficheros
-hdd_format Formatear HDD
-hdd_format_warn ¿Estás seguro de formatear? Se perderán todos los datos!
-hdd_format_failed Fallo al formatear HDD !
-hdd_umount_warn Fallo al montar HDD !
-hdd_check Comprobar sistema de ficheros
-hdd_check_failed Fallo comprobando HDD!
-hdd_settings Ajustes del HDD 
-hdd_manage Administrar
-hdd_not_found Disco no encontrado
-extra.clear_log Limpiar Log
-extra.zap_cycle Ciclo Zap
+hdd_fs Sistema de archivos
+hdd_format Formatear el Disco Duro
+hdd_format_warn ¿Seguro que quiere formatear? Se perderán todos los datos!
+hdd_format_failed Error al formatear el HDD!
+hdd_umount_warn Error al montar el HDD!
+hdd_check Comprobación del sistema de archivos
+hdd_check_failed Error al comprobar el HDD!
+hdd_settings Configuración de Disco Duro
+hdd_manage Administrar 
+hdd_not_found No se ha encontrado ningún HDD
+extra.clear_log Borrar el Log
+extra.zap_cycle Zapping cíclico
 extra.sms_channel Modo de canal SMS
-extra.manual_scan Escaneo manual
-extra.tp_freq Frequencia
-extra.tp_freq_ini Freq. Inicio
-extra.tp_freq_end Freq. Fin
+extra.manual_scan Búsqueda manual
+extra.tp_freq Frecuencia
+extra.tp_freq_ini Frecuencia inicial
+extra.tp_freq_end Frecuencia final
 extra.tp_freq_tone Tono
-extra.tp_rate Ratio de símbolo
+extra.tp_rate Symbolrate
 extra.tp_pol Polarización
-extra.tp.pol_v V
-extra.tp_pol_h H
-extra.tp_pol_both Ambos
-extra.tp_tone_both Ambos
+extra.tp.pol_v Vertical
+extra.tp_pol_h Horizontal
+extra.tp_pol_both V + H
+extra.tp_tone_both Alto + Bajo
 extra.tp_tone_off Bajo
 extra.tp_tone_on Alto
 extra.tp_fec FEC
@@ -1247,53 +1247,53 @@ extra.tp_mod_128 QAM/128
 extra.tp_mod_256 QAM/256
 extra.timezone Zona horaria
 extra.zapit_menu Opciones de Zapit
-extra.zapit_make_bouquet Hacer una lista resto de canales
-extra.zapit_save_last_chan Guardar último canal
-extra.zapit_motor_speed Velocidad de movimiento del motor (10 = 1deg/sec)
-extra.zapit_fe_timeout Ajustar tiempo de espera
-extra.zapit_fast_zap Cambio rapido
-extra.zapit_sort_names Ordenar canales por nombre
-extra.zapit_scanpids Escanear/Usar pids
-extra.zapit_rezap_time Re-Zap de emu cambiar hora
-extra.zapit_hvoltage Alto (13.5/18.5) voltaje
+extra.zapit_make_bouquet Crear una lista con los canales restantes
+extra.zapit_save_last_chan Guardar el último canal
+extra.zapit_motor_speed Velocidad del motor (10 = 1gr/seg)
+extra.zapit_fe_timeout Ajustar el tiempo de espera
+extra.zapit_fast_zap Cambio rápido
+extra.zapit_sort_names Ordenar los canales per nombre
+extra.zapit_scanpids Buscar/Utilizar pids
+extra.zapit_rezap_time Re-Zap al cambiar de emu
+extra.zapit_hvoltage Voltaje alto (13.5/18.5)
 reset_channels Borrar todos los canales
-reset_settings Restablecer los valores predeterminados
+reset_settings Restablecer los valores por defecto
 reset_all Valores de fábrica
-reset_confirm Estás seguro?
-extra.zapit_backup Copia de seguridad de canales a /tmp
-extra.zapit_restore Restaurar canales desde /tmp
-extra.add_to_bouquet Añadir a bouquet
+reset_confirm ¿Está seguro?
+extra.zapit_backup Copia de seguridad de los canales en /tmp
+extra.zapit_restore Restaurar los canales desde /tmp
+extra.add_to_bouquet Añadir al bouquet
 extra.key_list_start Inicio
-extra.key_list_end Fin
-extra.chadded El canal actual se ha añadido a Favoritos....\n
-extra.chalreadyinbq TEl canal actual ya está en bouquet....\n
-extra.menu_left_exit "Left" = menú atrás
-extra.zapit_write_names Escriba los nombres de los canales
-extra.update_dir Directorio de las actualizaciones
-extra.audio_run_player Boton de inicio de reproductor de audio 
-mpkey.rewind Rebovinar
+extra.key_list_end Final
+extra.chadded El canal actual se ha añadido a los Favoritos....\n
+extra.chalreadyinbq El canal actual ya está en el bouquet....\n
+extra.menu_left_exit "Izquierda" = menú atrás
+extra.zapit_write_names Escribir los nombres de los canales
+extra.update_dir Directorio para las actualizaciones
+extra.audio_run_player Tecla de inicio del reproductor de audio 
+mpkey.rewind Rebobinar
 mpkey.forward Avanzar
 mpkey.pause Pausa
 mpkey.stop Parar
 mpkey.play Reproducir
-mpkey.audio Pista de Audio
-mpkey.subt Pista de Subtitulos
+mpkey.audio Pista de audio
+mpkey.subt Pista de subtítulos
 mpkey.time Mostrar el tiempo
-mpkey.bookmark Guardar marcador
-mpkey.plugin Ejecutar plugin
-extra.loadcolors Cargar colores desde
-extra.savecolors Guardar colores como
-extra.loadkeys Cargar botones desde
-extra.savekeys Guardar botones como
-extra.loadconfig Cargar configuración desde
-extra.saveconfig Guardar configuración como
-extra.key_click Hacer clic en el boton
-videomenu.videomode Modo de video Digital
+mpkey.bookmark Guardar el marcador
+mpkey.plugin Ejecutar el plugin
+extra.loadcolors Cargar configuración de colores
+extra.savecolors Guardar configuración de colores
+extra.loadkeys Cargar configuración de teclas
+extra.savekeys Guardar configuración de teclas
+extra.loadconfig Cargar configuración
+extra.saveconfig Guardar la configuración en
+extra.key_click Haga clic en el botón
+videomenu.videomode Modo de vídeo Digital
 videomenu.videomode_ntsc NTSC
 videomenu.videomode_pal PAL
 videomenu.videomode_palm PAL-M
 extra.key_timeshift Timeshift
-extra.key_plugin Un toque de plugin
+extra.key_plugin Plugin 'una pulsación'
 extra.timeshift_pause Pausa Timeshift
 rfmod.rfmod modulador RF
 rfmod.carrier Frecuencia subportadora
@@ -1303,39 +1303,39 @@ rfmod.carrier6000 6.0
 rfmod.carrier6500 6.5
 rfmod.enable Activar el sonido
 rfmod.channel Canal
-rfmod.finetune Fine tune
-rfmod.standby Activar modulador
+rfmod.finetune Sintonización fina
+rfmod.standby Activar el modulador
 rfmod.test Patrón de prueba
-extra.key_unlock Boton de desbloqueo
-servicemenu.imageinfo Información de la Imagen
+extra.key_unlock Tecla para desbloquear
+servicemenu.imageinfo Información de la imagen
 imageinfo.creator Creador:
 imageinfo.date Fecha:
-imageinfo.dokumentation Docs:
+imageinfo.dokumentation Doc's:
 imageinfo.forum Foro:
 imageinfo.head Información de la imagen:
-imageinfo.homepage Página de Inicio:
+imageinfo.homepage Página web:
 imageinfo.image Imagen:
 imageinfo.license Licencia:
-imageinfo.version Version:
-inetradio.name Radio Internet
-extra.cache_txt Cache teletexto
-extra.use_gotoxx Use gotoXX
+imageinfo.version Versión:
+inetradio.name Radio de Internet
+extra.cache_txt Caché del teletexto
+extra.use_gotoxx Utilizar gotoXX
 extra.latitude Latitud
 extra.longitude Longitud
-extra.ladirection LaDirección
-extra.lodirection LoDirección
+extra.ladirection Lat. Norte/Sur
+extra.lodirection Lon. Este/Oeste
 extra.south Sur
 extra.north Norte
 extra.east Este
 extra.west Oeste
 options.on.without_messages Sin mensajes
-extra.zapit_scan_sdt Escanear SDT para actualizaciones
-extra.zapit_sdt_changed Cambio en los canales, actualizar la configuración.
-extra.auto_timeshift Auto-grabación, segundos (0 = disabilitado)
+extra.zapit_scan_sdt Escanear SDT para buscar actualizaciones
+extra.zapit_sdt_changed Hay cambios en los canales, actualice la configuración.
+extra.auto_timeshift Autograbación, segs (0 = off)
 extra.temp_timeshift Timeshift temporal
-extra.auto_delete Auto-borrado
-extra.auto_to_record Mover las grabaciones de Timeshift
-extra.record_time Fast/timeshift record time(hours)
+extra.auto_delete Autoborrado
+extra.auto_to_record Mover Timeshift a grabaciones
+extra.record_time Timeshift/grabación rápida (horas)
 extra.fec_s2_qpsk_1_2 1/2 s2 qpsk
 extra.fec_s2_qpsk_2_3 2/3 s2 qpsk
 extra.fec_s2_qpsk_3_4 3/4 s2 qpsk
@@ -1356,24 +1356,24 @@ extra.fec_s2_8psk_4_5 4/5 s2 8psk
 extra.fec_s2_8psk_9_10 9/10 s2 8psk
 video_mode_ok ¿Es correcto este modo de video?
 scrambled_channel Canal codificado
-neutrino_starting Iniciando AZtrino ...
+neutrino_starting -- AZTRINO HD -- \nIniciando el software...
 cam.settings CI Cam
-cam.empty No hay CAM en slot
-cam.inserted CAM insertada en slot
-cam.removed CAM removida del slot
-cam.init_ok Inicialización de CAM completada
-cam.waiting Esperando respuesta del CI
-cam.timeout Tiempo de espera de espera de menú CI listo
-subtitles.head Subtitulos
-subtitles.stop Parar subtitulos
-fan_speed CPU Velocidad de ventilador
+cam.empty No hay CAM en el tarjetero
+cam.inserted CAM insertada
+cam.removed CAM extraida del tarjetero
+cam.init_ok Inicialización de la CAM completada
+cam.waiting Esperando una respuesta del CI
+cam.timeout Tiempo de espera del menú CI agotado
+subtitles.head Subtítulos
+subtitles.stop Parar los subtítulos
+fan_speed CPU Velocidad del ventilador
 audio.srs_iq Algoritmos SRS TruVolume
 audio.srs_algo Tipo
 audio.srs_algo_light Luz
 audio.srs_algo_normal Normal
 audio.srs_volume Volumen de referencia
-audio.srs_nmgr Administrador de ruido
-cpu.freq Frequencia CPU
-cpu.freq_normal Frequencia normal 
-cpu.freq_standby Frequencia en reposo
-cpu.freq_default Frequencia por defecto
+audio.srs_nmgr Administrador de sonido
+cpu.freq Frecuencia de la CPU
+cpu.freq_normal Frecuencia normal 
+cpu.freq_standby Frecuencia en standby
+cpu.freq_default Frecuencia por defecto

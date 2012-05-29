@@ -181,6 +181,37 @@ bool CSatDiseqcNotifier::changeNotify(const neutrino_locale_t, void * Data)
 	g_Zapit->setDiseqcRepeat( CNeutrinoApp::getInstance()->getScanSettings().diseqcRepeat);
 	return true;
 }
+CTunerNotifier::CTunerNotifier( CMenuForwarder* i)
+{
+   toDisable[0]=i;
+}
+
+bool CTunerNotifier::changeNotify(const neutrino_locale_t, void * Data)
+{
+	int fe = *((int*) Data);
+
+	CNeutrinoApp::getInstance()->ReloadScanSettings(fe);
+	g_Zapit->reinitChannels();
+
+	pcrDemux->Stop();
+	audioDemux->Stop();
+	videoDemux->Stop();
+
+	videoDemux = new cDemux(fe);
+	audioDemux = new cDemux(fe);
+	pcrDemux = new cDemux(fe);
+
+	videoDemux->Open(DMX_VIDEO_CHANNEL);
+	audioDemux->Open(DMX_AUDIO_CHANNEL);
+	pcrDemux->Open(DMX_PCR_ONLY_CHANNEL, videoDemux->getBuffer());
+
+	videoDemux->Start();
+	audioDemux->Start();
+	pcrDemux->Start();
+
+	return  true;
+}
+
 
 CTP_scanNotifier::CTP_scanNotifier(CMenuOptionChooser* i1, CMenuOptionChooser* i2, CMenuForwarder* i3, CMenuForwarder* i4)
 {
@@ -931,6 +962,7 @@ int CDataResetNotifier::exec(CMenuTarget* parent, const std::string& actionKey)
 	if(delete_chan) {
 		system("rm -f /var/tuxbox/config/zapit/*.xml");
 		g_Zapit->reinitChannels();
+
 	} 
 	return true;
 }

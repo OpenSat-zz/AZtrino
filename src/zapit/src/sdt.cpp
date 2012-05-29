@@ -135,19 +135,20 @@ int nvod_service_ids(
 	return -1;
 }
 
+
+
 int parse_sdt(
 	t_transport_stream_id *p_transport_stream_id,
 	t_original_network_id *p_original_network_id,
-	t_satellite_position satellitePosition, freq_id_t freq)
+	t_satellite_position satellitePosition, freq_id_t freq, int demuxNum)
 {
 	int secdone[255];
 	int sectotal = -1;
 
 	memset(secdone, 0, 255);
 
-	cDemux * dmx = new cDemux();
+	cDemux * dmx = new cDemux(demuxNum);
 	dmx->Open(DMX_PSI_CHANNEL);
-
 	unsigned char buffer[SDT_SIZE];
 
 	/* position in buffer */
@@ -156,8 +157,8 @@ int parse_sdt(
 
 	/* service_description_section elements */
 	unsigned short section_length;
-	unsigned short transport_stream_id;
-	unsigned short original_network_id;
+	unsigned short transport_stream_id = 0;
+	unsigned short original_network_id = 0;
 	unsigned short service_id;
 	unsigned short descriptors_loop_length;
 	unsigned short running_status;
@@ -170,6 +171,12 @@ int parse_sdt(
 	unsigned char mask[DMX_FILTER_SIZE];
 
 	int flen;
+	bool cable_hack_done = false;
+#if HAVE_COOL_HARDWARE
+	bool cable = (frontend->getInfo()->type == FE_QAM);
+#else
+	bool cable = false;
+#endif
 #if 1
 	flen = 5;
 	memset(filter, 0x00, DMX_FILTER_SIZE);
@@ -206,6 +213,7 @@ int parse_sdt(
 		return -1;
 	}
 	do {
+_repeat:
 		if (dmx->Read(buffer, SDT_SIZE) < 0) {
 			delete dmx;
 			return -1;
@@ -215,11 +223,20 @@ int parse_sdt(
 
 
 		section_length = ((buffer[1] & 0x0F) << 8) | buffer[2];
-		transport_stream_id = (buffer[3] << 8) | buffer[4];
-		original_network_id = (buffer[8] << 8) | buffer[9];
+
+		if(cable_hack_done) {
+			if( (transport_stream_id == ((buffer[3] << 8) | buffer[4])) &&
+				(original_network_id == ((buffer[8] << 8) | buffer[9])))
+					break;
+		} else {
+			transport_stream_id = (buffer[3] << 8) | buffer[4];
+			original_network_id = (buffer[8] << 8) | buffer[9];
+		}
+
 
 		unsigned char secnum = buffer[6];
-		printf("[SDT] section %X last %X tsid 0x%x onid 0x%x -> %s\n", buffer[6], buffer[7], transport_stream_id, original_network_id, secdone[secnum] ? "skip" : "use");
+		//printf("[SDT] section %X last %X tsid 0x%x onid 0x%x -> %s\n", buffer[6], buffer[7], transport_stream_id, original_network_id, secdone[secnum] ? "skip" : "use");
+		//printf("## buffer:%s",buffer);
 		if(secdone[secnum])
 			continue;
 		secdone[secnum] = 1;
@@ -227,6 +244,8 @@ int parse_sdt(
 
 		*p_transport_stream_id = transport_stream_id;
 		*p_original_network_id = original_network_id;
+
+
 
 		for (pos = 11; pos < section_length - 1; pos += descriptors_loop_length + 5) {
 			service_id = (buffer[pos] << 8) | buffer[pos + 1];
@@ -243,10 +262,10 @@ int parse_sdt(
 					ISO_639_language_descriptor(buffer + pos2);
 					break;
 
-/*				case 0x40:
+				case 0x40:
 					network_name_descriptor(buffer + pos2);
 					break;
-*/
+
 				case 0x42:
 					stuffing_descriptor(buffer + pos2);
 					break;
@@ -332,16 +351,21 @@ int parse_sdt(
 					break;
 
 				default:
-					/*
-					DBG("descriptor_tag: %02x\n", buffer[pos2]);
+
+					//DBG("descriptor_tag: %02x\n", buffer[pos2]);
 					generic_descriptor(buffer + pos2);
-					*/
+
 					break;
 				}
 			}
 		}
 	} while(sectotal < buffer[7]);
 	//while (filter[4]++ != buffer[7]);
+	if(cable && !cable_hack_done && sectotal == 0) {
+		cable_hack_done = true;
+		secdone[0] = 0;
+		goto _repeat;
+	}
 	delete dmx;
 
 	return 0;
@@ -349,9 +373,9 @@ int parse_sdt(
 
 extern tallchans curchans;
 int parse_current_sdt( const t_transport_stream_id p_transport_stream_id, const t_original_network_id p_original_network_id,
-	t_satellite_position satellitePosition, freq_id_t freq)
+	t_satellite_position satellitePosition, freq_id_t freq, int demuxN)
 {
-	cDemux * dmx = new cDemux();
+	cDemux * dmx = new cDemux(demuxN);
 	dmx->Open(DMX_PSI_CHANNEL);
 	int ret = -1;
 
@@ -439,4 +463,5 @@ int parse_current_sdt( const t_transport_stream_id p_transport_stream_id, const 
 
 	return ret;
 }
+
 

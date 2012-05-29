@@ -138,7 +138,7 @@ void CScanSettings::useDefaults(const delivery_system_t _delivery_system)
 		strcpy(satNameNoDiseqc, "none");
 		break;
 	case DVB_T:
-		strcpy(satNameNoDiseqc, "");
+		strcpy(satNameNoDiseqc, "none");
 		break;
 	}
 }
@@ -176,6 +176,18 @@ bool CScanSettings::loadSettings(const char * const fileName, const delivery_sys
 	if(TP_fec == 4) TP_fec = 5;
 #endif	
 	scanSectionsd = configfile.getInt32("scanSectionsd", 0);
+
+	if(delivery_system == DVB_T)
+	{
+		TP_bandwidth = configfile.getInt32("bandwidth", BANDWIDTH_AUTO);
+		TP_code_rate_lp = configfile.getInt32("TP_code_rate_lp", FEC_AUTO);
+		TP_code_rate_hp = configfile.getInt32("TP_code_rate_hp", FEC_AUTO);
+		TP_guard_interval = configfile.getInt32("TP_guard_interval", GUARD_INTERVAL_AUTO);
+		TP_transmission_mode = configfile.getInt32("TP_transmission_mode", TRANSMISSION_MODE_AUTO);
+		TP_hierarchy_information = configfile.getInt32("TP_hierarchy_information", HIERARCHY_AUTO);
+		TP_inversion = configfile.getInt32("TP_inversion", INVERSION_AUTO);
+	}
+
 	return true;
 }
 
@@ -202,6 +214,15 @@ bool CScanSettings::saveSettings(const char * const fileName)
 
 	if(configfile.getModifiedFlag())
 		configfile.saveConfig(fileName);
-
+	if(delivery_system == DVB_T)
+	{
+		configfile.setInt32("TP_bandwidth", TP_bandwidth);
+		configfile.setInt32("TP_code_rate_lp", TP_code_rate_lp);
+		configfile.setInt32("TP_code_rate_hp", TP_code_rate_hp);
+		configfile.setInt32("TP_guard_interval", TP_guard_interval);
+		configfile.setInt32("TP_transmission_mode", TP_transmission_mode);
+		configfile.setInt32("TP_hierarchy_information", TP_hierarchy_information);
+		configfile.setInt32("TP_inversion", TP_inversion);
+	}
 	return true;
 }

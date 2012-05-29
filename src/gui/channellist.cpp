@@ -1318,6 +1318,9 @@ void CChannelList::paintDetails(int index)
 				len += snprintf(&buf[len], sizeof(buf) - len, "%d %s %s %s ", tpI->second.feparams.u.qam.symbol_rate/1000, f, s, m);
 				break;
 			case FE_OFDM:
+				frontend->getDelSys(tpI->second.feparams.u.ofdm.code_rate_HP, tpI->second.feparams.u.ofdm.constellation, f, s, m);
+				len += snprintf(&buf[len], sizeof(buf) - len, "%s %s %s ", f, s, m);
+				break;
 			case FE_ATSC:
 				break;
 			}

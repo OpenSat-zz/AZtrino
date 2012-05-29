@@ -930,6 +930,7 @@ scants.abort_body Should the search really be aborted?
 scants.abort_header Abortion of channel scan
 scants.actcable Cable:
 scants.actsatellite Satellite:
+scants.actterrestrial Terrestrial:
 scants.bouquet Bouquet
 scants.bouquet_create Create new
 scants.bouquet_erase Erase all
@@ -952,6 +953,7 @@ scants.startnow Start scan
 scants.test Test signal
 scants.transponders Transponders:
 scants.select_tp Select transponder
+terrestrialsetup.provider Provider:
 screensetup.lowerright Green = setup lower right
 screensetup.upperleft Red = setup upper left
 servicemenu.getplugins Reload plugins
@@ -966,6 +968,12 @@ servicemenu.restart_refused_recording Cant restart, recording in progress
 servicemenu.scants Servicescan
 servicemenu.ucodecheck Check ucodes
 servicemenu.update Software Update
+servicemenu.tuner Tuner
+servicemenu.tuner_dvbs Satellite
+servicemenu.tuner_dvbc Cable
+servicemenu.tuner_dvbt Terretrial
+servicemenu.tuner_options_slot0 Slot 0
+servicemenu.tuner_options_slot1 Slot 1
 settings.help Help
 settings.missingoptionsconffile The AZtrino-settings have been updated.\nNew Options will be set to default.
 settings.noconffile No AZtrino-settings found.\nUsing defaults.

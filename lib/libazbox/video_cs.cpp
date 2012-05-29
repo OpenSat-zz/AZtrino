@@ -6,12 +6,14 @@
 #include <sys/ioctl.h>
 #include <sys/time.h>
 #include <sys/select.h>
+#include <sys/stat.h>
 
 #include "video_cs.h"
 
 #include <linux/version.h>
 #include <linux/dvb/video.h>
 #include <linux/fb.h>
+
 #ifndef AZBOX_GEN_1
 	#include <linux/stmfb.h>
 #endif

@@ -38,7 +38,7 @@
 extern "C" {
 #include <driver/ringbuffer.h>
 #include <driver/genpsi.h>
-}           	
+}
 
 /* conversion buffer sizes */
 #define TS_SIZE         188
@@ -51,8 +51,8 @@ extern "C" {
 #define MAXPIDS		64
 
 /* devices */
-#define DMXDEV	"/dev/dvb/adapter0/demux0"
-#define DVRDEV	"/dev/dvb/adapter0/dvr0"
+//#define DMXDEV	"/dev/dvb/adapter0/demux0"
+//#define DVRDEV	"/dev/dvb/adapter0/dvr0"
 
 class cRecord
 {
@@ -65,15 +65,16 @@ class cRecord
                 time_t record_end_time;
 
                 pthread_t demux_thread[MAXPIDS];
-                
+
+
 		unsigned char demuxfd_count;
                 int demuxfd[MAXPIDS];
                 int dvrfd;
-	        
+
 		int file_fd;
-		
+
 		ringbuffer_t * ringbuffer;
-                
+
                 stream2file_status_t exit_flag;
 
 	public:
@@ -88,7 +89,7 @@ class cRecord
 
 	        void DMXThread();
 	        void FileThread();
-           
+
 };
 
 #endif

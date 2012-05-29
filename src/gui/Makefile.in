@@ -59,7 +59,7 @@ am_libneutrino_gui_a_OBJECTS = bouquetlist.$(OBJEXT) \
 	epgplus.$(OBJEXT) epg_menu.$(OBJEXT) streaminfo2.$(OBJEXT) \
 	dboxinfo.$(OBJEXT) plugins.$(OBJEXT) imageinfo.$(OBJEXT) \
 	audio_select.$(OBJEXT) moviebrowser.$(OBJEXT) \
-	movieinfo.$(OBJEXT)
+	movieinfo.$(OBJEXT) wireless.$(OBJEXT)
 libneutrino_gui_a_OBJECTS = $(am_libneutrino_gui_a_OBJECTS)
 libneutrino_gui2_a_AR = $(AR) $(ARFLAGS)
 libneutrino_gui2_a_LIBADD =
@@ -313,7 +313,7 @@ libneutrino_gui_a_SOURCES = \
 	movieplayer.cpp rc_lock.cpp bookmarkmanager.cpp \
 	timeosd.cpp epgplus.cpp epg_menu.cpp \
 	streaminfo2.cpp dboxinfo.cpp \
-	plugins.cpp imageinfo.cpp audio_select.cpp moviebrowser.cpp movieinfo.cpp
+	plugins.cpp imageinfo.cpp audio_select.cpp moviebrowser.cpp movieinfo.cpp wireless.cpp
 
 libneutrino_gui2_a_SOURCES = \
 	color.cpp alphasetup.cpp motorcontrol.cpp scale.cpp hdd_menu.cpp cam_menu.cpp infoclock.cpp upnpbrowser.cpp
@@ -414,6 +414,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/timerlist.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/update.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/upnpbrowser.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wireless.Po@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

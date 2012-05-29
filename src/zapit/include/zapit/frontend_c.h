@@ -151,14 +151,15 @@ class CFrontend
 		void				sendDiseqcStandby(void);
 		void				sendDiseqcZeroByteCommand(const uint8_t frm, const uint8_t addr, const uint8_t cmd);
 		void				sendToneBurst(const fe_sec_mini_cmd_t burst, const uint32_t ms);
-		int				setFrontend(const struct dvb_frontend_parameters *feparams, bool nowait = false);
+
+		int					setFrontend(const struct dvb_frontend_parameters *feparams, bool nowait = false);
 		void				setSec(const uint8_t sat_no, const uint8_t pol, const bool high_band);
 		void				set12V(bool enable);
 		void				reset(void);
 
 
 	public:
-		CFrontend(int fe = 0);
+		CFrontend(int fe = 1);
 		~CFrontend(void);
 
 		static fe_code_rate_t		getCodeRate(const uint8_t fec_inner, int system = 0);
@@ -176,7 +177,8 @@ class CFrontend
 		fe_status_t			getStatus(void) const;
 		uint32_t			getUncorrectedBlocks(void) const;
 		void				getDelSys(int f, int m, char * &fec, char * &sys, char * &mod);
-
+		int 				getFrontendNumber();
+		void 				changeFrontendNumber(int n);
 		const int32_t 			getCurrentSatellitePosition() { return currentSatellitePosition; }
 
 		void				setDiseqcRepeats(const uint8_t repeats)	{ diseqcRepeats = repeats; }
@@ -200,6 +202,7 @@ class CFrontend
 		uint32_t 			getRate ();
                 void Close();
                 void Open();
+                void Open(int n);
                 int getDescriptorFrontend();
 		bool sendUncommittedSwitchesCommand(int input);
 		bool setInput(CZapitChannel *channel, bool nvod);

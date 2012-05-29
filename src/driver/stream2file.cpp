@@ -58,6 +58,7 @@
 #include <driver/vfd.h>
 #include <zapit/cam.h>
 #include <zapit/channel.h>
+#include <zapit/frontend_c.h>
 
 extern "C" {
 #include <driver/genpsi.h>
@@ -66,6 +67,7 @@ extern "C" {
 static cRecord * record = NULL;
 extern CZapitChannel *channel;
 extern CCam *cam0;
+extern CFrontend * frontend;
 
 extern bool autoshift;
 extern bool autoshift_delete;
@@ -121,7 +123,7 @@ stream2file_error_msg_t start_recording(const char * const filename,
 	genpsi(fd);
 
 	if(!record)
-		record = new cRecord(2);
+		record = new cRecord(frontend->getFrontendNumber());  // 0: Slot 0,  1: Slot 1, .....
 
 	record->Open(numpids);
 

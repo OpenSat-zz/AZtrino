@@ -47,11 +47,23 @@
 
 #define CABLES_XML      CONFIGDIR "/cables.xml"
 #define SATELLITES_XML  CONFIGDIR "/satellites.xml" 
+#define SATELLITES_XML  CONFIGDIR "/satellites.xml"
+#define TERRESTRIAL_XML CONFIGDIR "/terrestrial.xml"
 
 #define AUDIO_DEVICE          "/dev/dvb/adapter0/audio0"
-#define DEMUX_DEVICE          "/dev/dvb/adapter0/demux0"
-#define FRONTEND_DEVICE       "/dev/dvb/adapter0/frontend0"
+#define DEMUX_DEVICE          "/dev/dvb/adapter0/demux1"
+#define FRONTEND_DEVICE       "/dev/dvb/adapter0/frontend1"
 #define VIDEO_DEVICE          "/dev/dvb/adapter0/video0"
+
+
+#define DEMUX_DEVICE_SAT        	0  // "/dev/dvb/adapter0/demux0"
+#define DEMUX_DEVICE_TERRESTRIAL    1  //  "/dev/dvb/adapter0/demux1"
+#define DEMUX_DEVICE_CABLE          2  //"/dev/dvb/adapter0/demux2"
+#define FRONTEND_DEVICE_SAT         0  //"/dev/dvb/adapter0/frontend0"
+#define FRONTEND_DEVICE_TERRESTRIAL 1  //   "/dev/dvb/adapter0/frontend1"
+#define FRONTEND_DEVICE_CABLE       2  //"/dev/dvb/adapter0/frontend2"
+
+
 
 #define CAMD_UDS_NAME  "/tmp/camd.socket"
 

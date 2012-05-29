@@ -153,10 +153,18 @@ int CScanTs::exec(CMenuTarget* parent, const std::string & actionKey)
 			TP.feparams.u.qpsk.symbol_rate = atoi(get_set.TP_rate);
 			TP.feparams.u.qpsk.fec_inner = (fe_code_rate_t) get_set.TP_fec;
 			TP.polarization = get_set.TP_pol;
-		} else {
+		} else if(g_info.delivery_system == DVB_C){
 			TP.feparams.u.qam.symbol_rate	= atoi(get_set.TP_rate);
 			TP.feparams.u.qam.fec_inner	= (fe_code_rate_t)get_set.TP_fec;
 			TP.feparams.u.qam.modulation	= (fe_modulation_t) get_set.TP_mod;
+		}else {
+			TP.feparams.u.ofdm.bandwidth = static_cast<fe_bandwidth_t>(get_set.TP_bandwidth);
+			TP.feparams.u.ofdm.code_rate_HP = static_cast<fe_code_rate_t>(get_set.TP_code_rate_hp);
+			TP.feparams.u.ofdm.code_rate_LP = static_cast<fe_code_rate_t>(get_set.TP_code_rate_lp);
+			TP.feparams.u.ofdm.constellation = static_cast<fe_modulation_t>(get_set.TP_mod);
+			TP.feparams.u.ofdm.transmission_mode = static_cast<fe_transmit_mode_t>(get_set.TP_transmission_mode);
+			TP.feparams.u.ofdm.guard_interval = static_cast<fe_guard_interval_t>(get_set.TP_guard_interval);
+			TP.feparams.u.ofdm.hierarchy_information = static_cast<fe_hierarchy_t>(get_set.TP_hierarchy_information);
 		}
 		//printf("[neutrino] freq %d rate %d fec %d pol %d\n", TP.feparams.frequency, TP.feparams.u.qpsk.symbol_rate, TP.feparams.u.qpsk.fec_inner, TP.polarization);
 	} 
@@ -213,6 +221,9 @@ int CScanTs::exec(CMenuTarget* parent, const std::string & actionKey)
 		} else if(frontend->getInfo()->type == FE_QAM) {
 			frontend->getDelSys(get_set.TP_fec, get_set.TP_mod, f, s, m);
 			sprintf(buffer, "%u %d %s %s %s", atoi(get_set.TP_freq)/1000, atoi(get_set.TP_rate)/1000, f, s, m);
+		}else if(frontend->getInfo()->type == FE_OFDM) {
+			frontend->getDelSys(get_set.TP_code_rate_hp, get_set.TP_mod, f, s, m);
+			sprintf(buffer, "%u %s %s %s", atoi(get_set.TP_freq)/1000, f, s, m);
 		}
 		paintLine(xpos2, ypos_cur_satellite, w - 95, get_set.satNameNoDiseqc);
 		paintLine(xpos2, ypos_frequency, w, buffer);
@@ -447,6 +458,11 @@ void CScanTs::paint(bool fortest)
 	if (g_info.delivery_system == DVB_C)
 	{	//cable
 		paintLineLocale(xpos1, &ypos, width - xpos1, LOCALE_SCANTS_ACTCABLE);
+		xpos2 = xpos1 + 10 + g_Font[SNeutrinoSettings::FONT_TYPE_MENU]->getRenderWidth(g_Locale->getText(LOCALE_SCANTS_ACTCABLE), true); // UTF-8
+	}
+	if (g_info.delivery_system == DVB_T)
+	{
+		paintLineLocale(xpos1, &ypos, width - xpos1, LOCALE_SCANTS_ACTTERRESTRIAL);
 		xpos2 = xpos1 + 10 + g_Font[SNeutrinoSettings::FONT_TYPE_MENU]->getRenderWidth(g_Locale->getText(LOCALE_SCANTS_ACTCABLE), true); // UTF-8
 	}
 

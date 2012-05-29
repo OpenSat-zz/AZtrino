@@ -26,8 +26,8 @@
 
 transponder_id_t get_sdt_TsidOnid(t_satellite_position satellitePosition, freq_id_t freq);
 int nvod_service_ids(const t_transport_stream_id, const t_original_network_id, const t_service_id, const unsigned int num, t_transport_stream_id * const, t_original_network_id * const, t_service_id * const);
-int parse_sdt(t_transport_stream_id* , t_original_network_id*, t_satellite_position satellitePosition, freq_id_t freq);
+int parse_sdt(t_transport_stream_id* , t_original_network_id*, t_satellite_position satellitePosition, freq_id_t freq, int demuxN);
 int parse_current_sdt( const t_transport_stream_id p_transport_stream_id, const t_original_network_id p_original_network_id,
-        t_satellite_position satellitePosition, freq_id_t freq);
+        t_satellite_position satellitePosition, freq_id_t freq, int demuxN);
 
 #endif /* __zapit_sdt_h__ */

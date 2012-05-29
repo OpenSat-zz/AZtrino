@@ -36,6 +36,8 @@
 #include <driver/stream2file.h>
 
 static const char * FILENAME = "record_cs.cpp";
+int demuxN=0;
+
 
 static int sync_byte_offset(const unsigned char * buf, const unsigned int len) {
 
@@ -52,10 +54,13 @@ static int sync_byte_offset(const unsigned char * buf, const unsigned int len) {
 static int setPesFilter(const unsigned short pid, const dmx_output_t dmx_output)
 {
 	int fd;
-	struct dmx_pes_filter_params flt; 
+	struct dmx_pes_filter_params flt;
 
 printf("%s:%s >\n", __FILE__, __FUNCTION__);
 
+	char DMXDEV [25];
+    sprintf (DMXDEV, "/dev/dvb/adapter0/demux%d", demuxN);
+	;
 	if ((fd = open(DMXDEV, O_RDWR|O_NONBLOCK)) < 0)
 		return -1;
 	if (ioctl(fd, DMX_SET_BUFFER_SIZE, DMX_BUFFER_SIZE) < 0)
@@ -112,14 +117,14 @@ printf("%s:%s >\n", __FILE__, __FUNCTION__);
 				else
 				{
 					ringbuffer_read_advance(ringbuf, written);
-					
+
 					if (vec[0].len == (size_t)written)
 					{
 						if (vec[1].len == 0)
 						{
 							goto all_bytes_written;
 						}
-						
+
 						vec[0] = vec[1];
 						vec[1].len = 0;
 					}
@@ -135,7 +140,7 @@ all_bytes_written:
 ;
 //fixme: do we need this			if (use_fdatasync)
 //				fdatasync(fd2);
-			
+
 		}
 		else
 		{
@@ -166,7 +171,7 @@ printf("%s:%s <\n", __FILE__, __FUNCTION__);
 void cRecord::DMXThread()
 {
 	pthread_t         file_thread;
-	
+
 	ringbuffer_data_t vec[2];
 	ssize_t           written;
 	ssize_t           todo = 0;
@@ -188,7 +193,7 @@ printf("%s:%s >\n", __FILE__, __FUNCTION__);
 	if (!ringbuf)
 	{
 		exit_flag = STREAM2FILE_STATUS_WRITE_OPEN_FAILURE;
-		printf("[stream2file]: error allocating ringbuffer! (out of memory?)\n"); 
+		printf("[stream2file]: error allocating ringbuffer! (out of memory?)\n");
 	}
 	else
 		fprintf(stderr, "[stream2file] allocated ringbuffer size: %ld\n", ringbuffer_write_space(ringbuf));
@@ -198,7 +203,7 @@ printf("%s:%s >\n", __FILE__, __FUNCTION__);
 	if (pthread_create(&file_thread, 0, execute_file_thread, this) != 0)
 	{
 		exit_flag = STREAM2FILE_STATUS_WRITE_OPEN_FAILURE;
-		printf("[stream2file]: error creating file_thread! (out of memory?)\n"); 
+		printf("[stream2file]: error creating file_thread! (out of memory?)\n");
 	}
 
 	while (exit_flag == STREAM2FILE_STATUS_RUNNING)
@@ -268,12 +273,12 @@ printf("%s:%s >\n", __FILE__, __FUNCTION__);
 				if (r > 0)
 				{
 					ringbuffer_write_advance(ringbuf, r);
-	
+
 					if (todo == r)
 					{
 						if (todo2 == 0)
 							goto next;
-	
+
 						todo = todo2;
 						todo2 = 0;
 						vec[0].buf = vec[1].buf;
@@ -324,55 +329,58 @@ printf("%s:%s <\n", __FILE__, __FUNCTION__);
 }
 
 
-cRecord::cRecord(int num) 
-{ 
-   printf("%s:%s num = %d\n", FILENAME, __FUNCTION__, num); 
-//fixme: what is the meaning of num? should it be the demuxer number?   
+cRecord::cRecord(int num)
+{
+   printf("%s:%s num = %d\n", FILENAME, __FUNCTION__, num);
+//fixme: what is the meaning of num? should it be the demuxer number?
+   demuxN=num;
 }
 
-cRecord::~cRecord() 
-{ 
-   printf("%s:%s\n", FILENAME, __FUNCTION__); 
+cRecord::~cRecord()
+{
+   printf("%s:%s\n", FILENAME, __FUNCTION__);
 }
 
-bool cRecord::Open(int numpids) 
-{ 
-   printf("%s:%s numpids %d\n", FILENAME, __FUNCTION__, numpids); 
+bool cRecord::Open(int numpids)
+{
+   printf("%s:%s numpids %d\n", FILENAME, __FUNCTION__, numpids);
 
    ringbuffers = 4;
    ringbuffersize = ((1 << 19) << ringbuffers);
 
    demuxfd_count = numpids;
-   
+
    exit_flag = STREAM2FILE_STATUS_IDLE;
 
-   return true; 
+   return true;
 }
 
-void cRecord::Close(void) 
-{ 
-     printf("%s:%s\n", FILENAME, __FUNCTION__); 
+void cRecord::Close(void)
+{
+     printf("%s:%s\n", FILENAME, __FUNCTION__);
 }
 
 /* helper function to call the cpp thread loop */
 void* execute_demux_thread(void *c)
 {
+printf("execute_demux_thread\n");
    cRecord *obj=(cRecord*)c;
 
-printf("%s:%s>\n", FILENAME, __FUNCTION__); 
+printf("%s:%s>\n", FILENAME, __FUNCTION__);
 
    obj->DMXThread();
 
-printf("%s:%s<\n", FILENAME, __FUNCTION__); 
+printf("%s:%s<\n", FILENAME, __FUNCTION__);
 
    return NULL;
 }
 
-bool cRecord::Start(int fd, unsigned short vpid, unsigned short * apids, int numpids) 
-{ 
-    printf("%s:%s: fd %d, vpid 0x%02x\n", FILENAME, __FUNCTION__, fd, vpid); 
-    
-    printf("apids: "); 
+bool cRecord::Start(int fd, unsigned short vpid, unsigned short * apids, int numpids)
+{
+	char DVRDEV [25];
+    printf("%s:%s: fd %d, vpid 0x%02x\n", FILENAME, __FUNCTION__, fd, vpid);
+
+    printf("apids: ");
     for (int i = 0; i < numpids; i++)
        printf("0x%02x ", apids[i]);
     printf("\n");
@@ -403,6 +411,7 @@ bool cRecord::Start(int fd, unsigned short vpid, unsigned short * apids, int num
 	    }
     }
 
+    sprintf (DVRDEV, "/dev/dvb/adapter0/dvr%d", demuxN);
     if ((dvrfd = open(DVRDEV, O_RDONLY|O_NONBLOCK)) < 0)
     {
 	    while (demuxfd_count > 0)
@@ -411,27 +420,30 @@ bool cRecord::Start(int fd, unsigned short vpid, unsigned short * apids, int num
             printf("error opening dvr device\n");
 	    return false;
     }
-    
+
     printf("dvrfd %d\n", dvrfd);
-    
+
     exit_flag = STREAM2FILE_STATUS_RUNNING;
+    printf("previo al pthread_create\n");
+
 
     if (pthread_create(&demux_thread[0], 0, execute_demux_thread, this) != 0)
     {
-	    exit_flag = STREAM2FILE_STATUS_WRITE_OPEN_FAILURE; 
+    	printf("ERROR  al pthread_create\n");
+	    exit_flag = STREAM2FILE_STATUS_WRITE_OPEN_FAILURE;
 	    printf("[stream2file]: error creating thread! (out of memory?)\n");
-	    return false; 
+	    return false;
     }
-    
+    printf("post al pthread_create\n");
     time(&record_start_time);
 
     printf("record start time: %lu \n", record_start_time);
-    return true; 
+    return true;
 }
 
-bool cRecord::Stop(void) 
-{ 
-    printf("%s:%s\n", FILENAME, __FUNCTION__); 
+bool cRecord::Stop(void)
+{
+    printf("%s:%s\n", FILENAME, __FUNCTION__);
 
     if (exit_flag == STREAM2FILE_STATUS_RUNNING)
     {
@@ -443,12 +455,12 @@ bool cRecord::Stop(void)
 	    return true;
     }
 
-    return false; 
+    return false;
 }
 
-void cRecord::RecordNotify(int Event, void *pData) 
-{ 
-    printf("%s:%s event %d\n", FILENAME, __FUNCTION__, Event); 
+void cRecord::RecordNotify(int Event, void *pData)
+{
+    printf("%s:%s event %d\n", FILENAME, __FUNCTION__, Event);
 
 //fixme: dont know what this is for? maybe we must connect to the event queues? not sure...
 }

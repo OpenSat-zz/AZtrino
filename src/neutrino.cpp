@@ -2186,7 +2186,7 @@ int CNeutrinoApp::run(int argc, char **argv)
 	CMenuWidget    keySettings         (LOCALE_MAINSETTINGS_KEYBINDING           , "keybinding.raw"      , 400);
 	CMenuWidget    miscSettings        (LOCALE_MISCSETTINGS_HEAD             , NEUTRINO_ICON_SETTINGS);
 	CMenuWidget    audioplPicSettings  (LOCALE_AUDIOPLAYERPICSETTINGS_GENERAL, NEUTRINO_ICON_SETTINGS);
-	CMenuWidget    scanSettings        (LOCALE_SERVICEMENU_SCANTS            , NEUTRINO_ICON_SETTINGS);
+	scanSettingsWidget =  CMenuWidget (LOCALE_SERVICEMENU_SCANTS            , NEUTRINO_ICON_SETTINGS);
 	CMenuWidget    service             (LOCALE_SERVICEMENU_HEAD              , NEUTRINO_ICON_SETTINGS);
 	CMenuWidget    moviePlayer         (LOCALE_MOVIEPLAYER_HEAD              , "streaming.raw"       );
 	CMenuWidget    shutdown            (LOCALE_MAINMENU_SHUTDOWN              , NEUTRINO_ICON_SETTINGS);
@@ -2194,13 +2194,13 @@ int CNeutrinoApp::run(int argc, char **argv)
 	InitMainMenu(mainMenu, mainSettings, audioSettings, parentallockSettings, networkSettings, recordingSettings,
 			colorSettings, lcdSettings, keySettings, languageSettings, miscSettings,
 			service, fontSettings, audioplPicSettings, streamingSettings, moviePlayer, shutdown);
-	InitServiceSettings(service, scanSettings);
+	InitServiceSettings(service, scanSettingsWidget);
 	InitLanguageSettings(languageSettings);
 	InitAudioplPicSettings(audioplPicSettings);
 	InitMiscSettings(miscSettings);
 	InitAudioSettings(audioSettings, audioSetupNotifier);
 	InitParentalLockSettings(parentallockSettings);
-	InitScanSettings(scanSettings);
+	InitScanSettings(scanSettingsWidget);
 
 	dprintf( DEBUG_NORMAL, "registering as event client\n");
 #if 0
@@ -2300,8 +2300,8 @@ int CNeutrinoApp::run(int argc, char **argv)
 		}
 		if(ret != menu_return::RETURN_EXIT_ALL)
 		{
-			scanSettings.exec(NULL, "");
-			scanSettings.editItem(1, GenericMenuBack);
+			scanSettingsWidget.exec(NULL, "");
+			scanSettingsWidget.editItem(1, GenericMenuBack);
 		}
 		videoDecoder->StopPicture();
 	}
@@ -4492,4 +4492,27 @@ void CNeutrinoApp::saveKeys(const char * fname)
 	tconfig.setString( "repeat_blocker", g_settings.repeat_blocker );
 	tconfig.setString( "repeat_genericblocker", g_settings.repeat_genericblocker );
 	tconfig.saveConfig(fname);
+}
+
+void CNeutrinoApp::ReloadScanSettings(int fe)
+{
+	//Change tuner
+	zapitCfg.tuner=fe;
+
+	switch (fe)
+	{
+		case 0:
+			g_info.delivery_system = DVB_S;
+			break;
+		case 1:
+			g_info.delivery_system = DVB_T;
+			break;
+		case 2:
+			g_info.delivery_system = DVB_C;
+			break;
+	}
+
+	//Reload Menu
+	scanSettingsWidget.clear();
+	InitScanSettings(scanSettingsWidget);
 }

@@ -334,6 +334,7 @@ class CMenuWidget : public CMenuTarget
 
 		virtual void addItem(CMenuItem* menuItem, const bool defaultselected = false);
 		virtual void editItem(int n, CMenuItem* menuItem);
+		virtual void clear();
 		bool hasItem();
 		virtual void paint();
 		virtual void hide();

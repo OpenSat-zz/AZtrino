@@ -22,6 +22,6 @@
 #ifndef __zapit_nit_h__
 #define __zapit_nit_h__
 
-int parse_nit(t_satellite_position satellitePosition, freq_id_t freq);
+int parse_nit(t_satellite_position satellitePosition, freq_id_t freqm, int demuxN);
 
 #endif /* __zapit_nit_h__ */

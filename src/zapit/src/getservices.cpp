@@ -57,7 +57,9 @@ void save_services(bool tocopy);
         msec = ((tv2.tv_sec - tv.tv_sec) * 1000) + ((tv2.tv_usec - tv.tv_usec) / 1000); \
         printf("%s: %u msec\n", label, msec)
 
-void ParseTransponders(xmlNodePtr node, t_satellite_position satellitePosition, bool cable)
+
+void ParseTransponders(xmlNodePtr node, t_satellite_position satellitePosition, bool cable, bool terrestrial)
+
 {
 	t_transport_stream_id transport_stream_id;
 	t_original_network_id original_network_id;
@@ -67,6 +69,16 @@ void ParseTransponders(xmlNodePtr node, t_satellite_position satellitePosition, 
 	tcnt =0;
 
 	memset(&feparams, 0, sizeof(FrontendParameters));
+
+#if 0
+	sprintf(tpstr, "\t\t<TS id=\"%04x\" on=\"%04x\" frq=\"%u\" inv=\"%hu\" bw=\"%u\" const=\"%u\" crhp=\"%u\" crlp=\"%u\" guard=\"%u\" tmode=\"%u\" hi=\"%u\">\n",
+	tI->second.transport_stream_id, tI->second.original_network_id,
+	tI->second.feparams.frequency, tI->second.feparams.inversion,
+	tI->second.feparams.u.ofdm.bandwidth, tI->second.feparams.u.ofdm.constellation,
+	tI->second.feparams.u.ofdm.code_rate_HP, tI->second.feparams.u.ofdm.code_rate_LP,
+	tI->second.feparams.u.ofdm.guard_interval, tI->second.feparams.u.ofdm.transmission_mode,
+	tI->second.feparams.u.ofdm.hierarchy_information);
+#endif
 
 	/* read all transponders */
 	while ((node = xmlGetNextOccurence(node, "TS")) != NULL) {
@@ -82,7 +94,15 @@ void ParseTransponders(xmlNodePtr node, t_satellite_position satellitePosition, 
 
 			if (feparams.frequency > 1000*1000)
 				feparams.frequency=feparams.frequency/1000; //transponderlist was read from tuxbox
-		} else {
+		} else if(terrestrial) {
+			feparams.u.ofdm.bandwidth = static_cast<fe_bandwidth_t>(xmlGetNumericAttribute(node, "bw", 0));
+			feparams.u.ofdm.constellation = static_cast<fe_modulation_t>(xmlGetNumericAttribute(node, "const", 0));
+			feparams.u.ofdm.code_rate_HP = static_cast<fe_code_rate_t>(xmlGetNumericAttribute(node, "crhp", 0));
+			feparams.u.ofdm.code_rate_LP = static_cast<fe_code_rate_t>(xmlGetNumericAttribute(node, "crlp", 0));
+			feparams.u.ofdm.guard_interval = static_cast<fe_guard_interval_t>(xmlGetNumericAttribute(node, "guard", 0));
+			feparams.u.ofdm.transmission_mode = static_cast<fe_transmit_mode_t>(xmlGetNumericAttribute(node, "tmode", 0));
+			feparams.u.ofdm.hierarchy_information = static_cast<fe_hierarchy_t>(xmlGetNumericAttribute(node, "hi", 0));
+		}else {
 			feparams.u.qpsk.fec_inner = (fe_code_rate_t) xmlGetNumericAttribute(node, (char *) "fec", 0);
 			feparams.u.qpsk.symbol_rate = xmlGetNumericAttribute(node, (char *) "sr", 0);
 
@@ -180,8 +200,7 @@ void ParseChannels(xmlNodePtr node, const t_transport_stream_id transport_stream
 							);
 //printf("INS CHANNEL %s %x\n", name.c_str(), &ret.first->second);
 					if(ret.second == false) {
-						printf("[zapit] duplicate channel %s id %llx freq %d (old %s at %d)\n",
-							name.c_str(), chid, freq, ret.first->second.getName().c_str(), ret.first->second.getFreqId());
+						//printf("[zapit] duplicate channel %s id %llx freq %d (old %s at %d)\n",name.c_str(), chid, freq, ret.first->second.getName().c_str(), ret.first->second.getFreqId());
 					} else {
 						scnt++;
 						tallchans_iterator cit = ret.first;
@@ -217,17 +236,20 @@ void FindTransponder(xmlNodePtr search)
 	newtpid = 0xC000;
 	while (search) {
 		bool cable = false;
+		bool terrestrial = false;
 
 		if (!(strcmp(xmlGetName(search), "cable")))
 			cable = true;
-		else if ((strcmp(xmlGetName(search), "sat"))) {	
+		else if (!(strcmp(xmlGetName(search), "transponder")))
+			terrestrial = true;
+		else if ((strcmp(xmlGetName(search), "sat"))) {
 			search = search->xmlNextNode;
 			continue;
 		}
 
 		satellitePosition = xmlGetSignedNumericAttribute(search, (char *) "position", 10);
 		DBG("going to parse dvb-%c provider %s\n", xmlGetName(search)[0], xmlGetAttribute(search, (char *) "name"));
-		ParseTransponders(search->xmlChildrenNode, satellitePosition, cable);
+		ParseTransponders(search->xmlChildrenNode, satellitePosition, cable, terrestrial);
 		newfound++;
 		search = search->xmlNextNode;
 	}
@@ -248,8 +270,15 @@ void ParseSatTransponders(fe_type_t frontendType, xmlNodePtr search, t_satellite
 	while ((tps = xmlGetNextOccurence(tps, "transponder")) != NULL) {
 		memset(&feparams, 0x00, sizeof(FrontendParameters));
 
-		feparams.frequency = xmlGetNumericAttribute(tps, (char *) "frequency", 0);
-		if (frontendType == FE_QAM) {
+
+		if(frontendType != FE_OFDM) {
+				feparams.frequency = xmlGetNumericAttribute(tps, "frequency", 0);
+		} else {
+				feparams.frequency = xmlGetNumericAttribute(tps, "centre_frequency", 0);
+		}
+
+
+		if ((frontendType == FE_QAM) || (frontendType == FE_OFDM)) {
 			if (feparams.frequency > 1000*1000)
 				feparams.frequency=feparams.frequency/1000; //transponderlist was read from tuxbox
 			feparams.frequency = (int) 1000 * (int) round ((double) feparams.frequency / (double) 1000);
@@ -273,6 +302,15 @@ void ParseSatTransponders(fe_type_t frontendType, xmlNodePtr search, t_satellite
 			if(modulation == 2)
 				xml_fec += 9;
 			feparams.u.qpsk.fec_inner = (fe_code_rate_t) xml_fec;
+		} else {
+			feparams.u.ofdm.bandwidth = static_cast<fe_bandwidth_t>(xmlGetNumericAttribute(tps, "bandwidth", 0));
+			feparams.u.ofdm.constellation = static_cast<fe_modulation_t>(xmlGetNumericAttribute(tps, "constellation", 0));
+			feparams.u.ofdm.code_rate_LP = static_cast<fe_code_rate_t>(xmlGetNumericAttribute(tps, "code_rate_lp", 0));
+			feparams.u.ofdm.code_rate_HP = static_cast<fe_code_rate_t>(xmlGetNumericAttribute(tps, "code_rate_hp", 0));
+			feparams.u.ofdm.guard_interval = static_cast<fe_guard_interval_t>(xmlGetNumericAttribute(tps, "guard_interval", 0));
+			feparams.u.ofdm.transmission_mode = static_cast<fe_transmit_mode_t>(xmlGetNumericAttribute(tps, "transmission_mode", 0));
+			feparams.u.ofdm.hierarchy_information = static_cast<fe_hierarchy_t>(xmlGetNumericAttribute(tps, "hierarchy_information", 0));
+			feparams.inversion = static_cast<fe_spectral_inversion_t>(xmlGetNumericAttribute(tps, "inversion", 0));
 		}
 		transponder_id_t tid = 
 			CREATE_TRANSPONDER_ID_FROM_SATELLITEPOSITION_ORIGINALNETWORK_TRANSPORTSTREAM_ID(
@@ -378,17 +416,19 @@ int LoadServices(fe_type_t frontendType, diseqc_t diseqcType, bool only_current)
 	select_transponders.clear();
 	fake_tid = fake_nid = 0;
 
-	if(!scanInputParser)  {
+	//if(!scanInputParser)  {
 		if(frontendType == FE_QPSK) {
 			scanInputParser = parseXmlFile(SATELLITES_XML);
 		} else if(frontendType == FE_QAM) {
 			scanInputParser = parseXmlFile(CABLES_XML);
+		} else if(frontendType == FE_OFDM) {
+			scanInputParser = parseXmlFile(TERRESTRIAL_XML);
 		}
-	}
+	//}
 
 	if (scanInputParser != NULL) {
 		t_satellite_position position = 0;
-		if(!satcleared) 
+		if(!satcleared)
 			satellitePositions.clear();
 		satcleared = 1;
 
@@ -402,7 +442,7 @@ int LoadServices(fe_type_t frontendType, diseqc_t diseqcType, bool only_current)
 					init_sat(position);
 				}
 				satellitePositions[position].name = name;
-			} else if(!(strcmp(xmlGetName(search), "cable"))) {
+			} else if(!(strcmp(xmlGetName(search), "cable")) || !(strcmp(xmlGetName(search), "terrestrial"))) {
 				char * name = xmlGetAttribute(search,(char *)  "name");
 				if(satellitePositions.find(position) == satellitePositions.end()) {
 					init_sat(position);
@@ -540,7 +580,14 @@ void SaveServices(bool tocopy)
 							tI->second.feparams.u.qam.symbol_rate, tI->second.feparams.u.qam.fec_inner,
 							tI->second.feparams.u.qam.modulation);
 					break;
-				case FE_OFDM:
+				case FE_OFDM: /* terrestrial */
+							sprintf(tpstr, "\t\t<TS id=\"%04x\" on=\"%04x\" frq=\"%u\" inv=\"%hu\" bw=\"%u\" const=\"%u\" crhp=\"%u\" crlp=\"%u\" guard=\"%u\" tmode=\"%u\" hi=\"%u\">\n",
+							tI->second.transport_stream_id, tI->second.original_network_id,
+							tI->second.feparams.frequency, tI->second.feparams.inversion,
+							tI->second.feparams.u.ofdm.bandwidth, tI->second.feparams.u.ofdm.constellation,
+							tI->second.feparams.u.ofdm.code_rate_HP, tI->second.feparams.u.ofdm.code_rate_LP,
+							tI->second.feparams.u.ofdm.guard_interval, tI->second.feparams.u.ofdm.transmission_mode,
+							tI->second.feparams.u.ofdm.hierarchy_information);
 				default:
 					break;
 			}
@@ -557,7 +604,9 @@ void SaveServices(bool tocopy)
 							case FE_QAM: /* cable */
 								fprintf(fd, "\t<cable name=\"%s\">\n", spos_it->second.name.c_str());
 								break;
-							case FE_OFDM:
+							case FE_OFDM: /* terrestrial */
+								fprintf(fd, "\t<transponder name=\"%s\" position=\"%hd\">\n", spos_it->second.name.c_str(), spos_it->first);
+								break;
 							default:
 								break;
 						}
@@ -594,6 +643,9 @@ void SaveServices(bool tocopy)
 					break;
 				case FE_QAM:
 					fprintf(fd, "\t</cable>\n");
+					break;
+				case FE_OFDM:
+					fprintf(fd, "\t</transponder>\n");
 					break;
 				default:
 					break;

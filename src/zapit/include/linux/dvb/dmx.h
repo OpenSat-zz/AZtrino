@@ -151,7 +151,7 @@ typedef struct dmx_caps {
 
 typedef enum {
 	DMX_SOURCE_FRONT0 = 0,
-	DMX_SOURCE_FRONT1,
+	DMX_SOURCE_FRONT1 = 1,
 	DMX_SOURCE_FRONT2,
 	DMX_SOURCE_FRONT3,
 	DMX_SOURCE_DVR0   = 16,

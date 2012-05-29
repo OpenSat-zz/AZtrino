@@ -350,6 +350,11 @@ int pmt_caids[10] = {0,0,0,0,0,0,0,0,0,0};
 
 int parse_pmt(CZapitChannel * const channel)
 {
+	parse_pmt(channel, 0);
+
+}
+int parse_pmt(CZapitChannel * const channel, int demuxN)
+{
 	int pmtlen;
 	int ia, dpmtlen, pos;
 	unsigned char descriptor_length=0;
@@ -378,7 +383,7 @@ int parse_pmt(CZapitChannel * const channel)
 		return -1;
 	}
 
-	cDemux * dmx = new cDemux();
+	cDemux * dmx = new cDemux(demuxN);
 	dmx->Open(DMX_PSI_CHANNEL);
 
 	memset(filter, 0x00, DMX_FILTER_SIZE);
@@ -529,14 +534,14 @@ int parse_pmt(CZapitChannel * const channel)
 
 cDemux * pmtDemux;
 
-int pmt_set_update_filter(CZapitChannel * const channel, int * fd)
+int pmt_set_update_filter(CZapitChannel * const channel, int * fd, int demuxN)
 {
 	unsigned char filter[DMX_FILTER_SIZE];
 	unsigned char mask[DMX_FILTER_SIZE];
 	unsigned char mode[DMX_FILTER_SIZE];
 
 	if(pmtDemux == NULL) {
-		pmtDemux = new cDemux(0);
+		pmtDemux = new cDemux(demuxN);
 		pmtDemux->Open(DMX_PSI_CHANNEL);
 	}
 

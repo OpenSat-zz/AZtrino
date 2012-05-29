@@ -67,6 +67,17 @@ class CSatDiseqcNotifier : public CChangeObserver
 		bool changeNotify(const neutrino_locale_t, void * Data);
 };
 
+class CTunerNotifier : public CChangeObserver
+{
+	private:
+		CMenuForwarder* toDisable[1];
+	public:
+		CTunerNotifier( CMenuForwarder*);
+
+		//bool changeNotify(const neutrino_locale_t, void * data);
+		bool changeNotify(const neutrino_locale_t, void * Data);
+};
+
 class CTP_scanNotifier : public CChangeObserver
 {
 	private:
@@ -161,8 +172,8 @@ class CPauseSectionsdNotifier : public CChangeObserver
 
 class CSectionsdConfigNotifier : public CChangeObserver
 {
-        public:
-                bool changeNotify(const neutrino_locale_t, void * );
+	public:
+    	bool changeNotify(const neutrino_locale_t, void * );
 };
 
 class CTouchFileNotifier : public CChangeObserver

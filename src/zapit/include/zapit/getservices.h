@@ -38,7 +38,7 @@
 //#define NONE 0x0000
 //#define INVALID 0x1FFF
 
-void ParseTransponders(xmlNodePtr xmltransponder, t_satellite_position satellitePosition);
+void ParseTransponders(xmlNodePtr xmltransponder, t_satellite_position satellitePosition, bool cable, bool terrestrial);
 void ParseChannels    (xmlNodePtr node, const t_transport_stream_id transport_stream_id, const t_original_network_id original_network_id, t_satellite_position satellitePosition, freq_id_t freq);
 void FindTransponder  (xmlNodePtr root);
 int LoadServices      (fe_type_t FrontendType, diseqc_t, bool only_current);

@@ -175,20 +175,40 @@ int CHDDMenuHandler::doMenu ()
 int CHDDDestExec::exec(CMenuTarget* parent, const std::string&)
 {
 	char cmd[100];
+	char STBmodel [ 3 ];
+	char hddevice [ 3 ];
+	FILE * modelFile;
+		modelFile = fopen ("/proc/model","r");
+
+	if ( modelFile != NULL )
+		/* or other suitable maximum line size */
+		fgets ( STBmodel, sizeof STBmodel, modelFile ); /* read a line */
+
+	printf("######################### %d\n",strncmp(STBmodel,"me",2));
+	if (strncmp(STBmodel,"me",2)!=0)
+		strcpy(hddevice, "hd");
+	else
+		strcpy(hddevice, "sd");
 
 	printf("CHDDDestExec: noise %d sleep %d\n", g_settings.hdd_noise, g_settings.hdd_sleep);
 	//FIXME: atm we can have 2 hdd, sata and usb
-	sprintf(cmd, "hdparm -S%d /dev/sda >/dev/null 2>/dev/null", g_settings.hdd_sleep);
+	sprintf(cmd, "hdparm -S%d /dev/%sa >/dev/null 2>/dev/null", g_settings.hdd_sleep,hddevice);
+	printf("%s\n", cmd);
 	system(cmd);
-	sprintf(cmd, "hdparm -M%d /dev/sda >/dev/null 2>/dev/null", g_settings.hdd_noise);
+	sprintf(cmd, "hdparm -M%d /dev/%sa >/dev/null 2>/dev/null", g_settings.hdd_noise,hddevice);
+	printf("%s\n", cmd);
 	system(cmd);
-	sprintf(cmd, "hdparm -S%d /dev/sdb >/dev/null 2>/dev/null", g_settings.hdd_sleep);
+	sprintf(cmd, "hdparm -S%d /dev/%sb >/dev/null 2>/dev/null", g_settings.hdd_sleep,hddevice);
+	printf("%s\n", cmd);
 	system(cmd);
-	sprintf(cmd, "hdparm -M%d /dev/sdb >/dev/null 2>/dev/null", g_settings.hdd_noise);
+	sprintf(cmd, "hdparm -M%d /dev/%sb >/dev/null 2>/dev/null", g_settings.hdd_noise,hddevice);
+	printf("%s\n", cmd);
 	system(cmd);
-	sprintf(cmd, "hdparm -K /dev/sda >/dev/null 2>/dev/null");
+	sprintf(cmd, "hdparm -K /dev/%sa >/dev/null 2>/dev/null",hddevice);
+	printf("%s\n", cmd);
 	system(cmd);
-	sprintf(cmd, "hdparm -K /dev/sdb >/dev/null 2>/dev/null");
+	sprintf(cmd, "hdparm -K /dev/%sb >/dev/null 2>/dev/null",hddevice);
+	printf("%s\n", cmd);
 	system(cmd);
 	return 1;
 }

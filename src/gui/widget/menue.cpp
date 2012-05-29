@@ -143,6 +143,14 @@ void CMenuWidget::addItem(CMenuItem* menuItem, const bool defaultselected)
 
 }
 
+
+void CMenuWidget::clear()
+{
+
+	items.clear();
+
+}
+
 void CMenuWidget::editItem(int pos, CMenuItem* menuItem)
 {
 	items.at(pos)=menuItem;

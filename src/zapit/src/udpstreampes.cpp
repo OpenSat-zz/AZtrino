@@ -35,6 +35,7 @@
 
 #include <linux/dvb/dmx.h>
 #include <zapit/client/zapitclient.h>
+#include <zapit/settings.h>  // DEMUX_DEVICE
 
 #include "udpstreampes.h"
 
@@ -197,7 +198,7 @@ void * DmxTSReader( void * Ptr )
    int fd_dvr;  
 	unsigned u;
 
-   fd_dvr = open("/dev/dvb/adapter0/dvr0", O_RDONLY);
+   fd_dvr = open("/dev/dvb/adapter0/dvr1", O_RDONLY);
    if (-1 == fd_dvr) {
       perror("ERROR: main() - dvr0 open");
       fprintf(stderr, "EXIT\n");
@@ -206,7 +207,7 @@ void * DmxTSReader( void * Ptr )
    }
 	
 	for (u = 0; u < StreamNum; u++) {
-		Stream[u].fd = open("/dev/dvb/adapter0/demux0", O_RDWR);
+		Stream[u].fd = open(DEMUX_DEVICE, O_RDWR);
 		if (-1 == Stream[u].fd) {
 			perror("ERROR: main() - demux0 open");
 			fprintf(stderr, "EXIT\n");
@@ -329,7 +330,7 @@ void * DmxReader( void * Ptr )
    CurStream = (StreamType*)Ptr;
    BufSize = (CurStream->BufPacketNum) * NET_DATA_PER_PACKET;
    
-   CurStream->fd = open("/dev/dvb/adapter0/demux0", O_RDWR);
+   CurStream->fd = open(DEMUX_DEVICE, O_RDWR);
    if (-1 == CurStream->fd) {
       perror("ERROR: main() - demux0 open");
       fprintf(stderr, "EXIT\n");

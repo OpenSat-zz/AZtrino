@@ -48,17 +48,17 @@ int fh_png_load(const char *name,unsigned char **buffer,int* xp,int* yp)
 	if(info_ptr == NULL)
 	{
 		png_destroy_read_struct(&png_ptr, (png_infopp)NULL, (png_infopp)NULL);
-		fclose(fh); 
+		fclose(fh);
 		return(FH_ERROR_FORMAT);
 	}
-
+/*
 	if(setjmp(png_ptr->jmpbuf))
 	{
 		png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
-		fclose(fh); 
+		fclose(fh);
 		return(FH_ERROR_FORMAT);
 	}
-
+*/
 	png_init_io(png_ptr,fh);
 
 	png_read_info(png_ptr, info_ptr);
@@ -135,17 +135,17 @@ int fh_png_getsize(const char *name,int *x,int *y, int wanted_width, int wanted_
 	if(info_ptr == NULL)
 	{
 		png_destroy_read_struct(&png_ptr, (png_infopp)NULL, (png_infopp)NULL);
-		fclose(fh); 
+		fclose(fh);
 		return(FH_ERROR_FORMAT);
 	}
-
+/*
 	if(setjmp(png_ptr->jmpbuf))
 	{
 		png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
-		fclose(fh); 
+		fclose(fh);
 		return(FH_ERROR_FORMAT);
 	}
-
+*/
 	png_init_io(png_ptr,fh);
 	png_read_info(png_ptr, info_ptr);
 	png_get_IHDR(png_ptr, info_ptr, &width, &height, &bit_depth, &color_type,&interlace_type, NULL, NULL);

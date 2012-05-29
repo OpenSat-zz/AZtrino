@@ -25,12 +25,13 @@
 
 #define PAT_SIZE 1024
 
-int parse_pat(CZapitChannel * const channel)
+
+int parse_pat(CZapitChannel * const channel, int demuxN)
 {
 	if (!channel)
 		return -1;
 
-        cDemux * dmx = new cDemux();
+    cDemux * dmx = new cDemux(demuxN);
 	dmx->Open(DMX_PSI_CHANNEL);
 
 	/* buffer for program association table */
@@ -72,17 +73,17 @@ if(buffer[7]) printf("[PAT] ****************************************************
 	} while (filter[4]++ != buffer[7]);
 	delete dmx;
 
-	printf("[pat.cpp] sid %X not found..\n", channel->getServiceId());
+	printf("[pat.cpp] sid 0not found..\n", channel->getServiceId());
 	return -1;
 }
 
 static unsigned char pbuffer[PAT_SIZE];
-int parse_pat()
+int parse_pat(int demuxN)
 {
 	int ret = 0;
 
 	printf("[scan] Parsing pat ...\n");
-	cDemux * dmx = new cDemux();
+	cDemux * dmx = new cDemux(demuxN);
 	dmx->Open(DMX_PSI_CHANNEL);
 
 	unsigned char filter[DMX_FILTER_SIZE];

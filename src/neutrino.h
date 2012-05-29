@@ -215,11 +215,13 @@ class CNeutrinoApp : public CMenuTarget, CChangeObserver
 		CNeutrinoApp();
 
 	public:
+		CMenuWidget    scanSettingsWidget;
 		void saveSetup(const char * fname);
 		int loadSetup(const char * fname);
 		void loadColors(const char * fname);
 		void SetupTiming();
 		void SetupFonts();
+		void ReloadScanSettings(int fe);
 
 		void setVolume(const neutrino_msg_t key, const bool bDoPaint = true, bool nowait = false);
 		~CNeutrinoApp();

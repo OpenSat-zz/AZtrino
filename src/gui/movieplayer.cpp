@@ -891,7 +891,7 @@ void CMoviePlayerGui::PlayFile(void)
 		}
 
 		if (showsubselectdialog) {
-			printf("################# Dialogo de subtitulos");
+			//printf("################# Subtitles");
 			CMenuWidget APIDSelector(LOCALE_APIDSELECTOR_HEAD, "audio.raw", 300);
 			APIDSelector.addItem(GenericMenuSeparator);
 			CSPIDSelectExec *SPIDChanger = new CSPIDSelectExec;
@@ -900,7 +900,7 @@ void CMoviePlayerGui::PlayFile(void)
 			if(is_file_player && !g_numpids){
 				playback->FindAllSPids(g_spids, &g_numpids, g_slanguage);
 			}
-			printf("################# Dialogo de subtitulos %d", g_numpids);
+			//printf("################# Subtitles %d", g_numpids);
 			if (g_numpids==0)
 			{
 				APIDSelector.addItem(new CMenuForwarderNonLocalized("Not aviable", enabled, NULL, SPIDChanger, "0. ", CRCInput::convertDigitToKey(1)), defpid);

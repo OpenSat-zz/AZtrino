@@ -11,6 +11,13 @@
 
 #include <string>
 
+#include <cstdlib>
+#include <vector>
+extern "C" {
+#include <inttypes.h>
+#include <sys/ioctl.h>
+
+}
 #define DEMUX_POLL_TIMEOUT 5000  // timeout in ms
 #define MAX_FILTER_LENGTH 16    // maximum number of filters
 #ifndef DMX_FILTER_SIZE
@@ -30,14 +37,21 @@ typedef struct {
 
 typedef enum
 {
-   DMX_VIDEO_CHANNEL  = 1,
-   DMX_AUDIO_CHANNEL,
-   DMX_PES_CHANNEL,
-   DMX_PSI_CHANNEL,
-   DMX_PIP_CHANNEL,
-   DMX_TP_CHANNEL,
-   DMX_PCR_ONLY_CHANNEL,
+	DMX_INVALID = 0,
+	DMX_VIDEO_CHANNEL = 1,
+	DMX_AUDIO_CHANNEL,
+	DMX_PES_CHANNEL,
+	DMX_PSI_CHANNEL,
+	DMX_PIP_CHANNEL,
+	DMX_TP_CHANNEL,
+	DMX_PCR_ONLY_CHANNEL
 } DMX_CHANNEL_TYPE;
+
+typedef struct
+{
+	int fd;
+	unsigned short pid;
+} pes_pids;
 
 class cDemux
 {
@@ -52,6 +66,17 @@ class cDemux
 		int uLength;
 		bool enabled;
 		int unit;
+
+
+
+		int num;
+				int fd;
+				int buffersize;
+				bool measure;
+				uint64_t last_measure, last_data;
+				DMX_CHANNEL_TYPE dmx_type;
+				std::vector<pes_pids> pesfds;
+
 
 		DMX_CHANNEL_TYPE type;
 		CS_DMX_PDATA * privateData;

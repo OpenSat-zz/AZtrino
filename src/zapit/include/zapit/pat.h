@@ -24,6 +24,7 @@
 
 #include "channel.h"
 
-int parse_pat(CZapitChannel * const channel);
+
+int parse_pat(CZapitChannel * const channel,int demuxN);
 
 #endif /* __zapit_pat_h__ */

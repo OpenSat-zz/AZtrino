@@ -37,7 +37,7 @@ void *nit_thread(void * data)
 	int satellitePosition = (int) data;
 
 	printf("[scan] trying to parse NIT\n");
-	int status = parse_nit(satellitePosition, 0);
+	int status = parse_nit(satellitePosition, 0,0);
 	if(status < 0)
 		printf("[scan] NIT failed !\n");
 	else
@@ -46,16 +46,16 @@ void *nit_thread(void * data)
 	pthread_exit(NULL);
 }
 
-int parse_nit(t_satellite_position satellitePosition, freq_id_t freq)
+int parse_nit(t_satellite_position satellitePosition, freq_id_t freq, int demuxN)
 {
 	int ret = 0;
 	int secdone[255];
 	int sectotal = -1;
-
+	printf("[parse_nit]\n");
 	for(int i = 0; i < 255; i++)
 		secdone[i] = 0;
 
-	cDemux * dmx = new cDemux();;
+	cDemux * dmx = new cDemux(demuxN);;
 	dmx->Open(DMX_PSI_CHANNEL);
 
 	unsigned char buffer[NIT_SIZE];
@@ -95,12 +95,12 @@ int parse_nit(t_satellite_position satellitePosition, freq_id_t freq)
 			return -1;
 		}
 if(buffer[0] != 0x40)
-	printf("[NIT] ******************************************* Bogus section received: 0x%x\n", buffer[0]);
+		//printf("[NIT] ******************************************* Bogus section received: 0x%x\n", buffer[0]);
 		section_length = ((buffer[1] & 0x0F) << 8) + buffer[2];
 		network_id = ((buffer[3] << 8)| buffer [4]);
 		network_descriptors_length = ((buffer[8] & 0x0F) << 8) | buffer[9];
 		unsigned char secnum = buffer[6];
-printf("[NIT] section %X last %X network_id 0x%x -> %s\n", secnum, buffer[7], network_id, secdone[secnum] ? "skip" : "use");
+		//printf("[NIT] section %X last %X network_id 0x%x -> %s\n", secnum, buffer[7], network_id, secdone[secnum] ? "skip" : "use");
 		if(secdone[secnum]) // mark sec XX done
 			continue;
 		secdone[secnum] = 1;

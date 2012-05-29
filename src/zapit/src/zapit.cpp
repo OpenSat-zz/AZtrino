@@ -148,6 +148,7 @@ enum {
 	RECORD_MODE = 0x04
 };
 
+int feNum =0;
 int currentMode;
 bool playbackStopForced = false;
 int zapit_debug = 0;
@@ -188,6 +189,12 @@ uint32_t  lastChannelTV;
 void setZapitConfig(Zapit_config * Cfg);
 void sendConfig(int connfd);
 
+
+void changeFrontEndNumber(int n)
+{
+	frontend->changeFrontendNumber(n);
+}
+
 void saveZapitSettings(bool write, bool write_a)
 {
 	if (channel) {
@@ -209,6 +216,7 @@ void saveZapitSettings(bool write, bool write_a)
 			config.setInt32("lastChannelTV", lastChannelTV);
 			config.setInt64("lastChannel", live_channel_id);
 		}
+		config.setInt32("tuner", feNum);
 		config.setInt32("lastSatellitePosition", frontend->getCurrentSatellitePosition());
 		config.setInt32("diseqcRepeats", frontend->getDiseqcRepeats());
 		config.setInt32("diseqcType", frontend->getDiseqcType());
@@ -457,22 +465,26 @@ printf("[zapit] saving channel, apid %x sub pid %x mode %d volume %d\n", channel
 	/* get program map table pid from program association table */
 	if (channel->getPmtPid() == 0) {
 		printf("[zapit] no pmt pid, going to parse pat\n");
-		if (parse_pat(channel) < 0) {
+		if (parse_pat(channel,frontend->getFrontendNumber()) < 0) {
 			printf("[zapit] pat parsing failed\n");
 			failed = true;
 		}
 	}
 
 	/* parse program map table and store pids */
-	if ((!failed) && (parse_pmt(channel) < 0)) {
+	if ((!failed) && (parse_pmt(channel,frontend->getFrontendNumber()) < 0)) {
 		printf("[zapit] pmt parsing failed\n");
-		if (parse_pat(channel) < 0) {
+		int parsepat=parse_pat(channel,frontend->getFrontendNumber());
+		if (parsepat < 0) {
 			printf("pat parsing failed\n");
 			failed = true;
 		}
-		else if (parse_pmt(channel) < 0) {
+		else {
+			if (parse_pmt(channel,frontend->getFrontendNumber()) < 0) {
 			printf("[zapit] pmt parsing failed\n");
 			failed = true;
+			}
+
 		}
 	}
 
@@ -556,7 +568,9 @@ printf("[zapit] saving channel, apid %x sub pid %x mode %d volume %d\n", channel
 //play:
 	send_ca_id(1);
         if (update_pmt)
-                pmt_set_update_filter(channel, &pmt_update_fd);
+        {
+        	 pmt_set_update_filter(channel, &pmt_update_fd, frontend->getFrontendNumber());
+        }
 
 	return 0;
 }
@@ -691,7 +705,9 @@ void parseScanInputXml(void)
 	case FE_QAM:
 		scanInputParser = parseXmlFile(CABLES_XML);
 		break;
-
+	case FE_OFDM:
+		scanInputParser = parseXmlFile(TERRESTRIAL_XML);
+		break;
 	default:
 		WARN("Unknown type %d", frontend->getInfo()->type);
 		return;
@@ -1056,43 +1072,44 @@ DBG("[zapit] sending EVT_SERVICES_CHANGED\n");
 		if(channel)
 			zapit(channel->getChannelID(), current_is_nvod);
 		break;
-        case CZapitMessages::CMD_TUNE_TP: {
-			CBasicServer::receive_data(connfd, &TP, sizeof(TP));
-			sig_delay = 0;
-			TP.feparams.inversion = INVERSION_AUTO;
-			const char *name = scanProviders.size() > 0  ? scanProviders.begin()->second.c_str() : "unknown";
+    case CZapitMessages::CMD_TUNE_TP: {
+		CBasicServer::receive_data(connfd, &TP, sizeof(TP));
+		sig_delay = 0;
+		TP.feparams.inversion = INVERSION_AUTO;
+		const char *name = scanProviders.size() > 0  ? scanProviders.begin()->second.c_str() : "unknown";
 
-			switch (frontend->getInfo()->type) {
-			case FE_QPSK:
-			case FE_OFDM: {
-				t_satellite_position satellitePosition = scanProviders.begin()->first;
-				printf("[zapit] tune to sat %s freq %d rate %d fec %d pol %d\n", name, TP.feparams.frequency, TP.feparams.u.qpsk.symbol_rate, TP.feparams.u.qpsk.fec_inner, TP.polarization);
-				frontend->setInput(satellitePosition, TP.feparams.frequency,  TP.polarization);
-				frontend->driveToSatellitePosition(satellitePosition);
-				break;
-			}
-			case FE_QAM:
-				printf("[zapit] tune to cable %s freq %d rate %d fec %d\n", name, TP.feparams.frequency, TP.feparams.u.qam.symbol_rate, TP.feparams.u.qam.fec_inner);
-				break;
-			default:
-				WARN("Unknown type %d", frontend->getInfo()->type);
-				return false;
-			}
-			frontend->tuneFrequency(&TP.feparams, TP.polarization, true);
+		switch (frontend->getInfo()->type) {
+		case FE_QPSK: {
+			t_satellite_position satellitePosition = scanProviders.begin()->first;
+			printf("[zapit] tune to sat %s freq %d rate %d fec %d pol %d\n", name, TP.feparams.frequency, TP.feparams.u.qpsk.symbol_rate, TP.feparams.u.qpsk.fec_inner, TP.polarization);
+			frontend->setInput(satellitePosition, TP.feparams.frequency,  TP.polarization);
+			frontend->driveToSatellitePosition(satellitePosition);
+			break;
 		}
-		break;
-        case CZapitMessages::CMD_SCAN_TP: {
-                CBasicServer::receive_data(connfd, &TP, sizeof(TP));
+		case FE_QAM:
+			printf("[zapit] tune to cable %s freq %d rate %d fec %d\n", name, TP.feparams.frequency, TP.feparams.u.qam.symbol_rate, TP.feparams.u.qam.fec_inner);
+			break;
+		case FE_OFDM:
+			printf("[zapit] tune to transponder %s freq %d\n", name, TP.feparams.frequency);
+			break;
+		default:
+			WARN("Unknown type %d", frontend->getInfo()->type);
+			return false;
+		}
+		frontend->tuneFrequency(&TP.feparams, TP.polarization, true);
+	}
+	break;
+    case CZapitMessages::CMD_SCAN_TP: {
+            CBasicServer::receive_data(connfd, &TP, sizeof(TP));
 
 #if 0
 printf("[zapit] TP_id %d freq %d rate %d fec %d pol %d\n", TP.TP_id, TP.feparams.frequency, TP.feparams.u.qpsk.symbol_rate, TP.feparams.u.qpsk.fec_inner, TP.polarization);
 #endif
-		if(!(TP.feparams.frequency > 0) && channel) {
+if(!(TP.feparams.frequency > 0) && channel) {
 			transponder_list_t::iterator transponder = transponders.find(channel->getTransponderId());
 			TP.feparams.frequency = transponder->second.feparams.frequency;
 			switch (frontend->getInfo()->type) {
 			case FE_QPSK:
-			case FE_OFDM:
 				TP.feparams.u.qpsk.symbol_rate = transponder->second.feparams.u.qpsk.symbol_rate;
 				TP.feparams.u.qpsk.fec_inner = transponder->second.feparams.u.qpsk.fec_inner;
 				TP.polarization = transponder->second.polarization;
@@ -1101,6 +1118,16 @@ printf("[zapit] TP_id %d freq %d rate %d fec %d pol %d\n", TP.TP_id, TP.feparams
 				TP.feparams.u.qam.symbol_rate = transponder->second.feparams.u.qam.symbol_rate;
 				TP.feparams.u.qam.fec_inner = transponder->second.feparams.u.qam.fec_inner;
 				TP.feparams.u.qam.modulation = transponder->second.feparams.u.qam.modulation;
+				break;
+			case FE_OFDM:
+				TP.feparams.inversion = transponder->second.feparams.inversion;
+				TP.feparams.u.ofdm.bandwidth = transponder->second.feparams.u.ofdm.bandwidth;
+				TP.feparams.u.ofdm.constellation = transponder->second.feparams.u.ofdm.constellation;
+				TP.feparams.u.ofdm.code_rate_HP = transponder->second.feparams.u.ofdm.code_rate_HP;
+				TP.feparams.u.ofdm.code_rate_LP = transponder->second.feparams.u.ofdm.code_rate_LP;
+				TP.feparams.u.ofdm.guard_interval = transponder->second.feparams.u.ofdm.guard_interval;
+				TP.feparams.u.ofdm.transmission_mode = transponder->second.feparams.u.ofdm.transmission_mode;
+				TP.feparams.u.ofdm.hierarchy_information = transponder->second.feparams.u.ofdm.hierarchy_information;
 				break;
 			default:
 				WARN("Unknown type %d", frontend->getInfo()->type);
@@ -1783,6 +1810,7 @@ int startPlayBack(CZapitChannel *thisChannel)
 
 	printf("[zapit] vpid %X apid %X pcr %X\n", thisChannel->getVideoPid(), thisChannel->getAudioPid(), thisChannel->getPcrPid());
 	if(standby) {
+
 		frontend->Open();
 		return 0;
 	}
@@ -1989,7 +2017,7 @@ void leaveStandby(void)
 	printf("[zapit] diseqc type = %d\n", diseqcType);
 
 	if (!frontend) {
-		frontend = new CFrontend();
+		frontend = new CFrontend(feNum);
 		frontend->setDiseqcRepeats(config.getInt32("diseqcRepeats", 0));
 		frontend->setCurrentSatellitePosition(config.getInt32("lastSatellitePosition", 0));
 		frontend->setDiseqcType(diseqcType);
@@ -2038,6 +2066,7 @@ unsigned int zapTo_ChannelID(t_channel_id channel_id, bool isSubService)
 {
 	unsigned int result = 0;
 
+
 	if (zapit(channel_id, isSubService) < 0) {
 DBG("[zapit] zapit failed, chid %llx\n", channel_id);
 		if(event_mode) eventServer->sendEvent((isSubService ? CZapitClient::EVT_ZAP_SUB_FAILED : CZapitClient::EVT_ZAP_FAILED), CEventServer::INITID_ZAPIT, &channel_id, sizeof(channel_id));
@@ -2070,6 +2099,12 @@ unsigned zapTo(const unsigned int channel)
 	else
 		return 0;
 }
+void change_demux(int demuxN)
+{
+	pcrDemux = new cDemux(demuxN);
+	videoDemux = new cDemux(demuxN);
+	audioDemux = new cDemux(demuxN);
+}
 
 void signal_handler(int signum)
 {
@@ -2093,6 +2128,8 @@ int zapit_main_thread(void *data)
 	time_t stime;
 	printf("[zapit] starting... tid %ld\n", syscall(__NR_gettid));
 	abort_zapit = 0;
+
+
 
 	pcrDemux = new cDemux();
 	videoDemux = new cDemux();
@@ -2120,7 +2157,7 @@ int zapit_main_thread(void *data)
 	found_channels = 0;
 	curr_sat = 0;
 
-	frontend = new CFrontend();
+	frontend = new CFrontend(feNum);
 
 	/* load configuration or set defaults if no configuration file exists */
 	loadZapitSettings();
@@ -2231,6 +2268,7 @@ void send_ca_id(int caid)
 
 void setZapitConfig(Zapit_config * Cfg)
 {
+	feNum = Cfg->tuner;
 	motorRotationSpeed = Cfg->motorRotationSpeed;
 	config.setInt32("motorRotationSpeed", motorRotationSpeed);
 	config.setBool("writeChannelsNames", Cfg->writeChannelsNames);
@@ -2250,6 +2288,7 @@ void setZapitConfig(Zapit_config * Cfg)
 	gotoXXLongitude = Cfg->gotoXXLongitude;
 	repeatUsals = Cfg->repeatUsals;
 
+
 	scanSDT = Cfg->scanSDT;
 	saveZapitSettings(true, false);
 }
@@ -2258,6 +2297,7 @@ void sendConfig(int connfd)
 {
 	Zapit_config Cfg;
 
+	Cfg.tuner=feNum;
 	Cfg.motorRotationSpeed = motorRotationSpeed;
 	Cfg.writeChannelsNames = config.getBool("writeChannelsNames", true);
 	Cfg.makeRemainingChannelsBouquet = config.getBool("makeRemainingChannelsBouquet", true);
@@ -2281,6 +2321,7 @@ void sendConfig(int connfd)
 
 void getZapitConfig(Zapit_config *Cfg)
 {
+	 	Cfg->tuner=feNum;
         Cfg->motorRotationSpeed = motorRotationSpeed;
         Cfg->writeChannelsNames = config.getBool("writeChannelsNames", true);
         Cfg->makeRemainingChannelsBouquet = config.getBool("makeRemainingChannelsBouquet", true);
@@ -2363,7 +2404,7 @@ printf("[sdt monitor] wakeup...\n");
 				printf("[sdt monitor] TP already updated.\n");
 				continue;
 			}
-			ret = parse_current_sdt(transport_stream_id, original_network_id, satellitePosition, freq);
+			ret = parse_current_sdt(transport_stream_id, original_network_id, satellitePosition, freq, frontend->getFrontendNumber());
 			if(ret)
 				continue;
 			sdt_tp.insert(std::pair <transponder_id_t, bool> (tpid, true) );
@@ -2402,7 +2443,15 @@ printf("[sdt monitor] wakeup...\n");
                                         tI->second.feparams.u.qam.symbol_rate, tI->second.feparams.u.qam.fec_inner,
                                         tI->second.feparams.u.qam.modulation);
                                         break;
-                                case FE_OFDM:
+                                case FE_OFDM: /* terrestrial */
+                               			sprintf(satstr, "\t<%s name=\"%s\"\n", "transponder", spos_it->second.name.c_str());
+                               			sprintf(tpstr, "\t\t<TS id=\"%04x\" on=\"%04x\" frq=\"%u\" inv=\"%hu\" bw=\"%u\" const=\"%u\" crhp=\"%u\" crlp=\"%u\" guard=\"%u\" tmode=\"%u\" hi=\"%u\">\n",
+                               			tI->second.transport_stream_id, tI->second.original_network_id,
+                               			tI->second.feparams.frequency, tI->second.feparams.inversion,
+                               			tI->second.feparams.u.ofdm.bandwidth, tI->second.feparams.u.ofdm.constellation,
+                               			tI->second.feparams.u.ofdm.code_rate_HP, tI->second.feparams.u.ofdm.code_rate_LP,
+                               			tI->second.feparams.u.ofdm.guard_interval, tI->second.feparams.u.ofdm.transmission_mode,
+                               			tI->second.feparams.u.ofdm.hierarchy_information);
                                 default:
                                         break;
                         }

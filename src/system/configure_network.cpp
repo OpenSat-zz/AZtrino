@@ -140,18 +140,15 @@ void CNetworkConfig::connectWirelessNetwork(char * iface,char * essid, int encry
 	//dhclient wlan0
 	sprintf(cmd,"/sbin/iwconfig %s mode managed",iface);
 	system(cmd);
-	printf ("############## %s\n",cmd);
 	if ((encrypt == CNetworkConfig::NONE) || (encrypt == CNetworkConfig::WEP))
 	{
 		sprintf(cmd,"/sbin/iwconfig %s essid %s",iface,essid);
 		system(cmd);
-		printf ("############## %s\n",cmd);
 
 		if (encrypt == CNetworkConfig::WEP)
 		{
 			sprintf(cmd,"/sbin/iwconfig %s key %s",iface,password);
 			system(cmd);
-			printf ("############## %s\n",cmd);
 		}
 	}
 	else if ((encrypt == CNetworkConfig::WPA) || (encrypt == CNetworkConfig::WPA2))
@@ -165,7 +162,6 @@ void CNetworkConfig::connectWirelessNetwork(char * iface,char * essid, int encry
 
 	sprintf(cmd,"/sbin/udhcpc -i  %s",iface);
 	system(cmd);
-	printf ("############## %s\n",cmd);
 
 	//mysystem((char *) "ifup",  (char *) "-v",  (char *) "eth0");
 

@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sstream>
+#include <sys/stat.h>
 
 #define FIFO_CMD "/tmp/rmfp.cmd"
 #define FIFO_IN "/tmp/rmfp.in"

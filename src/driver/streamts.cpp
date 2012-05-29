@@ -335,7 +335,7 @@ void * streamts_live_thread(void *data)
 #ifdef AZBOX_GEN_1
 	cDemux * dmx[demuxfd_count];
 	for(int i = 0; i < demuxfd_count; i++) {
-		dmx[i] = new cDemux(1);
+		dmx[i] = new cDemux(2);
 		dmx[i]->Open(DMX_TP_CHANNEL, NULL, DMX_BUFFER_SIZE);
 		dmx[i]->pesFilter(pids[i]);
 		dmx[i]->Start();
@@ -395,7 +395,7 @@ void * streamts_live_thread(void *data)
 		delete dmx[i];
 	}
 #else
-	cDemux * dmx = new cDemux(1);
+	cDemux * dmx = new cDemux(2);
 
 	dmx->Open(DMX_TP_CHANNEL, NULL, DMX_BUFFER_SIZE);
 

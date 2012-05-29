@@ -1,1 +1,0 @@
-crc.o: crc.c
